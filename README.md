@@ -20,8 +20,8 @@ hi. I’m Christopher Woodyard, founder of **Vers3Dynamics**, where I explore ho
 
 - 🌐 [Website](https://www.vers3dynamics.com)  
 - 🧠 [Substack](https://vers3dynamics.substack.com)  
-- 🤖 [Hugging Face](https://huggingface.co/topherchris420)  
-- 🔗 [LinkedIn](https://www.linkedin.com/in/christopherwoodyard)  
+- 🤖 [Hugging Face](https://huggingface.co/ciaochris)  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/christopher-woodyard-eth)  
 
 ---  
 
