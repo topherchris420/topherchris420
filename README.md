@@ -2,6 +2,8 @@
 
 hi. I’m Christopher Woodyard, founder of **Vers3Dynamics**, where I explore how technology, resonance, and symbolic systems shape human experience and perception. My focus is on building apps that help us better understand the unseen structures that guide cognition, behavior, and belief.
 
+[![Python application](https://github.com/topherchris420/dynamic-resonance-rooting/actions/workflows/python-app.yml/badge.svg)](https://github.com/topherchris420/dynamic-resonance-rooting/actions/workflows/python-app.yml)
+
 ## Areas of Interest
 
 - Cognitive phase space modeling  
