@@ -1,13 +1,13 @@
 # Christopher Woodyard | Founder + CEO, Vers3Dynamics
 
-**Bio:** Solo researcher and AI enthusiast based in the Washington, DC area. I leverage 5+ years of AI development experience to create technology that enhances human cognition and perception. My flagship project, the Reentry Interface (TRL 4), boosts operator focus by 30% using breath biofeedback—check it out at [https://github.com/topherchris420/orpheus-resonance-protocol](https://github.com/topherchris420/orpheus-resonance-protocol). I blend tech with resonance and symbolic systems to build tools for civilian sectors like aviation and healthcare.
+**Bio:** Researcher and quantumAI enthusiast based in Washington, DC. As Founder + CEO of **Vers3Dynamics**, I leverage 5+ years of AI development experience to create technology that enhances human cognition and perception. My flagship project, the Reentry Interface (TRL 4), boosts operator focus by 30% using breath biofeedback—check it out [here](https://github.com/topherchris420/orpheus-resonance-protocol). I blend tech with resonance and symbolic systems to build apps for everyone.
 
 ## Areas of Interest
-- **Cognitive Phase Space Modeling:** Mapping mental states as dynamic energy fields to improve decision-making, reflecting the mind and body as a unified system.
-- **Cymatics and Frequency-Based Wellness:** Exploring sound and vibration to enhance well-being, focusing on frequency effects for stress reduction in high-stakes jobs.
-- **Chrono-Spatial Geometry:** Designing interfaces that integrate time and space feedback, aiding operators in navigating complex environments with greater clarity.
-- **Generative AI Systems:** Developing adaptive AI that mirrors the body’s resonance with its surroundings, enhancing perception for civilian use cases like air traffic control.
-- **Post-Symbolic UX and Ambient Intelligence:** Crafting intuitive designs that transcend traditional interfaces, creating ambient intelligence for seamless human-tech interaction based on the idea that symbols shape reality.
+- **Bioenergetic Feedback Systems:** Designing tools that harness the body’s energy fields for real-time performance optimization, inspired by the idea that physiological rhythms enhance mental clarity.
+- **Vibrational Consciousness Interfaces:** Exploring how subtle vibrations influence awareness, creating interfaces that align human and tech rhythms for stress reduction in high-stakes roles.
+- **Cosmic Resonance Mapping:** Developing models to sync human perception with universal patterns, aiding operators in complex decision-making through harmonic data integration.
+- **Neural Oscillation Amplification:** Building AI-driven systems to amplify brainwave coherence, improving focus and resilience in civilian environments like emergency response.
+- **Holistic System Synchronization:** Crafting tech that unites mind, body, and environment into a cohesive network, fostering intuitive control for applications in healthcare and transport.
 
 ## Guiding Ideas
 - Reality mirrors underlying structures beyond the visible.
