@@ -19,7 +19,7 @@
 - 🧠 [Substack](https://vers3dynamics.substack.com)  
 - 🤖 [Hugging Face](https://huggingface.co/ciaochris)  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/christopher-woodyard-eth)  
-- 💻 [GitHub](https://github.com/topherchris420)  
+- 💻 [Google Colab](https://colab.research.google.com/drive/1rdR0r-m8CSoYTurllo6QXTw0MOueSmvZ?usp=sharing)  
 
 ---
 
