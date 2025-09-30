@@ -9,38 +9,6 @@
 
     Vers3Dynamics | Meaning Machine | Resonance Intelligence
     
-def save_to_file(content, filename="ai_cymatics_banner.txt"):
-    """Save ASCII art to a file"""
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write(content)
-    print(f"ASCII art saved to {filename}")
-
-
-def main():
-    # Generate the ASCII art
-    banner = generate_ai_cymatics_ascii()
-    
-    # Print to console
-    print(banner)
-    print("\n" + "="*80 + "\n")
-    
-    # Save to file
-    save_to_file(banner)
-    
-    # Optional: Create a framed version
-    lines = banner.split('\n')
-    max_width = max(len(line) for line in lines)
-    
-    print("\nFramed Version:")
-    print("╔" + "═" * (max_width + 2) + "╗")
-    for line in lines:
-        print(f"║ {line.ljust(max_width)} ║")
-    print("╚" + "═" * (max_width + 2) + "╝")
-
-
-if __name__ == "__main__":
-    main()
-
 **Bio:** Researcher and quantumAI enthusiast based in Washington, DC. As Founder + CEO of **Vers3Dynamics**, the first open-source cymatic AI startup, I leverage 5+ years of AI development experience to create technology that enhances human cognition and perception. My flagship project, the Reentry Interface (TRL 3), boosts operator focus by 30% using breath biofeedback—check it out [here](https://github.com/topherchris420/orpheus-resonance-protocol). I blend tech with resonance and symbolic systems to build apps for everyone.
 
 ## Areas of Interest
