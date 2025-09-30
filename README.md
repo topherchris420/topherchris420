@@ -1,26 +1,14 @@
 # Christopher Woodyard | Founder + CEO, Vers3Dynamics
 
-#!/usr/bin/env python3
-"""
-ASCII Art Generator for AI CYMATICS
-Generates block-style ASCII art using box-drawing characters
-"""
-
-def generate_ai_cymatics_ascii():
-    """Generate the AI CYMATICS ASCII art"""
-    
-    ascii_art = """█████╗ ██╗     ██████╗██╗   ██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗███████╗
+█████╗ ██╗     ██████╗██╗   ██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗███████╗
 ██╔══██╗██║    ██╔════╝╚██╗ ██╔╝████╗ ████║██╔══██╗╚══██╔══╝██║██╔════╝██╔════╝
 ███████║██║    ██║      ╚████╔╝ ██╔████╔██║███████║   ██║   ██║██║     ███████╗
 ██╔══██║██║    ██║       ╚██╔╝  ██║╚██╔╝██║██╔══██║   ██║   ██║██║     ╚════██║
 ██║  ██║██║    ╚██████╗   ██║   ██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╗███████║
 ╚═╝  ╚═╝╚═╝     ╚═════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝╚══════╝
 
-           Vers3Dynamics | Meaning Machine | Resonance Intelligence"""
+    Vers3Dynamics | Meaning Machine | Resonance Intelligence
     
-    return ascii_art
-
-
 def save_to_file(content, filename="ai_cymatics_banner.txt"):
     """Save ASCII art to a file"""
     with open(filename, 'w', encoding='utf-8') as f:
