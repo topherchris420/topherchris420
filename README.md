@@ -15,6 +15,4 @@
 
 Still learning. Still listening. Still building.
 
-## Contribution Activity
-
 ![snake gif](https://raw.githubusercontent.com/topherchris420/topherchris420/output/github-contribution-grid-snake.svg)
