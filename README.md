@@ -1,22 +1,27 @@
 <div align="center">
 
-```
+<pre>
 █████╗  ██╗     ██████╗██╗   ██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗███████╗
 ██╔══██╗██║    ██╔════╝╚██╗ ██╔╝████╗ ████║██╔══██╗╚══██╔══╝██║██╔════╝██╔════╝
 ███████║██║    ██║      ╚████╔╝ ██╔████╔██║███████║   ██║   ██║██║     ███████╗
 ██╔══██║██║    ██║       ╚██╔╝  ██║╚██╔╝██║██╔══██║   ██║   ██║██║     ╚════██║
 ██║  ██║██║    ╚██████╗   ██║   ██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╗███████║
 ╚═╝  ╚═╝╚═╝     ╚═════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝╚══════╝
-```
+</pre>
 
-# Christopher Woodyard
+<h1>Christopher Woodyard</h1>
 
-**Founder + CEO, Vers3Dynamics**
+<b>Founder + CEO, Vers3Dynamics</b>
 
-*Researcher and Quantum AI enthusiast based in Washington, DC.*
-*Still learning. Still listening. Still building.*
+<br>
 
-[![Ko-Fi](https://img.shields.io/badge/Ko--fi-Support%20My%20Work-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/vers3dynamics)
+<i>Researcher and Quantum AI enthusiast based in Washington, DC.</i>
+<br>
+<i>Still learning. Still listening. Still building.</i>
+
+<br><br>
+
+<a href="https://ko-fi.com/vers3dynamics"><img src="https://img.shields.io/badge/Ko--fi-Support%20My%20Work-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" /></a>
 
 </div>
 
