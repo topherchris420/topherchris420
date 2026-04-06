@@ -15,7 +15,7 @@
 
 <br>
 
-<i>Researcher and Quantum AI enthusiast based in Washington, DC.</i>
+<i>Researcher and Quantum AI enthusiast in Washington, DC.</i>
 <br>
 <i>Still learning. Still listening. Still building.</i>
 
@@ -30,8 +30,8 @@
 ### About Me
 
 - Building **Vers3Dynamics** — exploring the intersection of meaning, resonance, and intelligence
-- Interested in **Quantum AI**, **emergent systems**, and **resonance intelligence**
-- Based in **Washington, DC**
+- Interested in **Quantum AI**, **poetry**, **art** and **resonance intelligence**
+- Based in **Bethesda, MD**
 
 ---
 
