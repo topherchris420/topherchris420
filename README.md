@@ -30,7 +30,7 @@
 ### About Me
 
 - Building **Vers3Dynamics** — exploring the intersection of meaning, resonance, and intelligence
-- Interested in **Quantum AI**, **poetry**, **art** and **resonance intelligence**
+- Interested in **B/W long exposure photography**, **poetry**, **art** and **resonance intelligence**
 - Based in **Bethesda, MD**
 
 ---
