@@ -40,7 +40,7 @@ Treating cognition as a time-evolving dynamical system that can be partially obs
 ### Tech & Tools
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/AI%2FML-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%2FLearning-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
