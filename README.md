@@ -29,8 +29,8 @@
 
 ### About Me
 
-- Building **Vers3Dynamics** — exploring the intersection of meaning, resonance, and intelligence
-- Interested in **B/W long exposure photography**, **poetry**, **art** and **resonance intelligence**
+- Building **Vers3Dynamics** — A multimodal closed-loop system for real-time estimation and modulation of cognitive-affective state dynamics via oscillatory signal feedback
+- Interested in **B/W long exposure photography**, **poetry**, **art** and **resonant intelligence**
 - Based in **Bethesda, MD**
 
 ---
