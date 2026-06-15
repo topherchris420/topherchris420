@@ -61,19 +61,6 @@ I am interested in systems that stay humble: observe carefully, adapt in real ti
 ![Visualization](https://img.shields.io/badge/Visualization-0891B2?style=flat-square)
 ![Human State](https://img.shields.io/badge/Human%20State%20Systems-059669?style=flat-square)
 
-## GitHub Pulse
-
-<div align="center">
-
-<img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=topherchris420&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" />
-<img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=topherchris420&layout=compact&hide_border=true&theme=transparent" />
-
-<br>
-
-<img alt="GitHub streak" src="https://streak-stats.demolab.com?user=topherchris420&hide_border=true&theme=transparent" />
-
-</div>
-
 ## Open Loops
 
 I am open to conversations around:
