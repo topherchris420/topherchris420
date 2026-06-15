@@ -18,7 +18,6 @@ Researcher building adaptive systems for biosignal modeling, human-state inferen
 `Washington, DC / Bethesda, MD` - `resonant intelligence` - `signal-first systems`
 
 <a href="https://ko-fi.com/vers3dynamics"><img src="https://img.shields.io/badge/Ko--fi-Support%20the%20Lab-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" /></a>
-<a href="https://github.com/topherchris420"><img src="https://img.shields.io/badge/GitHub-topherchris420-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 
 </div>
 
