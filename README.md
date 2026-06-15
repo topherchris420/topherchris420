@@ -13,7 +13,7 @@
 
 **Founder + CEO, Vers3Dynamics**
 
-Researcher building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback.
+An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback.
 
 `Washington, DC / Bethesda, MD` - `resonant intelligence` - `signal-first systems`
 
@@ -23,13 +23,13 @@ Researcher building adaptive systems for biosignal modeling, human-state inferen
 
 ---
 
-## Current Signal
+## What i do
 
 - **Vers3Dynamics:** open research systems for multimodal biosignals, adaptive models, and feedback loops that can be listened to, seen, and felt.
 - **Resonant intelligence:** prototypes that treat cognition and physiology as time-evolving signals rather than static labels.
-- **Creative instrumentation:** black-and-white long exposure photography, poetry, audio/visual feedback, and tools that make invisible state easier to notice.
+- **Creative instrumentation:** black-and-white long exposure photography, poetry, audio/visual feedback, and tech that makes invisible states easier to notice.
 
-I am interested in systems that stay humble: observe carefully, adapt in real time, and make their uncertainty visible.
+I'm interested in systems with humanity: observe carefully, adapt in real time, and make their uncertainty visible.
 
 ## Featured Builds
 
@@ -61,14 +61,13 @@ I am interested in systems that stay humble: observe carefully, adapt in real ti
 ![Visualization](https://img.shields.io/badge/Visualization-0891B2?style=flat-square)
 ![Human State](https://img.shields.io/badge/Human%20State%20Systems-059669?style=flat-square)
 
-## Open Loops
+## Always Open
 
-I am open to conversations around:
+I'm open to conversations around:
 
 - biosignal modeling and closed-loop feedback
 - creative research tools that turn data into sound, image, or touch
 - responsible simulation spaces for unusual physics and cognition ideas
-- small, sharp collaborations where a prototype can teach us something real
 
 Best doorway: open a GitHub discussion or support the lab through Ko-fi if the work resonates.
 
