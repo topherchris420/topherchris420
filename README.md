@@ -37,8 +37,8 @@ I am interested in systems that stay humble: observe carefully, adapt in real ti
 | Project | Signal | Why It Matters |
 | --- | --- | --- |
 | [`hello_os`](https://github.com/topherchris420/ideas) | Importable rotor/noise modeling playground | Turns raw experimental notebooks into a safer, testable research surface. |
-| `Vers3Dynamics` | Biosignal-to-feedback research system | Explores real-time loops across signals, sound, image, and haptics. |
-| `R.A.I.N. Lab` | Open-ended research practice | Keeps experiments reproducible, remixable, and grounded in responsible simulation. |
+| [`Vers3Dynamics`](https://vers3dynamics.com) | Biosignal-to-feedback research system | Explores real-time loops across signals, sound, image, and haptics. |
+| [`R.A.I.N. Lab`](https://github.com/topherchris420/james_library) | Open-ended research practice | Keeps experiments reproducible, remixable, and grounded in responsible simulation. |
 
 ## Stack
 
