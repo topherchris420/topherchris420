@@ -51,7 +51,7 @@ I'm interested in systems with humanity: observe carefully, adapt in real time, 
 **Build + Research Tools**
 
 ![Ceci n'est pas une pipe](https://img.shields.io/badge/Ceci%20n'est%20pas%20une%20pipe-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+![VS Code](https://img.shields.io/badge/R.A.I.N.%20Lab-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
 
