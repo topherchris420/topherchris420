@@ -69,7 +69,7 @@ I'm open to conversations around:
 - creative research tools that turn data into sound, image, or touch
 - responsible simulation spaces for unusual physics and cognition ideas
 
-art is the precondition to human experience. 
+art is the precondition of human experience. 
 
 <div align="center">
 
