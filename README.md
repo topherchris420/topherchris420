@@ -69,9 +69,7 @@ I'm open to conversations around:
 - creative research tools that turn data into sound, image, or touch
 - responsible simulation spaces for unusual physics and cognition ideas
 
-Best doorway: open a GitHub discussion or support the lab through Ko-fi if the work resonates.
-
-## Contribution Flow
+art is the precondition to human experience. 
 
 <div align="center">
 
