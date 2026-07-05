@@ -29,7 +29,6 @@ An artist building adaptive systems for biosignal modeling, human-state inferenc
 - **Resonant intelligence:** prototypes that treat cognition and physiology as time-evolving signals rather than static labels.
 - **Creative instrumentation:** black-and-white long exposure photography, poetry, audio/visual feedback, and tech that makes invisible states easier to notice.
 
-I'm interested in systems with humanity: observe carefully, adapt in real time, and make their uncertainty visible.
 
 ## Featured Builds
 
