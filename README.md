@@ -35,7 +35,7 @@ An artist building adaptive systems for biosignal modeling, human-state inferenc
 | Project | Signal | Why It Matters |
 | --- | --- | --- |
 | [`hello_os`](https://github.com/topherchris420/ideas) | Importable rotor/noise modeling playground | Turns raw experimental notebooks into a safer, testable research surface. |
-| [`Vers3Dynamics`](https://vers3dynamics.com) | Biosignal-to-feedback research system | Explores real-time loops across signals, sound, image, and haptics. |
+| [`Vers3Dynamics`](https://courtyard.io/user/vers3dynamics/collection) | Biosignal-to-feedback research system | Explores real-time loops across signals, sound, image, and haptics. |
 | [`R.A.I.N. Lab`](https://github.com/topherchris420/james_library) | Open-ended research practice | Keeps experiments reproducible, remixable, and grounded in responsible simulation. |
 
 ## Stack
