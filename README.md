@@ -13,7 +13,7 @@
 
 **Founder + CEO, Vers3Dynamics**
 
-An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback.
+An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback. I create because the alternative is unbearable: a day that occurs and is not noticed occurring.
 
 `Washington, DC / Bethesda, MD` - `resonant intelligence` - `signal-first systems`
 
