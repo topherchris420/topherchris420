@@ -25,7 +25,7 @@ An artist building adaptive systems for biosignal modeling, human-state inferenc
 
 ## What i do
 
-- **Vers3Dynamics:** An open-source research lab building tools for observing what models, institutions, and dashboards leave out.
+- **Vers3Dynamics:** Building open-source systems that turn changing signals into relationships, relationships into state, and state into feedback.
 - **Resonant intelligence:** prototypes that treat cognition and physiology as time-evolving signals rather than static labels.
 - **Creative instrumentation:** b/w long exposure photography, poetry, painting, audio/visual feedback, and tech that makes invisible states easier to notice.
 
