@@ -13,8 +13,7 @@
 
 **Founder + CEO, Vers3Dynamics**
 
-An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback. I create because the alternative is unbearable: a day that occurs and is not noticed occurring.
-
+An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback. I create because the alternative feels impossible: to let a day happen without fully noticing that it happened.
 `Washington, DC / Bethesda, MD` - `resonant intelligence` - `signal-first systems`
 
 <a href="https://ko-fi.com/vers3dynamics"><img src="https://img.shields.io/badge/Ko--fi-Support%20the%20Lab-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" /></a>
