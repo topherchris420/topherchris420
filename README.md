@@ -1,79 +1,70 @@
-<div align="center">
-
-<pre>
-█████╗  ██╗     ██████╗██╗   ██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗███████╗
-██╔══██╗██║    ██╔════╝╚██╗ ██╔╝████╗ ████║██╔══██╗╚══██╔══╝██║██╔════╝██╔════╝
-███████║██║    ██║      ╚████╔╝ ██╔████╔██║███████║   ██║   ██║██║     ███████╗
-██╔══██║██║    ██║       ╚██╔╝  ██║╚██╔╝██║██╔══██║   ██║   ██║██║     ╚════██║
-██║  ██║██║    ╚██████╗   ██║   ██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╗███████║
-╚═╝  ╚═╝╚═╝     ╚═════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝╚══════╝
-</pre>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/resonance-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/resonance-light.svg">
+  <img src="assets/resonance-light.svg" alt="Vers3Dynamics — an open-source resonant intelligence lab. An abstract line drawing traces the relationships between oscillating signals." width="100%">
+</picture>
 
 # Christopher Woodyard
 
-**Founder + CEO, Vers3Dynamics**
+**Researcher, musician, artist. Founder + CEO of [Vers3Dynamics](https://vers3dynamics.com/).**<br>
+Washington, DC metro
 
-An artist building adaptive systems for biosignal modeling, human-state inference, and closed-loop feedback. I create because the alternative feels impossible: to let a day happen without fully noticing that it happened.
+I build instruments for noticing: software and experimental hardware that make changing relationships between signals easier to see, hear, and question.
 
-`Washington, DC / Bethesda, MD` - `resonant intelligence` - `signal-first systems`
+At Vers3Dynamics, I explore **resonant intelligence** through biosignal research, adaptive systems, and sound. The question running through the work: how can a system respond to change while preserving the person's ability to understand and choose?
 
-<a href="https://ko-fi.com/vers3dynamics"><img src="https://img.shields.io/badge/Ko--fi-Support%20the%20Lab-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" /></a>
+**Resonance as Substrate. Intelligence as a Layer.**
 
-</div>
+[Visit the lab](https://vers3dynamics.com/) · [Explore the work](#start-here) · [Music](https://chriswoodyard.bandcamp.com/) · [Support the lab](https://ko-fi.com/vers3dynamics)
+
+## Start here
+
+### [R.A.I.N. Lab](https://github.com/topherchris420/james_library) · Research orchestration
+
+The research brain of the lab: a local-first, multi-agent environment for investigating questions, comparing explanations, and retaining evidence. Model proposals pass through host-controlled policy; recorded decisions can be inspected and replayed.
+
+[Explore the research interface](https://rainlabteam.vercel.app/) · [Inspect the decision architecture](https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md)
+
+### [Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting) · Signal analysis
+
+A Python framework for examining rhythms, lagged relationships, and structural changes in multivariate time series. Start with a seeded oscillator experiment, then inspect the external benchmark—including the result that did not support its preregistered claim.
+
+[Run the example](https://github.com/topherchris420/dynamic-resonance-rooting#quick-start) · [Read the evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md)
+
+### [CIRCLE](https://github.com/topherchris420/circle) · Biosignal instrumentation
+
+An experimental hardware architecture for synchronized physiological sensing, local recording, and haptic feedback. Schematics, provenance contracts, and review gates make the design inspectable. **Engineering review stage; not cleared for fabrication or human connection.**
+
+[Explore the architecture](https://github.com/topherchris420/circle#hardware-architecture--resonance-assembly) · [Inspect the review gates](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md)
+
+## More from the lab
+
+| Project | What you can explore |
+| --- | --- |
+| [Anna](https://github.com/topherchris420/anna) | Self-hostable research search with hybrid retrieval, inspectable source passages, and portable research records. |
+| [IONS-X](https://github.com/topherchris420/ions-x-deep-emergence-lab) | Collective-sensing simulations with paired synthetic controls and reproducible experiment records. |
+| [Lop Nur Twin / Blacksite](https://github.com/topherchris420/lop-nur-twin) | A browser-based spatial reconstruction from public imagery, with evidence-linked geometry and a separate fictional game mode. |
+
+## How I work
+
+- **Make the evidence inspectable.** Keep observations, model outputs, and hypotheses distinguishable.
+- **Give ideas a way to fail.** Use controls, baselines, and reproducible experiments; publish limitations alongside results.
+- **Keep people in the loop.** Make feedback understandable and consequential decisions reviewable.
+
+My tools span Python and numerical computing, TypeScript and browser interfaces, real-time audio, and 3D visualization. Music, photography, painting, and poetry are part of the same practice: paying closer attention.
+
+If you work on biosignals, research infrastructure, signal analysis, or creative instruments, start with a project above. Reproduce an experiment, question an assumption, or open an issue with a concrete idea.
 
 ---
 
-## What i do
+> I create because the alternative feels impossible: to let a day happen without fully noticing that it happened.
 
-- **Vers3Dynamics:** Building open-source systems that turn changing signals into relationships, relationships into state, and state into feedback.
-- **Resonant intelligence:** prototypes that treat cognition and physiology as time-evolving signals rather than static labels.
-- **Creative instrumentation:** b/w long exposure photography, poetry, painting, audio/visual feedback, and tech that makes invisible states easier to notice.
+**Built by one researcher. Open to whoever wants to explore.**
 
+<details>
+  <summary>Contribution flow</summary>
 
-## Featured Builds
+  <p>The day-to-day work, drawn from public GitHub contributions.</p>
+  <img src="https://raw.githubusercontent.com/topherchris420/topherchris420/output/github-contribution-grid-snake.svg" alt="Animated snake tracing Christopher's GitHub contribution grid. Project links and descriptions are available above." width="100%" loading="lazy">
 
-| Project | Signal | Why It Matters |
-| --- | --- | --- |
-| [`hello_os`](https://github.com/topherchris420/ideas) | Importable rotor/noise modeling playground | Turns raw experimental notebooks into a safer, testable research surface. |
-| [`Vers3Dynamics`](https://courtyard.io/user/vers3dynamics/collection) | Biosignal-to-feedback research system | Explores real-time loops across signals, sound, image, and haptics. |
-| [`R.A.I.N. Lab`](https://rainlabteam.vercel.app/) | Open-ended research practice | Keeps experiments reproducible, remixable, and grounded in responsible simulation. |
-
-## Stack
-
-**Modeling + Analysis**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![Signal Processing](https://img.shields.io/badge/Signal%20Processing-111827?style=flat-square)
-
-**Build + Research Tools**
-
-![Ceci n'est pas une pipe](https://img.shields.io/badge/Ceci%20n'est%20pas%20une%20pipe-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![VS Code](https://img.shields.io/badge/R.A.I.N.%20Lab-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
-
-**Interfaces**
-
-![Audio](https://img.shields.io/badge/Audio%20Feedback-7C3AED?style=flat-square)
-![Visualization](https://img.shields.io/badge/Visualization-0891B2?style=flat-square)
-![Human State](https://img.shields.io/badge/Human%20State%20Systems-059669?style=flat-square)
-
-## Always Open
-
-I'm open to conversations around:
-
-- biosignal modeling and closed-loop feedback
-- creative research tools that turn data into sound, image, or touch
-- responsible simulation spaces for unusual physics and cognition ideas
-
-art is the precondition of human experience. 
-
-<div align="center">
-
-<picture>
-  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/topherchris420/topherchris420/output/github-contribution-grid-snake.svg" />
-</picture>
-
-</div>
+</details>
