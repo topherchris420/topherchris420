@@ -43,7 +43,7 @@ An experimental hardware architecture for synchronized physiological sensing, lo
 | --- | --- |
 | [Anna](https://github.com/topherchris420/anna) | Self-hostable research search with hybrid retrieval, inspectable source passages, and portable research records. |
 | [IONS-X](https://github.com/topherchris420/ions-x-deep-emergence-lab) | Collective-sensing simulations with paired synthetic controls and reproducible experiment records. |
-| [Lop Nur Twin / Blacksite](https://github.com/topherchris420/lop-nur-twin) | A browser-based spatial reconstruction from public imagery, with evidence-linked geometry and a separate fictional game mode. |
+| [Lop Nur Twin / Blacksite](https://github.com/topherchris420/lop-nur-twin) | Exploring what happens when public-source geospatial data becomes interactive: a browser-native 3D environment for simulation, navigation, and emergent play. |
 
 ## How I work
 
