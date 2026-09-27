@@ -55,8 +55,14 @@ scripts, remote fonts, embedded images, or animation. Each has a light and a
 dark variant, selected by a `<picture>` element, with the light image as the
 fallback. Everything a figure says also appears as ordinary Markdown.
 
-- `resonance-*.svg` — the banner. Its curves are an abstract drawing of coupled
-  rhythms, not recorded biosignals or experimental results.
+- `resonance-*.svg` — the banner. Its figure is a drawing of the Adinkra symbol
+  *Nea Onnim No Sua A, Ohu* ("one who does not know can know from learning"),
+  an Akan symbol of knowledge and life-long learning. It is drawn on a 13 × 13
+  grid of 12 px cells, mirror-symmetric on both axes, and redrawn for this
+  profile rather than copied from another artwork. Keep it faithful to the
+  traditional form: no distortion, recolouring beyond the palette, or
+  decoration, and keep its name beneath it. It replaced an earlier
+  interlaced-curve figure that read too much like another company's logo.
 - `constellations-*.svg` — projects grouped around the five questions. Rings mark
   projects that share the typed-judgment layer (Jev); the dashed arc marks the
   IONS-X engine reused in CIRCLE. Update it when a project is added or moves.
