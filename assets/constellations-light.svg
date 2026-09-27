@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Five questions, one lab</title>
+  <desc id="description">A map of Vers3Dynamics projects grouped around five questions. When should a machine's confidence count: R.A.I.N. Lab, Pordenone, Anna, Embedded AI Validation. How do signals move together: DRR, CIRCLE, IONS-X. What happens when agents have to live somewhere: Pine Gap, Lop Nur Twin, Mannahatta, Orpheus. What would have to be measured: Dynamic Location Theory, Woodyard model, hello_os, Project 33. At the centre, what does it sound like: music, Studio, Vanta. Rings mark projects sharing a typed-judgment layer (Jev): R.A.I.N. Lab, Pordenone, DRR, Pine Gap and Lop Nur Twin. A dashed arc marks the IONS-X correlation engine reused in CIRCLE.</desc>
+  <rect width="960" height="560" rx="12" fill="#F4F7F4"/>
+  <rect x="0.5" y="0.5" width="959" height="559" rx="11.5" stroke="#CDDCDA"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="40" y="46" fill="#476B6E" font-size="13" letter-spacing="2" font-weight="600">FIVE QUESTIONS · THE EXPERIMENTS THAT ORBIT THEM</text>
+    <path d="M230 185 L78 209" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 185 L304 235" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 185 L136 265" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 185 L236 285" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 185 L614 217" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 185 L786 231" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 185 L686 275" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 430 L596 463" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 430 L812 465" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 430 L676 507" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M730 430 L832 405" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 430 L46 465" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 430 L248 463" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 430 L96 507" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M230 430 L286 505" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M480 308 L406 347" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M480 308 L478 361" stroke="#CDDCDA" stroke-width="1"/>
+    <path d="M480 308 L426 387" stroke="#CDDCDA" stroke-width="1"/>
+    <circle cx="78" cy="209" r="3.5" fill="#0B5D63"/>
+    <circle cx="304" cy="235" r="3.5" fill="#0B5D63"/>
+    <circle cx="136" cy="265" r="3.5" fill="#0B5D63"/>
+    <circle cx="236" cy="285" r="3.5" fill="#0B5D63"/>
+    <circle cx="230" cy="185" r="7" fill="#F4F7F4" stroke="#0B5D63" stroke-width="2"/>
+    <circle cx="614" cy="217" r="3.5" fill="#0B5D63"/>
+    <circle cx="786" cy="231" r="3.5" fill="#0B5D63"/>
+    <circle cx="686" cy="275" r="3.5" fill="#0B5D63"/>
+    <circle cx="730" cy="185" r="7" fill="#F4F7F4" stroke="#0B5D63" stroke-width="2"/>
+    <circle cx="596" cy="463" r="3.5" fill="#0B5D63"/>
+    <circle cx="812" cy="465" r="3.5" fill="#0B5D63"/>
+    <circle cx="676" cy="507" r="3.5" fill="#0B5D63"/>
+    <circle cx="832" cy="405" r="3.5" fill="#0B5D63"/>
+    <circle cx="730" cy="430" r="7" fill="#F4F7F4" stroke="#0B5D63" stroke-width="2"/>
+    <circle cx="46" cy="465" r="3.5" fill="#0B5D63"/>
+    <circle cx="248" cy="463" r="3.5" fill="#0B5D63"/>
+    <circle cx="96" cy="507" r="3.5" fill="#0B5D63"/>
+    <circle cx="286" cy="505" r="3.5" fill="#0B5D63"/>
+    <circle cx="230" cy="430" r="7" fill="#F4F7F4" stroke="#0B5D63" stroke-width="2"/>
+    <circle cx="406" cy="347" r="3.5" fill="#0B5D63"/>
+    <circle cx="478" cy="361" r="3.5" fill="#0B5D63"/>
+    <circle cx="426" cy="387" r="3.5" fill="#0B5D63"/>
+    <circle cx="480" cy="308" r="7" fill="#F4F7F4" stroke="#0B5D63" stroke-width="2"/>
+    <circle cx="78" cy="209" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <circle cx="304" cy="235" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <circle cx="614" cy="217" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <circle cx="596" cy="463" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <circle cx="812" cy="465" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <path d="M692 283 Q766 315 788 240" stroke="#A0522D" stroke-width="1.4" stroke-dasharray="3 5"/>
+    <text x="92" y="214" fill="#12383C" font-size="15">R.A.I.N. Lab</text>
+    <text x="318" y="240" fill="#12383C" font-size="15">Pordenone</text>
+    <text x="150" y="270" fill="#12383C" font-size="15">Anna</text>
+    <text x="250" y="290" fill="#12383C" font-size="15">Embedded AI Validation</text>
+    <text x="230" y="132" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">When should a machine's</text>
+    <text x="230" y="152" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">confidence count?</text>
+    <text x="628" y="222" fill="#12383C" font-size="15">DRR</text>
+    <text x="800" y="236" fill="#12383C" font-size="15">CIRCLE</text>
+    <text x="700" y="280" fill="#12383C" font-size="15">IONS-X</text>
+    <text x="730" y="132" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">How do signals</text>
+    <text x="730" y="152" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">move together?</text>
+    <text x="610" y="468" fill="#12383C" font-size="15">Pine Gap</text>
+    <text x="826" y="470" fill="#12383C" font-size="15">Lop Nur Twin</text>
+    <text x="690" y="512" fill="#12383C" font-size="15">Mannahatta</text>
+    <text x="846" y="410" fill="#12383C" font-size="15">Orpheus</text>
+    <text x="730" y="377" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">What happens when agents</text>
+    <text x="730" y="397" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">have to live somewhere?</text>
+    <text x="60" y="470" fill="#12383C" font-size="15">Dynamic Location Theory</text>
+    <text x="262" y="468" fill="#12383C" font-size="15">Woodyard model</text>
+    <text x="110" y="512" fill="#12383C" font-size="15">hello_os</text>
+    <text x="300" y="510" fill="#12383C" font-size="15">Project 33</text>
+    <text x="230" y="377" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">What would have to</text>
+    <text x="230" y="397" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">be measured?</text>
+    <text x="420" y="352" fill="#12383C" font-size="15">Music</text>
+    <text x="492" y="366" fill="#12383C" font-size="15">Studio</text>
+    <text x="440" y="392" fill="#12383C" font-size="15">Vanta</text>
+    <text x="480" y="268" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">What does it</text>
+    <text x="480" y="288" fill="#0B5D63" font-size="16" text-anchor="middle" font-weight="600">sound like?</text>
+    <circle cx="552" cy="44" r="8" stroke="#A0522D" stroke-width="1.5"/>
+    <circle cx="552" cy="44" r="3.5" fill="#0B5D63"/>
+    <text x="568" y="49" fill="#476B6E" font-size="13">shares the typed-judgment layer (Jev)</text>
+    <path d="M552 70 H584" stroke="#A0522D" stroke-width="1.4" stroke-dasharray="3 5"/>
+    <text x="592" y="75" fill="#476B6E" font-size="13">engine reused across projects</text>
+  </g>
+</svg>

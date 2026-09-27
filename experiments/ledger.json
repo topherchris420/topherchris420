@@ -1,0 +1,329 @@
+{
+  "schema": "vers3dynamics-ledger/v1",
+  "reviewed": "2026-09-27",
+  "note": "States are judgments made by reading each repository's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began.",
+  "states": {
+    "CONCEIVED": "Stated precisely, with at least one prediction or success condition. Not yet running.",
+    "BUILDING": "Code or hardware design exists. Not yet runnable end to end by someone else.",
+    "EXECUTABLE": "Someone else can run it from the repository.",
+    "OBSERVED": "It produced a recorded result under stated conditions. The scope (synthetic, simulated, physical) is always named.",
+    "REPRODUCED": "The result was regenerated independently: another person, another dataset, or another instrument.",
+    "SUPPORTED": "The claim survived a test stated in advance, against external or physical evidence.",
+    "NOT SUPPORTED": "The claim failed a test stated in advance. It stays on the record."
+  },
+  "experiments": [
+    {
+      "id": "rain-lab",
+      "name": "R.A.I.N. Lab",
+      "repo": "https://github.com/topherchris420/james_library",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "local research meeting, offline demo, bounded decision and judgment interfaces" }
+      ],
+      "open": "Real-model accuracy and speed behind the decision gate are unmeasured (stated in the README).",
+      "next": "Measured accuracy of real models behind the gate.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-02-12", "sha": "16dd8f06317c5ed5f39bbaffec00da8602968956" },
+        "milestones": [
+          { "day": 0, "date": "2026-02-12", "label": "rain_lab.py meeting launcher and agent SOUL files committed" },
+          { "day": 222, "date": "2026-09-22", "label": "promotion gate: independent bounded evidence required before a claim is promoted", "sha": "0c24982bf6b93443676a2f9864dee6a2b83c947d" }
+        ],
+        "caveat": "The Rust runtime descends from ZeroClaw; its imported history carries other contributors. Dates here refer to the R.A.I.N. Lab Python layer."
+      },
+      "compressed": ["multi-agent orchestration", "citation verification", "documentation in six languages", "decision replay tooling"],
+      "not_compressed": ["measuring whether real models make good decisions", "calibration against outcomes"],
+      "evidence": [
+        "https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md",
+        "https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md"
+      ]
+    },
+    {
+      "id": "pordenone",
+      "name": "Pordenone",
+      "repo": "https://github.com/topherchris420/resonate-ai-mesh",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "deterministic hard check, optional model check, record and replay; telemetry is simulated" }
+      ],
+      "open": "Nothing in the repository moves physical hardware; human-state telemetry is labelled SIMULATED.",
+      "next": "A recorded session against live, non-simulated inputs.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2025-07-16" },
+        "milestones": [
+          { "day": 0, "date": "2025-07-16", "label": "started as a 'Resonant AI Router' browser prototype" },
+          { "day": 417, "date": "2026-09-06", "label": "rebuilt as the Pordenone monorepo" },
+          { "day": 432, "date": "2026-09-21", "label": "provider-neutral typed judgment added" }
+        ]
+      },
+      "evidence": ["https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md"]
+    },
+    {
+      "id": "anna",
+      "name": "Anna",
+      "repo": "https://github.com/topherchris420/anna",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "self-hostable search with citation-first answers and explicit refusal when evidence is absent" }
+      ],
+      "next": "A retrieval evaluation on a stated technical corpus.",
+      "timeline": {
+        "reconstructed": false,
+        "caveat": "Built on the Anna's Archive codebase, whose history begins in 2022. Vers3Dynamics commits begin on 2026-02-14."
+      }
+    },
+    {
+      "id": "eaiv",
+      "name": "Embedded AI Validation Platform",
+      "repo": "https://github.com/topherchris420/embedded-ai-validation-platform",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "simulated targets, replay datasets, deterministic fault injection" }
+      ],
+      "open": "Hardware power monitors (INA226, PPK2) are planned; the included monitor is simulated.",
+      "next": "The same validation run against a physical board, with measured power.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-07-10", "sha": "0d2b57b4c5a4f869bc770b940e38890d92b31f6b" },
+        "milestones": [
+          { "day": 0, "date": "2026-07-10", "label": "v0.3.0: fusion filters, hardware-in-the-loop simulator, firmware for four boards, CI", "sha": "b45a541cd377d8e16b67adc430fb600100b59b1a" }
+        ],
+        "caveat": "The repository opens with an upload, so earlier work is not in Git."
+      },
+      "compressed": ["plugin architecture", "sensor-fusion filters", "fault injection", "dashboard", "tests"],
+      "not_compressed": ["measurement on physical hardware", "power characterisation"]
+    },
+    {
+      "id": "drr",
+      "name": "Dynamic Resonance Rooting",
+      "repo": "https://github.com/topherchris420/dynamic-resonance-rooting",
+      "question": "How do signals move together?",
+      "state": [
+        { "state": "OBSERVED", "scope": "Monte Carlo calibration on simulated systems with known answers" },
+        { "state": "NOT SUPPORTED", "scope": "preregistered structural-change comparison on the NOAA CPC quasi-biennial oscillation series" }
+      ],
+      "open": "Whether any external dataset supports the structural-change claim.",
+      "next": "A preregistered external comparison that holds its false-alarm tolerance.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2025-06-14" },
+        "milestones": [
+          { "day": 0, "date": "2025-06-14", "label": "447-line framework module and tutorial notebook committed", "sha": "1dafd59a953df139faaf79948a2123fef3e6a2c7" },
+          { "day": 465, "date": "2026-09-22", "label": "claim boundaries and the preregistered QBO comparison recorded: not_supported", "sha": "bebd3512cadd0780d23b465cc1122d1fcf20be5c" },
+          { "day": 468, "date": "2026-09-25", "label": "rooting surrogates calibrated; depth made unit- and grid-invariant" }
+        ]
+      },
+      "compressed": ["operator implementation", "browser port checked for parity to 1e-9", "benchmarks and reproduction scripts"],
+      "not_compressed": ["choosing a fair external test", "the external result itself"],
+      "evidence": [
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md",
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md",
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"
+      ]
+    },
+    {
+      "id": "circle",
+      "name": "CIRCLE",
+      "repo": "https://github.com/topherchris420/circle",
+      "question": "How do signals move together?",
+      "state": [
+        { "state": "OBSERVED", "scope": "seeded physiological twin, scored on held-out seeds" },
+        { "state": "BUILDING", "scope": "hardware: not fabricated; not cleared for human connection" }
+      ],
+      "open": "Fabrication and human connection are blocked by unresolved review gates.",
+      "next": "Review gates closed, a fabricated board, a bench measurement.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-08-14", "sha": "5fb038724297f33b4ef5c863e0e377e7667b56f3" },
+        "milestones": [
+          { "day": 0, "date": "2026-08-14", "label": "safety basis, reproducible schematic execution, machine-checkable interlocks" },
+          { "day": 3, "date": "2026-08-17", "label": "Rev B electronics engineering package", "sha": "611723ddd09ed76b1ba9976cebc45c03e334bfce" },
+          { "day": 42, "date": "2026-09-25", "label": "physiology twin, Rev B signal pipeline, auditable closed loop", "sha": "74fa8e5af08211d751d5ce43d3151ca5ce2b9319" }
+        ]
+      },
+      "compressed": ["schematics as code", "safety contracts as tests", "CI with KiCad", "a physiological twin"],
+      "not_compressed": ["fabrication", "electrical-safety and EMC review", "any measurement on a person"],
+      "evidence": [
+        "https://github.com/topherchris420/circle/blob/main/docs/review-gates.md",
+        "https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md"
+      ]
+    },
+    {
+      "id": "ions-x",
+      "name": "IONS-X Deep Emergence Lab",
+      "repo": "https://github.com/topherchris420/ions-x-deep-emergence-lab",
+      "question": "How do signals move together?",
+      "state": [
+        { "state": "OBSERVED", "scope": "paired coupled/uncoupled runs in a synthetic field" }
+      ],
+      "open": "Outputs are associations in a synthetic model, not a validated null for empirical data.",
+      "next": "The paired-control design applied to recorded data.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2025-12-17" },
+        "milestones": [
+          { "day": 0, "date": "2025-12-17", "label": "simulation committed", "sha": "90676553c1030e3d4307e8a4051d92892d81cf7a" },
+          { "day": 281, "date": "2026-09-24", "label": "reproducible experiment engine and paired coupling controls", "sha": "9fddbba87100b41c9c4996cfe2fb96d1d05d0d85" }
+        ]
+      },
+      "compressed": ["simulation", "rendering", "packaging"],
+      "not_compressed": ["deciding what the control should be"],
+      "evidence": ["https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md"]
+    },
+    {
+      "id": "pine-gap",
+      "name": "Pine Gap: After Hours",
+      "repo": "https://github.com/topherchris420/satellite-vision-scape",
+      "question": "What happens when agents have to live somewhere?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "browser world, agent runtime, svs-agent-trace/v1 traces" },
+        { "state": "OBSERVED", "scope": "one recorded agent run: an existence proof, not a success rate" }
+      ],
+      "next": "Repeated agent runs and a success rate.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-07-15" },
+        "milestones": [
+          { "day": 0, "date": "2026-07-15", "label": "3D site viewer published from an app-builder template" },
+          { "day": 72, "date": "2026-09-25", "label": "playable third-person open world", "sha": "3863c121a8281309fc8927a9f0cca2712130fcf8" },
+          { "day": 73, "date": "2026-09-26", "label": "After Hours mission and agent runtime", "sha": "f6d4a60237bdec8558b2b0a10f44c9c48348e074" },
+          { "day": 74, "date": "2026-09-27", "label": "agent runtime test suites", "sha": "3e7b4f06d31bb684411b3346dd314ca40e497fab" }
+        ]
+      },
+      "compressed": ["3D world", "physics", "agent runtime and trace format", "tests"],
+      "not_compressed": ["a success rate", "knowing whether the agent is good at the task"],
+      "evidence": ["https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md"]
+    },
+    {
+      "id": "lop-nur",
+      "name": "Lop Nur Twin",
+      "repo": "https://github.com/topherchris420/lop-nur-twin",
+      "question": "What happens when agents have to live somewhere?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "public-source reconstruction with evidence ledger, release manifest, labelled-fiction game" }
+      ],
+      "open": "A public-source reconstruction can record its sources and confidence; it cannot confirm the site.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-07-17", "sha": "7cbff5a9adbe65d00286b40e52bea26904c18718" },
+        "milestones": [
+          { "day": 0, "date": "2026-07-17", "label": "3D airfield twin" },
+          { "day": 2, "date": "2026-07-19", "label": "simulator grounded in reproducible public evidence", "sha": "4a90c4813826f4db35f1ff4fb969124765e51f67" },
+          { "day": 19, "date": "2026-08-05", "label": "shared evidence ledger, release manifest, accessible analysis view", "sha": "c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9" }
+        ]
+      }
+    },
+    {
+      "id": "mannahatta",
+      "name": "Mannahatta",
+      "repo": "https://github.com/topherchris420/cognisync-terrain-weaver",
+      "question": "What happens when agents have to live somewhere?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "in-browser D8 storm routing and fixed-coefficient planning estimates" }
+      ],
+      "next": "Comparison of routed storms against a recorded flood event.",
+      "timeline": {
+        "reconstructed": false,
+        "caveat": "The current history begins on 2026-09-20 with an import of earlier work."
+      }
+    },
+    {
+      "id": "orpheus",
+      "name": "Orpheus",
+      "repo": "https://github.com/topherchris420/orpheus-resonance-protocol",
+      "question": "What happens when agents have to live somewhere?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "interface prototype; physiological values are generated, microphone energy is the only real input" }
+      ],
+      "timeline": { "reconstructed": false }
+    },
+    {
+      "id": "dlt",
+      "name": "Dynamic Location Theory",
+      "repo": "https://github.com/topherchris420/research",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "CONCEIVED", "scope": "predictions stated for atomic-clock interferometry, matter-wave interferometry, gravitational-wave detection; untested" },
+        { "state": "EXECUTABLE", "scope": "dlt_simulation.py, a simulation prototype; not evidence" }
+      ],
+      "next": "An interferometry measurement that could reject it.",
+      "timeline": {
+        "reconstructed": true,
+        "milestones": [
+          { "date": "2025-08-06", "label": "precursor: 'Quantum Localization: Vibrational Variables as Location' (archived repository teleportation)" },
+          { "date": "2026-01-16", "label": "preprint published on Zenodo", "doi": "10.5281/zenodo.18263032" },
+          { "date": "2026-03-31", "label": "research site and paper repository" }
+        ]
+      }
+    },
+    {
+      "id": "woodyard-workstation",
+      "name": "Woodyard model workstation",
+      "repo": "https://github.com/topherchris420/waveform-shift-quantum",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "simulation of a proposed scalar-field localization model beside standard quantum baselines" }
+      ],
+      "open": "The stated falsification condition (a phase-deviation bound from atom interferometry or optical clocks) has not been applied.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2025-08-07" },
+        "milestones": [
+          { "day": 366, "date": "2026-08-08", "label": "Woodyard (2026) localization paper integrated with side-by-side simulations" },
+          { "day": 368, "date": "2026-08-10", "label": "rebuilt as an experiment discovery and falsification engine" }
+        ]
+      }
+    },
+    {
+      "id": "hello-os",
+      "name": "hello_os",
+      "repo": "https://github.com/topherchris420/ideas",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "toy model with synthetic detector traces" }
+      ],
+      "timeline": { "reconstructed": false, "caveat": "Began as a Colab export, preserved under legacy/." }
+    },
+    {
+      "id": "project-33",
+      "name": "Project 33",
+      "repo": "https://github.com/topherchris420/33",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "BUILDING", "scope": "bench-validation prototype; firmware builds in CI; zero physical evidence artifacts; four unresolved claims; no flight claimed" }
+      ],
+      "next": "The first physical evidence artifact.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-07-03" },
+        "milestones": [
+          { "day": 0, "date": "2026-07-03", "label": "raised into a verifiable engineering package; project page deployed", "sha": "22d7f4c4fbabf2ed53714644388f8636db9ab67b" }
+        ],
+        "caveat": "The repository opens with an upload, so earlier work is not in Git."
+      },
+      "compressed": ["firmware hardening", "dashboard", "evidence tooling", "documentation"],
+      "not_compressed": ["bench measurements", "assembling the mechanism", "any flight"],
+      "evidence": [
+        "https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md",
+        "https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md"
+      ]
+    },
+    {
+      "id": "studio",
+      "name": "Vers3Dynamics Studio",
+      "repo": "https://github.com/topherchris420/quantum-spin-sound",
+      "question": "What does it sound like?",
+      "state": [{ "state": "EXECUTABLE", "scope": "live-coding music instrument" }],
+      "timeline": { "reconstructed": false }
+    },
+    {
+      "id": "vanta",
+      "name": "Vanta",
+      "repo": "https://github.com/topherchris420/vanta",
+      "question": "What does it sound like?",
+      "state": [{ "state": "EXECUTABLE", "scope": "portfolio and research atlas" }],
+      "timeline": { "reconstructed": false }
+    }
+  ]
+}

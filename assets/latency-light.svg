@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Build time and evidence time</title>
+  <desc id="description">A timeline chart. For each project, a short solid segment from first commit to first runnable version, and a longer path to the first controlled or external test, or a dashed question mark where that test has not happened. DRR: framework code day 0  ·  preregistered external test day 465: not supported. IONS-X: simulation day 0  ·  paired no-coupling controls day 281 (synthetic). R.A.I.N. Lab: meeting launcher day 0  ·  promotion gate day 222  ·  real-model accuracy: unmeasured. Pine Gap: 3D viewer day 0  ·  playable day 72  ·  agent finishes mission day 73  ·  success rate: one run so far. Project 33: engineering package day 0  ·  physical evidence artifacts: 0. Embedded AI Validation: simulated validation runs day 0  ·  measured power on hardware: planned. CIRCLE: Rev B design day 3  ·  physiology twin day 42  ·  fabrication: blocked by review gates.</desc>
+  <rect width="960" height="600" rx="12" fill="#F4F7F4"/>
+  <rect x="0.5" y="0.5" width="959" height="599" rx="11.5" stroke="#CDDCDA"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="40" y="46" fill="#476B6E" font-size="13" letter-spacing="2" font-weight="600">THE BUILD LINE IS SHORT. THE EVIDENCE LINE IS NOT.</text>
+    <text x="40" y="78" fill="#12383C" font-size="15">Days since each repository's first commit, from Git history.</text>
+    <path d="M262.0 118 V528" stroke="#E3ECE9" stroke-width="1"/>
+    <text x="262.0" y="110" fill="#476B6E" font-size="12" text-anchor="middle">0</text>
+    <path d="M397.4 118 V528" stroke="#E3ECE9" stroke-width="1"/>
+    <text x="397.4" y="110" fill="#476B6E" font-size="12" text-anchor="middle">100</text>
+    <path d="M532.8 118 V528" stroke="#E3ECE9" stroke-width="1"/>
+    <text x="532.8" y="110" fill="#476B6E" font-size="12" text-anchor="middle">200</text>
+    <path d="M668.2 118 V528" stroke="#E3ECE9" stroke-width="1"/>
+    <text x="668.2" y="110" fill="#476B6E" font-size="12" text-anchor="middle">300</text>
+    <path d="M803.7 118 V528" stroke="#E3ECE9" stroke-width="1"/>
+    <text x="803.7" y="110" fill="#476B6E" font-size="12" text-anchor="middle">400</text>
+    <text x="40" y="141" fill="#12383C" font-size="15" font-weight="600">DRR</text>
+    <path d="M262.0 136 H898.5" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 136 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M891.7 129 L898.7 136 L891.7 143 L884.7 136 Z" fill="#A0522D"/>
+    <text x="40" y="162" fill="#476B6E" font-size="13">framework code day 0  ·  preregistered external test day 465: not supported</text>
+    <text x="40" y="199" fill="#12383C" font-size="15" font-weight="600">IONS-X</text>
+    <path d="M262.0 194 H646.6" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 194 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M642.5 187 L649.5 194 L642.5 201 L635.5 194 Z" fill="#A0522D"/>
+    <text x="40" y="220" fill="#476B6E" font-size="13">simulation day 0  ·  paired no-coupling controls day 281 (synthetic)</text>
+    <text x="40" y="257" fill="#12383C" font-size="15" font-weight="600">R.A.I.N. Lab</text>
+    <path d="M262.0 252 H569.4" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 252 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M562.6 246 V258" stroke="#0B5D63" stroke-width="2"/>
+    <path d="M569.4 252 H603.4" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="609.4" y="257" fill="#A0522D" font-size="15" font-weight="600">?</text>
+    <text x="40" y="278" fill="#476B6E" font-size="13">meeting launcher day 0  ·  promotion gate day 222  ·  real-model accuracy: unmeasured</text>
+    <text x="40" y="315" fill="#12383C" font-size="15" font-weight="600">Pine Gap</text>
+    <path d="M262.0 310 H362.2" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 310 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M359.5 304 V316" stroke="#0B5D63" stroke-width="2"/>
+    <path d="M360.9 304 V316" stroke="#0B5D63" stroke-width="2"/>
+    <path d="M362.2 310 H396.2" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="402.2" y="315" fill="#A0522D" font-size="15" font-weight="600">?</text>
+    <text x="40" y="336" fill="#476B6E" font-size="13">3D viewer day 0  ·  playable day 72  ·  agent finishes mission day 73  ·  success rate: one run so far</text>
+    <text x="40" y="373" fill="#12383C" font-size="15" font-weight="600">Project 33</text>
+    <path d="M262.0 368 H378.5" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 368 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M378.5 368 H412.5" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="418.5" y="373" fill="#A0522D" font-size="15" font-weight="600">?</text>
+    <text x="40" y="394" fill="#476B6E" font-size="13">engineering package day 0  ·  physical evidence artifacts: 0</text>
+    <text x="40" y="431" fill="#12383C" font-size="15" font-weight="600">Embedded AI Validation</text>
+    <path d="M262.0 426 H369.0" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 426 H262.0" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M369.0 426 H403.0" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="409.0" y="431" fill="#A0522D" font-size="15" font-weight="600">?</text>
+    <text x="40" y="452" fill="#476B6E" font-size="13">simulated validation runs day 0  ·  measured power on hardware: planned</text>
+    <text x="40" y="489" fill="#12383C" font-size="15" font-weight="600">CIRCLE</text>
+    <path d="M262.0 484 H321.6" stroke="#CDDCDA" stroke-width="2"/>
+    <path d="M262.0 484 H266.1" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <path d="M318.9 478 V490" stroke="#0B5D63" stroke-width="2"/>
+    <path d="M321.6 484 H355.6" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="361.6" y="489" fill="#A0522D" font-size="15" font-weight="600">?</text>
+    <text x="40" y="510" fill="#476B6E" font-size="13">Rev B design day 3  ·  physiology twin day 42  ·  fabrication: blocked by review gates</text>
+    <path d="M40 564 H64" stroke="#0B5D63" stroke-width="6" stroke-linecap="round"/>
+    <text x="74" y="569" fill="#476B6E" font-size="13">first commit → runnable</text>
+    <path d="M262 557 L269 564 L262 571 L255 564 Z" fill="#A0522D"/>
+    <text x="278" y="569" fill="#476B6E" font-size="13">first controlled or external test</text>
+    <path d="M500 564 H530" stroke="#A0522D" stroke-width="2" stroke-dasharray="2 4"/>
+    <text x="538" y="569" fill="#476B6E" font-size="13">still open as of 27 Sep 2026</text>
+  </g>
+</svg>
