@@ -55,7 +55,7 @@ scripts, remote fonts, embedded images, or animation. Each has a light and a
 dark variant, selected by a `<picture>` element, with the light image as the
 fallback. Everything a figure says also appears as ordinary Markdown.
 
-- `resonance-*.svg` — the banner. Its figure is a drawing of the Adinkra symbol
+- `nea-onnim-*.svg` — the banner. Its figure is a drawing of the Adinkra symbol
   *Nea Onnim No Sua A, Ohu* ("one who does not know can know from learning"),
   an Akan symbol of knowledge and life-long learning. It is drawn on a 13 × 13
   grid of 12 px cells, mirror-symmetric on both axes, and redrawn for this
