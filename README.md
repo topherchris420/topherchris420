@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/resonance-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/resonance-light.svg">
-  <img src="assets/resonance-light.svg" alt="Vers3Dynamics — an open-source resonant intelligence lab. Beside the name, the Adinkra symbol Nea Onnim No Sua A, Ohu: one who does not know can know from learning." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/nea-onnim-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/nea-onnim-light.svg">
+  <img src="assets/nea-onnim-light.svg" alt="Vers3Dynamics — an open-source resonant intelligence lab. Beside the name, the Adinkra symbol Nea Onnim No Sua A, Ohu: one who does not know can know from learning." width="100%">
 </picture>
 
 # Christopher Woodyard
