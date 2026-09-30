@@ -37,7 +37,7 @@
       "evidence": [
         "https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md",
         "https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md",
-        "https://github.com/topherchris420/james_library/blob/main/RESULTS.md",
+        "https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md",
         "https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md"
       ],
       "last_reviewed": "2026-09-30",
@@ -141,7 +141,7 @@
       "compressed": ["operator implementation", "browser port checked for parity to 1e-9", "benchmarks and reproduction scripts"],
       "not_compressed": ["choosing a fair external test", "the external result itself"],
       "evidence": [
-        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md",
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"
       ],
@@ -221,12 +221,22 @@
       "not_compressed": ["a success rate", "knowing whether the agent is good at the task"],
       "evidence": [
         "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md",
-        "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/traces/jev-after-hours-live-2026-09-27.json",
+        "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json",
         "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md",
-        "https://github.com/topherchris420/satellite-vision-scape/blob/main/experiments/results/tuning-control-magnitude/report.md"
+        "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md"
       ],
       "last_reviewed": "2026-09-30",
       "observations": [
+        {
+          "experiment": "jev-after-hours-live-2026-09-27",
+          "scope": "one recorded live Jev session in the After Hours simulation",
+          "model": "jev-1.13.0",
+          "task_completed": true,
+          "elapsed_seconds": 457.82,
+          "human_interventions": 0,
+          "source": "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json",
+          "limitation": "One completed session does not establish a success rate or a comparison with human performance. The source pin identifies the stored trace; its build field is 'development', not an executed-code commit."
+        },
         {
           "experiment": "tuning-control-magnitude",
           "scope": "scripted baseline, three control-size conditions, ten paired seeded runs each",

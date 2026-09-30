@@ -6,7 +6,7 @@ This repository is Christopher Woodyard's GitHub profile. The README is the fron
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Person, practice, four starting points, three recorded findings, invitation |
+| Front door | `README.md` | Person, practice, playable lead project, three further entry points, recorded findings, invitation |
 | Project map | `docs/project-map.md` | Five questions, the wider project catalog, discarded approaches |
 | Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped experiment states and source records; JSON is the source of truth |
 | Build history | `experiments/unreasonably-fast.md` | Git-dated timelines and what AI did or did not shorten |
@@ -18,7 +18,8 @@ The front page is curated. Add a project there when it gives a visitor a distinc
 ## Editorial rules
 
 - Lead with the person and something a visitor can experience. Connect the software, research, music, and art through the actual work.
-- Give each featured project a concrete description and an obvious first action. Name setup requirements when they affect that action: Pine Gap's free agent is scripted; R.A.I.N.'s offline demo uses scripted dialogue; live models need configuration.
+- Give each featured project a concrete description and an obvious first action. Lead with Pine Gap's playable experience and actual gameplay capture. Name setup requirements when they affect that action: Pine Gap's free agent is scripted; R.A.I.N.'s offline demo uses scripted dialogue; live models need configuration.
+- Keep measured findings and gameplay media tied to reviewed commit permalinks. Project homepages and setup links follow the current default branch. A permalink identifies a stored artifact; it establishes the executed revision only if the run itself records that revision.
 - Describe capabilities from current public source files. Distinguish an implementation, a prompt's intention, and a measured outcome.
 - Use the evidence ladder in `experiments/README.md` for profile states. Always name synthetic, simulated, software, live-agent, or physical scope.
 - Keep a project's own experiment verdict separate from the profile ladder. A local `PASSED` or `SUPPORTED` result applies to its registered criteria; it does not establish external or physical validation.
@@ -41,6 +42,8 @@ SVGs are self-contained: native text and vector paths, no scripts, remote fonts,
 - `constellations-*.svg` — the September 27 project map, now in `docs/project-map.md`. The caption names the snapshot date and additions absent from the illustration. Rings indicate shared typed judgment; the dashed connection indicates IONS-X reuse in CIRCLE.
 - `latency-*.svg` — the September 27 timeline snapshot, displayed in `experiments/unreasonably-fast.md`. Keep its date and scope explicit; update both variants and the source ledger together for a new snapshot.
 
+The Pine Gap image in `README.md` is the project's actual `docs/media/screens/driving.jpg` capture, referenced at a reviewed commit. It shows the coffee mission and Indigo People on the radio. Keep it static, linked to the playable world, with descriptive alt text and a visible caption. The screenshot is about 94 KB; do not replace it with an autoplay GIF or a generated depiction of gameplay.
+
 | Role | Light | Dark |
 | --- | --- | --- |
 | Background | `#F4F7F4` | `#091A1D` |
@@ -60,7 +63,7 @@ SVGs are self-contained: native text and vector paths, no scripts, remote fonts,
 
 ## Before publishing
 
-1. Check changed public repository and evidence links against their destinations. Most file links use `main`; `research` uses `master`.
+1. Check changed public repository and evidence links against their destinations. Pin quoted findings and media to reviewed revisions; use default-branch links for current setup and source navigation. Most projects use `main`; `research` uses `master`.
 2. Render the README in light and dark modes at desktop and phone widths. Check layout, heading order, readable links, and missing images.
 3. Validate SVG XML and accessible title/description text.
 4. Parse `experiments/ledger.json` and compare the displayed states with it.

@@ -55,8 +55,9 @@ No entry currently meets this profile's independent `REPRODUCED` or external/phy
 
 ## Recent recorded outcomes
 
-- **R.A.I.N.** Exact-span citation checking passed its seeded corpus checks; typography normalization failed. A separate CIRCLE control experiment passed on simulated data. Original runs, same-seed reruns, measurements, criteria, and limits are in [RESULTS.md](https://github.com/topherchris420/james_library/blob/main/RESULTS.md).
-- **Pine Gap.** Ten paired runs per scripted control-size condition: graded turns and taps locked all four terminals in every run; long holds locked none. [Report and raw traces](https://github.com/topherchris420/satellite-vision-scape/blob/main/experiments/results/tuning-control-magnitude/report.md). This tests a control-size effect; repeated live Jev performance remains open.
+- **R.A.I.N.** Exact-span citation checking passed its seeded corpus checks; typography normalization failed. A separate CIRCLE control experiment passed on simulated data. Original runs, same-seed reruns, measurements, criteria, and limits are in [RESULTS.md](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
+- **Pine Gap, live Jev.** One [recorded session](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json) completed After Hours in 457.82 seconds (7m 38s rounded), with zero human interventions. This is one completed run, not a repeated-run success rate or a human comparison. The pinned commit preserves the stored trace; it does not identify the executed code, whose build field is `development`.
+- **Pine Gap, scripted controls.** Ten paired runs per scripted control-size condition: graded turns and taps locked all four terminals in every run; long holds locked none. [Report and raw traces](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md). This tests a control-size effect; repeated live Jev performance remains open.
 
 ## Updating
 
