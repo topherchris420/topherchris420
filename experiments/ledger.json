@@ -1,7 +1,7 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-09-27",
-  "note": "States are judgments made by reading each repository's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began.",
+  "reviewed": "2026-09-30",
+  "note": "States are judgments made by reading each repository's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns do not establish independent replication.",
   "states": {
     "CONCEIVED": "Stated precisely, with at least one prediction or success condition. Not yet running.",
     "BUILDING": "Code or hardware design exists. Not yet runnable end to end by someone else.",
@@ -18,7 +18,8 @@
       "repo": "https://github.com/topherchris420/james_library",
       "question": "When should a machine's confidence count?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "local research meeting, offline demo, bounded decision and judgment interfaces" }
+        { "state": "EXECUTABLE", "scope": "local research meeting, offline demo, bounded interfaces, experiment registry and reviewed simulation workflow" },
+        { "state": "OBSERVED", "scope": "recorded seeded citation checks and CIRCLE simulated controls; same-seed reruns, not independent replication" }
       ],
       "open": "Real-model accuracy and speed behind the decision gate are unmeasured (stated in the README).",
       "next": "Measured accuracy of real models behind the gate.",
@@ -35,7 +36,30 @@
       "not_compressed": ["measuring whether real models make good decisions", "calibration against outcomes"],
       "evidence": [
         "https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md",
-        "https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md"
+        "https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md",
+        "https://github.com/topherchris420/james_library/blob/main/RESULTS.md",
+        "https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md"
+      ],
+      "last_reviewed": "2026-09-30",
+      "observations": [
+        {
+          "experiment": "V3D-EXP-0001",
+          "verdict": "PASSED",
+          "scope": "exact-span citation checking on a local corpus with synthetic corruptions",
+          "limitation": "Does not test semantic support or scientific correctness."
+        },
+        {
+          "experiment": "V3D-EXP-0002",
+          "verdict": "FAILED",
+          "scope": "genuine source quotes with typography normalized to ASCII",
+          "limitation": "The failure and same-seed rerun are retained."
+        },
+        {
+          "experiment": "V3D-EXP-0003",
+          "verdict": "PASSED",
+          "scope": "seeded CIRCLE simulated controls",
+          "limitation": "No physical measurement or human outcome."
+        }
       ]
     },
     {
@@ -120,7 +144,8 @@
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"
-      ]
+      ],
+      "last_reviewed": "2026-09-30"
     },
     {
       "id": "circle",
@@ -147,7 +172,8 @@
       "evidence": [
         "https://github.com/topherchris420/circle/blob/main/docs/review-gates.md",
         "https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md"
-      ]
+      ],
+      "last_reviewed": "2026-09-30"
     },
     {
       "id": "ions-x",
@@ -178,9 +204,9 @@
       "question": "What happens when agents have to live somewhere?",
       "state": [
         { "state": "EXECUTABLE", "scope": "browser world, agent runtime, svs-agent-trace/v1 traces" },
-        { "state": "OBSERVED", "scope": "one recorded agent run: an existence proof, not a success rate" }
+        { "state": "OBSERVED", "scope": "one complete recorded live Jev run and paired scripted simulation episodes; not a live-model success rate" }
       ],
-      "next": "Repeated agent runs and a success rate.",
+      "next": "Repeated live-model runs compared against scripted baselines, with a success rate.",
       "timeline": {
         "reconstructed": true,
         "first_commit": { "date": "2026-07-15" },
@@ -193,7 +219,32 @@
       },
       "compressed": ["3D world", "physics", "agent runtime and trace format", "tests"],
       "not_compressed": ["a success rate", "knowing whether the agent is good at the task"],
-      "evidence": ["https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md"]
+      "evidence": [
+        "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md",
+        "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/traces/jev-after-hours-live-2026-09-27.json",
+        "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md",
+        "https://github.com/topherchris420/satellite-vision-scape/blob/main/experiments/results/tuning-control-magnitude/report.md"
+      ],
+      "last_reviewed": "2026-09-30",
+      "observations": [
+        {
+          "experiment": "tuning-control-magnitude",
+          "scope": "scripted baseline, three control-size conditions, ten paired seeded runs each",
+          "graded": {
+            "runs": 10,
+            "all_four_terminals_locked": 10
+          },
+          "long": {
+            "runs": 10,
+            "all_four_terminals_locked": 0
+          },
+          "tap": {
+            "runs": 10,
+            "all_four_terminals_locked": 10
+          },
+          "limitation": "Tests the control-size effect in one simulation build; does not establish Jev's reliability or independent replication."
+        }
+      ]
     },
     {
       "id": "lop-nur",
@@ -212,7 +263,8 @@
           { "day": 2, "date": "2026-07-19", "label": "simulator grounded in reproducible public evidence", "sha": "4a90c4813826f4db35f1ff4fb969124765e51f67" },
           { "day": 19, "date": "2026-08-05", "label": "shared evidence ledger, release manifest, accessible analysis view", "sha": "c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9" }
         ]
-      }
+      },
+      "last_reviewed": "2026-09-30"
     },
     {
       "id": "mannahatta",
@@ -226,7 +278,8 @@
       "timeline": {
         "reconstructed": false,
         "caveat": "The current history begins on 2026-09-20 with an import of earlier work."
-      }
+      },
+      "last_reviewed": "2026-09-30"
     },
     {
       "id": "orpheus",
@@ -322,8 +375,13 @@
       "name": "Vanta",
       "repo": "https://github.com/topherchris420/vanta",
       "question": "What does it sound like?",
-      "state": [{ "state": "EXECUTABLE", "scope": "portfolio and research atlas" }],
-      "timeline": { "reconstructed": false }
+      "state": [
+        { "state": "EXECUTABLE", "scope": "portfolio and research atlas" }
+      ],
+      "timeline": {
+        "reconstructed": false
+      },
+      "last_reviewed": "2026-09-30"
     }
   ]
 }

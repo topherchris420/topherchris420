@@ -8,6 +8,14 @@ A public record of idea-to-reality latency: how long each step took, what AI sho
 
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/latency-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/latency-light.svg">
+  <img src="../assets/latency-light.svg" alt="September 27, 2026 timeline snapshot for seven projects, measured from first Git commit. Runnable code often arrived early; controlled tests, external evidence, and physical measurements took longer or remain open. Exact dates and sources follow below." width="100%">
+</picture>
+
+*Chart snapshot: 27 September 2026. Subsequent recorded outcomes appear in the [ledger](README.md); the chart describes the Git milestones listed below.*
+
 ## CIRCLE
 
 **Question.** Can a closed-loop biosignal instrument be designed so that every claim it makes — measured, inferred, or acted on — is reviewable before anyone is connected to it?
@@ -23,7 +31,7 @@ A public record of idea-to-reality latency: how long each step took, what AI sho
 **Not compressed.** Fabrication. Electrical-safety and EMC review. Any measurement on a person.
 **Evidence.** [Review gates](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md) · [physiology pipeline](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md)
 
-The first three days fit the [72-hour question](../README.md#unreasonably-fast-deliberately-bounded). The answer the package gave was the useful kind: *not cleared for fabrication or human connection*.
+The first three days fit the [72-hour question](../README.md#how-i-work). The answer the package gave was the useful kind: *not cleared for fabrication or human connection*.
 
 ## Pine Gap: After Hours
 

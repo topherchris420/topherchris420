@@ -1,78 +1,45 @@
 # Profile maintenance
 
-This repository is the GitHub profile for Christopher Woodyard. The README is
-the product: keep it useful in raw Markdown, on a narrow screen, and without
-loading external images.
+This repository is Christopher Woodyard's GitHub profile. The README is the front door: someone should be able to understand the practice, choose something to try, and find the record behind it in about a minute.
 
 ## Structure
 
-The profile uses progressive disclosure. A visitor should understand the lab in
-about a minute from the README; anyone curious can keep descending.
-
 | Layer | File | Job |
 | --- | --- | --- |
-| Map | `README.md` | Who, the rule, five questions, where each experiment stands, what failed, the strata |
-| Ledger | `experiments/README.md`, `experiments/ledger.json` | State of every experiment, with sources; `ledger.json` is the source of truth |
-| Latency | `experiments/unreasonably-fast.md` | Git-dated timelines: what AI compressed and what it did not |
-| Feasibility | `experiments/impossible-six-months-ago.md` | What recently became attemptable, and what it still cannot tell us |
-| Strata | `experiments/archive.md` | The archived repositories, read in order |
+| Front door | `README.md` | Person, practice, four starting points, three recorded findings, invitation |
+| Project map | `docs/project-map.md` | Five questions, the wider project catalog, discarded approaches |
+| Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped experiment states and source records; JSON is the source of truth |
+| Build history | `experiments/unreasonably-fast.md` | Git-dated timelines and what AI did or did not shorten |
+| Feasibility | `experiments/impossible-six-months-ago.md` | What recently became attemptable and what it still cannot tell us |
+| Archive | `experiments/archive.md` | Earlier repositories and their recorded connections |
 
-The README is organized by question, not by repository. Add a new project under
-the question it serves. If it serves none of the five, that is worth noticing
-before adding a sixth.
+The front page is curated. Add a project there when it gives a visitor a distinct, useful way into the practice. Put the wider catalog in the project map under the question it serves. A new repository does not automatically need a new front-page entry.
 
 ## Editorial rules
 
-- Lead with the person, the lab, and the questions. Let projects be the evidence.
-- Use the evidence ladder in `experiments/README.md` for every state. Name the
-  scope (synthetic, simulated, physical). Never promote a state because of a
-  deployment, a demo, or a passing build.
-- Keep failures on the page. A `NOT SUPPORTED` result or an unresolved claim is
-  part of the record; do not remove it when the work moves on.
-- Take timelines only from Git history on the default branch. If no interval
-  can be read honestly, write *timeline not reconstructed yet*.
-- Describe an archived repository from its own README. Give a reason for
-  archiving only if the repository records one. Call a connection to later work
-  a lineage only when it is explicit (same name, same stated idea, reused code);
-  otherwise call it an echo, or say nothing.
-- Link only to public repositories. Private repositories return 404 to visitors.
-- Do not introduce unverified performance, safety, clinical, novelty, or
-  institutional claims. Avoid "pioneering", "first", "revolutionary", and their
-  relatives unless the exact claim is sourced.
-- No badges, statistics cards, skill bars, or animated widgets. GitHub already
-  shows the contribution graph beneath the README.
-- Preserve the artist's voice and the invitation to contribute.
+- Lead with the person and something a visitor can experience. Connect the software, research, music, and art through the actual work.
+- Give each featured project a concrete description and an obvious first action. Name setup requirements when they affect that action: Pine Gap's free agent is scripted; R.A.I.N.'s offline demo uses scripted dialogue; live models need configuration.
+- Describe capabilities from current public source files. Distinguish an implementation, a prompt's intention, and a measured outcome.
+- Use the evidence ladder in `experiments/README.md` for profile states. Always name synthetic, simulated, software, live-agent, or physical scope.
+- Keep a project's own experiment verdict separate from the profile ladder. A local `PASSED` or `SUPPORTED` result applies to its registered criteria; it does not establish external or physical validation.
+- Same-seed reruns by the same project do not establish independent replication under the profile's `REPRODUCED` definition.
+- Keep failures visible with their sources, even when later work addresses them. Never remove an earlier failed run to improve the story.
+- Take timelines from Git history. A first upload records when work entered Git; it may omit earlier work.
+- Do not invent performance, clinical, safety, novelty, or institutional claims.
+- Link to public projects. Keep contact information to the publicly listed collaboration address.
+- Preserve the artist's voice, the invitation to contribute, and the distinction between Christopher's portfolio and the lab.
+- No statistics cards, skill bars, animated widgets, or decorative badges. Native headings and links must carry the complete page without images.
+- Keep the front page readable on a phone. Use vertically stacked project sections; wide comparisons belong in the evidence documents.
 
-The September 2026 refreshes supersede the earlier layout proposal in
-`docs/superpowers/`; those files remain historical planning records. The
-contribution-snake workflow was removed in the second refresh; it can be
-restored from Git history if wanted.
+The September 2026 refreshes supersede `docs/superpowers/`, which remains a historical planning record. Sponsorship configuration belongs in `.github/FUNDING.yml`.
 
 ## Visual assets
 
-All SVGs in `assets/` are self-contained: native text and vector paths, no
-scripts, remote fonts, embedded images, or animation. Each has a light and a
-dark variant, selected by a `<picture>` element, with the light image as the
-fallback. Everything a figure says also appears as ordinary Markdown.
+SVGs are self-contained: native text and vector paths, no scripts, remote fonts, embedded images, or animation. Light and dark variants use a `<picture>` element with a light fallback. Everything they communicate must also exist as ordinary text.
 
-- `nea-onnim-*.svg` — the banner. Its figure is a drawing of the Adinkra symbol
-  *Nea Onnim No Sua A, Ohu* ("one who does not know can know from learning"),
-  an Akan symbol of knowledge and life-long learning. It is drawn on a 13 × 13
-  grid of 12 px cells, mirror-symmetric on both axes, and redrawn for this
-  profile rather than copied from another artwork. Keep it faithful to the
-  traditional form: no distortion, recolouring beyond the palette, or
-  decoration, and keep its name beneath it. It replaced an earlier
-  interlaced-curve figure that read too much like another company's logo.
-- `constellations-*.svg` — projects grouped around the five questions. Rings mark
-  projects that share the typed-judgment layer (Jev); the dashed arc marks the
-  IONS-X engine reused in CIRCLE. Update it when a project is added or moves.
-- `latency-*.svg` — days from first commit to runnable, and to the first
-  controlled or external test, per project. Its numbers must match
-  `experiments/ledger.json`. The "still open" date in its legend is the date of
-  the last review.
-
-The dark variants of `constellations` and `latency` are pure colour
-substitutions of the light files, so geometry changes need to be made in both.
+- `nea-onnim-*.svg` — the profile banner. Preserve the drawing and the name of the Adinkra symbol *Nea Onnim No Sua A, Ohu*, an Akan symbol of knowledge and lifelong learning. Its geometry is mirror-symmetric on a 13 × 13 grid of 12 px cells. Keep the traditional form without distortion or decoration.
+- `constellations-*.svg` — the September 27 project map, now in `docs/project-map.md`. The caption names the snapshot date and additions absent from the illustration. Rings indicate shared typed judgment; the dashed connection indicates IONS-X reuse in CIRCLE.
+- `latency-*.svg` — the September 27 timeline snapshot, displayed in `experiments/unreasonably-fast.md`. Keep its date and scope explicit; update both variants and the source ledger together for a new snapshot.
 
 | Role | Light | Dark |
 | --- | --- | --- |
@@ -80,20 +47,22 @@ substitutions of the light files, so geometry changes need to be made in both.
 | Rule | `#CDDCDA` | `#234044` |
 | Ink | `#12383C` | `#E8F2ED` |
 | Muted | `#476B6E` | `#ADC7C3` |
-| Accent (built) | `#0B5D63` | `#8BD5CC` |
-| Warm (tested, open, shared) | `#A0522D` | `#E8A87C` |
+| Accent | `#0B5D63` | `#8BD5CC` |
+| Warm | `#A0522D` | `#E8A87C` |
 | Grid | `#E3ECE9` | `#10292C` |
 
-## Before publishing an edit
+## Updating evidence
 
-1. Open every changed project, commit, or evidence link and check its
-   destination. Repository files are on `main` except `research`, which uses
-   `master`.
-2. Preview the README in light and dark mode at desktop and phone widths.
-   Verify that figures scale, text wraps, and tables do not clip.
-3. Check the SVG files for valid XML and useful title and description text.
-4. Validate `experiments/ledger.json` (it must parse) and confirm that states in
-   the README match it.
-5. Run `git diff --check` and review the complete diff.
+1. Update the relevant `ledger.json` entry with a source and `last_reviewed` date. The top-level review date is the latest partial review; it does not imply every project was rechecked.
+2. Mirror changed states in `experiments/README.md`. Update front-page findings only when their exact source supports the change.
+3. Keep recorded timelines intact unless Git history justifies a correction. Leave unreconstructed histories labelled.
+4. Add newly discarded approaches to the project map and choose a few useful findings for the front page.
 
-Sponsorship configuration belongs in `.github/FUNDING.yml`.
+## Before publishing
+
+1. Check changed public repository and evidence links against their destinations. Most file links use `main`; `research` uses `master`.
+2. Render the README in light and dark modes at desktop and phone widths. Check layout, heading order, readable links, and missing images.
+3. Validate SVG XML and accessible title/description text.
+4. Parse `experiments/ledger.json` and compare the displayed states with it.
+5. Check relative file links and heading anchors across the documentation.
+6. Run `git diff --check` and review the complete diff.
