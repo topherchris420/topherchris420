@@ -10,6 +10,7 @@ The profile [README](../README.md) is the map. This folder is the record behind 
 | [`unreasonably-fast.md`](unreasonably-fast.md) | How long each step took, from Git history, and what AI did and did not shorten. |
 | [`impossible-six-months-ago.md`](impossible-six-months-ago.md) | Capabilities that recently became attemptable for one person, and what each still cannot tell us. |
 | [`archive.md`](archive.md) | The archived repositories, read as strata. |
+| [`tools/check_profile.py`](../tools/check_profile.py) | The check that runs on every push: this file against the table below, the front page's ladder lines, the project map, every internal link, and every figure. |
 
 ## The evidence ladder
 
@@ -31,7 +32,7 @@ Three rules keep the ladder honest:
 
 ## Where things stand
 
-Initial snapshot: 27 September 2026. A partial review on 30 September refreshed R.A.I.N. and Pine Gap's recorded outcomes and rechecked the DRR, CIRCLE, Lop Nur, Mannahatta, and Vanta descriptions. See each entry's `last_reviewed` in `ledger.json`; remaining entries retain the initial snapshot.
+Initial snapshot: 27 September 2026. A partial review on 30 September refreshed R.A.I.N. and Pine Gap's recorded outcomes and rechecked the DRR, CIRCLE, Lop Nur, Mannahatta, and Vanta descriptions. A review on 4 October added HumanTouch from its public source files and put this table under the automated check. See each entry's `last_reviewed` in `ledger.json`; remaining entries retain the initial snapshot.
 
 | Experiment | Question | State | What would move it |
 | --- | --- | --- | --- |
@@ -46,10 +47,13 @@ Initial snapshot: 27 September 2026. A partial review on 30 September refreshed 
 | [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin) | worlds | `EXECUTABLE` | — a public-source twin records sources; it cannot confirm a site |
 | [Mannahatta](https://github.com/topherchris420/cognisync-terrain-weaver) | worlds | `EXECUTABLE` | routed storms compared against a recorded flood |
 | [Orpheus](https://github.com/topherchris420/orpheus-resonance-protocol) | worlds | `EXECUTABLE` (interface prototype) | — |
-| [Dynamic Location Theory](https://github.com/topherchris420/research) | measurement | `CONCEIVED` (predictions untested) | an interferometry measurement that could reject it |
+| [Dynamic Location Theory](https://github.com/topherchris420/research) | measurement | `CONCEIVED` (predictions untested) · `EXECUTABLE` (simulation prototype; not evidence) | an interferometry measurement that could reject it |
 | [Woodyard model workstation](https://github.com/topherchris420/waveform-shift-quantum) | measurement | `EXECUTABLE` (simulation) | its stated falsification bound applied to published measurements |
 | [hello_os](https://github.com/topherchris420/ideas) | measurement | `EXECUTABLE` (toy model) | — |
 | [Project 33](https://github.com/topherchris420/33) | measurement | `BUILDING` (bench prototype; no flight claimed) | the first physical evidence artifact |
+| [HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch) | sound | `EXECUTABLE` · `OBSERVED` (offline calibration of its measurement instruments on synthetic fixtures; no model) | a live ablation published with its model, date, and per-case results |
+| [Vers3Dynamics Studio](https://github.com/topherchris420/quantum-spin-sound) | sound | `EXECUTABLE` (live-coding instrument) | — |
+| [Vanta](https://github.com/topherchris420/vanta) | sound | `EXECUTABLE` (portfolio and research atlas) | — |
 
 No entry currently meets this profile's independent `REPRODUCED` or external/physical `SUPPORTED` definition. R.A.I.N. records same-seed reruns as “reproduced,” and Pine Gap's scripted experiment reports predictions as “SUPPORTED” under its own criteria. Those are scoped project verdicts; the profile ladder keeps independent replication and external evidence distinct.
 
@@ -58,10 +62,12 @@ No entry currently meets this profile's independent `REPRODUCED` or external/phy
 - **R.A.I.N.** Exact-span citation checking passed its seeded corpus checks; typography normalization failed. A separate CIRCLE control experiment passed on simulated data. Original runs, same-seed reruns, measurements, criteria, and limits are in [RESULTS.md](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
 - **Pine Gap, live Jev.** One [recorded session](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json) completed After Hours in 457.82 seconds (7m 38s rounded), with zero human interventions. This is one completed run, not a repeated-run success rate or a human comparison. The pinned commit preserves the stored trace; it does not identify the executed code, whose build field is `development`.
 - **Pine Gap, scripted controls.** Ten paired runs per scripted control-size condition: graded turns and taps locked all four terminals in every run; long holds locked none. [Report and raw traces](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md). This tests a control-size effect; repeated live Jev performance remains open.
+- **HumanTouch, instruments.** The offline evaluation runs 13 synthetic fixtures through the measurement code with no model. In the stored results file, timestamped 3 October 2026, hand-written faithful revisions score an unnecessary-change rate of 0.000 and over-edited ones 0.668, with the other metrics separating the same way; the Space's README quotes an earlier run. This calibrates the instruments. It says nothing about what a live model does. [Results file](https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md) · [method](https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md#evaluation).
 
 ## Updating
 
 1. Change `ledger.json` first, with the source that justifies the new state.
 2. Mirror the change in the table above and, if the experiment appears there, in the profile README.
-3. Never promote a state because of a deployment, a demo, or a passing build. Demote freely.
-4. When a claim fails, add it to [“What didn’t survive contact”](../docs/project-map.md#what-didnt-survive-contact). Do not delete the entry when the work moves on.
+3. Run `python3 ../tools/check_profile.py` from this folder, or `python3 tools/check_profile.py` from the repository root. It fails when this table, the front page, or the project map disagrees with `ledger.json`.
+4. Never promote a state because of a deployment, a demo, or a passing build. Demote freely.
+5. When a claim fails, add it to [“What didn’t survive contact”](../docs/project-map.md#what-didnt-survive-contact). Do not delete the entry when the work moves on.

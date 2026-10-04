@@ -1,7 +1,14 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-09-30",
-  "note": "States are judgments made by reading each repository's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns do not establish independent replication.",
+  "reviewed": "2026-10-04",
+  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
+  "questions": {
+    "confidence": "When should a machine's confidence count?",
+    "signals": "How do signals move together?",
+    "worlds": "What happens when agents have to live somewhere?",
+    "measurement": "What would have to be measured?",
+    "sound": "What does it sound like?"
+  },
   "states": {
     "CONCEIVED": "Stated precisely, with at least one prediction or success condition. Not yet running.",
     "BUILDING": "Code or hardware design exists. Not yet runnable end to end by someone else.",
@@ -392,6 +399,40 @@
         "reconstructed": false
       },
       "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "humantouch",
+      "name": "HumanTouch",
+      "repo": "https://huggingface.co/spaces/ciaochris/HumanTouch",
+      "question": "What does it sound like?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "Gradio writing studio and six stateless tools on Hugging Face Spaces; measurement runs without a model, editing needs the Space's configured provider" },
+        { "state": "OBSERVED", "scope": "offline evaluation of the measurement instruments on 13 synthetic fixtures with hand-written faithful and over-edited reference revisions; no model involved" }
+      ],
+      "open": "Whether the constraints and guard improve a live model's edits. The live ablation's numbers vary between runs, and the Space's README says to read the latest results file rather than any quoted figure.",
+      "next": "A live ablation across the five conditions, published with its model, date, and per-case results.",
+      "timeline": {
+        "reconstructed": false,
+        "caveat": "Hosted on Hugging Face Spaces; its history was not read for this ledger."
+      },
+      "compressed": ["the studio", "deterministic measurement", "change ledger and guard", "offline evaluation harness"],
+      "not_compressed": ["knowing whether a live model's edits are better for the writer"],
+      "evidence": [
+        "https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md",
+        "https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md",
+        "https://huggingface.co/spaces/ciaochris/HumanTouch/tree/main/evals"
+      ],
+      "last_reviewed": "2026-10-04",
+      "observations": [
+        {
+          "experiment": "offline-reference-revisions",
+          "scope": "13 synthetic fixtures with hand-written faithful and over-edited reference revisions, run through the measurement code; no model",
+          "recorded": "2026-10-03T17:52:28Z",
+          "unnecessary_change_rate": { "faithful": 0.0, "smoothed": 0.668, "n": 9 },
+          "source": "https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md",
+          "limitation": "Calibrates the instruments against hand-written references. It says nothing about a live model's edits; the Space's README quotes an earlier run of the same evaluation."
+        }
+      ]
     }
   ]
 }

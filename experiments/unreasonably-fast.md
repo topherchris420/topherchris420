@@ -27,9 +27,9 @@ A public record of idea-to-reality latency: how long each step took, what AI sho
 | 42 | 2026-09-25 | [Physiology twin, signal pipeline, auditable closed loop](https://github.com/topherchris420/circle/commit/74fa8e5af08211d751d5ce43d3151ca5ce2b9319) |
 | — | open | Fabrication; human connection |
 
-**Compressed.** Schematics as code, safety contracts as tests, KiCad in CI, a seeded physiological twin with held-out scoring.
-**Not compressed.** Fabrication. Electrical-safety and EMC review. Any measurement on a person.
-**Evidence.** [Review gates](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md) · [physiology pipeline](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md)
+- **Compressed.** Schematics as code, safety contracts as tests, KiCad in CI, a seeded physiological twin with held-out scoring.
+- **Not compressed.** Fabrication. Electrical-safety and EMC review. Any measurement on a person.
+- **Evidence.** [Review gates](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md) · [physiology pipeline](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md)
 
 The first three days fit the [72-hour question](../README.md#how-i-work). The answer the package gave was the useful kind: *not cleared for fabrication or human connection*.
 
@@ -45,9 +45,9 @@ The first three days fit the [72-hour question](../README.md#how-i-work). The an
 | 74 | 2026-09-27 | [Agent runtime test suites](https://github.com/topherchris420/satellite-vision-scape/commit/3e7b4f06d31bb684411b3346dd314ca40e497fab) |
 | — | open | A success rate |
 
-**Compressed.** The world, the physics, the agent runtime, the trace format, the tests.
-**Not compressed.** Knowing whether the agent is good at the task. The README says it directly: *one run is an existence proof, not a success rate.*
-**Evidence.** [Agent runtime, contracts and limits](https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md)
+- **Compressed.** The world, the physics, the agent runtime, the trace format, the tests.
+- **Not compressed.** Knowing whether the agent is good at the task. The README says it directly: *one run is an existence proof, not a success rate.*
+- **Evidence.** [Agent runtime, contracts and limits](https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md)
 
 ## Dynamic Resonance Rooting
 
@@ -59,9 +59,9 @@ The first three days fit the [72-hour question](../README.md#how-i-work). The an
 | 465 | 2026-09-22 | [Claim boundaries and the preregistered QBO comparison](https://github.com/topherchris420/dynamic-resonance-rooting/commit/bebd3512cadd0780d23b465cc1122d1fcf20be5c): **not supported** |
 | 468 | 2026-09-25 | Surrogate calibration; depth made unit- and grid-invariant |
 
-**Compressed.** The operators, a browser port checked for parity with the Python package to 1e-9, benchmark and reproduction scripts.
-**Not compressed.** Choosing a fair external test, fixing it in advance, and accepting the answer.
-**Evidence.** [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md) · [validation report](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md) · [benchmarks](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md)
+- **Compressed.** The operators, a browser port checked for parity with the Python package to 1e-9, benchmark and reproduction scripts.
+- **Not compressed.** Choosing a fair external test, fixing it in advance, and accepting the answer.
+- **Evidence.** [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md) · [validation report](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md) · [benchmarks](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md)
 
 The longest interval in this record, and the most informative. The framework went into Git on the first afternoon. A fair test took fifteen months.
 
@@ -74,9 +74,9 @@ The longest interval in this record, and the most informative. The framework wen
 | 0 | 2025-12-17 | [Simulation committed](https://github.com/topherchris420/ions-x-deep-emergence-lab/commit/90676553c1030e3d4307e8a4051d92892d81cf7a) |
 | 281 | 2026-09-24 | [Paired coupled/uncoupled controls](https://github.com/topherchris420/ions-x-deep-emergence-lab/commit/9fddbba87100b41c9c4996cfe2fb96d1d05d0d85) |
 
-**Compressed.** Simulation, rendering, packaging.
-**Not compressed.** Deciding what the control should be. The engine existed for nine months before it could answer its own question.
-**Evidence.** [Experiment design and limitations](https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md)
+- **Compressed.** Simulation, rendering, packaging.
+- **Not compressed.** Deciding what the control should be. The engine existed for nine months before it could answer its own question.
+- **Evidence.** [Experiment design and limitations](https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md)
 
 ## R.A.I.N. Lab
 
@@ -88,9 +88,9 @@ The longest interval in this record, and the most informative. The framework wen
 | 222 | 2026-09-22 | [Promotion gate: independent bounded evidence before a claim is promoted](https://github.com/topherchris420/james_library/commit/0c24982bf6b93443676a2f9864dee6a2b83c947d) |
 | — | open | Real-model accuracy and speed behind the gate |
 
-**Compressed.** Multi-agent orchestration, citation verification, replay tooling, documentation in six languages.
-**Not compressed.** Measuring whether real models make good decisions.
-**Evidence.** [Bounded decisions](https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md) · [typed judgment](https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md)
+- **Compressed.** Multi-agent orchestration, citation verification, replay tooling, documentation in six languages.
+- **Not compressed.** Measuring whether real models make good decisions.
+- **Evidence.** [Bounded decisions](https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md) · [typed judgment](https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md)
 
 The Rust runtime descends from ZeroClaw and carries its contributors' history; the dates here refer to the R.A.I.N. Lab research layer.
 
@@ -103,8 +103,8 @@ The Rust runtime descends from ZeroClaw and carries its contributors' history; t
 | 0 | 2026-07-10 | Upload, then [v0.3.0](https://github.com/topherchris420/embedded-ai-validation-platform/commit/b45a541cd377d8e16b67adc430fb600100b59b1a) the same day: fusion filters, hardware-in-the-loop simulator, firmware for four boards, CI |
 | — | open | Measured power on physical hardware |
 
-**Compressed.** The plugin architecture, filters, fault injection, dashboard, tests.
-**Not compressed.** Measurement on a physical board. The hardware power monitors are listed as planned.
+- **Compressed.** The plugin architecture, filters, fault injection, dashboard, tests.
+- **Not compressed.** Measurement on a physical board. The hardware power monitors are listed as planned.
 
 ## Project 33
 
@@ -115,9 +115,9 @@ The Rust runtime descends from ZeroClaw and carries its contributors' history; t
 | 0 | 2026-07-03 | Upload, then [raised into a verifiable engineering package](https://github.com/topherchris420/33/commit/22d7f4c4fbabf2ed53714644388f8636db9ab67b) with a deployed project page |
 | — | open | The first physical evidence artifact |
 
-**Compressed.** Firmware hardening, dashboard, evidence tooling, documentation.
-**Not compressed.** Bench measurements, an assembled mechanism, any flight. The evidence catalog records zero physical artifacts.
-**Evidence.** [Evidence Observatory](https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md) · [paper alignment](https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md)
+- **Compressed.** Firmware hardening, dashboard, evidence tooling, documentation.
+- **Not compressed.** Bench measurements, an assembled mechanism, any flight. The evidence catalog records zero physical artifacts.
+- **Evidence.** [Evidence Observatory](https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md) · [paper alignment](https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md)
 
 ## Lop Nur Twin
 
@@ -129,8 +129,8 @@ The Rust runtime descends from ZeroClaw and carries its contributors' history; t
 | 2 | 2026-07-19 | [Grounded in reproducible public evidence](https://github.com/topherchris420/lop-nur-twin/commit/4a90c4813826f4db35f1ff4fb969124765e51f67) |
 | 19 | 2026-08-05 | [Evidence ledger, release manifest, accessible analysis view](https://github.com/topherchris420/lop-nur-twin/commit/c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9) |
 
-**Compressed.** Geometry, rendering, the ledger, the comparison tooling.
-**Not compressed.** Ground truth. A public-source reconstruction can record where every shape came from; it cannot confirm what is there.
+- **Compressed.** Geometry, rendering, the ledger, the comparison tooling.
+- **Not compressed.** Ground truth. A public-source reconstruction can record where every shape came from; it cannot confirm what is there.
 
 ## Location as resonance
 
@@ -146,8 +146,8 @@ This line of work spans three repositories, so its intervals are counted in cale
 | 2026-08-10 | [Woodyard model workstation](https://github.com/topherchris420/waveform-shift-quantum) rebuilt as a falsification engine |
 | open | An interferometry bound applied to the model |
 
-**Compressed.** Simulation, visualization, typesetting, a workstation that compares the proposal with standard baselines.
-**Not compressed.** Any measurement. The predictions concern atomic clocks and matter-wave interferometers; nothing on a laptop can settle them.
+- **Compressed.** Simulation, visualization, typesetting, a workstation that compares the proposal with standard baselines.
+- **Not compressed.** Any measurement. The predictions concern atomic clocks and matter-wave interferometers; nothing on a laptop can settle them.
 
 ---
 

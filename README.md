@@ -8,15 +8,13 @@
 
 **I make strange things and test whether they work.**
 
-Researcher, educator, musician, artist. I run [Vers3Dynamics](https://vers3dynamics.com/), an open-source resonant intelligence lab in the Washington, DC metro.
-
-I turn questions about intelligence, perception, and resonance into things you can play, run, inspect, or hear.
+Researcher, educator, musician, artist. I run [Vers3Dynamics](https://vers3dynamics.com/), an open-source resonant intelligence lab in the Washington, DC metro, where questions about intelligence, perception, and resonance become things you can play, run, inspect, or hear.
 
 **Built by one researcher. Held in common. Free to explore.**
 
 [**Play Pine Gap →**](https://geotwn.vercel.app/) · [**Explore my portfolio →**](https://mitpress.vercel.app/) · [**Listen to Indigo People →**](https://chriswoodyard.bandcamp.com/)
 
-[Selected work](#start-somewhere) · [Recorded results](#what-the-record-says) · [The full project map](docs/project-map.md)
+[Start somewhere](#start-somewhere) · [What the record says](#what-the-record-says) · [What would move it](#what-would-move-the-record) · [The full project map](docs/project-map.md)
 
 ## Start somewhere
 
@@ -38,6 +36,10 @@ Choose **After Hours** to start the mission. The scripted agent needs no key; li
 
 One [recorded live Jev run](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json) completed the mission in **7m 38s**, with **zero human interventions**. Repeated live-model reliability remains an open question.
 
+<!-- ledger:pine-gap -->
+
+On the ladder: `EXECUTABLE` · `OBSERVED` (one complete live run; paired scripted episodes). Not yet a success rate.
+
 ### R.A.I.N. Lab · Think with a room that can disagree
 
 Bring a question or a difficult paper. Four constrained AI perspectives examine it, check quotations, and keep the disagreement. Register an experiment and preserve the criteria and outcome, including failures.
@@ -46,11 +48,21 @@ Bring a question or a difficult paper. Four constrained AI perspectives examine 
 
 Python 3.12+ runs the offline demo with scripted dialogue. Live meetings need a configured model.
 
+<!-- ledger:rain-lab -->
+
+On the ladder: `EXECUTABLE` · `OBSERVED` (seeded citation checks and simulated controls; same-seed reruns). The accuracy of real models behind the gate is unmeasured.
+
 ### HumanTouch · Keep the texture of your voice
 
-Revise a draft, steer its tone with a voice profile, and make variations from the same source. Keep your rhythm and point of view in the process; choose the final edit.
+Paste a draft and say what you want changed. The model may change expression; it may not silently change meaning, certainty, facts, or the habits that make the writing yours. Every edit lands in a change ledger with a tick-box that restores your wording, and edits that touch certainty, numbers, or negation are withheld unless you asked for them. You choose the final text.
 
 [**Open the writing studio →**](https://huggingface.co/spaces/ciaochris/HumanTouch) · [Source](https://huggingface.co/spaces/ciaochris/HumanTouch/tree/main)
+
+Measurement runs on the Space with no model. Editing uses the Space's configured provider.
+
+<!-- ledger:humantouch -->
+
+On the ladder: `EXECUTABLE` · `OBSERVED` (offline calibration of its own instruments on synthetic fixtures; no model). Whether a live model edits better under these constraints is not yet measured.
 
 ### Dynamic Resonance Rooting · Question the pattern
 
@@ -58,9 +70,15 @@ Find recurring frequencies, explore which signals lead others, and inspect struc
 
 [**Run the synthetic example →**](https://github.com/topherchris420/dynamic-resonance-rooting#quick-start) · [Source](https://github.com/topherchris420/dynamic-resonance-rooting)
 
+<!-- ledger:drr -->
+
+On the ladder: `OBSERVED` (synthetic calibration) · `NOT SUPPORTED` (one preregistered external test). The failure stays on the record.
+
 Further in: [Lop Nur Twin / Blacksite](https://github.com/topherchris420/lop-nur-twin) · [Mannahatta](https://github.com/topherchris420/cognisync-terrain-weaver) · [CIRCLE](https://github.com/topherchris420/circle) · [All five questions](docs/project-map.md)
 
 ## What the record says
+
+Every project sits on a ladder: `CONCEIVED` → `BUILDING` → `EXECUTABLE` → `OBSERVED` → `REPRODUCED` → `SUPPORTED`, with `NOT SUPPORTED` for a claim that failed a test stated in advance. The scope is part of the state, so a result on a synthetic system never reads as a result on a person. Nothing climbs because it was deployed or demoed. Nothing here has reached `REPRODUCED` or `SUPPORTED` yet.
 
 *Reviewed 30 September 2026. Sources below are pinned to the reviewed revisions.*
 
@@ -68,7 +86,18 @@ Further in: [Lop Nur Twin / Blacksite](https://github.com/topherchris420/lop-nur
 - **R.A.I.N. · A quotation check can be too strict.** Verbatim quotes passed and fabricated variants failed the seeded checks. All 50 genuine quotes failed after typography changes. [Passing and failing runs](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
 - **DRR · An external test can say no.** On NOAA's QBO series, the structural-change test exceeded its preregistered false-alarm tolerance. The claim remains **not supported**. [Protocol and result](https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md).
 
-[**Evidence ledger →**](experiments/README.md) · [Earlier findings and discarded approaches](docs/project-map.md#what-didnt-survive-contact)
+[**Evidence ledger →**](experiments/README.md) · [Machine-readable](experiments/ledger.json) · [Earlier findings and discarded approaches](docs/project-map.md#what-didnt-survive-contact)
+
+## What would move the record
+
+Every ledger entry names the next thing that would change its state. These are the ones a visitor could do:
+
+- **Run Pine Gap's live agent ten times.** One completed run is an existence proof. Ten traces beside the scripted baseline would be a success rate. [Live Jev setup](https://github.com/topherchris420/satellite-vision-scape#run-jev-yourself) · [Trace format](https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md)
+- **Bring DRR a series with a known break.** The structural-change test failed its preregistered tolerance on one external dataset. A second dataset, with the tolerance stated first, would show whether the fault is in the operator or the series. [Protocol](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md)
+- **Measure a real model behind R.A.I.N.'s gate.** The gate exists; the accuracy of the models it constrains does not yet have a number. [Bounded decisions](https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md)
+- **Reproduce anything.** No entry has been regenerated by someone who is not its author. That rung is the one I cannot climb alone.
+
+Open an issue in the project's repository with what you ran and what you saw, including the runs that failed. [Every entry's next step →](experiments/README.md#where-things-stand)
 
 ## How I work
 
@@ -78,7 +107,9 @@ Use AI to reach a working thing quickly. Pick a useful test that fits inside 72 
 
 Models propose. Host code checks. People decide.
 
-[What AI made faster](experiments/unreasonably-fast.md) · [What recently became possible](experiments/impossible-six-months-ago.md)
+This page is held to the same rule. On every push, a [script](tools/check_profile.py) compares each state shown here with the [ledger](experiments/ledger.json), resolves every internal link, and validates every figure. If the page and the record disagree, the check fails.
+
+[What AI made faster](experiments/unreasonably-fast.md) · [What recently became possible](experiments/impossible-six-months-ago.md) · [How this page is maintained](docs/profile-maintenance.md)
 
 ## One practice, many forms
 
@@ -90,7 +121,7 @@ The music on Pine Gap's radio is my album *Green Machine*, recorded as **Indigo 
 
 *What emerges between them belongs to everyone.*
 
-Try a project. Reproduce a result. Open an issue in its repository with what surprised you. For collaboration, [get in touch](mailto:christopher@vers3dynamics.com); to help keep the work open, [support the lab](https://ko-fi.com/vers3dynamics).
+Try a project. Reproduce a result. For collaboration, [get in touch](mailto:christopher@vers3dynamics.com); to help keep the work open, [support the lab](https://ko-fi.com/vers3dynamics).
 
 ---
 

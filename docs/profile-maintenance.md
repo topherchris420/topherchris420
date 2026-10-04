@@ -12,6 +12,7 @@ This repository is Christopher Woodyard's GitHub profile. The README is the fron
 | Build history | `experiments/unreasonably-fast.md` | Git-dated timelines and what AI did or did not shorten |
 | Feasibility | `experiments/impossible-six-months-ago.md` | What recently became attemptable and what it still cannot tell us |
 | Archive | `experiments/archive.md` | Earlier repositories and their recorded connections |
+| Check | `tools/check_profile.py`, `.github/workflows/check.yml` | Compares every page with the ledger on each push: states, question labels, links, anchors, figures |
 
 The front page is curated. Add a project there when it gives a visitor a distinct, useful way into the practice. Put the wider catalog in the project map under the question it serves. A new repository does not automatically need a new front-page entry.
 
@@ -22,6 +23,7 @@ The front page is curated. Add a project there when it gives a visitor a distinc
 - Keep measured findings and gameplay media tied to reviewed commit permalinks. Project homepages and setup links follow the current default branch. A permalink identifies a stored artifact; it establishes the executed revision only if the run itself records that revision.
 - Describe capabilities from current public source files. Distinguish an implementation, a prompt's intention, and a measured outcome.
 - Use the evidence ladder in `experiments/README.md` for profile states. Always name synthetic, simulated, software, live-agent, or physical scope.
+- Give each featured project a ladder line and put `<!-- ledger:ID -->` on the line before it. The check compares the backticked states on that line with the entry in `ledger.json`, so a project without a ledger entry cannot be featured.
 - Keep a project's own experiment verdict separate from the profile ladder. A local `PASSED` or `SUPPORTED` result applies to its registered criteria; it does not establish external or physical validation.
 - Same-seed reruns by the same project do not establish independent replication under the profile's `REPRODUCED` definition.
 - Keep failures visible with their sources, even when later work addresses them. Never remove an earlier failed run to improve the story.
@@ -32,7 +34,7 @@ The front page is curated. Add a project there when it gives a visitor a distinc
 - No statistics cards, skill bars, animated widgets, or decorative badges. Native headings and links must carry the complete page without images.
 - Keep the front page readable on a phone. Use vertically stacked project sections; wide comparisons belong in the evidence documents.
 
-The September 2026 refreshes supersede `docs/superpowers/`, which remains a historical planning record. Sponsorship configuration belongs in `.github/FUNDING.yml`.
+The September 2026 refreshes supersede `docs/superpowers/`, which remains a historical planning record with its own [note](superpowers/README.md). Sponsorship configuration belongs in `.github/FUNDING.yml`.
 
 ## Visual assets
 
@@ -57,15 +59,14 @@ The Pine Gap image in `README.md` is the project's actual `docs/media/screens/dr
 ## Updating evidence
 
 1. Update the relevant `ledger.json` entry with a source and `last_reviewed` date. The top-level review date is the latest partial review; it does not imply every project was rechecked.
-2. Mirror changed states in `experiments/README.md`. Update front-page findings only when their exact source supports the change.
-3. Keep recorded timelines intact unless Git history justifies a correction. Leave unreconstructed histories labelled.
-4. Add newly discarded approaches to the project map and choose a few useful findings for the front page.
+2. Mirror changed states in `experiments/README.md` and on the front page's ladder lines. Update front-page findings only when their exact source supports the change.
+3. Run `python3 tools/check_profile.py`. It fails when any page disagrees with the ledger.
+4. Keep recorded timelines intact unless Git history justifies a correction. Leave unreconstructed histories labelled. The check verifies that each milestone's day count matches its date.
+5. Add newly discarded approaches to the project map and choose a few useful findings for the front page.
 
 ## Before publishing
 
-1. Check changed public repository and evidence links against their destinations. Pin quoted findings and media to reviewed revisions; use default-branch links for current setup and source navigation. Most projects use `main`; `research` uses `master`.
-2. Render the README in light and dark modes at desktop and phone widths. Check layout, heading order, readable links, and missing images.
-3. Validate SVG XML and accessible title/description text.
-4. Parse `experiments/ledger.json` and compare the displayed states with it.
-5. Check relative file links and heading anchors across the documentation.
-6. Run `git diff --check` and review the complete diff.
+1. Run `python3 tools/check_profile.py`. It parses the ledger, compares every displayed state with it, resolves relative links and heading anchors, and validates the SVG assets. Add `--external` to also confirm that outside links answer. The same check runs in GitHub Actions on every push.
+2. Check changed public repository and evidence links against their destinations. Pin quoted findings and media to reviewed revisions; use default-branch links for current setup and source navigation. Most projects use `main`; `research` uses `master`; HumanTouch lives on Hugging Face Spaces.
+3. Render the README in light and dark modes at desktop and phone widths. Check layout, heading order, readable links, and missing images.
+4. Run `git diff --check` and review the complete diff.

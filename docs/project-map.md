@@ -56,7 +56,7 @@ Music, photography, painting, poetry, and software are ways of paying closer att
 - **[Indigo People](https://chriswoodyard.bandcamp.com/)** — my recordings on Bandcamp.
 - **[Vers3Dynamics Studio](https://github.com/topherchris420/quantum-spin-sound)** — live-coded music with Strudel and audio-reactive visuals.
 - **[Vanta](https://github.com/topherchris420/vanta)** — writing, instruments, worlds, art, and music as five channels in one portfolio, with a source-linked research atlas. [Explore](https://mitpress.vercel.app/).
-- **[HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch)** — a writing studio with voice steering and source-text variations. Its prompts direct the model to preserve meaning, qualifiers, and point of view; every output still needs the writer's review.
+- **[HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch)** — a writing studio where a model may change expression but not silently change meaning, certainty, or facts. The change ledger, the guard that withholds certainty and number changes, and the authorship map are HumanTouch's own code, applied after any model. An offline evaluation calibrates those instruments on synthetic fixtures; a live model's edits are not yet measured.
 
 ## What didn't survive contact
 
