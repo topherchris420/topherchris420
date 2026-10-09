@@ -6,7 +6,7 @@ This repository is Christopher Woodyard's GitHub profile. The README is the fron
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Person, practice, playable lead project, three further entry points, recorded findings, invitation |
+| Front door | `README.md` | Person, philosophy, five entry points spanning research, governed agents, signals, worlds, and authorship; recorded findings and invitation |
 | Project map | `docs/project-map.md` | Five questions, the wider project catalog, discarded approaches |
 | Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped experiment states and source records; JSON is the source of truth |
 | Build history | `experiments/unreasonably-fast.md` | Git-dated timelines and what AI did or did not shorten |
@@ -19,7 +19,7 @@ The front page is curated. Add a project there when it gives a visitor a distinc
 ## Editorial rules
 
 - Lead with the person and something a visitor can experience. Connect the software, research, music, and art through the actual work.
-- Give each featured project a concrete description and an obvious first action. Lead with Pine Gap's playable experience and actual gameplay capture. Name setup requirements when they affect that action: Pine Gap's free agent is scripted; R.A.I.N.'s offline demo uses scripted dialogue; live models need configuration.
+- Give each featured project a concrete description and an obvious first action. Lead with the research philosophy and distinct ways in while keeping Pine Gap's playable experience and actual gameplay capture. Name setup requirements: Pine Gap's free agent is scripted; the original R.A.I.N. offline demo uses scripted dialogue; newer R.A.I.N. autonomy runs only locally with a configured model.
 - Keep measured findings and gameplay media tied to reviewed commit permalinks. Project homepages and setup links follow the current default branch. A permalink identifies a stored artifact; it establishes the executed revision only if the run itself records that revision.
 - Describe capabilities from current public source files. Distinguish an implementation, a prompt's intention, and a measured outcome.
 - Use the evidence ladder in `experiments/README.md` for profile states. Always name synthetic, simulated, software, live-agent, or physical scope.
