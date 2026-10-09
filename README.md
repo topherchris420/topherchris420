@@ -71,6 +71,12 @@ Before an agent changes authoritative state, the [Resonate AI Mesh](https://gith
 
 [**Run the offline demo →**](https://github.com/topherchris420/resonate-ai-mesh#one-command) · [**Inspect the execution law →**](https://github.com/topherchris420/resonate-ai-mesh#the-execution-law) · [**Examine recorded experiments →**](https://github.com/topherchris420/resonate-ai-mesh#a-reproducible-experiment)
 
+<a href="https://github.com/topherchris420/resonate-ai-mesh/blob/f90f0f7325163d8ed5e61584437dd5cae992aaef/docs/images/cockpit-replay.png">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/resonate-ai-mesh/f90f0f7325163d8ed5e61584437dd5cae992aaef/docs/images/cockpit-replay.png" alt="Resonate AI Mesh research cockpit replay showing a human-approved proposal rejected when deterministic re-validation detects that its observation has become stale." width="90%">
+</a>
+
+*Pordenone's actual research cockpit: simulated human approval cannot override the deterministic freshness check.*
+
 Current controlled experiments use simulated environments, not customer production deployments.
 
 <!-- ledger:pordenone -->
@@ -83,6 +89,12 @@ Evidence ladder: `EXECUTABLE` (simulated telemetry; external reliability unestab
 
 [**Run the known-signal example →**](https://github.com/topherchris420/dynamic-resonance-rooting#quick-start) · [**Read the external result →**](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md)
 
+<a href="https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/assets/drr-flier.png">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/dynamic-resonance-rooting/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/assets/drr-flier.png" alt="Dynamic Resonance Rooting project flier illustrating its time-series and signal-analysis research themes." width="75%">
+</a>
+
+*DRR's own research flier. It illustrates the project, not a new validation result.*
+
 <!-- ledger:drr -->
 
 Evidence ladder: `OBSERVED` (synthetic calibration) · `NOT SUPPORTED` (one preregistered external structural-change test).
@@ -90,6 +102,18 @@ Evidence ladder: `OBSERVED` (synthetic calibration) · `NOT SUPPORTED` (one prer
 [CIRCLE](https://github.com/topherchris420/circle) takes a related question into closed-loop biosignal research: can a system preserve the path from raw measurement to bounded decision to independently observed actuation? Its simulated physiology twin records gaps, refusals, and the distinction between issuing a cue and verifying it occurred.
 
 [**Run the physiology twin →**](https://github.com/topherchris420/circle#run-the-digital-test-bench) · [**Inspect the evidence chain →**](https://github.com/topherchris420/circle#closed-loop-evidence)
+
+<a href="https://github.com/topherchris420/circle/blob/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/physiology-polygraph.png">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/circle/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/physiology-polygraph.png" alt="CIRCLE simulated physiology polygraph comparing signals recovered from raw modeled sensor codes against known simulated reference data." width="90%">
+</a>
+
+*CIRCLE's simulated physiology traces plotted against known synthetic ground truth. No human signals or fabricated board are represented.*
+
+<a href="https://github.com/topherchris420/circle/blob/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/circle-3d-animation.gif">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/circle/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/circle-3d-animation.gif" alt="Animated 3D concept of the planned CIRCLE Rev B biosignal instrument housing and physical geometry; not footage of fabricated hardware." width="68%">
+</a>
+
+*CIRCLE Rev B, a rotating **design visualization**, not a physical device or measured telemetry. [Open the hardware design](https://github.com/topherchris420/circle).*
 
 Its boards are designed, not built. There is no human or physical-device validation, and the hardware is **not approved for fabrication or human connection**.
 
@@ -110,6 +134,12 @@ The scripted agent needs no key; live Jev requires a TypeSafe key.
 </a>
 
 *An actual game capture. My own music plays on the radio.*
+
+<a href="https://github.com/topherchris420/satellite-vision-scape/blob/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" alt="A sped-up replay of a scripted baseline agent driving a four-wheel-drive vehicle through the Pine Gap After Hours coffee-delivery mission." width="85%">
+</a>
+
+*Recorded **scripted-agent baseline**, replayed at 10× speed, completing the coffee leg in 87.5 seconds. This is not a live Jev model run. [Watch the smaller MP4](https://github.com/topherchris420/satellite-vision-scape/blob/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.mp4) · [Inspect the game](https://github.com/topherchris420/satellite-vision-scape).*
 
 One [recorded live Jev session](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json) completed the mission in **7m 38s** without human intervention. It is one run, not a measured success rate.
 
@@ -161,6 +191,12 @@ The point is not to make every idea look right. It is to build things that can t
 - **DRR:** A preregistered external structural-change test exceeded the permitted false-alarm rate. The claim remains **not supported**. [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md).
 - **Research pipeline:** [rain-pipeline](https://github.com/topherchris420/rain-pipeline) separates exploration, preregistration, held-out real data, deterministic evaluation, and replay. Its experiments include a failed hypothesis. Project-specific verdicts are not automatic promotions on this profile's evidence ladder.
 
+<a href="https://github.com/topherchris420/rain-pipeline/blob/d85ec37f80e7f1df7c9b8d77ecbb74e37b27630b/runs/20261004T181106Z/figure.png">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/rain-pipeline/d85ec37f80e7f1df7c9b8d77ecbb74e37b27630b/runs/20261004T181106Z/figure.png" alt="Registered R.A.I.N. pipeline experiment V3D-EXP-0003: detection rates by breathing stratum and frequency for three lag-window choices." width="85%">
+</a>
+
+*Real-data analysis from experiment V3D-EXP-0003. All three lag-window choices reached a detection ceiling on the same held-out windows, so this plot does **not** show that the adaptive approach improves detection. [Read the full run](https://github.com/topherchris420/rain-pipeline/blob/d85ec37f80e7f1df7c9b8d77ecbb74e37b27630b/runs/20261004T181106Z/REPORT.md).*
+
 The [public ledger](experiments/README.md) uses `CONCEIVED` → `BUILDING` → `EXECUTABLE` → `OBSERVED` → `REPRODUCED` → `SUPPORTED`, with `NOT SUPPORTED` for claims that fail preregistered tests. A result on a simulated system is not a result on a person.
 
 **Nothing here has reached `REPRODUCED` or `SUPPORTED` yet.**
@@ -174,6 +210,12 @@ The [public ledger](experiments/README.md) uses `CONCEIVED` → `BUILDING` → `
 My music, paintings, poetry, and research are not separate identities. They are different instruments for noticing. I record as **Indigo People**; my [Vanta portfolio](https://mitpress.vercel.app/) holds the wider practice, and [Vers3Dynamics Studio](https://github.com/topherchris420/quantum-spin-sound) explores live-coded sound and audio-reactive visuals.
 
 [**Listen →**](https://chriswoodyard.bandcamp.com/) · [**See the art and writing →**](https://mitpress.vercel.app/) · [**Browse the research atlas →**](https://mitpress.vercel.app/research)
+
+<a href="https://github.com/topherchris420/vanta/blob/120c6c4d36356fc7a7b5ffa3fc8729d1ecc0b069/public/work/impasto-head.webp">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/vanta/120c6c4d36356fc7a7b5ffa3fc8729d1ecc0b069/public/work/impasto-head.webp" alt="An impasto portrait painting from Christopher Woodyard's Vanta art portfolio." width="65%">
+</a>
+
+*An original artwork from Vanta. The paintings, music, research instruments and simulated worlds belong to one practice.*
 
 *What emerges between them belongs to everyone.*
 

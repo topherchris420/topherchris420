@@ -48,7 +48,7 @@ The Pine Gap image in `README.md` is the project's actual `docs/media/screens/dr
 
 The R.A.I.N. and Bethesda screenshots are genuine project captures in [`lop-nur-twin`](https://github.com/topherchris420/lop-nur-twin), pinned to revision `f1dfe3f880c071f98836ab46edcce6f92641b613` so media changes cannot silently rewrite what was shown. The profile uses `docs/screenshots/rain-lab-meeting.png`, `docs/screenshots/rain-lab-record.png`, `docs/screenshots/bethesda-street.png`, and `docs/screenshot-lens.png`. Captions explicitly distinguish scripted meetings, simulation records, and reconstructed geography from live-model or real-world validation. These external media paths should be checked against their source repository whenever the capture is refreshed.
 
-No GIFs were available among the R.A.I.N. repository's media at this review. Add a GIF only when there is real interface or runtime footage to record, keep it brief and compact, provide an equivalent static screenshot and readable caption, and never animate static frames to imply actions that were not observed.
+No GIFs were available among the R.A.I.N. repository's media at its original review. The wider profile now includes two existing animations, linked to their own repositories: Pine Gap's `docs/media/agent-drive.gif` is a replay of a recorded **scripted baseline**, not a live Jev run; CIRCLE's `diagrams/circle-3d-animation.gif` is an **intended hardware geometry visualization**, not footage of fabricated hardware. Do not confuse either with new scientific validation. Keep animations compact, link an MP4 alternative when possible, preserve captions describing provenance, and do not synthesize apparent recordings of events that did not happen.
 
 | Role | Light | Dark |
 | --- | --- | --- |
@@ -59,6 +59,20 @@ No GIFs were available among the R.A.I.N. repository's media at this review. Add
 | Accent | `#0B5D63` | `#8BD5CC` |
 | Warm | `#A0522D` | `#E8A87C` |
 | Grid | `#E3ECE9` | `#10292C` |
+
+
+The October 2026 multi-project media pass also pins the source revisions used for each visual; update the image link, evidence caption and (when needed) the ledger independently:
+
+| Linked project | Illustrated artifact | Pinned revision |
+| --- | --- | --- |
+| Pordenone / Resonate AI Mesh | Research cockpit replay screenshot | `f90f0f732516` |
+| Dynamic Resonance Rooting | Project research flier (not experimental proof) | `862c4f75e609` |
+| CIRCLE | Simulated physiology plot and geometry-concept GIF | `774ddf8750db` |
+| Pine Gap | Scripted-agent replay GIF and smaller MP4 alternative | `345760768049` |
+| rain-pipeline | V3D-EXP-0003 figure (held-out, no improvement shown) | `d85ec37f80e7` |
+| Vanta | Impasto portrait painting | `120c6c4d3635` |
+
+Where a repository has no committed interface captures (for example HumanTouch on Hugging Face or the Studio UI at this review), prefer a direct link over a generic screenshot, mockup or unrelated image. The GitHub profile checker validates relative links and local vector assets but **does not verify that cross-repository images resolve**. Re-check pinned external media links when refreshing them.
 
 ## Updating evidence
 
