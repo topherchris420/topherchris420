@@ -46,6 +46,10 @@ SVGs are self-contained: native text and vector paths, no scripts, remote fonts,
 
 The Pine Gap image in `README.md` is the project's actual `docs/media/screens/driving.jpg` capture, referenced at a reviewed commit. It shows the coffee mission and Indigo People on the radio. Keep it static, linked to the playable world, with descriptive alt text and a visible caption. The screenshot is about 94 KB; do not replace it with an autoplay GIF or a generated depiction of gameplay.
 
+The R.A.I.N. and Bethesda screenshots are genuine project captures in [`lop-nur-twin`](https://github.com/topherchris420/lop-nur-twin), pinned to revision `f1dfe3f880c071f98836ab46edcce6f92641b613` so media changes cannot silently rewrite what was shown. The profile uses `docs/screenshots/rain-lab-meeting.png`, `docs/screenshots/rain-lab-record.png`, `docs/screenshots/bethesda-street.png`, and `docs/screenshot-lens.png`. Captions explicitly distinguish scripted meetings, simulation records, and reconstructed geography from live-model or real-world validation. These external media paths should be checked against their source repository whenever the capture is refreshed.
+
+No GIFs were available among the R.A.I.N. repository's media at this review. Add a GIF only when there is real interface or runtime footage to record, keep it brief and compact, provide an equivalent static screenshot and readable caption, and never animate static frames to imply actions that were not observed.
+
 | Role | Light | Dark |
 | --- | --- | --- |
 | Background | `#F4F7F4` | `#091A1D` |

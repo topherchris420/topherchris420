@@ -46,6 +46,21 @@ Inside this lab, a local model can observe a simulated world, propose hypotheses
 
 The integrated lab's offline meetings and authorized experiments belong to this repository. Its **autonomous research loop** is experimental and runs **locally from the command line**, not on the deployed website, using a configured local model. Historical results from `james_library` remain archival evidence, not proof that the newer autonomous loop makes accurate scientific discoveries.
 
+
+<a href="https://github.com/topherchris420/lop-nur-twin/blob/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/rain-lab-meeting.png">
+  <img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/rain-lab-meeting.png" alt="Screenshot of the integrated R.A.I.N. Lab research panel showing four research perspectives and a scripted offline meeting." width="100%">
+</a>
+
+*Inside Bethesda: the actual R.A.I.N. research panel. This capture shows a labelled scripted offline meeting, not an independently evaluated model session.*
+
+
+<a href="https://github.com/topherchris420/lop-nur-twin/blob/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/rain-lab-record.png">
+  <img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/rain-lab-record.png" alt="Screenshot of the R.A.I.N. Lab experiment registry displaying an authorized simulated experiment record, evidence provenance and replay verification." width="100%">
+</a>
+
+*An experiment's record, limitations, provenance and replay. A matching simulator replay establishes computational consistency, not real-world validation.*
+
+
 <!-- ledger:rain-lab -->
 
 Evidence ladder (historical R.A.I.N. experiments, recorded before the migration): `EXECUTABLE` · `OBSERVED` (seeded quotation checks and simulated controls; same-seed reruns). These labels do not certify the integrated autonomous research runtime; live-model scientific accuracy remains unmeasured.
@@ -102,7 +117,22 @@ One [recorded live Jev session](https://github.com/topherchris420/satellite-visi
 
 Evidence ladder: `EXECUTABLE` · `OBSERVED` (one live-agent trace and paired scripted experiments).
 
-**Lop Nur Twin / Blacksite** reconstructs a desert airfield from public sources. Inspect which structures are observed, reported, inferred, or illustrative, and enter a game on the same geometry. A hidden Bethesda world holds the emerging R.A.I.N. Lab. Simulated game events never become evidence about the real site.
+**Lop Nur Twin / Blacksite** reconstructs a desert airfield from public sources. Inspect which structures are observed, reported, inferred, or illustrative, and enter a game on the same geometry. A hidden Bethesda world holds the integrated R.A.I.N. Lab. Simulated game events never become evidence about the real site.
+
+
+<a href="https://github.com/topherchris420/lop-nur-twin/blob/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/bethesda-street.png">
+  <img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshots/bethesda-street.png" alt="Actual screenshot of the walkable simulated Bethesda street environment in Lop Nur Twin, which contains the integrated R.A.I.N. Lab." width="100%">
+</a>
+
+*Bethesda inside Lop Nur Twin, an explorable simulation rather than live footage or a claim about real residents.*
+
+
+<a href="https://github.com/topherchris420/lop-nur-twin/blob/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshot-lens.png">
+  <img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/f1dfe3f880c071f98836ab46edcce6f92641b613/docs/screenshot-lens.png" alt="Screenshot of the Lop Nur Twin evidence lens, showing geographic structures classified by the provenance and uncertainty of their supporting sources." width="100%">
+</a>
+
+*The evidence lens distinguishes documented reconstruction from interpretation. Its colors describe the provenance of the model, not independent proof of a site's activity.*
+
 
 [**Inspect the evidence →**](https://lop-nur-twin.vercel.app/analysis) · [**Play Blacksite →**](https://lop-nur-twin.vercel.app/play) · [**Explore the code →**](https://github.com/topherchris420/lop-nur-twin)
 
