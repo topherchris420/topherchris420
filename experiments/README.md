@@ -32,11 +32,13 @@ Three rules keep the ladder honest:
 
 ## Where things stand
 
+**Current R.A.I.N. Lab:** [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin). The R.A.I.N. row below is intentionally linked to `james_library` because this ledger records historical experiments performed before the [October 6 runtime migration](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RAIN_MIGRATION.md). It does not identify the current development repository or certify the newer autonomous researcher.
+
 Initial snapshot: 27 September 2026. A partial review on 30 September refreshed R.A.I.N. and Pine Gap's recorded outcomes and rechecked the DRR, CIRCLE, Lop Nur, Mannahatta, and Vanta descriptions. A review on 4 October added HumanTouch from its public source files and put this table under the automated check. See each entry's `last_reviewed` in `ledger.json`; remaining entries retain the initial snapshot.
 
 | Experiment | Question | State | What would move it |
 | --- | --- | --- | --- |
-| [R.A.I.N. Lab](https://github.com/topherchris420/james_library) | confidence | `EXECUTABLE` · `OBSERVED` (seeded citation checks and simulated controls; same-seed reruns) | measured accuracy of real models behind the decision gate |
+| [R.A.I.N. historical tests](https://github.com/topherchris420/james_library) | confidence | `EXECUTABLE` · `OBSERVED` (seeded citation checks and simulated controls; same-seed reruns) | measured accuracy of real models behind the decision gate |
 | [Pordenone](https://github.com/topherchris420/resonate-ai-mesh) | confidence | `EXECUTABLE` (telemetry simulated) | a recorded session on live inputs |
 | [Anna](https://github.com/topherchris420/anna) | confidence | `EXECUTABLE` | a retrieval evaluation on a stated corpus |
 | [Embedded AI Validation](https://github.com/topherchris420/embedded-ai-validation-platform) | confidence | `EXECUTABLE` (simulated targets) | a run on a physical board, with measured power |
@@ -59,7 +61,7 @@ No entry currently meets this profile's independent `REPRODUCED` or external/phy
 
 ## Recent recorded outcomes
 
-- **R.A.I.N.** Exact-span citation checking passed its seeded corpus checks; typography normalization failed. A separate CIRCLE control experiment passed on simulated data. Original runs, same-seed reruns, measurements, criteria, and limits are in [RESULTS.md](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
+- **R.A.I.N. (historical `james_library` source).** Exact-span citation checking passed its seeded corpus checks; typography normalization failed. A separate CIRCLE control experiment passed on simulated data. Original runs, same-seed reruns, measurements, criteria, and limits are in [RESULTS.md](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
 - **Pine Gap, live Jev.** One [recorded session](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json) completed After Hours in 457.82 seconds (7m 38s rounded), with zero human interventions. This is one completed run, not a repeated-run success rate or a human comparison. The pinned commit preserves the stored trace; it does not identify the executed code, whose build field is `development`.
 - **Pine Gap, scripted controls.** Ten paired runs per scripted control-size condition: graded turns and taps locked all four terminals in every run; long holds locked none. [Report and raw traces](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md). This tests a control-size effect; repeated live Jev performance remains open.
 - **HumanTouch, instruments.** The offline evaluation runs 13 synthetic fixtures through the measurement code with no model. In the stored results file, timestamped 3 October 2026, hand-written faithful revisions score an unnecessary-change rate of 0.000 and over-edited ones 0.668, with the other metrics separating the same way; the Space's README quotes an earlier run. This calibrates the instruments. It says nothing about what a live model does. [Results file](https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md) · [method](https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md#evaluation).

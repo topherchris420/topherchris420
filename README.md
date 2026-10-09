@@ -16,7 +16,7 @@ I build instruments for relationships we cannot readily see: between signals and
 
 **Built by one researcher. Held in common. Free to explore.**
 
-[**Meet R.A.I.N. →**](https://rainlabteam.vercel.app/) · [**Explore Lop Nur →**](https://lop-nur-twin.vercel.app/) · [**Play Pine Gap →**](https://geotwn.vercel.app/) · [**Try HumanTouch →**](https://huggingface.co/spaces/ciaochris/HumanTouch) · [**Hear the music →**](https://chriswoodyard.bandcamp.com/)
+[**R.A.I.N. Lab source →**](https://github.com/topherchris420/lop-nur-twin) · [**Explore the twin →**](https://lop-nur-twin.vercel.app/) · [**Play Pine Gap →**](https://geotwn.vercel.app/) · [**Try HumanTouch →**](https://huggingface.co/spaces/ciaochris/HumanTouch) · [**Hear the music →**](https://chriswoodyard.bandcamp.com/)
 
 [The idea](#the-idea) · [Enter the work](#enter-the-work) · [What the evidence says](#what-the-evidence-says) · [Participate](#participate) · [Full project map](docs/project-map.md)
 
@@ -38,15 +38,17 @@ Not every project implements every stage. What connects them is the boundary: a 
 
 ### 01 / R.A.I.N. Lab · Give research a memory
 
-A laboratory inside a city inside a simulated world. In [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin), a hidden Bethesda environment contains a bounded research runtime. A local model can observe a simulated state, propose hypotheses, select from pre-authorized experiments, inspect host-executed results, preserve contradictions, and decide what to investigate next. The human defines the charter; the host retains control of simulation, evidence, budgets, and stopping rules.
+**The current R.A.I.N. Lab lives in [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin).** Its original `james_library` research runtime was integrated into the repository as native TypeScript: the research team, corpus, experiment registry, and evidence mechanisms now operate inside the Bethesda simulation, not as a separately installed Python project. The [migration record](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RAIN_MIGRATION.md) documents the source revision, parity tests, and what was intentionally left out.
 
-[**Explore the world →**](https://lop-nur-twin.vercel.app/) · [**Read the research loop →**](https://github.com/topherchris420/lop-nur-twin#why-this-is-more-than-a-digital-twin) · [**Meet the team →**](https://rainlabteam.vercel.app/) · [**Run the original demo →**](https://github.com/topherchris420/james_library#try-rain-lab)
+Inside this lab, a local model can observe a simulated world, propose hypotheses, choose among pre-authorized experiments, inspect host-executed results, preserve contradictions, and suggest what to investigate next. The human defines the charter; the host retains control of simulation, evidence, budgets, and stopping rules.
 
-The autonomous loop runs **locally from the command line**, not on the deployed website. It requires a configured local model. The original multi-perspective R.A.I.N. offline demo uses scripted dialogue, and its historical tests do not validate the newer research loop's scientific accuracy.
+[**Explore the world →**](https://lop-nur-twin.vercel.app/) · [**Open the R.A.I.N. source →**](https://github.com/topherchris420/lop-nur-twin) · [**Read the research loop →**](https://github.com/topherchris420/lop-nur-twin#why-this-is-more-than-a-digital-twin) · [**Run the integrated lab locally →**](https://github.com/topherchris420/lop-nur-twin#a-lab-behind-a-door)
+
+The integrated lab's offline meetings and authorized experiments belong to this repository. Its **autonomous research loop** is experimental and runs **locally from the command line**, not on the deployed website, using a configured local model. Historical results from `james_library` remain archival evidence, not proof that the newer autonomous loop makes accurate scientific discoveries.
 
 <!-- ledger:rain-lab -->
 
-Evidence ladder (original R.A.I.N. experiments): `EXECUTABLE` · `OBSERVED` (seeded quotation checks and simulated controls; same-seed reruns). Live-model research accuracy remains unmeasured.
+Evidence ladder (historical R.A.I.N. experiments, recorded before the migration): `EXECUTABLE` · `OBSERVED` (seeded quotation checks and simulated controls; same-seed reruns). These labels do not certify the integrated autonomous research runtime; live-model scientific accuracy remains unmeasured.
 
 ### 02 / Pordenone · Give agents boundaries
 
@@ -125,7 +127,7 @@ Evidence ladder: `EXECUTABLE` · `OBSERVED` (offline instrument calibration on s
 The point is not to make every idea look right. It is to build things that can tell me when I am wrong.
 
 - **Pine Gap:** Ten paired scripted runs per condition found graded dial turns locked four terminals every time, while long holds locked none. [Experiment and traces](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md).
-- **R.A.I.N.:** The seeded quotation gate rejected fabricated quotes, but also rejected genuine quotes with typography changes. That failure remains visible. [Recorded results](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
+- **R.A.I.N. (historical test, before integration):** The seeded quotation gate rejected fabricated quotes, but also rejected genuine quotes with typography changes. That failure remains visible in the [archived source revision](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md); the [current lab](https://github.com/topherchris420/lop-nur-twin) is now maintained elsewhere.
 - **DRR:** A preregistered external structural-change test exceeded the permitted false-alarm rate. The claim remains **not supported**. [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md).
 - **Research pipeline:** [rain-pipeline](https://github.com/topherchris420/rain-pipeline) separates exploration, preregistration, held-out real data, deterministic evaluation, and replay. Its experiments include a failed hypothesis. Project-specific verdicts are not automatic promotions on this profile's evidence ladder.
 
