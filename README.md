@@ -154,6 +154,8 @@ You do not need to understand every paper or install every model. Start with som
 - **Doing research?** [Replay an experiment](https://github.com/topherchris420/rain-pipeline) or [challenge a DRR result](https://github.com/topherchris420/dynamic-resonance-rooting). Independent reproduction is the rung I cannot climb alone.
 - **Want to collaborate?** Open an issue on the relevant repository or [write to me](mailto:christopher@vers3dynamics.com). To help keep the work available without a paywall, [support the lab](https://ko-fi.com/vers3dynamics).
 
+## How I work
+
 My method: **maximum conceptual ambition; minimum credible experiment.** Build something, decide what would falsify it, keep what happened, and build again.
 
 ---
