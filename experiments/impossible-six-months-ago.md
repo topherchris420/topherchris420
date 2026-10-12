@@ -15,6 +15,8 @@ Each entry names the repository where it was attempted, the date it first appear
 | Sep 2026 | A statistics package ported to the browser and checked against the original to 1e-9, so a reader can watch the false-alarm rate hold live | [Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting) | Whether the operators generalize beyond the systems they were calibrated on. |
 | Sep 2026 | An AI agent completing a multi-stage mission in a real-time 3D world through ordinary controls, with every choice traced | [Pine Gap](https://github.com/topherchris420/satellite-vision-scape) | How often it succeeds. One run is an existence proof. |
 | Sep 2026 | A seeded physiological twin that renders synthetic heartbeats, breathing, and skin conductance through the exact sensor chips a design specifies | [CIRCLE](https://github.com/topherchris420/circle) | How a real body, on a real board, behaves. |
+| Oct 2026 | A pre-registered test against blind comparators, with truth taken from real held-out outcomes on 5,078 claims across five public datasets, frozen and run on the day the repository began | [TRIAD](https://github.com/topherchris420/triad) | Whether people, rather than an AI agent of the same model family, would judge the same claims the same way. |
+| Oct 2026 | A local desktop companion with screen capture and voice on three operating systems and one-use reviewed input on Windows, whose network client cannot name any address but a loopback port | [James](https://github.com/topherchris420/james) | Whether real models propose good actions, or whether people can use it safely. |
 
 ## Still out of reach
 

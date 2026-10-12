@@ -9,10 +9,10 @@ Across software, hardware designs, and games, one relationship keeps returning: 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/constellations-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/constellations-light.svg">
-  <img src="../assets/constellations-light.svg" alt="Projects grouped around five questions: machine confidence, coupled signals, agent worlds, measurement, and sound. Rings mark shared typed judgment; a dashed connection marks the IONS-X engine reused in CIRCLE. The projects are listed below; HumanTouch is a later addition." width="100%">
+  <img src="../assets/constellations-light.svg" alt="Projects grouped around five questions: machine confidence, coupled signals, agent worlds, measurement, and sound. Rings mark shared typed judgment; a dashed connection marks the IONS-X engine reused in CIRCLE. The projects are listed below; HumanTouch, James and TRIAD are later additions." width="100%">
 </picture>
 
-The illustration is the September 27, 2026 map. HumanTouch is included in the written map below.
+The illustration is the September 27, 2026 map. HumanTouch, James and TRIAD are included in the written map below; the profile's [loop diagram](../README.md#the-idea) shows where each featured project does its main work.
 
 ## When should a machine's confidence count?
 
@@ -21,6 +21,7 @@ A model may search, argue, score, or propose. A host policy, deterministic check
 - **[R.A.I.N. Lab (current home: Lop Nur Twin)](https://github.com/topherchris420/lop-nur-twin)** — the four-perspective research runtime, literature corpus, decision constraints, research registry, experiment mechanisms, and Bethesda simulation now share one repository. The [migration record](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RAIN_MIGRATION.md) documents the TypeScript port from the earlier `james_library` runtime; that [former source](https://github.com/topherchris420/james_library) remains relevant to [dated historical experiments](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md), not as the current lab. The bounded autonomous experiment cycle runs locally under a human-authorized charter.
 - **[rain-pipeline](https://github.com/topherchris420/rain-pipeline)** — a newer executable bridge from preregistered questions to pinned real-data runs, deterministic verdicts, verification, and replay. Its public record includes a failed confirmatory hypothesis; it is not retroactively promoted in the September evidence ledger.
 - **[Pordenone / Resonate AI Mesh](https://github.com/topherchris420/resonate-ai-mesh)** — deterministic authorization gates, bounded judgment, fault-injection experiments, hash-chained decisions, offline replay, and counterfactuals. Its controlled results describe simulated worlds, not production deployments.
+- **[James](https://github.com/topherchris420/james)** — a local desktop companion in Rust. It talks only to a model server on your own machine through a client that can address nothing but a loopback port, sees the screen only when you capture it, and turns any change to the computer into one exact proposal you approve once, then reconcile. It reads R.A.I.N. Lab's status and results as context and cannot steer the Lab. A developer preview: reviewed input is Windows-only, and real-model quality and usability are not yet measured. [Validation ledger](https://github.com/topherchris420/james/blob/main/docs/VALIDATION.md). Not to be confused with the archived `james_library` runtime.
 - **[Anna](https://github.com/topherchris420/anna)** — self-hostable research search built on the architecture of Anna's Archive: hybrid retrieval, exact source offsets, and an explicit refusal when evidence is absent.
 - **[Embedded AI Validation](https://github.com/topherchris420/embedded-ai-validation-platform)** — continuous integration for edge-AI firmware, with metrics labelled measured, simulated, estimated, or mock before they inform a release verdict.
 
@@ -45,6 +46,7 @@ Places reconstructed from public sources become explorable worlds and bounded ex
 
 Ideas written precisely enough to fail, beside code that distinguishes analytical, synthetic, and untested work. Papers become more useful when they specify the experiment that could change their conclusion.
 
+- **[TRIAD](https://github.com/topherchris420/triad)** — when should a sensor refuse to answer, and when should any predictive system recognize that its evidence is insufficient? It began as a simulated capacitive sensor and widened, one frozen milestone at a time, to public datasets and to the claims people make about predictive systems. Every headline number is bound to the archived artifact that produced it and rechecked in CI. Its pre-registered Milestone 8 found its own evidence rules no better than blind comparators. [Research arc](https://github.com/topherchris420/triad#the-research-arc-machine-checked) · [Milestone 8](https://github.com/topherchris420/triad/blob/master/docs/metrology/milestone8-results.md).
 - **[Dynamic Location Theory](https://github.com/topherchris420/research)** — a proposal that position is encoded through resonance with a background scalar field, with atomic-clock and matter-wave interferometry predictions. [Paper](https://github.com/topherchris420/research/blob/master/137.pdf) · [DOI](https://doi.org/10.5281/zenodo.18263032). Predictions remain untested.
 - **[Woodyard model workstation](https://github.com/topherchris420/waveform-shift-quantum)** — a proposed scalar-field localization model simulated beside standard quantum baselines, with a stated falsification condition.
 - **[hello_os](https://github.com/topherchris420/ideas)** — a toy model of gravitomagnetic rotor arrays, synthetic detector traces, and design sweeps bounded by material stress.
@@ -61,7 +63,7 @@ Music, photography, painting, poetry, and software are ways of paying closer att
 
 ## What didn't survive contact
 
-Discarded approaches stay in view. The first five entries were recorded in the September 27 profile; the later entries follow the linked experiment records reviewed September 30.
+Discarded approaches stay in view. The first five entries were recorded in the September 27 profile; the next two follow the linked experiment records reviewed September 30; the last two were added on October 12.
 
 - **A structural-change claim.** On NOAA's QBO series, DRR exceeded its preregistered false-alarm tolerance. The claim remains `not_supported`. [Protocol and result](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md).
 - **Two firmware assumptions.** CIRCLE's physiological twin showed that the ADC has no native 64 SPS mode and optical timestamps must anchor to the FIFO interrupt rather than the read. [Pipeline methods](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md).
@@ -70,5 +72,7 @@ Discarded approaches stay in view. The first five entries were recorded in the S
 - **The language of 2025.** Early prototypes described “operational” wormhole stabilization and teleportation fidelity above 99.5%. Those descriptions were replaced with bounded questions and testable predictions. The archive preserves the earlier work. [Read the strata](../experiments/archive.md).
 - **A citation assumption.** R.A.I.N.'s exact-span gate rejected genuine quotes after typography normalization. Its failed experiment and seeded rerun remain published beside the passing checks. [Results](https://github.com/topherchris420/james_library/blob/main/RESULTS.md).
 - **An apparent model advantage.** In Blacksite, a simple marksman script matched Jev on the same seeds. The map made a stationary shooter difficult to threaten. The world was revised, and the remaining exploit stays documented. [Historical comparison and limits](https://github.com/topherchris420/lop-nur-twin#what-happened-when-a-model-played-it).
+- **Convergence as confidence.** In TRIAD's synthetic pilot, half of the position errors above 5 mm carried a successful optimizer convergence flag. A stopping condition is not evidence that an answer is right. [Research arc](https://github.com/topherchris420/triad#the-research-arc-machine-checked).
+- **A better evidence judge.** TRIAD's claim-relative evidence rules lost a pre-registered test to a blind statistical reviewer on 5,078 real-outcome claims, and cost more than endorsing nothing. The method is not to be proposed as a contribution; repairs need a new frozen test. [Milestone 8 results](https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md).
 
 [← Back to the profile](../README.md) · [Where the experiments stand](../experiments/README.md)

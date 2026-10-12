@@ -1,7 +1,7 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-10-04",
-  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
+  "reviewed": "2026-10-12",
+  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
     "signals": "How do signals move together?",
@@ -89,6 +89,38 @@
         ]
       },
       "evidence": ["https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md"]
+    },
+    {
+      "id": "james",
+      "name": "James",
+      "repo": "https://github.com/topherchris420/james",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "Rust desktop companion built from source on Windows, macOS and Linux, plus an unsigned Windows x64 preview; one-use approval contracts tested with simulated actions and clocks; not a usability, real-model or clean-machine evaluation" }
+      ],
+      "open": "Streaming against real LM Studio, Ollama and llama.cpp builds, real-model answer and vision quality, usability and accessibility, clean-machine install, and reliable targeting of a specific application are unproven (stated in its validation ledger). Reviewed computer input exists only on Windows.",
+      "next": "The reproducible end-to-end session in its own benchmark protocol: a real model, a screen question, one harmless approved input in a throwaway app, reconciliation, and a Lab question, with failures recorded.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-10-11", "sha": "c18fb325615600bbd361c982d00748ab92b53ffc" },
+        "milestones": [
+          { "day": 0, "date": "2026-10-11", "label": "Rust authorization core: one-use approvals, policy checks, budgets, cancellation", "sha": "c18fb325615600bbd361c982d00748ab92b53ffc" },
+          { "day": 0, "date": "2026-10-11", "label": "native desktop app talking to a local model server", "sha": "7cc7e322265ef79aef1a43565839c41b58b82bf0" },
+          { "day": 0, "date": "2026-10-11", "label": "screen capture, voice, reviewed Windows input, read-only R.A.I.N. Lab context, Windows installer", "sha": "b243e252a7dd8a889a791a16dd696de64eb02a3b" },
+          { "day": 0, "date": "2026-10-11", "label": "delayed approvals expire before a resumed dispatch", "sha": "a364945b284ff25f5d7e944b80268ba8afd37f6a" },
+          { "day": 1, "date": "2026-10-12", "label": "james-loopback: every request confined to a loopback port", "sha": "2fe074f6ecb6d250a701e1aeb10292cb68f59367" }
+        ],
+        "caveat": "Not the archived james_library Python runtime. James is a separate Rust repository that reads R.A.I.N. Lab's status and results but cannot steer the Lab."
+      },
+      "compressed": ["approval and supervision contracts", "native desktop UI", "loopback-only HTTP client", "screen and voice helpers on three operating systems", "Windows installer"],
+      "not_compressed": ["knowing whether real models give good answers and proposals", "testing on a clean machine", "knowing whether people can use it safely"],
+      "evidence": [
+        "https://github.com/topherchris420/james/blob/main/docs/VALIDATION.md",
+        "https://github.com/topherchris420/james/blob/main/docs/SUPERVISION.md",
+        "https://github.com/topherchris420/james/blob/main/docs/BENCHMARKS.md",
+        "https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md"
+      ],
+      "last_reviewed": "2026-10-12"
     },
     {
       "id": "anna",
@@ -307,6 +339,66 @@
         { "state": "EXECUTABLE", "scope": "interface prototype; physiological values are generated, microphone energy is the only real input" }
       ],
       "timeline": { "reconstructed": false }
+    },
+    {
+      "id": "triad",
+      "name": "TRIAD",
+      "repo": "https://github.com/topherchris420/triad",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "Rust instrument and command line; frozen artifacts replayed and claims rechecked in Linux and Windows CI" },
+        { "state": "OBSERVED", "scope": "a simulated four-electrode capacitive sensor (synthetic pilot) and frozen models on public datasets (OpenML Electricity, UCI Bike Sharing)" },
+        { "state": "NOT SUPPORTED", "scope": "pre-registered Milestone 8: claim-relative evidence rules against blind comparators on 5,078 claims from five public datasets, with truth from held-out outcomes; frozen Milestone 3, 6 and 7 tests were also negative" }
+      ],
+      "open": "The blind comparators were written by an AI agent of the same model family from a brief alone; isolation was instruction-based and self-reported. There has been no human adjudication, unrelated-team replication or peer review. Milestone 7 repeated Milestone 6's negative result on a second public dataset with the same authors and pipeline, which this profile does not count as independent reproduction.",
+      "next": "Any repair to the evidence rules tested on a new frozen test its authors have not seen, ideally judged or rerun by an unrelated team.",
+      "timeline": {
+        "reconstructed": true,
+        "first_commit": { "date": "2026-10-11", "sha": "10e46ca7ccf083e77a39732c6b70bb61a18a8786" },
+        "milestones": [
+          { "day": 0, "date": "2026-10-11", "label": "reference audit, validated electrostatics and baseline localization for a simulated capacitive sensor", "sha": "10e46ca7ccf083e77a39732c6b70bb61a18a8786" },
+          { "day": 0, "date": "2026-10-11", "label": "Milestone 3 report published with negative findings", "sha": "de428fe3f31863ac9875918ef5ff782f50913b4e" },
+          { "day": 0, "date": "2026-10-11", "label": "Milestone 7 protocols, evidence method and claim suite frozen before fitting", "sha": "bb1bd0fabde1010abcbf7433009d48218d3db1d0" },
+          { "day": 0, "date": "2026-10-11", "label": "Milestone 8 protocol and comparator brief frozen before any model, case or comparator", "sha": "9df849e805d7285eba0d9f047f9065ad11e7af29" },
+          { "day": 0, "date": "2026-10-11", "label": "Milestone 8 run once and archived: not established", "sha": "1d065ac3b7973a527ddbe2248fa302af6ce5ea01" },
+          { "day": 1, "date": "2026-10-12", "label": "README findings bound to archived evidence by a checked claims ledger", "sha": "79212616d762652b00bb3f5ec196a571de1938c6" }
+        ],
+        "caveat": "The repository opens with a 12,844-line commit, so earlier work is not in Git."
+      },
+      "compressed": ["electrostatic forward model", "inverse estimation", "experiment runners and archives", "independent verifiers", "a claims ledger checked in CI"],
+      "not_compressed": ["independent human review", "replication by an unrelated team", "a method that beats strong existing practice"],
+      "evidence": [
+        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/README.md",
+        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md",
+        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone7-results.md",
+        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json"
+      ],
+      "last_reviewed": "2026-10-12",
+      "observations": [
+        {
+          "experiment": "milestone-2-optimizer-audit",
+          "scope": "1,080 test positions from a simulated capacitive sensor",
+          "result": "451 nonconvergence flags; only 10 of the 20 errors above 5 mm were flagged",
+          "source": "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/evaluation.json",
+          "limitation": "Synthetic pilot; descriptive, not a calibrated abstention rule."
+        },
+        {
+          "experiment": "milestone-7-bike-sharing",
+          "scope": "frozen ridge and gradient-boosting models on 2,806 eligible UCI Bike Sharing test hours",
+          "verdict": "evidence insufficient to establish a practical advantage",
+          "delta_cost_per_hour": { "ridge": 0.0049, "gradient_boosting": 0.0062 },
+          "source": "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/bike-sharing-v7/report.json",
+          "limitation": "TRIAD minus standard monitoring at a matched budget; positive means TRIAD cost more. Hours and days are dependent, not independent trials."
+        },
+        {
+          "experiment": "evidence-outcomes-v8",
+          "scope": "5,078 generated reliability claims on five public UCI datasets new to TRIAD; truth from held-out outcomes",
+          "verdict": "not established (pre-registered)",
+          "decision_cost": { "triad": 0.159, "blind_statistical_reviewer": 0.121, "blind_checklist": 0.160, "never_endorse": 0.125 },
+          "source": "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/evidence-outcomes-v8/score/report.json",
+          "limitation": "Comparators were written by an AI agent of the same model family; no human adjudication."
+        }
+      ]
     },
     {
       "id": "dlt",

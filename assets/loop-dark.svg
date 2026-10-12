@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">One loop, eight stages</title>
+  <desc id="description">A loop of eight stages: observe, propose, validate, authorize, act, measure, preserve, replay, then back to observe. Each stage is labelled with the projects that do their main work there. Observe: CIRCLE and Dynamic Resonance Rooting. Propose: R.A.I.N. Lab. Validate: Pordenone. Authorize, the one stage highlighted in a warm colour as belonging to a person: James and HumanTouch. Act: James and Pine Gap. Measure: TRIAD and rain-pipeline. Preserve: R.A.I.N. Lab and Pordenone. Replay: rain-pipeline and TRIAD. Inside the loop: Intelligence may propose. Evidence must be checked. Authority stays with the human. Not every project implements every stage.</desc>
+  <rect width="960" height="470" rx="12" fill="#091A1D"/>
+  <rect x="0.5" y="0.5" width="959" height="469" rx="11.5" stroke="#234044"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="40" y="46" fill="#ADC7C3" font-size="13" letter-spacing="2" font-weight="600">ONE LOOP · WHERE EACH INSTRUMENT DOES ITS MAIN WORK</text>
+    <path d="M170 158 H790 A92 92 0 0 1 790 342 H170 A92 92 0 0 1 170 158 Z" stroke="#234044" stroke-width="2"/>
+    <path d="M270.5 152 L276.5 158 L270.5 164" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M276.5 336 L270.5 342 L276.5 348" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M477 152 L483 158 L477 164" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M483 336 L477 342 L483 348" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M683.5 152 L689.5 158 L683.5 164" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M689.5 336 L683.5 342 L689.5 348" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M876 247 L882 253 L888 247" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 253 L78 247 L84 253" stroke="#8BD5CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="170" cy="158" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="170" y="128" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">observe</text>
+    <text x="170" y="100" fill="#E8F2ED" font-size="16" text-anchor="middle">CIRCLE · DRR</text>
+    <circle cx="377" cy="158" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="377" y="128" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">propose</text>
+    <text x="377" y="100" fill="#E8F2ED" font-size="16" text-anchor="middle">R.A.I.N. Lab</text>
+    <circle cx="583" cy="158" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="583" y="128" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">validate</text>
+    <text x="583" y="100" fill="#E8F2ED" font-size="16" text-anchor="middle">Pordenone</text>
+    <circle cx="790" cy="158" r="15" stroke="#E8A87C" stroke-width="1.5"/>
+    <circle cx="790" cy="158" r="7" fill="#E8A87C"/>
+    <text x="790" y="128" fill="#E8A87C" font-size="20" font-weight="600" text-anchor="middle">authorize</text>
+    <text x="790" y="100" fill="#E8F2ED" font-size="16" text-anchor="middle">James · HumanTouch</text>
+    <circle cx="790" cy="342" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="790" y="386" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">act</text>
+    <text x="790" y="412" fill="#E8F2ED" font-size="16" text-anchor="middle">James · Pine Gap</text>
+    <circle cx="583" cy="342" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="583" y="386" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">measure</text>
+    <text x="583" y="412" fill="#E8F2ED" font-size="16" text-anchor="middle">TRIAD · rain-pipeline</text>
+    <circle cx="377" cy="342" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="377" y="386" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">preserve</text>
+    <text x="377" y="412" fill="#E8F2ED" font-size="16" text-anchor="middle">R.A.I.N. Lab · Pordenone</text>
+    <circle cx="170" cy="342" r="7" fill="#091A1D" stroke="#8BD5CC" stroke-width="2"/>
+    <text x="170" y="386" fill="#8BD5CC" font-size="20" font-weight="600" text-anchor="middle">replay</text>
+    <text x="170" y="412" fill="#E8F2ED" font-size="16" text-anchor="middle">rain-pipeline · TRIAD</text>
+    <text x="790" y="196" fill="#E8A87C" font-size="14" text-anchor="middle" letter-spacing="0.4">a person decides</text>
+    <text x="480" y="230" fill="#E8F2ED" font-size="19" text-anchor="middle">Intelligence may propose.</text>
+    <text x="480" y="258" fill="#E8F2ED" font-size="19" text-anchor="middle">Evidence must be checked.</text>
+    <text x="480" y="286" fill="#E8A87C" font-size="19" font-weight="600" text-anchor="middle">Authority stays with the human.</text>
+    <text x="40" y="446" fill="#ADC7C3" font-size="13">Each name marks where a project does its main work. Not every project implements every stage.</text>
+  </g>
+</svg>

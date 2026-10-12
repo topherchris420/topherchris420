@@ -16,9 +16,13 @@ Offline checks, always run:
            row's question and state codes match the entry exactly.
   markers  every `<!-- ledger:ID -->` marker in README.md names a ledger
            entry, and the line after it shows that entry's states exactly.
-  map      every ledger entry's repository is linked from docs/project-map.md.
+  map      every ledger entry's repository is linked from docs/project-map.md,
+           matched as a whole URL so `james` is not found inside `james_library`.
   links    every relative link, image and heading anchor in the Markdown
            files resolves; anchors follow GitHub's heading slugs.
+  pins     every image embedded from another repository is served from a
+           40-digit commit, so a later push cannot silently change what a
+           caption describes.
   svg      every SVG in assets/ is self-contained (valid XML, <title> and
            <desc>, no scripts, images, animation or remote references), and
            every light variant has a dark twin.
@@ -88,6 +92,7 @@ HTML_REF = re.compile(r"\b(?:src|href|srcset)=\"([^\"]+)\"")
 HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*#*\s*$")
 EXTERNAL = re.compile(r"https?://[^\s<>()\[\]\"'`]+")
 REVIEWED_LINE = re.compile(r"\*Reviewed (\d{1,2} [A-Z][a-z]+ \d{4})\.")
+RAW_MEDIA = re.compile(r"https://raw\.githubusercontent\.com/([^/\s\"'()]+)/([^/\s\"'()]+)/([^/\s\"'()]+)/")
 
 
 class Report:
@@ -382,12 +387,17 @@ def check_markers(entries: dict[str, dict], report: Report) -> None:
     report.count("front-page markers", markers)
 
 
+def links_repo(text: str, repo: str) -> bool:
+    """True when `repo` appears as a whole URL, not as the prefix of a longer name."""
+    return re.search(re.escape(repo) + r"(?![\w.-])", text) is not None
+
+
 def check_project_map(entries: dict[str, dict], report: Report) -> None:
     text = PROJECT_MAP.read_text(encoding="utf-8")
     missing = 0
     for entry in entries.values():
         repo = entry.get("repo")
-        if isinstance(repo, str) and repo not in text:
+        if isinstance(repo, str) and not links_repo(text, repo):
             report.fail(rel(PROJECT_MAP), f"{entry['name']} ({repo}) is not in the project map")
             missing += 1
     report.count("map entries", len(entries) - missing)
@@ -430,6 +440,19 @@ def check_links(report: Report) -> set[str]:
                     report.fail(where, f"{target}: no heading with anchor #{anchor} in {rel(resolved)}")
     report.count("relative links", checked)
     return external
+
+
+def check_pins(report: Report) -> None:
+    pinned = 0
+    for md in markdown_files():
+        for number, line in enumerate(lines_without_fences(md.read_text(encoding="utf-8")), 1):
+            for m in RAW_MEDIA.finditer(line):
+                owner, repo, ref = m.groups()
+                if SHA.match(ref):
+                    pinned += 1
+                else:
+                    report.fail(f"{rel(md)}:{number}", f"{owner}/{repo} media is served from {ref!r}, not a 40-digit commit")
+    report.count("pinned media", pinned)
 
 
 def check_svgs(report: Report) -> None:
@@ -557,6 +580,7 @@ def main(argv: list[str]) -> int:
             check_claims(entries, report)
         check_dates(ledger, report)
     external = check_links(report)
+    check_pins(report)
     check_svgs(report)
     if args.external:
         check_external(external, report)
