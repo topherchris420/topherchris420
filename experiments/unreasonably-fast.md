@@ -149,6 +149,45 @@ This line of work spans three repositories, so its intervals are counted in cale
 - **Compressed.** Simulation, visualization, typesetting, a workstation that compares the proposal with standard baselines.
 - **Not compressed.** Any measurement. The predictions concern atomic clocks and matter-wave interferometers; nothing on a laptop can settle them.
 
+## TRIAD
+
+**Question.** When should a sensor refuse to answer, and do explicit evidence rules judge a predictive system's reliability claims better than strong existing practice?
+
+| Day | Date | Step |
+| ---: | --- | --- |
+| 0 | 2026-10-11 | Upload: [reference audit, validated electrostatics and baseline localization](https://github.com/topherchris420/triad/commit/10e46ca7ccf083e77a39732c6b70bb61a18a8786) for a simulated capacitive sensor |
+| 0 | 2026-10-11 | [Milestone 3 report](https://github.com/topherchris420/triad/commit/de428fe3f31863ac9875918ef5ff782f50913b4e) published with negative findings |
+| 0 | 2026-10-11 | [Milestone 7 protocols, evidence method and claim suite frozen](https://github.com/topherchris420/triad/commit/bb1bd0fabde1010abcbf7433009d48218d3db1d0) before any model was fitted |
+| 0 | 2026-10-11 | [Milestone 8 protocol and comparator brief frozen](https://github.com/topherchris420/triad/commit/9df849e805d7285eba0d9f047f9065ad11e7af29) before any model, case or comparator |
+| 0 | 2026-10-11 | [Milestone 8 run once and archived](https://github.com/topherchris420/triad/commit/1d065ac3b7973a527ddbe2248fa302af6ce5ea01): **not established** |
+| 1 | 2026-10-12 | [README findings bound to archived evidence](https://github.com/topherchris420/triad/commit/79212616d762652b00bb3f5ec196a571de1938c6) by a claims ledger checked in CI |
+| — | open | A repaired rule set on a new frozen test; review by an unrelated team |
+
+- **Compressed.** The electrostatic forward model and inverse estimation, experiment runners and archives, an independent verifier, a claims ledger that fails CI when the README misquotes a number.
+- **Not compressed.** Independence. The blind comparators were written by an AI agent of the same model family from a brief alone. Nothing has been adjudicated by a person, replicated by an unrelated team, or peer reviewed.
+- **Evidence.** [Research arc](https://github.com/topherchris420/triad#the-research-arc-machine-checked) · [Milestone 8 results](https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md) · [claims ledger](https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json)
+
+The shortest interval in this record between a first commit and a pre-registered answer, and the answer was no. Compare DRR, where a fair external test took fifteen months. The repository opens with a 12,844-line upload, so the work before it is off the record. Its day 1 is likewise a UTC date for the evening of day 0.
+
+## James
+
+**Question.** Can a desktop companion be useful while every change to the computer stays one exact, human-approved, reconciled action?
+
+| Day | Date | Step |
+| ---: | --- | --- |
+| 0 | 2026-10-11 | [Rust authorization core](https://github.com/topherchris420/james/commit/c18fb325615600bbd361c982d00748ab92b53ffc): one-use approvals, policy checks, budgets, cancellation |
+| 0 | 2026-10-11 | [Native desktop app](https://github.com/topherchris420/james/commit/7cc7e322265ef79aef1a43565839c41b58b82bf0) talking to a local model server |
+| 0 | 2026-10-11 | [Screen capture, voice, reviewed Windows input, read-only Lab context, installer](https://github.com/topherchris420/james/commit/b243e252a7dd8a889a791a16dd696de64eb02a3b) |
+| 0 | 2026-10-11 | [Delayed approvals expire before a resumed dispatch](https://github.com/topherchris420/james/commit/a364945b284ff25f5d7e944b80268ba8afd37f6a) |
+| 1 | 2026-10-12 | [james-loopback](https://github.com/topherchris420/james/commit/2fe074f6ecb6d250a701e1aeb10292cb68f59367): every request confined to a loopback port |
+| — | open | A reproducible end-to-end session with a real model and one harmless approved action |
+
+- **Compressed.** Supervision contracts and their regression tests, the desktop UI, a dependency-free loopback HTTP client, screen and voice helpers on three operating systems, a Windows installer.
+- **Not compressed.** Knowing whether real models give good answers and propose good actions, whether people can use it safely, and whether it installs cleanly on a fresh machine.
+- **Evidence.** [Validation ledger](https://github.com/topherchris420/james/blob/main/docs/VALIDATION.md) · [supervision](https://github.com/topherchris420/james/blob/main/docs/SUPERVISION.md) · [benchmark protocol](https://github.com/topherchris420/james/blob/main/docs/BENCHMARKS.md)
+
+Day 1 here is a Git author date recorded in UTC; in the author's own time zone it was still the evening of day 0. Not to be confused with the archived `james_library` runtime of the R.A.I.N. Lab entry above.
+
 ---
 
 ## Timeline not reconstructed yet
