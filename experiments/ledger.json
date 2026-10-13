@@ -1,6 +1,6 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-10-12",
+  "reviewed": "2026-10-13",
   "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
@@ -96,31 +96,72 @@
       "repo": "https://github.com/topherchris420/james",
       "question": "When should a machine's confidence count?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "Rust desktop companion built from source on Windows, macOS and Linux, plus an unsigned Windows x64 preview; one-use approval contracts tested with simulated actions and clocks; not a usability, real-model or clean-machine evaluation" }
+        {
+          "state": "EXECUTABLE",
+          "scope": "Rust desktop preview and platform release packaging; loopback-only model-app connection and one-use Windows input contracts; recorded Linux-container real-model workflows and platform CI, not general end-user or physical-device validation"
+        }
       ],
-      "open": "Streaming against real LM Studio, Ollama and llama.cpp builds, real-model answer and vision quality, usability and accessibility, clean-machine install, and reliable targeting of a specific application are unproven (stated in its validation ledger). Reviewed computer input exists only on Windows.",
-      "next": "The reproducible end-to-end session in its own benchmark protocol: a real model, a screen question, one harmless approved input in a throwaway app, reconciliation, and a Lab question, with failures recorded.",
+      "open": "Real-device Windows/macOS installation, a reviewed input reaching a real application, LM Studio, microphones, screen readers, first-time-user evaluation and code signing remain unverified. A model app can serve a cloud model despite James connecting only to loopback; the application reports and warns about that state.",
+      "next": "Complete its published real-device acceptance scenarios and end-user release gates without removing prior failures.",
       "timeline": {
         "reconstructed": true,
-        "first_commit": { "date": "2026-10-11", "sha": "c18fb325615600bbd361c982d00748ab92b53ffc" },
+        "first_commit": {
+          "date": "2026-10-11",
+          "sha": "c18fb325615600bbd361c982d00748ab92b53ffc"
+        },
         "milestones": [
-          { "day": 0, "date": "2026-10-11", "label": "Rust authorization core: one-use approvals, policy checks, budgets, cancellation", "sha": "c18fb325615600bbd361c982d00748ab92b53ffc" },
-          { "day": 0, "date": "2026-10-11", "label": "native desktop app talking to a local model server", "sha": "7cc7e322265ef79aef1a43565839c41b58b82bf0" },
-          { "day": 0, "date": "2026-10-11", "label": "screen capture, voice, reviewed Windows input, read-only R.A.I.N. Lab context, Windows installer", "sha": "b243e252a7dd8a889a791a16dd696de64eb02a3b" },
-          { "day": 0, "date": "2026-10-11", "label": "delayed approvals expire before a resumed dispatch", "sha": "a364945b284ff25f5d7e944b80268ba8afd37f6a" },
-          { "day": 1, "date": "2026-10-12", "label": "james-loopback: every request confined to a loopback port", "sha": "2fe074f6ecb6d250a701e1aeb10292cb68f59367" }
+          {
+            "day": 0,
+            "date": "2026-10-11",
+            "label": "Rust authorization core: one-use approvals, policy checks, budgets, cancellation",
+            "sha": "c18fb325615600bbd361c982d00748ab92b53ffc"
+          },
+          {
+            "day": 0,
+            "date": "2026-10-11",
+            "label": "native desktop app talking to a local model server",
+            "sha": "7cc7e322265ef79aef1a43565839c41b58b82bf0"
+          },
+          {
+            "day": 0,
+            "date": "2026-10-11",
+            "label": "screen capture, voice, reviewed Windows input, read-only R.A.I.N. Lab context, Windows installer",
+            "sha": "b243e252a7dd8a889a791a16dd696de64eb02a3b"
+          },
+          {
+            "day": 0,
+            "date": "2026-10-11",
+            "label": "delayed approvals expire before a resumed dispatch",
+            "sha": "a364945b284ff25f5d7e944b80268ba8afd37f6a"
+          },
+          {
+            "day": 1,
+            "date": "2026-10-12",
+            "label": "james-loopback: every request confined to a loopback port",
+            "sha": "2fe074f6ecb6d250a701e1aeb10292cb68f59367"
+          }
         ],
         "caveat": "Not the archived james_library Python runtime. James is a separate Rust repository that reads R.A.I.N. Lab's status and results but cannot steer the Lab."
       },
-      "compressed": ["approval and supervision contracts", "native desktop UI", "loopback-only HTTP client", "screen and voice helpers on three operating systems", "Windows installer"],
-      "not_compressed": ["knowing whether real models give good answers and proposals", "testing on a clean machine", "knowing whether people can use it safely"],
+      "compressed": [
+        "approval and supervision contracts",
+        "native desktop UI",
+        "loopback-only HTTP client",
+        "screen and voice helpers on three operating systems",
+        "Windows installer"
+      ],
+      "not_compressed": [
+        "knowing whether real models give good answers and proposals",
+        "testing on a clean machine",
+        "knowing whether people can use it safely"
+      ],
       "evidence": [
-        "https://github.com/topherchris420/james/blob/main/docs/VALIDATION.md",
-        "https://github.com/topherchris420/james/blob/main/docs/SUPERVISION.md",
-        "https://github.com/topherchris420/james/blob/main/docs/BENCHMARKS.md",
+        "https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/README.md",
+        "https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/END_USER_READINESS.md",
+        "https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/VALIDATION.md",
         "https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md"
       ],
-      "last_reviewed": "2026-10-12"
+      "last_reviewed": "2026-10-13"
     },
     {
       "id": "anna",
@@ -242,29 +283,64 @@
       "repo": "https://github.com/topherchris420/satellite-vision-scape",
       "question": "What happens when agents have to live somewhere?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "browser world, agent runtime, svs-agent-trace/v1 traces" },
-        { "state": "OBSERVED", "scope": "one complete recorded live Jev run and paired scripted simulation episodes; not a live-model success rate" }
+        {
+          "state": "EXECUTABLE",
+          "scope": "browser world, shared human/agent input mechanics, trace and evaluation formats"
+        },
+        {
+          "state": "OBSERVED",
+          "scope": "recorded live Jev After Hours and Free Roam case studies plus paired scripted episodes; no repeated-trial live-model success rate"
+        }
       ],
       "next": "Repeated live-model runs compared against scripted baselines, with a success rate.",
       "timeline": {
         "reconstructed": true,
-        "first_commit": { "date": "2026-07-15" },
+        "first_commit": {
+          "date": "2026-07-15"
+        },
         "milestones": [
-          { "day": 0, "date": "2026-07-15", "label": "3D site viewer published from an app-builder template" },
-          { "day": 72, "date": "2026-09-25", "label": "playable third-person open world", "sha": "3863c121a8281309fc8927a9f0cca2712130fcf8" },
-          { "day": 73, "date": "2026-09-26", "label": "After Hours mission and agent runtime", "sha": "f6d4a60237bdec8558b2b0a10f44c9c48348e074" },
-          { "day": 74, "date": "2026-09-27", "label": "agent runtime test suites", "sha": "3e7b4f06d31bb684411b3346dd314ca40e497fab" }
+          {
+            "day": 0,
+            "date": "2026-07-15",
+            "label": "3D site viewer published from an app-builder template"
+          },
+          {
+            "day": 72,
+            "date": "2026-09-25",
+            "label": "playable third-person open world",
+            "sha": "3863c121a8281309fc8927a9f0cca2712130fcf8"
+          },
+          {
+            "day": 73,
+            "date": "2026-09-26",
+            "label": "After Hours mission and agent runtime",
+            "sha": "f6d4a60237bdec8558b2b0a10f44c9c48348e074"
+          },
+          {
+            "day": 74,
+            "date": "2026-09-27",
+            "label": "agent runtime test suites",
+            "sha": "3e7b4f06d31bb684411b3346dd314ca40e497fab"
+          }
         ]
       },
-      "compressed": ["3D world", "physics", "agent runtime and trace format", "tests"],
-      "not_compressed": ["a success rate", "knowing whether the agent is good at the task"],
+      "compressed": [
+        "3D world",
+        "physics",
+        "agent runtime and trace format",
+        "tests"
+      ],
+      "not_compressed": [
+        "a success rate",
+        "knowing whether the agent is good at the task"
+      ],
       "evidence": [
         "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md",
         "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json",
         "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md",
         "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md"
       ],
-      "last_reviewed": "2026-09-30",
+      "last_reviewed": "2026-10-13",
       "observations": [
         {
           "experiment": "jev-after-hours-live-2026-09-27",
@@ -301,19 +377,50 @@
       "repo": "https://github.com/topherchris420/lop-nur-twin",
       "question": "What happens when agents have to live somewhere?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "public-source reconstruction with evidence ledger, release manifest, labelled-fiction game" }
+        {
+          "state": "EXECUTABLE",
+          "scope": "public-source reconstruction, labelled-fiction games, integrated R.A.I.N. research runtime and bounded civilization experiments"
+        },
+        {
+          "state": "OBSERVED",
+          "scope": "scripted Bethesda and rule-based civilization experiments with native replay; one live Gemma-designed oscillator run remained inconclusive after numerical guards failed; no physical or general scientific validation"
+        }
       ],
-      "open": "A public-source reconstruction can record its sources and confidence; it cannot confirm the site.",
+      "open": "Reconstruction cannot confirm the real site. Simulator findings do not establish human behavior, historical outcomes, physical measurements or general scientific intelligence. The retained live Gemma oscillator experiment failed its analytic accuracy guards.",
       "timeline": {
         "reconstructed": true,
-        "first_commit": { "date": "2026-07-17", "sha": "7cbff5a9adbe65d00286b40e52bea26904c18718" },
+        "first_commit": {
+          "date": "2026-07-17",
+          "sha": "7cbff5a9adbe65d00286b40e52bea26904c18718"
+        },
         "milestones": [
-          { "day": 0, "date": "2026-07-17", "label": "3D airfield twin" },
-          { "day": 2, "date": "2026-07-19", "label": "simulator grounded in reproducible public evidence", "sha": "4a90c4813826f4db35f1ff4fb969124765e51f67" },
-          { "day": 19, "date": "2026-08-05", "label": "shared evidence ledger, release manifest, accessible analysis view", "sha": "c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9" }
+          {
+            "day": 0,
+            "date": "2026-07-17",
+            "label": "3D airfield twin"
+          },
+          {
+            "day": 2,
+            "date": "2026-07-19",
+            "label": "simulator grounded in reproducible public evidence",
+            "sha": "4a90c4813826f4db35f1ff4fb969124765e51f67"
+          },
+          {
+            "day": 19,
+            "date": "2026-08-05",
+            "label": "shared evidence ledger, release manifest, accessible analysis view",
+            "sha": "c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9"
+          }
         ]
       },
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-13",
+      "next": "A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines.",
+      "evidence": [
+        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md",
+        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/rain-discovery-validation/README.md",
+        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md",
+        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md"
+      ]
     },
     {
       "id": "mannahatta",
@@ -321,14 +428,31 @@
       "repo": "https://github.com/topherchris420/cognisync-terrain-weaver",
       "question": "What happens when agents have to live somewhere?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "in-browser D8 storm routing and fixed-coefficient planning estimates" }
+        {
+          "state": "EXECUTABLE",
+          "scope": "sealed-storm surface counterfactuals, fill-and-spill terrain routing and identity-checked browser/CLI replay; planning estimates"
+        },
+        {
+          "state": "OBSERVED",
+          "scope": "recorded synthetic checks, source/classification sensitivity and comparisons with public street-flooding reports; not measured intervention outcomes"
+        },
+        {
+          "state": "NOT SUPPORTED",
+          "scope": "preregistered holdout claim that routed accumulation ranks street-flooding reports better than simple low elevation"
+        }
       ],
-      "next": "Comparison of routed storms against a recorded flood event.",
+      "next": "A repaired model evaluated on a new frozen holdout, preserving the failed comparison and comparing against low elevation.",
       "timeline": {
         "reconstructed": false,
         "caveat": "The current history begins on 2026-09-20 with an import of earlier work."
       },
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-13",
+      "open": "Classification and fixed-coefficient hydrology remain limited. The holdout flood-report comparison did not beat the low-elevation baseline; replay and internally consistent counterfactuals do not validate a flood forecast.",
+      "evidence": [
+        "https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/README.md",
+        "https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/INDEX.md",
+        "https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/routing/R5-311-association-holdout/REPORT.md"
+      ]
     },
     {
       "id": "orpheus",
@@ -339,6 +463,34 @@
         { "state": "EXECUTABLE", "scope": "interface prototype; physiological values are generated, microphone energy is the only real input" }
       ],
       "timeline": { "reconstructed": false }
+    },
+    {
+      "id": "qnp",
+      "name": "Quantum Noise Profiler",
+      "repo": "https://github.com/topherchris420/quantum-noise-profiler",
+      "question": "What would have to be measured?",
+      "state": [
+        {
+          "state": "EXECUTABLE",
+          "scope": "qubit-noise monitoring, provenance-separated series, model/forecast refusal, and declared session error budgets"
+        },
+        {
+          "state": "OBSERVED",
+          "scope": "preregistered v0.2/v0.3 simulations with frozen protocols and stored raw data; no quantum-hardware results"
+        }
+      ],
+      "open": "Hardware validation has not run. Guarantees depend on channel-specific null assumptions, and calibrated empirical configurations are distinct from anytime-valid thresholds. Conventional CUSUM matched v0.3 operational performance; stationary fluctuations remain an unresolved failure mode.",
+      "next": "Independent replication and an authorized, separately scoped hardware validation of the monitoring assumptions.",
+      "timeline": {
+        "reconstructed": false,
+        "caveat": "This review inspected the archived protocols and results; it did not reconstruct the project's development timeline."
+      },
+      "evidence": [
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/README.md",
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md",
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md"
+      ],
+      "last_reviewed": "2026-10-13"
     },
     {
       "id": "triad",

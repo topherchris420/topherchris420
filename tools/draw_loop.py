@@ -30,18 +30,18 @@ STAGES = [
     ("validate", "Pordenone"),
     ("authorize", "James · HumanTouch"),
     ("act", "James · Pine Gap"),
-    ("measure", "TRIAD · rain-pipeline"),
-    ("preserve", "R.A.I.N. Lab · Pordenone"),
-    ("replay", "rain-pipeline · TRIAD"),
+    ("measure", "TRIAD · QNP"),
+    ("preserve", "R.A.I.N. Lab · Anna"),
+    ("replay", "Mannahatta · rain-pipeline"),
 ]
 
 DESC = (
     "A loop of eight stages: observe, propose, validate, authorize, act, measure, preserve, replay, then back to observe. "
-    "Each stage is labelled with the projects that do their main work there. "
+    "Each stage is labelled with selected projects that do their main work there. "
     "Observe: CIRCLE and Dynamic Resonance Rooting. Propose: R.A.I.N. Lab. Validate: Pordenone. "
     "Authorize, the one stage highlighted in a warm colour as belonging to a person: James and HumanTouch. "
-    "Act: James and Pine Gap. Measure: TRIAD and rain-pipeline. Preserve: R.A.I.N. Lab and Pordenone. "
-    "Replay: rain-pipeline and TRIAD. "
+    "Act: James and Pine Gap. Measure: TRIAD and Quantum Noise Profiler (QNP). Preserve: R.A.I.N. Lab and Anna. "
+    "Replay: Mannahatta and rain-pipeline. "
     "Inside the loop: Intelligence may propose. Evidence must be checked. Authority stays with the human. "
     "Not every project implements every stage."
 )
@@ -72,7 +72,7 @@ def build(mode: str) -> str:
         f'  <rect width="{W}" height="{H}" rx="12" fill="{p["bg"]}"/>',
         f'  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="11.5" stroke="{p["rule"]}"/>',
         f'  <g font-family="{FONT}">',
-        f'    <text x="40" y="46" fill="{p["muted"]}" font-size="13" letter-spacing="2" font-weight="600">ONE LOOP · WHERE EACH INSTRUMENT DOES ITS MAIN WORK</text>',
+        f'    <text x="40" y="46" fill="{p["muted"]}" font-size="13" letter-spacing="2" font-weight="600">ONE LOOP · SELECTED INSTRUMENTS ALONG THE METHOD</text>',
         # the track
         f'    <path d="M{left} {TOP} H{right} A{R:g} {R:g} 0 0 1 {right} {BOTTOM} H{left} A{R:g} {R:g} 0 0 1 {left} {TOP} Z" stroke="{p["rule"]}" stroke-width="2"/>',
     ]
