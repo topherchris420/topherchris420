@@ -6,7 +6,7 @@ This repository is Christopher Woodyard's GitHub profile. The README is the fron
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Person and shared method; seven question-led entries emphasizing research worlds, measurement, counterfactuals, authorization, and signals; wider links, retained findings, art and invitation |
+| Front door | `README.md` | Person and invitation; seven question-led entries emphasizing research worlds, measurement, counterfactuals, authorization, and signals; wider links, shared method, expandable source records, art and invitation |
 | Editorial review | `docs/portfolio-review.md` | Commit-pinned assessment of every project in the requested public GitHub subset; distinctiveness and evidence guide placement, not popularity |
 | Project map | `docs/project-map.md` | Five questions, the wider project catalog, discarded approaches |
 | Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped experiment states and source records; JSON is the source of truth |
@@ -52,11 +52,11 @@ SVGs are self-contained: native text and vector paths, no scripts, remote fonts,
 - `constellations-*.svg` — the September 27 project map, now in `docs/project-map.md`. The caption names the snapshot date and additions absent from the illustration. Rings indicate shared typed judgment; the dashed connection indicates IONS-X reuse in CIRCLE.
 - `latency-*.svg` — the September 27 timeline snapshot, displayed in `experiments/unreasonably-fast.md`. Keep its date and scope explicit; update both variants and the source ledger together for a new snapshot.
 
-The Pine Gap image in `README.md` is the project's actual `docs/media/screens/driving.jpg` capture, referenced at a reviewed commit. It shows the coffee mission and Indigo People on the radio. Keep it static, linked to the playable world, with descriptive alt text and a visible caption. The screenshot is about 94 KB; do not replace it with an autoplay GIF or a generated depiction of gameplay.
+Pine Gap's primary media is the actual `docs/media/agent-drive.gif` scripted-baseline replay, pinned to revision `3457607680492edf4e4c9117859429846695f10c`. Keep the visible scripted-baseline and 10× playback caption, the smaller MP4 alternative, and the gameplay still link. The animation shows behavior over time and is part of the presentation, not a decorative widget.
 
 The R.A.I.N. screenshots are genuine project captures in [`lop-nur-twin`](https://github.com/topherchris420/lop-nur-twin), pinned to revision `f1dfe3f880c071f98836ab46edcce6f92641b613` so media changes cannot silently rewrite what was shown. The current profile uses `docs/screenshots/rain-lab-meeting.png` and `docs/screenshots/rain-lab-record.png`, side by side at 49% width. Their caption distinguishes scripted meetings and simulation records from live-model or real-world validation. Earlier revisions also displayed `docs/screenshots/bethesda-street.png` and `docs/screenshot-lens.png`. Check external media paths against their source repository whenever a capture is refreshed.
 
-The 13 October front page uses static project captures. Earlier profile revisions also embedded Pine Gap's `docs/media/agent-drive.gif`, a replay of a recorded **scripted baseline**, and CIRCLE's `diagrams/circle-3d-animation.gif`, an **intended hardware geometry visualization**. If reusing those assets, preserve their scope; neither establishes a live model result or physical-device validation. Keep animations compact, link an MP4 alternative when possible, and do not synthesize apparent recordings of events that did not happen.
+The profile also embeds CIRCLE's `diagrams/circle-3d-animation.gif`, pinned to revision `774ddf8750dbe03fd207403d1b4bc428816f3967`, as an intended hardware geometry visualization. Preserve both project GIFs: the author explicitly requested their restoration on 13 October 2026. Do not remove them in a general simplification pass. Keep their scope visible; neither establishes a live model result or physical-device validation. Keep animations responsive, link an MP4 alternative when available, and do not synthesize apparent recordings of events that did not happen.
 
 | Role | Light | Dark |
 | --- | --- | --- |

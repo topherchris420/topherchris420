@@ -18,25 +18,7 @@ I build these things to study a question that keeps changing shape: **what gives
 
 [**Enter R.A.I.N. Lab →**](https://github.com/topherchris420/lop-nur-twin) · [**Play Pine Gap →**](https://geotwn.vercel.app/) · [**Explore Mannahatta →**](https://phaseroot.vercel.app/) · [**Meet James →**](https://github.com/topherchris420/james) · [**Hear the music →**](https://chriswoodyard.bandcamp.com/)
 
-[The idea](#the-idea) · [Enter the work](#enter-the-work) · [What the evidence says](#what-the-evidence-says) · [Participate](#participate) · [Full project map](docs/project-map.md)
-
-## The idea
-
-An answer is the beginning of an investigation. I want to see what was observed, which explanation was proposed, what the system was allowed to do, and what actually happened.
-
-One loop runs through the lab:
-
-**observe → propose → validate → authorize → act → measure → preserve → replay**
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/loop-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/loop-light.svg">
-  <img src="assets/loop-light.svg" alt="Eight stages with selected instruments. Observe: CIRCLE and DRR. Propose: R.A.I.N. Lab. Validate: Pordenone. Authorize: James and HumanTouch, where a person decides. Act: James and Pine Gap. Measure: TRIAD and QNP. Preserve: R.A.I.N. Lab and Anna. Replay: Mannahatta and rain-pipeline. Intelligence may propose. Evidence must be checked. Authority stays with the human." width="100%">
-</picture>
-
-The authorize step belongs to a person, or to a deterministic policy a person wrote. A model's inference is not evidence, its confidence is not permission, and a beautiful simulation is not a measurement of the real world.
-
-> **Intelligence may propose. Evidence must be checked. Authority stays with the human.**
+[Enter the work](#enter-the-work) · [The idea](#the-idea) · [What the evidence says](#what-the-evidence-says) · [Participate](#participate) · [Full project map](docs/project-map.md)
 
 ## Enter the work
 
@@ -83,11 +65,13 @@ That makes an interesting question observable: did the agent solve the task, or 
 
 [**Play →**](https://geotwn.vercel.app/) · [**Watch the scripted baseline →**](https://geotwn.vercel.app/?controller=mock) · [**Inspect a live run →**](https://github.com/topherchris420/satellite-vision-scape/blob/64640fb80bba7c7fc15eb7e04e99c202c29e6654/docs/traces/jev-free-roam-borrowed-wheels-live-2026-10-03.json)
 
-<a href="https://geotwn.vercel.app/">
-  <img src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/media/screens/driving.jpg" alt="Actual Pine Gap gameplay: a four-wheel-drive vehicle near a radome during the coffee mission." width="100%">
+<a href="https://github.com/topherchris420/satellite-vision-scape/blob/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" alt="A sped-up replay of a scripted baseline agent driving a four-wheel-drive vehicle through Pine Gap's coffee-delivery mission." width="100%">
 </a>
 
-*Actual gameplay. Public play and the scripted baseline need no key. Live Jev requires local setup and a TypeSafe key.*
+*Recorded scripted-agent baseline, replayed at 10× speed: the coffee leg takes 87.5 seconds. This is not a live Jev model run.* [Watch the smaller MP4](https://github.com/topherchris420/satellite-vision-scape/blob/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.mp4).
+
+Public play and the scripted baseline need no key. Live Jev requires local setup and a TypeSafe key. [See the gameplay still](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/media/screens/driving.jpg).
 
 <!-- ledger:pine-gap -->
 
@@ -177,6 +161,12 @@ Evidence ladder: `EXECUTABLE` · `OBSERVED` · `NOT SUPPORTED` (simulated sensor
 
 **[CIRCLE](https://github.com/topherchris420/circle)** studies closed-loop physiological feedback: raw sensor codes become estimates, estimates inform bounded decisions, and an independent observation checks whether an intended cue occurred. Timestamps, gaps, refusals, and consent belong to the same record.
 
+<a href="https://github.com/topherchris420/circle/blob/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/circle-3d-animation.gif">
+  <img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/circle/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/circle-3d-animation.gif" alt="Rotating 3D design visualization of CIRCLE's planned Rev B biosignal instrument geometry; not fabricated hardware." width="68%">
+</a>
+
+*CIRCLE Rev B: a hardware design in motion. This is a geometry visualization, not footage of a physical device.*
+
 Its digital physiology twin makes that chain inspectable against known simulated truth. Issuing a haptic command and observing a haptic onset are distinct events.
 
 <a href="https://github.com/topherchris420/circle/blob/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/physiology-polygraph.png">
@@ -212,9 +202,30 @@ These projects develop other parts of the practice. Each has its own scope; shar
 
 [**Full project map →**](docs/project-map.md) · [**Why these projects lead the profile →**](docs/portfolio-review.md)
 
+## The idea
+
+An answer is the beginning of an investigation. I want to see what was observed, which explanation was proposed, what the system was allowed to do, and what actually happened.
+
+One loop runs through the lab:
+
+**observe → propose → validate → authorize → act → measure → preserve → replay**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/loop-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/loop-light.svg">
+  <img src="assets/loop-light.svg" alt="Eight stages with selected instruments. Observe: CIRCLE and DRR. Propose: R.A.I.N. Lab. Validate: Pordenone. Authorize: James and HumanTouch, where a person decides. Act: James and Pine Gap. Measure: TRIAD and QNP. Preserve: R.A.I.N. Lab and Anna. Replay: Mannahatta and rain-pipeline. Intelligence may propose. Evidence must be checked. Authority stays with the human." width="100%">
+</picture>
+
+The authorize step belongs to a person, or to a deterministic policy a person wrote. A model's inference is not evidence, its confidence is not permission, and a beautiful simulation is not a measurement of the real world.
+
+> **Intelligence may propose. Evidence must be checked. Authority stays with the human.**
+
 ## What the evidence says
 
-The point is to build things that can tell me when I am wrong. These are some of the records behind the work:
+The point is to build things that can tell me when I am wrong. Failed tests stay in the record, including when later work improves the method.
+
+<details>
+<summary><strong>Open seven findings, failures, and their source records</strong></summary>
 
 - **R.A.I.N.:** The live Gemma oscillator experiment replayed successfully but failed both analytical accuracy guards. Its conclusion stayed inconclusive. [Record](https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md). Historically, the quotation gate also rejected genuine quotes after typography normalization. [Archived failure](https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md).
 - **Quantum Noise Profiler:** The follow-up repaired two earlier failure modes in simulation; CUSUM matched its operational performance, and hardware validation remains undone. [Results](https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md).
@@ -223,6 +234,8 @@ The point is to build things that can tell me when I am wrong. These are some of
 - **DRR:** Its preregistered NOAA QBO structural-change comparison exceeded the permitted false-alarm rate. [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md).
 - **James:** Earlier small-model sessions confused simulator findings with real-world evidence or claimed authority the model did not have. Later implementation checks do not erase those failures. [Historical session](https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md#readme-screenshot-session-2026-10-11).
 - **Pine Gap:** Paired scripted runs exposed a control-size failure: graded dial turns locked terminals; long holds did not. A later live Free Roam run completed its task but recorded a pedestrian collision. [Scripted experiment](https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md) · [Live trace](https://github.com/topherchris420/satellite-vision-scape/blob/64640fb80bba7c7fc15eb7e04e99c202c29e6654/docs/traces/jev-free-roam-borrowed-wheels-live-2026-10-03.json).
+
+</details>
 
 The [public ledger](experiments/README.md) separates implementation, recorded observation, independent reproduction, and external support. [rain-pipeline](https://github.com/topherchris420/rain-pipeline) preserves preregistration, held-out data, deterministic evaluation, and replay; its record also includes a failed hypothesis. Repetition by the same hands is not independent reproduction.
 
