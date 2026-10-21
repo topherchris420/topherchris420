@@ -1,100 +1,145 @@
 # Profile maintenance
 
-This repository is Christopher Woodyard's GitHub profile. The README is the front door: someone should be able to understand the practice, choose something to try, and find the record behind it in about a minute.
+This repository is Christopher Woodyard's GitHub profile. The README is the entrance to the laboratory, not the laboratory notebook: within ten seconds a visitor should know who Christopher is, what he builds, and what they can try right now, and within a minute they should be holding something to explore.
 
 ## Structure
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Person and invitation; seven question-led entries emphasizing research worlds, measurement, counterfactuals, authorization, and signals; wider links, shared method, expandable source records, art and invitation |
-| Editorial review | `docs/portfolio-review.md` | Commit-pinned assessment of every project in the requested public GitHub subset; distinctiveness and evidence guide placement, not popularity |
-| Project map | `docs/project-map.md` | Five questions, the wider project catalog, discarded approaches |
-| Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped experiment states and source records; JSON is the source of truth |
+| Front door | `README.md` | Entrance banner, a short introduction, six doors, six rooms of exhibits, how the work connects, the evidence, the atlas, the art, and an invitation |
+| Atlas data | `docs/atlas.json` | Every public repository plus public sites of private projects: theme, one-sentence description, what a visitor can do, maturity, links. Source of truth for the atlas |
+| Atlas page | `docs/atlas.md` | Generated from `atlas.json` by `tools/build_atlas.py`, together with the README's atlas block |
+| Research map | `docs/project-map.md` | The five research questions, the wider catalog by question, and what didn't survive contact |
+| Ledger | `experiments/README.md`, `experiments/ledger.json` | Scoped evidence states and source records; the JSON is the source of truth |
 | Build history | `experiments/unreasonably-fast.md` | Git-dated timelines and what AI did or did not shorten |
 | Feasibility | `experiments/impossible-six-months-ago.md` | What recently became attemptable and what it still cannot tell us |
-| Archive | `experiments/archive.md` | Earlier repositories and their recorded connections |
-| Check | `tools/check_profile.py`, `.github/workflows/check.yml` | Compares every page with the ledger on each push: states, question labels, links, anchors, pinned media, figures |
-| Diagram | `tools/draw_loop.py` | Draws both variants of the loop diagram from one layout |
+| Archive | `experiments/archive.md` | Earlier repositories read as strata, including the ones no longer public |
+| Reviews | `docs/portfolio-review.md` | The dated 13 October editorial review, kept as written |
+| Checks | `tools/check_profile.py`, `.github/workflows/check.yml` | Run on every push: ledger, states on every page, links and anchors, pinned media, figures, private-repository links, atlas sync, image weight |
+| Coverage | `.github/workflows/atlas.yml` | Weekly: compares the atlas with the owner's public repositories (`tools/build_atlas.py --discover`) |
+| Illustrations | `tools/draw_assets.py`, `tools/svgkit.py`, `tools/glyphs.json` | Draw every SVG in `assets/`, light and dark, from one layout. `tools/extract_glyphs.py` refreshes the glyph cache; see `tools/FONTS.md` |
+| Captures | `assets/captures/*.webp` | Genuine screenshots of live public sites, taken when a project's repository has no capture of its own |
 
-The front page is curated around concrete questions and experiences. The loop `observe → propose → validate → authorize → act → measure → preserve → replay` connects them; it is not a required ordering of the project sections. Lead with R.A.I.N., Pine Gap, Quantum Noise Profiler and Mannahatta, then the authorization and signal instruments. Add a project when it gives a visitor a distinct, useful way into the practice. Put the wider catalog in the project map under the question it serves. A new repository does not automatically need a new front-page entry.
+`docs/superpowers/` is a superseded June 2026 plan kept as a record; nothing in it describes the current profile.
+
+## The front page
+
+1. **Entrance.** `assets/hero-*.svg`: the name, *I make strange things and test whether they work*, the Adinkra symbol *Nea Onnim No Sua A, Ohu*, and a cabinet of fifteen project drawers with one left open. Then two sentences of introduction, the statement *AI is getting better at answering questions. We're working on making it better at knowing which answers deserve to be trusted.*, and four links a visitor can try immediately.
+2. **Six doors.** `assets/door-*.svg`, each linking to its room's heading: Play a world · Challenge an intelligent system · Hear the invisible · Explore a research lab · Use something practical · Discover the unusual. A plain-text row repeats them for phones and screen readers.
+3. **Six rooms.** Each room has one to three full exhibits, sometimes a two-column pair of smaller ones, and an *Also in this room* list. Rooms are separated by `assets/rule-*.svg`.
+4. **How the inventions connect.** `assets/chain-*.svg` and the table under it: Observation → Interpretation → Decision → Action → Measurement → Verification, with representative projects, the branch where uncertainty should stop action, and the loop back. The projects are separate systems; never present them as one architecture.
+5. **What the evidence says**, **Every public project** (generated), **One practice, many forms**, **Join in**, **How I work** (its anchor is linked from `experiments/unreasonably-fast.md`), and the closing invitation.
+
+### An exhibit
+
+```text
+### Name
+**A plain-language question the project actually asks**
+[real capture or labelled illustration, linked to the live experience]
+Two or three sentences: what a visitor experiences and what the system does.
+<sub>Caption: what the image shows, when it was captured, and its scope.</sub>
+`MATURITY LABEL` · [**Primary action →**](live) · [Source](repo)
+<details> Under the hood: what's distinctive · what was recorded · what failed · what isn't claimed
+<!-- ledger:ID -->
+Evidence ladder: `STATES` (scope).
+</details>
+```
+
+Start with what is fascinating, then what the system does, then links to the method and evidence. Long methodology belongs in the project's own repository.
+
+### Choosing what to feature
+
+The exhibition is curated; the atlas is complete. A new public repository goes into `docs/atlas.json` first. Feature it only if it gives a visitor a distinct, honest way into the practice, has something real to show, and has been read closely enough to describe its boundaries. Prefer projects a visitor can try without installing anything.
 
 ## Editorial rules
 
-- Lead with the person and something a visitor can experience. Connect the software, research, music, and art through the actual work.
-- Give each featured project a concrete description and an obvious first action. Preserve Pine Gap's playable experience and actual gameplay capture. The canonical R.A.I.N. Lab is `topherchris420/lop-nur-twin` (the previous `james_library` runtime was integrated on 6 October 2026). Keep links to `james_library` only as clearly marked historical evidence. Name setup requirements: Pine Gap's free agent is scripted; R.A.I.N.'s offline meetings and public Noeterra rulers are rule-based/scripted; model research and model rulers run locally with configured models.
-- Assess interest through the concrete question, working instrument, inspectable record, and contribution to the wider practice. Established components and distinctive combinations do not establish scientific novelty. A portfolio refresh is not a systematic prior-art review.
-- Quantum Noise Profiler has simulation evidence only. Keep channel-specific statistical assumptions and calibrated-versus-anytime-valid configurations distinct; preserve the conventional CUSUM comparison. Mannahatta's controlled counterfactual and replay do not validate a flood forecast; keep its failed flood-report holdout visible.
-- Under each featured heading, an italic *On the loop* line names the stages where that project does its main work. The diagram places selected instruments along the method, not every project at every stage. Keep its labels and alt text in agreement. The authorize stage always belongs to a person or to a deterministic policy a person wrote; never place a model there.
-- `topherchris420/james` is the current Rust desktop companion. It is not the archived `james_library` runtime; never let one stand in for the other. James reads R.A.I.N. Lab's results and cannot steer the Lab.
-- TRIAD's Milestone 8 comparators were written by an AI agent of the same model family, with no human adjudication. Keep that caveat beside any claim about the result, and describe its same-author repetitions on new datasets as repetitions, not independent replication.
-- Keep measured findings and gameplay media tied to reviewed commit permalinks. Project homepages and setup links follow the current default branch. A permalink identifies a stored artifact; it establishes the executed revision only if the run itself records that revision.
-- Describe capabilities from current public source files. Distinguish an implementation, a prompt's intention, and a measured outcome.
-- Use the evidence ladder in `experiments/README.md` for profile states. Always name synthetic, simulated, software, live-agent, or physical scope.
-- Give each featured project a ladder line and put `<!-- ledger:ID -->` on the line before it. The check compares the backticked states on that line with the entry in `ledger.json`, so a project without a ledger entry cannot be featured.
-- Keep a project's own experiment verdict separate from the profile ladder. A local `PASSED` or `SUPPORTED` result applies to its registered criteria; it does not establish external or physical validation.
-- Same-seed reruns by the same project do not establish independent replication under the profile's `REPRODUCED` definition.
-- Keep failures visible with their sources, even when later work addresses them. Never remove an earlier failed run to improve the story.
-- Take timelines from Git history. A first upload records when work entered Git; it may omit earlier work.
-- Do not invent performance, clinical, safety, novelty, or institutional claims.
-- Link to public projects. Keep contact information to the publicly listed collaboration address.
-- Preserve the artist's voice, the invitation to contribute, and the distinction between Christopher's portfolio and the lab.
-- No statistics cards, skill bars, animated widgets, or decorative badges. Native headings and links must carry the complete page without images.
-- Keep the front page readable on a phone. Use vertically stacked project sections; wide comparisons belong in the evidence documents.
+- Lead with something a visitor can experience. Connect the software, research, music and art through the actual work, and let the projects be the protagonists.
+- Describe capabilities from current public source files and live sites. Distinguish an implementation, a prompt's intention, a roadmap, and a measured outcome. Never upgrade a claim to make a sentence work.
+- Name the scope of every result: synthetic, simulated, scripted, live-model, public-data, or physical. Keep each project's own boundaries in its copy:
+  - Pine Gap and Lop Nur Twin are public-source reconstructions and fictional games, not operational information; keep weapons-related game content and Blacksite imagery out of the profile.
+  - GHOSTWHEEL is simulation only; no real vehicle can be connected, and no vulnerability in any real vehicle is claimed.
+  - Luca is for devices and networks the user owns or may assess; a match is evidence to investigate, not proof of compromise. Credit Kaspersky's TinyCheck as its base.
+  - Project Ascent is not an appraisal or financial advice; its 9.98% median error applies only to the DC single-family and rowhouse configuration it validated.
+  - CIRCLE is not cleared for fabrication or human connection. Sentinel and DNA Music Molecules measure nothing about the body.
+  - Nocturne controls no lights; DC figures are model estimates.
+  - Quantum Noise Profiler's hardware warning accuracy is not established.
+  - TRIAD's selective-risk metric is established prior art; its blind comparators were written by an AI agent of the same model family. The NIST submission implies no endorsement.
+- Credit other people's work. `james_library`'s Rust runtime descends from ZeroClaw; Luca derives from TinyCheck; Anna is built on the Anna's Archive codebase; forks name their upstream in the atlas.
+- **Private source, public site.** When a repository is private but its site is public (DNA Music Molecules, Waveform), link the site, label it *source not public*, and never link the repository. Such a project gets no new ledger state: `EXECUTABLE` means someone else can run it from a repository. Repositories that become private go into `no_longer_public` in `docs/atlas.json`; the check then fails on any link to them.
+- Link text names the project, not the host. Some Vercel hostnames are historical and do not describe the project.
+- Do not link a live site that promotes material the profile should not (Anna's live index includes a shadow-library directory) or that shows an outdated build. Link the repository instead.
+- Use the evidence ladder in `experiments/README.md`. Same-seed reruns and same-author repetitions are not `REPRODUCED`; a project's local *supported* or *passed* verdict on a simulation is not `SUPPORTED`. A pre-registered test against external or physical evidence that the claim survives is `SUPPORTED`, at the scope of that test.
+- Keep failures visible with their sources, even when later work addresses them. Never remove an earlier failed run to improve the story. Add new ones to the research map's *What didn't survive contact* and choose a few for the front page.
+- Take timelines from Git history. Do not invent performance, clinical, safety, novelty, affiliation, or institutional claims.
+- Keep contact information to the publicly listed collaboration address. Preserve the artist's voice and the closing quotation.
+- No statistics cards, skill bars, badge walls, or decorative animation. Native headings and links must carry the whole page without images.
 
-The September 2026 refreshes supersede `docs/superpowers/`, which remains a historical planning record with its own [note](superpowers/README.md). Sponsorship configuration belongs in `.github/FUNDING.yml`.
+## Images
 
-## Visual assets
+**Real captures only.** Use a project's own committed screenshots or recordings, pinned to a 40-digit commit, or a capture of its live public site taken for this profile and stored in `assets/captures/` as WebP (≤ 400 KB; the check enforces it). Each caption says what the image shows and its scope; captures of live sites carry their date. Never use design mockups, generated "screenshots", AI-generated people, or third-party photographs of real sites. Credit basemap imagery (Mannahatta's Esri/Maxar basemap).
 
-SVGs are self-contained: native text and vector paths, no scripts, remote fonts, embedded images, or animation. Light and dark variants use a `<picture>` element with a light fallback. Everything they communicate must also exist as ordinary text.
+The current captures were taken on 21 October 2026 with headless Chromium at 1440 px and resized to 1200 px:
 
-- `loop-*.svg` — the loop, drawn as a track of eight stages with the featured projects placed where they do their main work and the authorize stage marked as a person's. Generated by `tools/draw_loop.py`; edit the script, not the SVGs.
-- `nea-onnim-*.svg` — the profile banner. Preserve the drawing and the name of the Adinkra symbol *Nea Onnim No Sua A, Ohu*, an Akan symbol of knowledge and lifelong learning. Its geometry is mirror-symmetric on a 13 × 13 grid of 12 px cells. Keep the traditional form without distortion or decoration.
-- `constellations-*.svg` — the September 27 project map, now in `docs/project-map.md`. The caption names the snapshot date and additions absent from the illustration. Rings indicate shared typed judgment; the dashed connection indicates IONS-X reuse in CIRCLE.
-- `latency-*.svg` — the September 27 timeline snapshot, displayed in `experiments/unreasonably-fast.md`. Keep its date and scope explicit; update both variants and the source ledger together for a new snapshot.
+| File | Source | Shows |
+| --- | --- | --- |
+| `ghostwheel-refusal.webp` | ghostwheel-one.vercel.app | A replayed command refused after a short drive |
+| `mannahatta-storm.webp` | phaseroot.vercel.app | The illustrative example after a sealed 50 mm storm |
+| `dna-music-instrument.webp` | arpa-h.vercel.app | The instrument's opening screen |
+| `drr-live-lab.webp` | dynamic-resonance-rooting.vercel.app | A planted edge recovered in the live lab |
+| `sentinel-studio.webp` | hello-goodbye-iota.vercel.app | Sentinel's opening screen |
+| `luca-synthetic-demo.webp` | luca-rho-five.vercel.app | The synthetic sample report |
+| `project-33-page.webp` | topherchris420.github.io/33 | The project page |
+| `waveform-workstation.webp` | waveform-teleportation.vercel.app | The workstation's opening screen |
+| `nocturne-restoration-brief.webp` | `examples/restoration/report.html` at `90a98878`, opened offline | Its report on an invented district |
+| `qnp-evidence-explorer.webp` | `docs/assets/evidence-explorer.png` at `192a8a03`, cropped | The ibm_fez pilot in the offline explorer |
 
-Pine Gap's primary media is the actual `docs/media/agent-drive.gif` scripted-baseline replay, pinned to revision `3457607680492edf4e4c9117859429846695f10c`. Keep the visible scripted-baseline and 10× playback caption, the smaller MP4 alternative, and the gameplay still link. The animation shows behavior over time and is part of the presentation, not a decorative widget.
+Pinned media from other repositories:
 
-The R.A.I.N. screenshots are genuine project captures in [`lop-nur-twin`](https://github.com/topherchris420/lop-nur-twin), pinned to revision `f1dfe3f880c071f98836ab46edcce6f92641b613` so media changes cannot silently rewrite what was shown. The current profile uses `docs/screenshots/rain-lab-meeting.png` and `docs/screenshots/rain-lab-record.png`, side by side at 49% width. Their caption distinguishes scripted meetings and simulation records from live-model or real-world validation. Earlier revisions also displayed `docs/screenshots/bethesda-street.png` and `docs/screenshot-lens.png`. Check external media paths against their source repository whenever a capture is refreshed.
+| Project | Artifact | Revision |
+| --- | --- | --- |
+| Pine Gap | `docs/media/agent-drive.gif`, the scripted baseline at 10× (not an AI model) | `3457607680492edf4e4c9117859429846695f10c` |
+| R.A.I.N. Lab | `docs/screenshots/rain-lab-meeting.png`, `rain-lab-record.png` (scripted; no model ran) | `f1dfe3f880c071f98836ab46edcce6f92641b613` |
+| James | `docs/assets/james-conversation.png`, a real session with Gemma 3 4B | `465f58dda921a7de0575b50348cbc5b5ae43122b` |
+| TRIAD | `results/milestone7-plots/bike-sharing.png`, a negative result | `917fc17338dffdc13f924c498c64aab493ad211a` |
+| Project Ascent | `evidence/ascent-studio-preview.png`, the fictional sample home | `698e8fe8a345bf9a5522a0d8031a230775c14182` |
+| Jasmine | `docs/images/test-real-model.png`, a small local model answering from a PDF | `b66dcbdca5df8b61a1b04993910663ac24a92df3` |
+| CIRCLE | `diagrams/circle-3d-animation.gif` (concept render) and `diagrams/physiology-polygraph.png` (simulated physiology) | `774ddf8750dbe03fd207403d1b4bc428816f3967` |
+| Vanta | `public/work/impasto-head.webp`, Christopher's painting | `120c6c4d36356fc7a7b5ffa3fc8729d1ecc0b069` |
 
-The profile also embeds CIRCLE's `diagrams/circle-3d-animation.gif`, pinned to revision `774ddf8750dbe03fd207403d1b4bc428816f3967`, as an intended hardware geometry visualization. Preserve both project GIFs: the author explicitly requested their restoration on 13 October 2026. Do not remove them in a general simplification pass. Keep their scope visible; neither establishes a live model result or physical-device validation. Keep animations responsive, link an MP4 alternative when available, and do not synthesize apparent recordings of events that did not happen.
+Preserve the Pine Gap and CIRCLE animations: the author asked for their restoration on 13 October 2026. Keep their captions: the Pine Gap GIF is the scripted baseline, and the CIRCLE GIF is a concept render whose labels are not claims. The checker verifies that external media are pinned to a commit; it does not fetch them, so re-check pinned URLs when refreshing a capture.
+
+## Illustrations
+
+All SVGs are self-contained: vector paths only, no scripts, remote resources, embedded raster images or animation. Text is drawn as outlines from `tools/glyphs.json` (Fraunces for display, JetBrains Mono for labels, Inter for body text, all under the SIL Open Font License), so every visitor sees the same letterforms. Light and dark variants are paired in a `<picture>` element with the light version as the fallback, and everything an image says also appears in its alt text or in the page.
+
+Edit the content tables in `tools/draw_assets.py` (`CABINET`, `DOORS`, `CHAIN`), then run `python3 tools/draw_assets.py` and update the README's alt text to match. `constellations-*.svg` (the September 27 map in `docs/project-map.md`) and `latency-*.svg` (the September 27 timeline in `experiments/unreasonably-fast.md`) are dated snapshots drawn earlier; keep their dates in their captions.
 
 | Role | Light | Dark |
 | --- | --- | --- |
 | Background | `#F4F7F4` | `#091A1D` |
+| Panel | `#FBFCFA` | `#0D2226` |
 | Rule | `#CDDCDA` | `#234044` |
 | Ink | `#12383C` | `#E8F2ED` |
 | Muted | `#476B6E` | `#ADC7C3` |
-| Accent | `#0B5D63` | `#8BD5CC` |
-| Warm | `#A0522D` | `#E8A87C` |
-| Grid | `#E3ECE9` | `#10292C` |
+| Accent (deep spectral teal) | `#0B5D63` | `#8BD5CC` |
+| Warm (a person decides) | `#A0522D` | `#E8A87C` |
 
+## Adding a public repository
 
-The October 2026 media passes recorded the following source revisions. Some images now appear only in earlier profile revisions; retain the provenance when reusing them. Update the image link, evidence caption and (when needed) the ledger independently:
-
-| Linked project | Illustrated artifact | Pinned revision |
-| --- | --- | --- |
-| Pordenone / Resonate AI Mesh | Research cockpit replay screenshot | `f90f0f732516` |
-| Dynamic Resonance Rooting | Project research flier (not experimental proof) | `862c4f75e609` |
-| CIRCLE | Simulated physiology plot and geometry-concept GIF | `774ddf8750db` |
-| Pine Gap | Scripted-agent replay GIF and smaller MP4 alternative | `345760768049` |
-| rain-pipeline | V3D-EXP-0003 figure (held-out, no improvement shown) | `d85ec37f80e7` |
-| James | Real desktop session with a local Qwen2.5-3B model (`docs/assets/james-conversation.png`) | `31cdff1822b2` |
-| TRIAD | Milestone 7 UCI Bike Sharing figure (`results/milestone7-plots/bike-sharing.png`); primary effect above zero | `7be64c8c93f2` |
-| Vanta | Impasto portrait painting | `120c6c4d3635` |
-
-Where a repository has no committed interface captures (for example HumanTouch on Hugging Face or the Studio UI at this review), prefer a direct link over a generic screenshot, mockup or unrelated image. The GitHub profile checker validates relative links and local vector assets, and its `pins` check fails any image served from `raw.githubusercontent.com` at a branch name instead of a 40-digit commit. It **does not verify that cross-repository images resolve**. Re-check pinned external media links when refreshing them.
+1. Read its README and source. Write one entry in `docs/atlas.json`: one sentence on what is implemented, a short *what you can do*, a maturity label from the atlas legend, and its live URL if one works.
+2. Run `python3 tools/build_atlas.py`, then `python3 tools/check_profile.py`.
+3. If it makes claims worth tracking, add a ledger entry, a row in `experiments/README.md`, and a line in `docs/project-map.md`.
+4. Feature it on the front page only by editorial decision, and then also add it to `CABINET` or `DOORS` if it changes what those show.
 
 ## Updating evidence
 
-1. Update the relevant `ledger.json` entry with a source and `last_reviewed` date. The top-level review date is the latest partial review; it does not imply every project was rechecked.
-2. Mirror changed states in `experiments/README.md` and on the front page's ladder lines. Update front-page findings only when their exact source supports the change.
-3. Run `python3 tools/check_profile.py`. It fails when any page disagrees with the ledger.
-4. Keep recorded timelines intact unless Git history justifies a correction. Leave unreconstructed histories labelled. The check verifies that each milestone's day count matches its date.
-5. Add newly discarded approaches to the project map and choose a few useful findings for the front page.
+1. Update the entry in `ledger.json` with the source that justifies the state and a `last_reviewed` date. The top-level `reviewed` date equals the latest `last_reviewed`.
+2. Mirror changed states in `experiments/README.md` and on the front page's ladder lines. If an entry reaches or loses `SUPPORTED` or `REPRODUCED`, update the front page's **so far** lines; the check names any entry they leave out.
+3. Never promote a state because of a deployment, a demo, or a passing build. Demote freely, and say why in the ledger.
+4. Add newly discarded approaches to the research map.
 
 ## Before publishing
 
-1. Run `python3 tools/check_profile.py`. It parses the ledger, compares every displayed state with it, resolves relative links and heading anchors, and validates the SVG assets. Add `--external` to also confirm that outside links answer. The same check runs in GitHub Actions on every push.
-2. Check changed public repository and evidence links against their destinations. Pin quoted findings and media to reviewed revisions; use default-branch links for current setup and source navigation. Most projects use `main`; `research` and `triad` use `master`; HumanTouch lives on Hugging Face Spaces.
-3. Render the README in light and dark modes at desktop and phone widths. Check layout, heading order, readable links, and missing images.
-4. Run `git diff --check` and review the complete diff.
+1. Run `python3 tools/check_profile.py`. Add `--external` to confirm that outside links answer; Bandcamp and Ko-fi refuse automated clients and are listed for a check by hand.
+2. Render the README in light and dark modes at desktop and phone widths: check the door grid, the two-column pairs, every image, heading order and anchor links.
+3. Run `git diff --check` and review the complete diff.

@@ -1,0 +1,507 @@
+{
+  "schema": "vers3dynamics-atlas/v1",
+  "owner": "topherchris420",
+  "reviewed": "2026-10-21",
+  "reviewed_label": "21 October 2026",
+  "note": "Every public repository under topherchris420, plus public websites of projects whose source is private. Descriptions come from reading each repository's README and source at the commit current on the review date; they describe what is implemented, not what is planned. tools/build_atlas.py renders docs/atlas.md and the README's atlas block from this file, and --discover reports public repositories that are not listed here yet.",
+  "intro": "Every public project in one place, arranged by the six doors on the [front page](../README.md#choose-a-door). The exhibition there is curated; this atlas is meant to be complete. Each entry says what the project is, what you can do with it today, and how far along it is. Archived experiments and forks are at the end, kept for the record.",
+  "maturity_labels": {
+    "Playable world": "A world or game you can open in a browser now.",
+    "Live web app": "An interactive application you can use in a browser now, without installing anything.",
+    "Desktop preview": "An installable developer preview; downloads are unsigned and real-device testing is incomplete.",
+    "Research instrument": "Runnable code that produces recorded, inspectable results with stated limits.",
+    "Simulated research": "Experiments that run on simulated or synthetic data only.",
+    "Executable prototype": "Runs from the repository; not yet validated in the field or by other people.",
+    "Hardware design": "Designs, models and simulations; nothing has been fabricated.",
+    "Library": "A package or command-line tool for your own data.",
+    "Paper": "A written proposal with stated predictions; untested.",
+    "Website": "A public site whose source code is not public.",
+    "Archived": "Preserved as part of the record and no longer developed.",
+    "Fork": "Another project's repository, kept for a contribution or as a starting point."
+  },
+  "maturity_footnote": "A label describes what exists, not whether a claim is true. The [evidence ledger](../experiments/README.md) records, separately, what each experiment has shown and under which conditions. A live demo or a passing build never moves a project up that ladder.",
+  "themes": [
+    {
+      "id": "play-a-world",
+      "title": "Play a world",
+      "blurb": "Explore virtual cities, simulations and autonomous agents."
+    },
+    {
+      "id": "challenge-an-intelligent-system",
+      "title": "Challenge an intelligent system",
+      "blurb": "Investigate decisions, authorization, uncertainty and security."
+    },
+    {
+      "id": "hear-the-invisible",
+      "title": "Hear the invisible",
+      "blurb": "Discover sound, molecular representations, frequency and resonance."
+    },
+    {
+      "id": "explore-a-research-lab",
+      "title": "Explore a research lab",
+      "blurb": "Inspect experiments, models, measurements and scientific results."
+    },
+    {
+      "id": "use-something-practical",
+      "title": "Use something practical",
+      "blurb": "Approachable software for homeowners, creators, device owners and researchers."
+    },
+    {
+      "id": "discover-the-unusual",
+      "title": "Discover the unusual",
+      "blurb": "Experimental inventions that resist easy categorization."
+    },
+    {
+      "id": "artist",
+      "title": "The artist's collection",
+      "blurb": "Music, painting, writing and the portfolio that holds them."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pine Gap: After Hours",
+      "repo": "satellite-vision-scape",
+      "url": "https://geotwn.vercel.app/",
+      "url_label": "Play",
+      "theme": "play-a-world",
+      "featured": true,
+      "status": "active",
+      "maturity": "Playable world",
+      "description": "A browser 3D world built from public sources, where a person, a scripted policy and an AI agent attempt the same night-shift task under the same physics.",
+      "do": "Drive a coffee run at midnight, then watch the scripted baseline try it"
+    },
+    {
+      "name": "R.A.I.N. Lab · Lop Nur Twin",
+      "repo": "lop-nur-twin",
+      "url": "https://rainlabteam.vercel.app/",
+      "url_label": "Enter the lab",
+      "links": [
+        {
+          "label": "Play Noeterra",
+          "url": "https://lop-nur-twin.vercel.app/noeterra"
+        }
+      ],
+      "theme": "play-a-world",
+      "featured": true,
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A research lab hidden inside a simulated city, where a local model may propose an experiment but host code decides what runs, replays it and records the verdict.",
+      "do": "Walk the public-source twin, find the lab and watch a scripted meeting"
+    },
+    {
+      "name": "Mannahatta",
+      "repo": "cognisync-terrain-weaver",
+      "url": "https://phaseroot.vercel.app/",
+      "url_label": "Explore",
+      "theme": "play-a-world",
+      "featured": true,
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "A map instrument that compares a place's historical ecology, present land cover and drawn redesigns under one sealed, terrain-routed storm.",
+      "do": "Redraw a city block and send the same storm through it"
+    },
+    {
+      "name": "Orpheus",
+      "repo": "orpheus-resonance-protocol",
+      "theme": "play-a-world",
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "Interactive command-room fiction in the browser: commit decisions against generated events, then review their consequences in an after-action log.",
+      "do": "Make the calls, then audit every choice",
+      "url": "https://parsonscorporation.vercel.app/",
+      "url_label": "Play"
+    },
+    {
+      "name": "GHOSTWHEEL",
+      "repo": "ghostwheel",
+      "url": "https://ghostwheel-one.vercel.app/",
+      "url_label": "Open the simulator",
+      "theme": "challenge-an-intelligent-system",
+      "featured": true,
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "A browser simulator where you drive fictional electric vehicles and watch a command gateway accept or refuse each steering request; no real vehicle can be connected.",
+      "do": "Drive a fictional EV, inject a synthetic fault and watch it refused"
+    },
+    {
+      "name": "James",
+      "repo": "james",
+      "url": "https://github.com/topherchris420/james/releases",
+      "url_label": "Download the preview",
+      "theme": "challenge-an-intelligent-system",
+      "featured": true,
+      "status": "active",
+      "maturity": "Desktop preview",
+      "description": "A Rust desktop companion that talks to a model on your own computer, sees the screen only when you ask, and needs your approval for every input.",
+      "do": "Chat with a local model that cannot act without you"
+    },
+    {
+      "name": "Pordenone · Resonate AI Mesh",
+      "repo": "resonate-ai-mesh",
+      "url": "https://resonate-ai-bridge.vercel.app/",
+      "url_label": "Open the cockpit",
+      "theme": "challenge-an-intelligent-system",
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A deterministic Rust kernel in which simulated agents propose actions and checks decide, with every step recorded for exact replay and counterfactuals.",
+      "do": "Replay a decision where re-validation overruled an approval"
+    },
+    {
+      "name": "DNA Music Molecules",
+      "url": "https://arpa-h.vercel.app/",
+      "url_label": "Play a strand",
+      "theme": "hear-the-invisible",
+      "featured": true,
+      "status": "website",
+      "maturity": "Website",
+      "description": "A browser instrument that reads a DNA sequence as a musical score through versioned lenses, so you can mutate a strand, compare two, and see the rule behind every note.",
+      "do": "Change one letter of a strand and hear the difference"
+    },
+    {
+      "name": "Sentinel",
+      "repo": "resonance-flow-nexus",
+      "theme": "hear-the-invisible",
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "An account-free browser studio that plays adjustable stereo tones and noise beside a paced breathing guide, keeping session records on your own device.",
+      "do": "Shape a tone and breathe with a timed guide",
+      "url": "https://hello-goodbye-iota.vercel.app/",
+      "url_label": "Open"
+    },
+    {
+      "name": "Vers3Dynamics Studio",
+      "repo": "quantum-spin-sound",
+      "url": "https://bell-labs.vercel.app/",
+      "url_label": "Play",
+      "theme": "hear-the-invisible",
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "A browser instrument where scratching a virtual record bends a Web Audio synthesizer while waveform, spectrum and geometry react; its Strudel pattern editor does not yet drive the sound.",
+      "do": "Scratch a virtual record and watch the sound bend"
+    },
+    {
+      "name": "Dynamic Resonance Rooting",
+      "repo": "dynamic-resonance-rooting",
+      "url": "https://dynamic-resonance-rooting.vercel.app/",
+      "url_label": "Open the live lab",
+      "theme": "hear-the-invisible",
+      "status": "active",
+      "maturity": "Library",
+      "description": "A Python framework, with a browser lab, that finds rhythms, lead–lag links and structural change in multivariate signals and tests each against surrogate nulls.",
+      "do": "Plant a hidden rhythm in the live lab and see whether it is found"
+    },
+    {
+      "name": "TRIAD",
+      "repo": "triad",
+      "theme": "explore-a-research-lab",
+      "featured": true,
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A Rust instrument that measures how often the answers a system chooses to give are wrong, and tests when it should refuse to answer at all.",
+      "do": "Score saved predictions, or read eight frozen studies and their failures",
+      "links": [
+        {
+          "label": "Research arc",
+          "url": "https://github.com/topherchris420/triad#the-research-arc-machine-checked"
+        }
+      ]
+    },
+    {
+      "name": "Quantum Noise Profiler",
+      "repo": "quantum-noise-profiler",
+      "theme": "explore-a-research-lab",
+      "featured": true,
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A Python instrument that tracks qubit noise with separated provenance and sequential drift tests, and withholds estimates its data cannot support.",
+      "do": "Step through a real IBM qubit pilot, batch by batch"
+    },
+    {
+      "name": "IONS-X Deep Emergence Lab",
+      "repo": "ions-x-deep-emergence-lab",
+      "theme": "explore-a-research-lab",
+      "status": "active",
+      "maturity": "Simulated research",
+      "description": "A seeded simulation where sensing agents search a synthetic field for planted couplings, with every run paired against an identical run that has none.",
+      "do": "Watch forty agents hunt for a coupling, then check the control"
+    },
+    {
+      "name": "rain-pipeline",
+      "repo": "rain-pipeline",
+      "theme": "explore-a-research-lab",
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A pipeline that commits an experiment's pass and fail rules before held-out data is read, tests them on public heart-and-breathing recordings, and replays every verdict.",
+      "do": "Replay a preregistered experiment that failed"
+    },
+    {
+      "name": "Project Ascent",
+      "repo": "project-ascent",
+      "url": "https://project-ascent-theta.vercel.app/",
+      "url_label": "Try Ascent",
+      "theme": "use-something-practical",
+      "featured": true,
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "Free home-price studios for covered DC and Maryland homes that show every comparable sale and assumption, and publish the accuracy tests the models failed.",
+      "do": "Take apart the sales behind an estimate; not an appraisal"
+    },
+    {
+      "name": "Luca",
+      "repo": "Luca",
+      "url": "https://luca-rho-five.vercel.app/",
+      "url_label": "See the sample report",
+      "theme": "use-something-practical",
+      "featured": true,
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A Wi-Fi access point that records one device's traffic and checks it against indicators and heuristics; built on Kaspersky's TinyCheck, with an added kernel observatory.",
+      "do": "Inspect a device you own without installing anything on it"
+    },
+    {
+      "name": "Jasmine",
+      "repo": "Jasmine",
+      "theme": "use-something-practical",
+      "featured": true,
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A self-hosted studio that turns a plain-language request into an AI workflow you test on your own models and deploy as an API, widget or schedule.",
+      "do": "Describe an AI app and watch each step run on your own model"
+    },
+    {
+      "name": "Nocturne",
+      "repo": "nocturne",
+      "theme": "use-something-practical",
+      "featured": true,
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A toolkit that works backward from a darker-sky target to the least-cost lighting changes, and turns owners' existing switches into tracked, reversible actions.",
+      "do": "Plan a darker sky without dimming the crosswalk"
+    },
+    {
+      "name": "Anna · R.A.I.N. DataMatrix Engine",
+      "repo": "anna",
+      "theme": "use-something-practical",
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A self-hostable search engine for papers, standards, code and vendor documentation that fuses keyword and vector retrieval and cites the exact passage.",
+      "do": "Run your own research search and re-check every citation"
+    },
+    {
+      "name": "Embedded AI Validation Platform",
+      "repo": "embedded-ai-validation-platform",
+      "theme": "use-something-practical",
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A command line and dashboard that run firmware, TinyML, sensor-fusion and fault-injection suites and gate releases; every committed result is simulated.",
+      "do": "Run a simulated release gate on an embedded AI build"
+    },
+    {
+      "name": "CIRCLE",
+      "repo": "circle",
+      "theme": "discover-the-unusual",
+      "featured": true,
+      "status": "active",
+      "maturity": "Hardware design",
+      "description": "A closed-loop biosignal and haptic-feedback instrument designed in code and tested against a simulated physiology twin; nothing is fabricated or cleared for use on a person.",
+      "do": "Run the physiology twin and audit every controller decision"
+    },
+    {
+      "name": "Project 33",
+      "repo": "33",
+      "url": "https://topherchris420.github.io/33/",
+      "url_label": "Project page",
+      "theme": "discover-the-unusual",
+      "featured": true,
+      "status": "active",
+      "maturity": "Executable prototype",
+      "description": "A folding-fin rocket bench testbed whose evidence record ties each engineering claim to its artifacts, including the claims its own models contradict.",
+      "do": "Audit eight claims, three of them contradicted"
+    },
+    {
+      "name": "Waveform",
+      "url": "https://waveform-teleportation.vercel.app/",
+      "url_label": "Open the workstation",
+      "theme": "discover-the-unusual",
+      "featured": true,
+      "status": "website",
+      "maturity": "Website",
+      "description": "Simulation workstations that evolve standard quantum mechanics and a proposed field model side by side and look for the experiment that would separate them.",
+      "do": "Change one parameter and watch two theories disagree"
+    },
+    {
+      "name": "hello_os",
+      "repo": "ideas",
+      "theme": "discover-the-unusual",
+      "status": "active",
+      "maturity": "Simulated research",
+      "description": "A small Python package that computes a toy gravitomagnetic rotor-array model, stress-limited design sweeps and synthetic detector traces.",
+      "do": "Sweep imaginary rotor designs against material limits"
+    },
+    {
+      "name": "Dynamic Location Theory",
+      "url": "https://doi.org/10.5281/zenodo.18263032",
+      "url_label": "Read the preprint",
+      "theme": "discover-the-unusual",
+      "status": "website",
+      "source_note": "preprint",
+      "maturity": "Paper",
+      "description": "A preprint proposing that position is encoded through resonance with a background scalar field, with predictions for atomic clocks and matter-wave interferometry.",
+      "do": "Read the predictions that could reject it"
+    },
+    {
+      "name": "Vanta",
+      "repo": "vanta",
+      "url": "https://mitpress.vercel.app/",
+      "url_label": "Visit",
+      "theme": "artist",
+      "status": "active",
+      "maturity": "Live web app",
+      "description": "Christopher's portfolio: writing, instruments, worlds, paintings and music as five channels, with a source-linked research atlas.",
+      "do": "Tune five channels of one person's work"
+    },
+    {
+      "name": "HumanTouch",
+      "url": "https://huggingface.co/spaces/ciaochris/HumanTouch",
+      "url_label": "Try it",
+      "theme": "artist",
+      "status": "website",
+      "source_note": "source on Hugging Face",
+      "maturity": "Live web app",
+      "description": "A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable.",
+      "do": "Revise a paragraph and inspect what changed"
+    },
+    {
+      "name": "Indigo People",
+      "url": "https://chriswoodyard.bandcamp.com/",
+      "url_label": "Listen",
+      "theme": "artist",
+      "status": "website",
+      "source_note": "music",
+      "maturity": "Website",
+      "description": "Christopher's recordings as Indigo People.",
+      "do": "Listen"
+    },
+    {
+      "name": "james_library",
+      "repo": "james_library",
+      "theme": "explore-a-research-lab",
+      "status": "archived",
+      "maturity": "Archived",
+      "description": "The original R.A.I.N. Lab runtime, whose dated experiments remain historical evidence; its Rust layer descends from ZeroClaw, and the lab now lives in Lop Nur Twin.",
+      "do": "Read the first quote-checking experiments, including the one that failed"
+    },
+    {
+      "name": "NIST metric proposal",
+      "repo": "ai-metrology-submissions",
+      "theme": "explore-a-research-lab",
+      "status": "fork",
+      "maturity": "Fork",
+      "fork_of": "usnistgov/ai-metrology-submissions",
+      "description": "One proposal on a branch: the established selective-risk-at-target-coverage metric, submitted through the NIST AI Metrology Center's public community process; not merged as of 21 October 2026, and no endorsement is implied.",
+      "do": "Read the proposal",
+      "url": "https://github.com/topherchris420/ai-metrology-submissions/blob/ff442fdfa56cc2fe4b18e087a5c5e9b6559a8e49/submissions/selective-risk-at-target-coverage.yml",
+      "url_label": "Proposal"
+    },
+    {
+      "name": "THINK",
+      "repo": "darpa-math-ponderer",
+      "theme": "discover-the-unusual",
+      "status": "archived",
+      "maturity": "Archived",
+      "description": "A browser workspace that assembles templated conjectures in four areas of mathematics, each marked as needing proof; nothing in it is proved, searched or written by a model.",
+      "do": "Generate a conjecture with its assumptions"
+    },
+    {
+      "name": "Resona",
+      "repo": "resona-lab-network",
+      "theme": "discover-the-unusual",
+      "status": "archived",
+      "maturity": "Archived",
+      "description": "A social site where researchers post projects and others resonate with, fork and discuss them; no longer maintained.",
+      "do": "Read how a research network was imagined"
+    },
+    {
+      "name": "DC news prototype",
+      "repo": "washingtondc-news",
+      "theme": "discover-the-unusual",
+      "status": "archived",
+      "maturity": "Archived",
+      "description": "A prototype local-news landing page with weather and puzzle-style easter eggs; never a news outlet, and its placeholder headlines are invented.",
+      "do": "Find the hidden documents"
+    },
+    {
+      "name": "Signal Lab",
+      "repo": "fartscroll",
+      "theme": "hear-the-invisible",
+      "status": "archived",
+      "maturity": "Archived",
+      "fork_of": "chriswindings/fartscroll",
+      "description": "A one-page waveform console with sliders and an optional tone, kept in a repository that began as a fork of someone else's browser prank.",
+      "do": "Tune a waveform",
+      "url": "https://woodyard.vercel.app/",
+      "url_label": "Open"
+    },
+    {
+      "name": "Sergeant Carney",
+      "repo": "Sergeant_Carney",
+      "theme": "discover-the-unusual",
+      "status": "archived",
+      "maturity": "Archived",
+      "fork_of": "tonykipkemboi/groq_streamlit_demo",
+      "description": "A chat experiment in which a language model role-plays Sgt. William Harvey Carney in nineteenth-century diction; his replies are model-generated and may be wrong.",
+      "do": "Read the role-play prompt"
+    },
+    {
+      "name": "GitSocial agent skill",
+      "repo": "gitsocial-agent-skill",
+      "theme": "use-something-practical",
+      "status": "archived",
+      "maturity": "Fork",
+      "fork_of": "gitsocial-org/gitsocial-agent-skill",
+      "description": "An unmodified reference copy of gitsocial-org's skill that teaches coding agents the GitSocial command line; the work is theirs.",
+      "do": "Follow the link upstream"
+    }
+  ],
+  "archive_blurb": "earlier experiments and forks, kept for the record",
+  "archive_intro": "Older work stays public when it is part of the record. These repositories are archived or are forks of other people's projects; [the archive, read as strata](../experiments/archive.md) tells how the earlier experiments became the current ones.",
+  "archive_footnote": "Twenty-four earlier experiments from 2024–2025 have since been made private, as have the source repositories of Waveform, Dynamic Location Theory and DNA Music Molecules. Their descriptions stay in [the archive record]({root}experiments/archive.md); their links are not repeated here because they no longer resolve.",
+  "maintenance": "The data lives in [`atlas.json`](atlas.json); [`tools/build_atlas.py`](../tools/build_atlas.py) writes this page and the atlas block on the front page. A scheduled workflow runs `python3 tools/build_atlas.py --discover`, which lists public repositories that are not in the atlas yet and entries whose repositories stopped being public. Adding one is an editorial act: read the repository, write one entry that describes what is implemented, and run the build. Featuring it on the front page is a separate decision.",
+  "excluded": [
+    {
+      "repo": "topherchris420",
+      "reason": "This profile."
+    }
+  ],
+  "no_longer_public": [
+    "waveform-shift-quantum",
+    "research",
+    "dna-music-molecules",
+    "james-library-showcase",
+    "teleportation",
+    "groq3",
+    "groq_streamlit_demo2",
+    "nonlinear-time-series-analysis",
+    "chrono-root-flow-visualizer",
+    "wormhole-resonance-visualizer",
+    "resonance-bloom-genesis",
+    "quantum-phase-explorer-lab",
+    "quantum-chaos-spark",
+    "quantum-mist-tuner",
+    "vacuum-resonance-genesis-core",
+    "hyperspace-echo-portal",
+    "tempo-weave-flow",
+    "soul-resonance-studio",
+    "coherence-journey-viz",
+    "mind-forge-human",
+    "cognition-stream",
+    "ontogenetic-field-weaver",
+    "TextResonanceAnalyzer",
+    "signalvault-resonance-mapper",
+    "signal-forge-pulse",
+    "cropguard-nexus",
+    "math-dreamweaver-ai",
+    "stellar-resonance-engine",
+    "vitalsync-wellness"
+  ]
+}

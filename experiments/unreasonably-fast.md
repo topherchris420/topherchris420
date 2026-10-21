@@ -140,10 +140,10 @@ This line of work spans three repositories, so its intervals are counted in cale
 
 | Date | Step |
 | --- | --- |
-| 2025-08-06 | [teleportation](https://github.com/topherchris420/teleportation) (archived): "vibrational variables as location" |
+| 2025-08-06 | teleportation (archived; no longer public): "vibrational variables as location" |
 | 2026-01-16 | Preprint on Zenodo: [10.5281/zenodo.18263032](https://doi.org/10.5281/zenodo.18263032) |
-| 2026-03-31 | [research](https://github.com/topherchris420/research): paper site and simulation prototype |
-| 2026-08-10 | [Woodyard model workstation](https://github.com/topherchris420/waveform-shift-quantum) rebuilt as a falsification engine |
+| 2026-03-31 | research: paper site and simulation prototype (no longer public) |
+| 2026-08-10 | Woodyard model workstation rebuilt as a falsification engine; it runs publicly as [Waveform](https://waveform-teleportation.vercel.app/), its source no longer public |
 | open | An interferometry bound applied to the model |
 
 - **Compressed.** Simulation, visualization, typesetting, a workstation that compares the proposal with standard baselines.

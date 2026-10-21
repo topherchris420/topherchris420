@@ -1,0 +1,28 @@
+name: Atlas coverage
+
+# The atlas lists every public repository; the front page features a curated few.
+# Each week this compares docs/atlas.json with the owner's public repositories and
+# writes the differences to the job summary. A red run means a repository was
+# published (or made private) since the atlas was last edited: read it, add or
+# move its entry in docs/atlas.json, and run tools/build_atlas.py.
+
+on:
+  schedule:
+    - cron: "41 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare the atlas with public repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/build_atlas.py --discover

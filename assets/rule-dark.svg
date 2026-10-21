@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="40" viewBox="0 0 1200 40" fill="none" role="img" aria-labelledby="title description">
+<title id="title">Section rule</title>
+<desc id="description">A thin measuring rule with a short graduated scale at its centre, separating sections.</desc>
+<defs></defs>
+<path d="M0 20.5 H1200" stroke="#234044"/>
+<path d="M530 11.5 V20.5 M537 16 V20.5 M544 16 V20.5 M551 16 V20.5 M558 16 V20.5 M565 11.5 V20.5 M572 16 V20.5 M579 16 V20.5 M586 16 V20.5 M593 16 V20.5 M600 11.5 V20.5 M607 16 V20.5 M614 16 V20.5 M621 16 V20.5 M628 16 V20.5 M635 11.5 V20.5 M642 16 V20.5 M649 16 V20.5 M656 16 V20.5 M663 16 V20.5 M670 11.5 V20.5" stroke="#ADC7C3" stroke-opacity="0.75"/>
+<circle cx="600.0" cy="20.5" r="3" fill="#8BD5CC"/>
+</svg>

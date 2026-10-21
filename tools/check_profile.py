@@ -28,13 +28,23 @@ Offline checks, always run:
            every light variant has a dark twin.
   dates    the front page's "Reviewed ..." line is a real date no later than
            the ledger's review date.
-  claims   the sentences saying nothing has reached REPRODUCED or SUPPORTED
-           are present only while that is what the ledger says.
+  claims   the front page's "`SUPPORTED`, so far" and "`REPRODUCED`, so far"
+           lines name every entry that holds those states, or say "nothing"
+           while none does; the ledger page's sentence saying no entry has
+           reached them is present only while that is true.
+  public   no Markdown file links a repository that docs/atlas.json lists as
+           no longer public, so a visitor never meets a 404 from this profile.
+  atlas    docs/atlas.json is valid, and the README's atlas block and
+           docs/atlas.md match what tools/build_atlas.py generates from it.
+  weight   every raster image in assets/ stays under the size budget, so the
+           page remains quick to load.
 
 Optional:
 
   --external  every http(s) link in the Markdown files answers with a status
               below 400. Needs network access, so it is not run on push.
+              Hosts that refuse automated clients are reported for a manual
+              check instead of failing.
 
 Exit status is 0 when everything passes and 1 otherwise.
 """
@@ -48,6 +58,7 @@ import json
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -59,7 +70,14 @@ FRONT_PAGE = ROOT / "README.md"
 PROJECT_MAP = ROOT / "docs" / "project-map.md"
 ASSETS = ROOT / "assets"
 
+ATLAS = ROOT / "docs" / "atlas.json"
 SCHEMA = "vers3dynamics-ledger/v1"
+TOP_RUNGS = ("SUPPORTED", "REPRODUCED")
+RASTER_BUDGET = 400 * 1024
+RASTER_TYPES = (".png", ".jpg", ".jpeg", ".gif", ".webp")
+# Hosts that answer automated requests with a bot challenge; they are checked by hand.
+BOT_WALLED = ("bandcamp.com", "ko-fi.com")
+OWNER_LINK = re.compile(r"https://(?:github\.com|raw\.githubusercontent\.com)/topherchris420/([A-Za-z0-9_.-]+)")
 LADDER = (
     "CONCEIVED",
     "BUILDING",
@@ -364,8 +382,10 @@ def check_markers(entries: dict[str, dict], report: Report) -> None:
         m = MARKER.search(line)
         if not m:
             continue
-        markers += 1
         eid = m.group(1)
+        if eid == "top-rung":
+            continue
+        markers += 1
         entry = entries.get(eid)
         if entry is None:
             report.fail(f"{where}:{index + 1}", f"marker names unknown ledger entry {eid!r}")
@@ -514,23 +534,80 @@ def check_dates(ledger: dict, report: Report) -> None:
     report.count("review dates", len(found))
 
 
-TOP_RUNG_CLAIMS = (
-    (FRONT_PAGE, "Nothing here has reached `REPRODUCED` or `SUPPORTED` yet."),
-    (LEDGER_DOC, "No entry currently meets this profile's independent `REPRODUCED` or external/physical `SUPPORTED` definition."),
-)
+LEDGER_CLAIM = "No entry currently meets this profile's independent `REPRODUCED` or external/physical `SUPPORTED` definition."
 
 
 def check_claims(entries: dict[str, dict], report: Report) -> None:
-    reached = sorted(
-        f"{e['name']}: {s}" for e in entries.values() for s in states_of(e) if s in ("REPRODUCED", "SUPPORTED")
-    )
-    for path, sentence in TOP_RUNG_CLAIMS:
-        present = sentence in path.read_text(encoding="utf-8")
-        if present and reached:
-            report.fail(rel(path), "says nothing has reached REPRODUCED or SUPPORTED, but the ledger has " + "; ".join(reached))
-        if not present and not reached:
-            report.fail(rel(path), f"the ledger has no REPRODUCED or SUPPORTED entry, but the sentence saying so is gone: {sentence!r}")
-    report.count("top-rung claims", len(TOP_RUNG_CLAIMS))
+    """The front page's top-rung lines and the ledger page's sentence must match the ledger."""
+    holders = {rung: sorted(e["name"] for e in entries.values() if rung in states_of(e)) for rung in TOP_RUNGS}
+    lines = FRONT_PAGE.read_text(encoding="utf-8").splitlines()
+    for rung in TOP_RUNGS:
+        label = f"**`{rung}`, so far:**"
+        found = [line for line in lines if line.startswith(label)]
+        if len(found) != 1:
+            report.fail(rel(FRONT_PAGE), f"needs exactly one line starting with {label!r}")
+            continue
+        line = found[0]
+        if not holders[rung]:
+            if "nothing" not in line:
+                report.fail(rel(FRONT_PAGE), f"no ledger entry holds {rung}, so its line must say nothing has reached it")
+        else:
+            if "nothing" in line:
+                report.fail(rel(FRONT_PAGE), f"says nothing has reached {rung}, but the ledger has {', '.join(holders[rung])}")
+            for name in holders[rung]:
+                if name not in line:
+                    report.fail(rel(FRONT_PAGE), f"the {rung} line does not name {name}, which holds that state")
+    reached = holders["SUPPORTED"] or holders["REPRODUCED"]
+    present = LEDGER_CLAIM in LEDGER_DOC.read_text(encoding="utf-8")
+    if present and reached:
+        report.fail(rel(LEDGER_DOC), "says no entry has reached REPRODUCED or SUPPORTED, but the ledger has some")
+    if not present and not reached:
+        report.fail(rel(LEDGER_DOC), f"the ledger has no REPRODUCED or SUPPORTED entry, but the sentence saying so is gone: {LEDGER_CLAIM!r}")
+    report.count("top-rung claims", len(TOP_RUNGS) + 1)
+
+
+def check_public(report: Report) -> None:
+    """No link may lead to a repository the atlas records as no longer public."""
+    gone = {name.lower() for name in json.loads(ATLAS.read_text(encoding="utf-8")).get("no_longer_public", [])}
+    links = 0
+    for md in markdown_files():
+        for number, line in enumerate(lines_without_fences(md.read_text(encoding="utf-8")), 1):
+            for m in OWNER_LINK.finditer(line):
+                links += 1
+                name = m.group(1).removesuffix(".git").lower()
+                if name in gone:
+                    report.fail(f"{rel(md)}:{number}", f"links {m.group(0)}, which is no longer public")
+    report.count("owner links", links)
+
+
+def check_atlas(report: Report) -> None:
+    """The generated atlas must match its data."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    sys.dont_write_bytecode = True  # keep tools/ free of __pycache__
+    import build_atlas  # noqa: E402 - the generator lives beside this script
+
+    data = build_atlas.load()
+    for problem in build_atlas.validate(data):
+        report.fail(rel(ATLAS), problem)
+    readme = FRONT_PAGE.read_text(encoding="utf-8")
+    if readme != build_atlas.splice(readme, build_atlas.readme_block(data)):
+        report.fail(rel(FRONT_PAGE), "atlas block is out of date with docs/atlas.json; run python3 tools/build_atlas.py")
+    doc = build_atlas.ATLAS_DOC
+    if not doc.exists() or doc.read_text(encoding="utf-8") != build_atlas.atlas_doc(data):
+        report.fail("docs/atlas.md", "is out of date with docs/atlas.json; run python3 tools/build_atlas.py")
+    report.count("atlas entries", len(data["projects"]))
+
+
+def check_weight(report: Report) -> None:
+    total = 0
+    files = [p for p in ASSETS.rglob("*") if p.suffix.lower() in RASTER_TYPES]
+    for path in files:
+        size = path.stat().st_size
+        total += size
+        if size > RASTER_BUDGET:
+            report.fail(rel(path), f"{size // 1024} KB is over the {RASTER_BUDGET // 1024} KB budget for a local image")
+    report.count("local images", len(files))
+    report.count("local image KB", total // 1024)
 
 
 def fetch_status(url: str) -> int | str:
@@ -557,10 +634,18 @@ def fetch_status(url: str) -> int | str:
 
 def check_external(urls: set[str], report: Report) -> None:
     bases = sorted({u.split("#")[0] for u in urls})
+    manual = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         for url, status in zip(bases, pool.map(fetch_status, bases)):
-            if not isinstance(status, int) or status >= 400:
-                report.fail(url, f"answered {status}")
+            if isinstance(status, int) and status < 400:
+                continue
+            host = urllib.parse.urlparse(url).hostname or ""
+            if status == 403 and any(host == h or host.endswith("." + h) for h in BOT_WALLED):
+                manual.append(url)
+                continue
+            report.fail(url, f"answered {status}")
+    for url in manual:
+        print(f"CHECK BY HAND {url} (refuses automated clients)")
     report.count("external links", len(bases))
 
 
@@ -582,6 +667,9 @@ def main(argv: list[str]) -> int:
     external = check_links(report)
     check_pins(report)
     check_svgs(report)
+    check_public(report)
+    check_atlas(report)
+    check_weight(report)
     if args.external:
         check_external(external, report)
 

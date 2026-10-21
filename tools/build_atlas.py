@@ -1,0 +1,300 @@
+#!/usr/bin/env python3
+"""Build the public project atlas from docs/atlas.json.
+
+The atlas is the complete, organized list of public work. The README's
+featured exhibition is curated by hand; the atlas is generated, so a newly
+published repository needs one JSON entry, not a rewrite of the README.
+
+    python3 tools/build_atlas.py             write docs/atlas.md and the README's atlas block
+    python3 tools/build_atlas.py --check     fail if either is out of date (runs in CI)
+    python3 tools/build_atlas.py --discover  compare the atlas with the owner's public
+                                             repositories on GitHub (needs network)
+
+--discover lists public repositories the atlas has not considered yet, and
+atlas entries whose repository is no longer public (its links would 404).
+Adding a repository is an editorial decision: write its entry by hand, with a
+description taken from what the repository actually does, then run the build.
+Links in shared text use a {root} placeholder for the repository root, so the
+same sentence works on the front page and in docs/. Standard library only.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "docs" / "atlas.json"
+ATLAS_DOC = ROOT / "docs" / "atlas.md"
+README = ROOT / "README.md"
+BEGIN, END = "<!-- atlas:begin -->", "<!-- atlas:end -->"
+SCHEMA = "vers3dynamics-atlas/v1"
+STATUSES = ("active", "archived", "fork", "website")
+
+
+def load() -> dict:
+    data = json.loads(DATA.read_text(encoding="utf-8"))
+    if data.get("schema") != SCHEMA:
+        raise SystemExit(f"{DATA.name}: schema is {data.get('schema')!r}, expected {SCHEMA!r}")
+    return data
+
+
+def validate(data: dict) -> list[str]:
+    problems = []
+    themes = {t["id"] for t in data["themes"]}
+    seen = set()
+    for p in data["projects"]:
+        tag = p.get("name", "?")
+        for key in ("name", "theme", "description", "do", "maturity", "status"):
+            if not p.get(key):
+                problems.append(f"{tag}: missing '{key}'")
+        if p.get("theme") not in themes:
+            problems.append(f"{tag}: unknown theme {p.get('theme')!r}")
+        if p.get("status") not in STATUSES:
+            problems.append(f"{tag}: status must be one of {', '.join(STATUSES)}")
+        if p.get("status") == "website":
+            if p.get("repo"):
+                problems.append(f"{tag}: a website-only entry must not link a repository")
+            if not p.get("url"):
+                problems.append(f"{tag}: a website-only entry needs a url")
+        elif not p.get("repo"):
+            problems.append(f"{tag}: missing 'repo'")
+        key = p.get("repo") or p.get("url")
+        if key in seen:
+            problems.append(f"{tag}: listed twice")
+        seen.add(key)
+        for field in ("url",):
+            if p.get(field) and not p[field].startswith("https://"):
+                problems.append(f"{tag}: {field} must be an https URL")
+        if p.get("description", "").count(". ") > 1:
+            problems.append(f"{tag}: description should be one sentence")
+    for name in data.get("no_longer_public", []):
+        if name in {p.get("repo") for p in data["projects"]}:
+            problems.append(f"{name}: listed as a project and as no longer public")
+    return problems
+
+
+def repo_url(data: dict, repo: str) -> str:
+    return f"https://github.com/{data['owner']}/{repo}"
+
+
+def links(data: dict, p: dict, short: bool = False) -> str:
+    parts = []
+    if p.get("url"):
+        parts.append(f"[{p.get('url_label', 'Open')} ↗]({p['url']})")
+    if p.get("repo"):
+        parts.append(f"[{'Source' if short else 'Repository'}]({repo_url(data, p['repo'])})")
+    for extra in p.get("links", []):
+        parts.append(f"[{extra['label']}]({extra['url']})")
+    return " · ".join(parts)
+
+
+def name_link(data: dict, p: dict) -> str:
+    target = repo_url(data, p["repo"]) if p.get("repo") else p["url"]
+    return f"[{p['name']}]({target})"
+
+
+def by_theme(data: dict, status: tuple[str, ...]) -> list[tuple[dict, list[dict]]]:
+    groups = []
+    for theme in data["themes"]:
+        members = [p for p in data["projects"] if p["theme"] == theme["id"] and p["status"] in status]
+        if members:
+            groups.append((theme, members))
+    return groups
+
+
+def note(p: dict) -> str:
+    bits = []
+    if p["status"] == "website":
+        bits.append(p.get("source_note", "source not public"))
+    if p.get("fork_of"):
+        bits.append(f"fork of {p['fork_of']}")
+    return f" *({'; '.join(bits)})*" if bits else ""
+
+
+# --- README block ---------------------------------------------------------------
+
+
+def readme_block(data: dict) -> str:
+    current = [p for p in data["projects"] if p["status"] in ("active", "website")]
+    older = [p for p in data["projects"] if p["status"] in ("archived", "fork")]
+    out = [BEGIN, "<!-- Generated by tools/build_atlas.py from docs/atlas.json. Edit the JSON, then run the script. -->", ""]
+    for theme, members in by_theme(data, ("active", "website")):
+        count = f"{len(members)} project{'s' if len(members) != 1 else ''}"
+        out.append(f"<details><summary><b>{theme['title']}</b> · {count} · <i>{theme['blurb']}</i></summary>")
+        out.append("")
+        for p in members:
+            star = " ◆" if p.get("featured") else ""
+            out.append(f"- **{name_link(data, p)}**{star} — {p['description']}{note(p)} "
+                       f"<br><sub>{p['maturity'].upper()} · {p['do']} · {links(data, p, short=True)}</sub>")
+        out.append("")
+        out.append("</details>")
+        out.append("")
+    out.append(f"<details><summary><b>The archive</b> · {len(older)} repositories · <i>{data['archive_blurb']}</i></summary>")
+    out.append("")
+    for p in older:
+        live = f" · [{p.get('url_label', 'Open')} ↗]({p['url']})" if p.get("url") else ""
+        out.append(f"- **{name_link(data, p)}** — {p['description']}{note(p)} <sub>{p['maturity'].upper()}{live}</sub>")
+    out.append("")
+    out.append(data["archive_footnote"].replace("{root}", ""))
+    out.append("")
+    out.append("</details>")
+    out.append("")
+    out.append(f"◆ featured above · {len(current)} current projects and {len(older)} archived or forked repositories · "
+               f"[The atlas as a page →](docs/atlas.md)")
+    out.append(END)
+    return "\n".join(out)
+
+
+# --- docs/atlas.md ---------------------------------------------------------------
+
+
+def atlas_doc(data: dict) -> str:
+    current = [p for p in data["projects"] if p["status"] in ("active", "website")]
+    older = [p for p in data["projects"] if p["status"] in ("archived", "fork")]
+    out = [
+        "# The public project atlas",
+        "",
+        "[← Back to the profile](../README.md) · [Research map](project-map.md) · [Evidence ledger](../experiments/README.md) · [The archive, read as strata](../experiments/archive.md)",
+        "",
+        "<!-- Generated by tools/build_atlas.py from docs/atlas.json. Edit the JSON, then run the script. -->",
+        "",
+        data["intro"],
+        "",
+        f"**{len(current)} current projects · {len(older)} archived experiments and forks · reviewed {data['reviewed_label']}.** "
+        "◆ marks a project featured on the profile's front page.",
+        "",
+        "## How to read the maturity labels",
+        "",
+        "| Label | Means |",
+        "| --- | --- |",
+    ]
+    for label, meaning in data["maturity_labels"].items():
+        out.append(f"| {label} | {meaning} |")
+    out.append("")
+    out.append(data["maturity_footnote"])
+    for theme, members in by_theme(data, ("active", "website")):
+        out += ["", f"## {theme['title']}", "", f"*{theme['blurb']}*", "",
+                "| Project | What it is | What you can do | Maturity | Links |", "| --- | --- | --- | --- | --- |"]
+        for p in members:
+            star = " ◆" if p.get("featured") else ""
+            out.append(f"| **{name_link(data, p)}**{star} | {p['description']}{note(p)} | {p['do']} | {p['maturity']} | {links(data, p)} |")
+    out += ["", "## The archive", "", data["archive_intro"], "",
+            "| Repository | What it was | Status |", "| --- | --- | --- |"]
+    for p in older:
+        live = f" · [{p.get('url_label', 'Open')} ↗]({p['url']})" if p.get("url") else ""
+        out.append(f"| **{name_link(data, p)}** | {p['description']}{note(p)} | {p['maturity']}{live} |")
+    out += ["", data["archive_footnote"].replace("{root}", "../"), "", "## Keeping the atlas complete", "", data["maintenance"], "",
+            "[← Back to the profile](../README.md)", ""]
+    return "\n".join(out)
+
+
+# --- discovery ---------------------------------------------------------------------
+
+
+def public_repos(owner: str) -> list[dict]:
+    repos, page = [], 1
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "vers3dynamics-atlas"}
+    if os.environ.get("GITHUB_TOKEN"):
+        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+    while True:
+        url = f"https://api.github.com/users/{owner}/repos?type=owner&per_page=100&page={page}"
+        request = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(request, timeout=30) as response:
+            batch = json.load(response)
+        repos += batch
+        if len(batch) < 100:
+            return repos
+        page += 1
+
+
+def discover(data: dict) -> int:
+    try:
+        repos = public_repos(data["owner"])
+    except (urllib.error.URLError, TimeoutError) as exc:
+        print(f"Could not reach the GitHub API: {exc}")
+        return 2
+    public = {r["name"].lower(): r for r in repos}
+    listed = {p["repo"].lower() for p in data["projects"] if p.get("repo")}
+    excluded = {e["repo"].lower() for e in data.get("excluded", [])}
+    new = sorted(name for name in public if name not in listed | excluded)
+    gone = sorted(p["repo"] for p in data["projects"] if p.get("repo") and p["repo"].lower() not in public)
+    lines = [f"## Atlas coverage for {data['owner']}", "",
+             f"{len(public)} public repositories; {len(listed)} in the atlas; {len(excluded)} deliberately excluded.", ""]
+    if new:
+        lines += ["### Public repositories not yet in the atlas", ""]
+        for name in new:
+            r = public[name]
+            flags = ", ".join(f for f, on in (("fork", r.get("fork")), ("archived", r.get("archived"))) if on)
+            lines.append(f"- [{r['name']}]({r['html_url']}){f' ({flags})' if flags else ''} — "
+                         f"{r.get('description') or 'no description'}")
+        lines += ["", "Read each repository, then add an entry to `docs/atlas.json` (or to `excluded`, with a reason) "
+                      "and run `python3 tools/build_atlas.py`. Feature it on the front page only if it earns a place there.", ""]
+    if gone:
+        lines += ["### Atlas entries that are no longer public", ""]
+        lines += [f"- `{name}` — its links now return 404. Move it to `no_longer_public` or link a public site instead." for name in gone]
+        lines.append("")
+    if not new and not gone:
+        lines.append("The atlas covers every public repository. Nothing to do.")
+    report = "\n".join(lines)
+    print(report)
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as handle:
+            handle.write(report + "\n")
+    return 1 if new or gone else 0
+
+
+# --- main ---------------------------------------------------------------------------
+
+
+def splice(readme: str, block: str) -> str:
+    if BEGIN not in readme or END not in readme:
+        raise SystemExit(f"README.md has no {BEGIN} ... {END} block")
+    head, rest = readme.split(BEGIN, 1)
+    _, tail = rest.split(END, 1)
+    return head + block + tail
+
+
+def main(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="fail if generated files are out of date")
+    mode.add_argument("--discover", action="store_true", help="compare the atlas with GitHub's public repositories")
+    args = parser.parse_args(argv)
+
+    data = load()
+    problems = validate(data)
+    if problems:
+        for problem in problems:
+            print(f"FAIL docs/atlas.json: {problem}")
+        return 1
+    if args.discover:
+        return discover(data)
+
+    readme = README.read_text(encoding="utf-8")
+    wanted_readme = splice(readme, readme_block(data))
+    wanted_doc = atlas_doc(data)
+    if args.check:
+        stale = [name for name, current, wanted in (
+            ("README.md atlas block", readme, wanted_readme),
+            ("docs/atlas.md", ATLAS_DOC.read_text(encoding="utf-8") if ATLAS_DOC.exists() else "", wanted_doc),
+        ) if current != wanted]
+        for name in stale:
+            print(f"FAIL {name} is out of date with docs/atlas.json; run python3 tools/build_atlas.py")
+        if not stale:
+            print(f"atlas: {len(data['projects'])} entries, README and docs/atlas.md up to date")
+        return 1 if stale else 0
+    README.write_text(wanted_readme, encoding="utf-8")
+    ATLAS_DOC.write_text(wanted_doc, encoding="utf-8")
+    print(f"wrote README.md atlas block and docs/atlas.md ({len(data['projects'])} entries)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

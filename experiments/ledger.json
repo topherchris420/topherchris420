@@ -1,6 +1,6 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-10-13",
+  "reviewed": "2026-10-21",
   "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
@@ -47,7 +47,7 @@
         "https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md",
         "https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md"
       ],
-      "last_reviewed": "2026-09-30",
+      "last_reviewed": "2026-10-21",
       "observations": [
         {
           "experiment": "V3D-EXP-0001",
@@ -75,9 +75,11 @@
       "repo": "https://github.com/topherchris420/resonate-ai-mesh",
       "question": "When should a machine's confidence count?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "deterministic hard check, optional model check, record and replay; telemetry is simulated" }
+        { "state": "EXECUTABLE", "scope": "deterministic hard check, optional model check, record and replay; telemetry is simulated" },
+        { "state": "OBSERVED", "scope": "six seeded experiments in simulation, each with one pre-registered prediction, paired conditions and deterministic mock judges; not a language model or live inputs" },
+        { "state": "NOT SUPPORTED", "scope": "pre-registered simulated claim that consulting judgment only for unstable agents keeps its protection (+2.55 degraded-evidence commits per run)" }
       ],
-      "open": "Nothing in the repository moves physical hardware; human-state telemetry is labelled SIMULATED.",
+      "open": "Nothing in the repository moves physical hardware; human-state telemetry is labelled SIMULATED. The real language-model judge was recorded on one short run only, which is not a quality measurement.",
       "next": "A recorded session against live, non-simulated inputs.",
       "timeline": {
         "reconstructed": true,
@@ -88,7 +90,11 @@
           { "day": 432, "date": "2026-09-21", "label": "provider-neutral typed judgment added" }
         ]
       },
-      "evidence": ["https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md"]
+      "evidence": [
+        "https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md",
+        "https://github.com/topherchris420/resonate-ai-mesh/blob/8afc9de712331efdb1aece51ff60c7ca0dbb4244/docs/experiments.md"
+      ],
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "james",
@@ -161,13 +167,14 @@
         "https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/VALIDATION.md",
         "https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md"
       ],
-      "last_reviewed": "2026-10-13"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "anna",
       "name": "Anna",
       "repo": "https://github.com/topherchris420/anna",
       "question": "When should a machine's confidence count?",
+      "last_reviewed": "2026-10-21",
       "state": [
         { "state": "EXECUTABLE", "scope": "self-hostable search with citation-first answers and explicit refusal when evidence is absent" }
       ],
@@ -182,6 +189,7 @@
       "name": "Embedded AI Validation Platform",
       "repo": "https://github.com/topherchris420/embedded-ai-validation-platform",
       "question": "When should a machine's confidence count?",
+      "last_reviewed": "2026-10-21",
       "state": [
         { "state": "EXECUTABLE", "scope": "simulated targets, replay datasets, deterministic fault injection" }
       ],
@@ -225,7 +233,7 @@
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "circle",
@@ -253,7 +261,7 @@
         "https://github.com/topherchris420/circle/blob/main/docs/review-gates.md",
         "https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md"
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "ions-x",
@@ -261,9 +269,9 @@
       "repo": "https://github.com/topherchris420/ions-x-deep-emergence-lab",
       "question": "How do signals move together?",
       "state": [
-        { "state": "OBSERVED", "scope": "paired coupled/uncoupled runs in a synthetic field" }
+        { "state": "OBSERVED", "scope": "v0.5 paired coupled/uncoupled benchmark over 8 seeds in a synthetic driven field; results from the earlier generator were superseded after the project's own audit found that field froze" }
       ],
-      "open": "Outputs are associations in a synthetic model, not a validated null for empirical data.",
+      "open": "Outputs are associations in a synthetic model, not a validated null for empirical data. With 8 seeds the transient coupling does not clear the family-wise bar, and the detector fires on 8.8% of unrelated pairs against a nominal 2.35%.",
       "next": "The paired-control design applied to recorded data.",
       "timeline": {
         "reconstructed": true,
@@ -275,7 +283,11 @@
       },
       "compressed": ["simulation", "rendering", "packaging"],
       "not_compressed": ["deciding what the control should be"],
-      "evidence": ["https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md"]
+      "evidence": [
+        "https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md",
+        "https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/99401c3e1a6ceed3f63cc8e3e606f164e13ff245/README.md"
+      ],
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pine-gap",
@@ -340,7 +352,7 @@
         "https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md",
         "https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md"
       ],
-      "last_reviewed": "2026-10-13",
+      "last_reviewed": "2026-10-21",
       "observations": [
         {
           "experiment": "jev-after-hours-live-2026-09-27",
@@ -413,7 +425,7 @@
           }
         ]
       },
-      "last_reviewed": "2026-10-13",
+      "last_reviewed": "2026-10-21",
       "next": "A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines.",
       "evidence": [
         "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md",
@@ -446,7 +458,7 @@
         "reconstructed": false,
         "caveat": "The current history begins on 2026-09-20 with an import of earlier work."
       },
-      "last_reviewed": "2026-10-13",
+      "last_reviewed": "2026-10-21",
       "open": "Classification and fixed-coefficient hydrology remain limited. The holdout flood-report comparison did not beat the low-elevation baseline; replay and internally consistent counterfactuals do not validate a flood forecast.",
       "evidence": [
         "https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/README.md",
@@ -459,6 +471,7 @@
       "name": "Orpheus",
       "repo": "https://github.com/topherchris420/orpheus-resonance-protocol",
       "question": "What happens when agents have to live somewhere?",
+      "last_reviewed": "2026-10-21",
       "state": [
         { "state": "EXECUTABLE", "scope": "interface prototype; physiological values are generated, microphone energy is the only real input" }
       ],
@@ -476,10 +489,18 @@
         },
         {
           "state": "OBSERVED",
-          "scope": "preregistered v0.2/v0.3 simulations with frozen protocols and stored raw data; no quantum-hardware results"
+          "scope": "preregistered v0.2/v0.3 simulations with frozen protocols and stored raw data; one preregistered two-hour assumption-check pilot on IBM ibm_fez (5 qubits, 14 jobs, 296,000 shots), not a detection test"
+        },
+        {
+          "state": "SUPPORTED",
+          "scope": "preregistered pilot check P.C2 on physical hardware: readout stayed stable within single sweep jobs on one IBM device over two hours (0 of 10 sweeps disagreed; at most 1 allowed); an assumption check, not detection performance"
+        },
+        {
+          "state": "NOT SUPPORTED",
+          "scope": "preregistered pilot check P.C1: readout-probe counts did not follow one constant binomial rate across 12 batches (6 of 10 series rejected; at most 1 allowed)"
         }
       ],
-      "open": "Hardware validation has not run. Guarantees depend on channel-specific null assumptions, and calibrated empirical configurations are distinct from anytime-valid thresholds. Conventional CUSUM matched v0.3 operational performance; stationary fluctuations remain an unresolved failure mode.",
+      "open": "Hardware warning accuracy is not established: the pilot covers one device for two hours, and whether its alerts were true or false is unknown. Guarantees depend on channel-specific null assumptions, and calibrated empirical configurations are distinct from anytime-valid thresholds. Conventional CUSUM matched v0.3 operational performance in simulation.",
       "next": "Independent replication and an authorized, separately scoped hardware validation of the monitoring assumptions.",
       "timeline": {
         "reconstructed": false,
@@ -488,9 +509,11 @@
       "evidence": [
         "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/README.md",
         "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md",
-        "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md"
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md",
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/results/V03_SUMMARY.md",
+        "https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/docs/report/HARDWARE_ADDENDUM.md"
       ],
-      "last_reviewed": "2026-10-13"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "triad",
@@ -499,7 +522,7 @@
       "question": "What would have to be measured?",
       "state": [
         { "state": "EXECUTABLE", "scope": "Rust instrument and command line; frozen artifacts replayed and claims rechecked in Linux and Windows CI" },
-        { "state": "OBSERVED", "scope": "a simulated four-electrode capacitive sensor (synthetic pilot) and frozen models on public datasets (OpenML Electricity, UCI Bike Sharing)" },
+        { "state": "OBSERVED", "scope": "a simulated four-electrode capacitive sensor (synthetic pilot), frozen models on public datasets (OpenML Electricity, UCI Bike Sharing), and the Milestone 9 pre-registered simulation of refusal certification (not real data)" },
         { "state": "NOT SUPPORTED", "scope": "pre-registered Milestone 8: claim-relative evidence rules against blind comparators on 5,078 claims from five public datasets, with truth from held-out outcomes; frozen Milestone 3, 6 and 7 tests were also negative" }
       ],
       "open": "The blind comparators were written by an AI agent of the same model family from a brief alone; isolation was instruction-based and self-reported. There has been no human adjudication, unrelated-team replication or peer review. Milestone 7 repeated Milestone 6's negative result on a second public dataset with the same authors and pipeline, which this profile does not count as independent reproduction.",
@@ -523,9 +546,10 @@
         "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/README.md",
         "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md",
         "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone7-results.md",
-        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json"
+        "https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json",
+        "https://github.com/topherchris420/triad/blob/917fc17338dffdc13f924c498c64aab493ad211a/results/certify-v1/report.md"
       ],
-      "last_reviewed": "2026-10-12",
+      "last_reviewed": "2026-10-21",
       "observations": [
         {
           "experiment": "milestone-2-optimizer-audit",
@@ -555,12 +579,13 @@
     {
       "id": "dlt",
       "name": "Dynamic Location Theory",
-      "repo": "https://github.com/topherchris420/research",
+      "repo": "https://doi.org/10.5281/zenodo.18263032",
       "question": "What would have to be measured?",
       "state": [
-        { "state": "CONCEIVED", "scope": "predictions stated for atomic-clock interferometry, matter-wave interferometry, gravitational-wave detection; untested" },
-        { "state": "EXECUTABLE", "scope": "dlt_simulation.py, a simulation prototype; not evidence" }
+        { "state": "CONCEIVED", "scope": "predictions stated for atomic-clock interferometry, matter-wave interferometry, gravitational-wave detection; untested" }
       ],
+      "visibility": "The paper repository (topherchris420/research) and its research site became private in October 2026. The simulation prototype it held, dlt_simulation.py, can no longer be run by anyone else, so the EXECUTABLE state recorded on 2026-09-27 was withdrawn on 2026-10-21. The preprint remains public.",
+      "last_reviewed": "2026-10-21",
       "next": "An interferometry measurement that could reject it.",
       "timeline": {
         "reconstructed": true,
@@ -573,12 +598,14 @@
     },
     {
       "id": "woodyard-workstation",
-      "name": "Woodyard model workstation",
-      "repo": "https://github.com/topherchris420/waveform-shift-quantum",
+      "name": "Waveform (Woodyard model workstation)",
+      "repo": "https://waveform-teleportation.vercel.app/",
       "question": "What would have to be measured?",
       "state": [
-        { "state": "EXECUTABLE", "scope": "simulation of a proposed scalar-field localization model beside standard quantum baselines" }
+        { "state": "EXECUTABLE", "scope": "public browser workstation simulating a proposed scalar-field localization model beside standard quantum baselines; analytical models only, no measured data; source repository private since October 2026, so the code cannot be inspected" }
       ],
+      "visibility": "The source repository (topherchris420/waveform-shift-quantum) became private in October 2026; the workstation still runs publicly at the linked site.",
+      "last_reviewed": "2026-10-21",
       "open": "The stated falsification condition (a phase-deviation bound from atom interferometry or optical clocks) has not been applied.",
       "timeline": {
         "reconstructed": true,
@@ -594,6 +621,7 @@
       "name": "hello_os",
       "repo": "https://github.com/topherchris420/ideas",
       "question": "What would have to be measured?",
+      "last_reviewed": "2026-10-21",
       "state": [
         { "state": "EXECUTABLE", "scope": "toy model with synthetic detector traces" }
       ],
@@ -605,7 +633,7 @@
       "repo": "https://github.com/topherchris420/33",
       "question": "What would have to be measured?",
       "state": [
-        { "state": "BUILDING", "scope": "bench-validation prototype; firmware builds in CI; zero physical evidence artifacts; four unresolved claims; no flight claimed" }
+        { "state": "BUILDING", "scope": "bench-validation prototype; firmware builds in CI; 8 claims tracked: 3 contradicted by their own models, 4 unresolved, 1 supported within stated limits; zero accepted physical measurements; no flight claimed" }
       ],
       "next": "The first physical evidence artifact.",
       "timeline": {
@@ -620,16 +648,21 @@
       "not_compressed": ["bench measurements", "assembling the mechanism", "any flight"],
       "evidence": [
         "https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md",
-        "https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md"
-      ]
+        "https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md",
+        "https://github.com/topherchris420/33/blob/2ad7213e5fea06d1f21a20c020ada15467199c8d/README.md"
+      ],
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "studio",
       "name": "Vers3Dynamics Studio",
       "repo": "https://github.com/topherchris420/quantum-spin-sound",
       "question": "What does it sound like?",
-      "state": [{ "state": "EXECUTABLE", "scope": "live-coding music instrument" }],
-      "timeline": { "reconstructed": false }
+      "state": [{ "state": "EXECUTABLE", "scope": "browser synthesizer with a scratchable virtual record and audio-reactive visuals; its Strudel-style pattern editor does not yet drive the sound" }],
+      "open": "The project's own falsification test, editing one note and hearing the pitch change, fails today: pattern text is not evaluated.",
+      "timeline": { "reconstructed": false },
+      "evidence": ["https://github.com/topherchris420/quantum-spin-sound/blob/d019ddf43cf2d33eb36babaa21fa32ee09642322/README.md"],
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "vanta",
@@ -642,7 +675,7 @@
       "timeline": {
         "reconstructed": false
       },
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "humantouch",
@@ -677,6 +710,90 @@
           "limitation": "Calibrates the instruments against hand-written references. It says nothing about a live model's edits; the Space's README quotes an earlier run of the same evaluation."
         }
       ]
+    },
+    {
+      "id": "ghostwheel",
+      "name": "GHOSTWHEEL",
+      "repo": "https://github.com/topherchris420/ghostwheel",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "browser simulator of fictional EVs with nine synthetic fault scenarios, a seeded research suite and hash-chained replay, plus a Python service checked for parity with the browser; simulation only, no path to physical actuation" },
+        { "state": "BUILDING", "scope": "Windows desktop edition, CARLA bridge and ROS 2 passive observers: code and mocked tests exist, none validated end to end" }
+      ],
+      "open": "No experiment results are committed. Measurements describe the model, not real-world vehicle safety; no vulnerability in any real vehicle, OVMS or CARLA is claimed.",
+      "next": "Committed, replayable results from the seeded research suite, and the CARLA bridge validated in a live session.",
+      "timeline": { "reconstructed": false, "caveat": "Not reconstructed in this review." },
+      "evidence": ["https://github.com/topherchris420/ghostwheel/blob/58312f824f23b32e94407cb83ab1cb86a6ac1ebc/README.md"],
+      "last_reviewed": "2026-10-21"
+    },
+    {
+      "id": "jasmine",
+      "name": "Jasmine",
+      "repo": "https://github.com/topherchris420/Jasmine",
+      "question": "When should a machine's confidence count?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "self-hosted workflow studio and runtime: a deterministic planner, test runs against models on the user's machine, versioned deployments as APIs, widgets and schedules; 41 test files, no CI" }
+      ],
+      "open": "Feature equivalence with the workflow platform it is modelled on is not established. The hosted demo depends on a separately running runtime and was unavailable on 2026-10-21. The repository has no license file.",
+      "next": "Continuous integration and a reproducible end-to-end run on a clean machine.",
+      "timeline": { "reconstructed": false, "caveat": "Not reconstructed in this review." },
+      "evidence": ["https://github.com/topherchris420/Jasmine/blob/b66dcbdca5df8b61a1b04993910663ac24a92df3/README.md"],
+      "last_reviewed": "2026-10-21"
+    },
+    {
+      "id": "project-ascent",
+      "name": "Project Ascent",
+      "repo": "https://github.com/topherchris420/project-ascent",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "account-free pricing studios for covered DC and Maryland homes, a fictional demo, homeowner scenarios and exports; not an appraisal or financial advice" },
+        { "state": "OBSERVED", "scope": "five pre-registered, chronological holdout studies on recorded sales; internal and retrospective, not independently certified" },
+        { "state": "SUPPORTED", "scope": "pre-registered acceptance (9 of 9 criteria) for the DC single-family and rowhouse model on 2,254 held-out recorded sales, thresholds fixed in code before scoring; three criteria passed narrowly, without statistical margin, and only the exact validated configuration is covered" },
+        { "state": "NOT SUPPORTED", "scope": "pre-registered acceptance failed for DC condominiums (4 of 9 criteria), both Maryland models (4 and 8 of 9) and a King County backtest (5 of 9)" }
+      ],
+      "open": "Only the DC single-family and rowhouse model passed all 9 criteria (median error 9.98%, several narrowly), and only for its exact validated configuration. No study has outside attestation.",
+      "next": "An outside attestation of one study, and repaired models tested on new frozen holdouts.",
+      "timeline": { "reconstructed": false, "caveat": "Not reconstructed in this review." },
+      "evidence": [
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/README.md",
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc.json",
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc-condos.json",
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland.json",
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland-v2.json",
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json"
+      ],
+      "last_reviewed": "2026-10-21"
+    },
+    {
+      "id": "luca",
+      "name": "Luca",
+      "repo": "https://github.com/topherchris420/Luca",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "Wi-Fi access-point appliance derived from Kaspersky's TinyCheck, plus a kernel observatory with unit tests and CI virtual-machine smoke tests; a synthetic public demo" }
+      ],
+      "open": "The kernel observatory has not run on real access-point hardware, its preregistered experiments have no committed results, and the capture pipeline has no automated tests. A match is evidence to investigate, not proof of compromise.",
+      "next": "The preregistered observatory experiments run and published, then repeated on access-point hardware.",
+      "timeline": { "reconstructed": false, "caveat": "Built on TinyCheck, whose history predates this project. Not reconstructed in this review." },
+      "evidence": ["https://github.com/topherchris420/Luca/blob/07472038cc46677fdaf31d777161fcafa733fb5c/README.md"],
+      "last_reviewed": "2026-10-21"
+    },
+    {
+      "id": "nocturne",
+      "name": "Nocturne",
+      "repo": "https://github.com/topherchris420/nocturne",
+      "question": "What would have to be measured?",
+      "state": [
+        { "state": "EXECUTABLE", "scope": "command line and local browser planner: least-cost lighting plans checked against a brute-force oracle, modeled skyglow and energy cases; controls no lights" }
+      ],
+      "open": "DC figures are model estimates and the restoration examples use invented data. In its own model streetlights are a minority of skyglow: removing about 60% of their after-midnight contribution moves the modeled sky by about 0.1 mag/arcsec2. No field pilot has run.",
+      "next": "The written one-building field pilot, with calibrated target and control stations.",
+      "timeline": { "reconstructed": false, "caveat": "Not reconstructed in this review." },
+      "evidence": [
+        "https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/README.md",
+        "https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/docs/EVIDENCE.md"
+      ],
+      "last_reviewed": "2026-10-21"
     }
   ]
 }
