@@ -120,7 +120,7 @@ Older work stays public when it is part of the record. These repositories are ar
 | **[Sergeant Carney](https://github.com/topherchris420/Sergeant_Carney)** | A chat experiment in which a language model role-plays Sgt. William Harvey Carney in nineteenth-century diction; his replies are model-generated and may be wrong. *(fork of tonykipkemboi/groq_streamlit_demo)* | Archived |
 | **[GitSocial agent skill](https://github.com/topherchris420/gitsocial-agent-skill)** | An unmodified reference copy of gitsocial-org's skill that teaches coding agents the GitSocial command line; the work is theirs. *(fork of gitsocial-org/gitsocial-agent-skill)* | Fork |
 
-Twenty-four earlier experiments from 2024–2025 have since been made private, as have the source repositories of Waveform, Dynamic Location Theory and DNA Music Molecules. Their descriptions stay in [the archive record](../experiments/archive.md); their links are not repeated here because they no longer resolve.
+Twenty-five of the twenty-nine archived experiments, from 2024 to early 2026, are no longer public, and neither is the source code of Waveform, Dynamic Location Theory or DNA Music Molecules. The experiments are still described in [the archive record](../experiments/archive.md), without links, because those no longer resolve.
 
 ## Keeping the atlas complete
 
