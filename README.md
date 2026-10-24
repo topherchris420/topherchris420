@@ -18,7 +18,17 @@ I'm also an educator, artist, musician, and writer. Sound, feedback, and experim
 
 ## Start here
 
-Three ways to meet the lab. Each begins with something you can explore in your browser.
+Four ways to meet the lab. Each begins with something you can explore in your browser.
+
+### Take a midnight drive with my music
+
+**Pine Gap: After Hours** is a fictional night shift in a world you can drive through. Deliver a coffee, explore the site, and tune in to my original music as **Indigo People** on the vehicle's radio.
+
+<a href="https://geotwn.vercel.app/"><img src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" width="100%" alt="Pine Gap: After Hours: a four-wheel-drive vehicle travels across the simulated site at night to deliver a coffee. Click to enter the playable world and hear Christopher Woodyard's music on the radio."></a>
+
+<sub>The scripted baseline, shown at 10× speed; no AI model ran in this recording. The GIF is silent; open the playable world for the radio. Public-source reconstruction, fictional gameplay.</sub>
+
+**[Drive and hear the radio →](https://geotwn.vercel.app/)** · [Listen to Indigo People](https://chriswoodyard.bandcamp.com/) · [Source](https://github.com/topherchris420/satellite-vision-scape) · [Experiment and recorded runs](docs/exhibition.md#pine-gap-after-hours)
 
 ### Make a car refuse a command
 
