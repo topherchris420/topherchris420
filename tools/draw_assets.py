@@ -433,9 +433,41 @@ def rule(mode: str) -> str:
     return c.svg()
 
 
+def hero_mobile(mode: str) -> str:
+    """A readable phone composition, not a scaled-down sixteen-drawer cabinet."""
+    p = PALETTES[mode]
+    c = Canvas(600, 488, "Christopher Woodyard · Vers3Dynamics",
+               "Christopher Woodyard. Vers3Dynamics, an independent open-source laboratory. "
+               "I make strange things and test whether they work. "
+               "The Adinkra symbol Nea Onnim No Sua A, Ohu: "
+               "one who does not know can know from learning. "
+               "Three specimen drawers depict research, signals and decisions; "
+               "one is open for the next experiment.")
+    c.text("VERS3DYNAMICS", 36, 51, "mono-medium", 20, p["accent"], tracking=2.0)
+    c.text("Christopher", 33, 124, "display", 61, p["ink"], tracking=-0.8)
+    c.text("Woodyard", 33, 187, "display", 61, p["ink"], tracking=-0.8)
+    c.text("I make strange things", 36, 236, "display-italic", 30, p["accent"])
+    c.text("and test whether they work.", 36, 275, "display-italic", 30, p["accent"])
+    c.add(adinkra(508, 94, 52, p["accent"]))
+    for i, (label, icon) in enumerate((("RESEARCH", "flask"), ("SIGNALS", "pulse"),
+                                      ("DECISIONS", "triad"), ("NEXT", None))):
+        x = 36 + i * 135
+        dash = ' stroke-dasharray="4 4"' if icon is None else ''
+        c.add(f'<rect x="{x}" y="310" width="123" height="110" rx="8" '
+              f'fill="{p["panel"]}" stroke="{p["rule"]}"{dash}/>')
+        if icon:
+            c.add(pictogram(icon, x + 61.5, 350, 1.05, p["accent"], stroke=2.0))
+        else:
+            c.text("?", x + 61.5, 364, "display-italic", 39, p["muted"], anchor="middle")
+        c.text(label, x + 61.5, 400, "mono-medium", 13.5, p["muted"], anchor="middle")
+    c.text("INDEPENDENT · OPEN-SOURCE LABORATORY", 36, 459, "mono", 14, p["muted"], tracking=0.8)
+    return c.svg(background=p["bg"], border=p["rule"])
+
+
 def main() -> None:
     for mode in PALETTES:
         builds = [("hero", lambda m: hero(m)), ("rule", lambda m: rule(m)), ("chain", lambda m: chain(m))]
+        builds.append(("hero-mobile", hero_mobile))
         builds += [(f"door-{d[0].split('-')[0]}", (lambda i: lambda m: door(m, i))(i)) for i, d in enumerate(DOORS)]
         for name, build in builds:
             path = OUT / f"{name}-{mode}.svg"

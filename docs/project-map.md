@@ -12,7 +12,7 @@ Across software, hardware designs, and games, one relationship keeps returning: 
   <img src="../assets/constellations-light.svg" alt="Projects grouped around five questions: machine confidence, coupled signals, agent worlds, measurement, and sound. Rings mark shared typed judgment; a dashed connection marks the IONS-X engine reused in CIRCLE. The projects are listed below; HumanTouch, James, TRIAD, Quantum Noise Profiler and Sentinel are later additions to the written map." width="100%">
 </picture>
 
-The illustration is the September 27, 2026 map. HumanTouch, James, TRIAD, Quantum Noise Profiler, Sentinel, GHOSTWHEEL, Jasmine, Project Ascent, Luca and Nocturne are included in the written map below; the profile's [connection diagram](../README.md#how-the-inventions-connect) places representative projects along six shared questions. The [13 October portfolio review](portfolio-review.md) records the editorial assessment of the projects in that review's GitHub subset; the 21 October review behind the redesigned profile read every public repository.
+The illustration is the September 27, 2026 map. HumanTouch, James, TRIAD, Quantum Noise Profiler, Sentinel, GHOSTWHEEL, Jasmine, Project Ascent, Luca and Nocturne are included in the written map below; the profile's [connection diagram](exhibition.md#how-the-inventions-connect) places representative projects along six shared questions. The [13 October portfolio review](portfolio-review.md) records the editorial assessment of the projects in that review's GitHub subset; the 21 October review behind the redesigned profile read every public repository.
 
 ## When should a machine's confidence count?
 

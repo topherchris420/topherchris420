@@ -14,7 +14,7 @@ Offline checks, always run:
            per-entry review.
   table    every ledger entry has a row in experiments/README.md, and the
            row's question and state codes match the entry exactly.
-  markers  every `<!-- ledger:ID -->` marker in README.md names a ledger
+  markers  every `<!-- ledger:ID -->` marker in public Markdown names a ledger
            entry, and the line after it shows that entry's states exactly.
   map      every ledger entry's repository is linked from docs/project-map.md,
            matched as a whole URL so `james` is not found inside `james_library`.
@@ -67,6 +67,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LEDGER = ROOT / "experiments" / "ledger.json"
 LEDGER_DOC = ROOT / "experiments" / "README.md"
 FRONT_PAGE = ROOT / "README.md"
+EVIDENCE_PAGES = (FRONT_PAGE, ROOT / "docs" / "exhibition.md")
 PROJECT_MAP = ROOT / "docs" / "project-map.md"
 ASSETS = ROOT / "assets"
 
@@ -375,36 +376,38 @@ def check_table(ledger: dict, entries: dict[str, dict], report: Report) -> None:
 
 
 def check_markers(entries: dict[str, dict], report: Report) -> None:
-    where = rel(FRONT_PAGE)
-    lines = lines_without_fences(FRONT_PAGE.read_text(encoding="utf-8"))
+    """Check evidence labels wherever a public page displays them."""
     markers = 0
-    for index, line in enumerate(lines):
-        m = MARKER.search(line)
-        if not m:
-            continue
-        eid = m.group(1)
-        if eid == "top-rung":
-            continue
-        markers += 1
-        entry = entries.get(eid)
-        if entry is None:
-            report.fail(f"{where}:{index + 1}", f"marker names unknown ledger entry {eid!r}")
-            continue
-        following = next((l for l in lines[index + 1 :] if l.strip()), "")
-        shown = set()
-        for token in BACKTICKED.findall(following):
-            if token in LADDER:
-                shown.add(token)
-            elif token.isupper():
-                report.fail(f"{where}:{index + 1}", f"{entry['name']}: `{token}` is not a ladder state")
-        if shown != states_of(entry):
-            report.fail(
-                f"{where}:{index + 1}",
-                f"{entry['name']}: page shows {sorted(shown)}, ledger has {sorted(states_of(entry))}",
-            )
+    for page in markdown_files():
+        where = rel(page)
+        lines = lines_without_fences(page.read_text(encoding="utf-8"))
+        for index, line in enumerate(lines):
+            m = MARKER.search(line)
+            if not m:
+                continue
+            eid = m.group(1)
+            if eid == "top-rung":
+                continue
+            markers += 1
+            entry = entries.get(eid)
+            if entry is None:
+                report.fail(f"{where}:{index + 1}", f"marker names unknown ledger entry {eid!r}")
+                continue
+            following = next((l for l in lines[index + 1 :] if l.strip()), "")
+            shown = set()
+            for token in BACKTICKED.findall(following):
+                if token in LADDER:
+                    shown.add(token)
+                elif token.isupper():
+                    report.fail(f"{where}:{index + 1}", f"{entry['name']}: `{token}` is not a ladder state")
+            if shown != states_of(entry):
+                report.fail(
+                    f"{where}:{index + 1}",
+                    f"{entry['name']}: page shows {sorted(shown)}, ledger has {sorted(states_of(entry))}",
+                )
     if markers == 0:
-        report.fail(where, "no <!-- ledger:ID --> markers found; the front page is unchecked")
-    report.count("front-page markers", markers)
+        report.fail("profile", "no <!-- ledger:ID --> markers found; evidence labels are unchecked")
+    report.count("evidence markers", markers)
 
 
 def links_repo(text: str, repo: str) -> bool:
@@ -517,53 +520,55 @@ def check_svgs(report: Report) -> None:
 
 
 def check_dates(ledger: dict, report: Report) -> None:
-    where = rel(FRONT_PAGE)
-    text = FRONT_PAGE.read_text(encoding="utf-8")
     reviewed = valid_date(ledger.get("reviewed"))
-    found = REVIEWED_LINE.findall(text)
-    if not found:
-        report.fail(where, "no '*Reviewed D Month YYYY.*' line on the front page")
-    for raw in found:
-        try:
-            date = dt.datetime.strptime(raw, "%d %B %Y").date()
-        except ValueError:
-            report.fail(where, f"'Reviewed {raw}' is not a real date")
-            continue
-        if reviewed and date > reviewed:
-            report.fail(where, f"front page reviewed {date} is after the ledger's reviewed date {reviewed}")
-    report.count("review dates", len(found))
+    for page in EVIDENCE_PAGES:
+        where = rel(page)
+        text = page.read_text(encoding="utf-8")
+        found = REVIEWED_LINE.findall(text)
+        if not found:
+            report.fail(where, "no '*Reviewed D Month YYYY.*' line on the front page")
+        for raw in found:
+            try:
+                date = dt.datetime.strptime(raw, "%d %B %Y").date()
+            except ValueError:
+                report.fail(where, f"'Reviewed {raw}' is not a real date")
+                continue
+            if reviewed and date > reviewed:
+                report.fail(where, f"front page reviewed {date} is after the ledger's reviewed date {reviewed}")
+        report.count("review dates", len(found))
 
 
 LEDGER_CLAIM = "No entry currently meets this profile's independent `REPRODUCED` or external/physical `SUPPORTED` definition."
 
 
 def check_claims(entries: dict[str, dict], report: Report) -> None:
-    """The front page's top-rung lines and the ledger page's sentence must match the ledger."""
+    """The profile and exhibition summaries must match the evidence ledger."""
     holders = {rung: sorted(e["name"] for e in entries.values() if rung in states_of(e)) for rung in TOP_RUNGS}
-    lines = FRONT_PAGE.read_text(encoding="utf-8").splitlines()
-    for rung in TOP_RUNGS:
-        label = f"**`{rung}`, so far:**"
-        found = [line for line in lines if line.startswith(label)]
-        if len(found) != 1:
-            report.fail(rel(FRONT_PAGE), f"needs exactly one line starting with {label!r}")
-            continue
-        line = found[0]
-        if not holders[rung]:
-            if "nothing" not in line:
-                report.fail(rel(FRONT_PAGE), f"no ledger entry holds {rung}, so its line must say nothing has reached it")
-        else:
-            if "nothing" in line:
-                report.fail(rel(FRONT_PAGE), f"says nothing has reached {rung}, but the ledger has {', '.join(holders[rung])}")
-            for name in holders[rung]:
-                if name not in line:
-                    report.fail(rel(FRONT_PAGE), f"the {rung} line does not name {name}, which holds that state")
+    for page in EVIDENCE_PAGES:
+        lines = page.read_text(encoding="utf-8").splitlines()
+        for rung in TOP_RUNGS:
+            label = f"**`{rung}`, so far:**"
+            found = [line for line in lines if line.startswith(label)]
+            if len(found) != 1:
+                report.fail(rel(page), f"needs exactly one line starting with {label!r}")
+                continue
+            line = found[0]
+            if not holders[rung]:
+                if "nothing" not in line:
+                    report.fail(rel(page), f"no ledger entry holds {rung}, so its line must say nothing has reached it")
+            else:
+                if "nothing" in line:
+                    report.fail(rel(page), f"says nothing has reached {rung}, but the ledger has {', '.join(holders[rung])}")
+                for name in holders[rung]:
+                    if name not in line:
+                        report.fail(rel(page), f"the {rung} line does not name {name}, which holds that state")
     reached = holders["SUPPORTED"] or holders["REPRODUCED"]
     present = LEDGER_CLAIM in LEDGER_DOC.read_text(encoding="utf-8")
     if present and reached:
         report.fail(rel(LEDGER_DOC), "says no entry has reached REPRODUCED or SUPPORTED, but the ledger has some")
     if not present and not reached:
         report.fail(rel(LEDGER_DOC), f"the ledger has no REPRODUCED or SUPPORTED entry, but the sentence saying so is gone: {LEDGER_CLAIM!r}")
-    report.count("top-rung claims", len(TOP_RUNGS) + 1)
+    report.count("top-rung claims", len(TOP_RUNGS) * len(EVIDENCE_PAGES) + 1)
 
 
 def check_public(report: Report) -> None:

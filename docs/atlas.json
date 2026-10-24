@@ -4,7 +4,7 @@
   "reviewed": "2026-10-21",
   "reviewed_label": "21 October 2026",
   "note": "Every public repository under topherchris420, plus public websites of projects whose source is private. Descriptions come from reading each repository's README and source at the commit current on the review date; they describe what is implemented, not what is planned. tools/build_atlas.py renders docs/atlas.md and the README's atlas block from this file, and --discover reports public repositories that are not listed here yet.",
-  "intro": "Every public project in one place, arranged by the six doors on the [front page](../README.md#choose-a-door). The exhibition there is curated; this atlas is meant to be complete. Each entry says what the project is, what you can do with it today, and how far along it is. Archived experiments and forks are at the end, kept for the record.",
+  "intro": "Every public project in one place, arranged by the six doors on the [front page](../README.md#choose-a-door). The [illustrated exhibition](exhibition.md) is curated; this atlas is meant to be complete. Each entry says what the project is, what you can do with it today, and how far along it is. Archived experiments and forks are at the end, kept for the record.",
   "maturity_labels": {
     "Playable world": "A world or game you can open in a browser now.",
     "Live web app": "An interactive application you can use in a browser now, without installing anything.",
@@ -53,6 +53,7 @@
     },
     {
       "id": "artist",
+      "exhibition_anchor": "one-practice-many-forms",
       "title": "The artist's collection",
       "blurb": "Music, painting, writing and the portfolio that holds them."
     }

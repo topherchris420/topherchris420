@@ -6,7 +6,8 @@ This repository is Christopher Woodyard's GitHub profile. The README is the entr
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Entrance banner, a short introduction, six doors, six rooms of exhibits, how the work connects, the evidence, the atlas, the art, and an invitation |
+| Front door | `README.md` | Responsive entrance banner, short introduction, three browser experiences, generated navigation, research starting points, evidence, art, and collaboration |
+| Exhibition | `docs/exhibition.md` | The complete illustrated tour: six rooms, pinned captures and animations, methods, evidence labels, retained failures, and the connection diagram |
 | Atlas data | `docs/atlas.json` | Every public repository plus public sites of private projects: theme, one-sentence description, what a visitor can do, maturity, links. Source of truth for the atlas |
 | Atlas page | `docs/atlas.md` | Generated from `atlas.json` by `tools/build_atlas.py`, together with the README's atlas block |
 | Research map | `docs/project-map.md` | The five research questions, the wider catalog by question, and what didn't survive contact |
@@ -24,11 +25,18 @@ This repository is Christopher Woodyard's GitHub profile. The README is the entr
 
 ## The front page
 
-1. **Entrance.** `assets/hero-*.svg`: the name, *I make strange things and test whether they work*, the Adinkra symbol *Nea Onnim No Sua A, Ohu*, and a cabinet of fifteen project drawers with one left open. Then two sentences of introduction, the statement *AI is getting better at answering questions. We're working on making it better at knowing which answers deserve to be trusted.*, and four links a visitor can try immediately.
-2. **Six doors.** `assets/door-*.svg`, each linking to its room's heading: Play a world · Challenge an intelligent system · Hear the invisible · Explore a research lab · Use something practical · Discover the unusual. A plain-text row repeats them for phones and screen readers.
-3. **Six rooms.** Each room has one to three full exhibits, sometimes a two-column pair of smaller ones, and an *Also in this room* list. Rooms are separated by `assets/rule-*.svg`.
-4. **How the inventions connect.** `assets/chain-*.svg` and the table under it: Observation → Interpretation → Decision → Action → Measurement → Verification, with representative projects, the branch where uncertainty should stop action, and the loop back. The projects are separate systems; never present them as one architecture.
-5. **What the evidence says**, **Every public project** (generated), **One practice, many forms**, **Join in**, **How I work** (its anchor is linked from `experiments/unreasonably-fast.md`), and the closing invitation.
+1. **Entrance.** Preserve the existing cabinet banner and Adinkra symbol. At viewport widths up to 600 px, `assets/hero-mobile-*.svg` uses larger lettering and four simplified drawers. Native text introduces Christopher, the lab, and its question even if images do not load.
+2. **Start here.** Three browser experiences: GHOSTWHEEL, R.A.I.N., and Ascent. Each has a plain-language invitation, a primary action, source links, and its relevant scope. Keep the page focused; additional exhibits belong in the exhibition.
+3. **Choose a door.** A compact, generated table links to the six exhibition rooms and the artist's collection. Counts come from `docs/atlas.json`; the complete inventory remains in `docs/atlas.md`. `exhibition_anchor` overrides a theme id where the exhibition heading differs.
+4. **Build on the research.** Direct starting points for TRIAD, Quantum Noise Profiler, CIRCLE, and DRR, with installation and evidence boundaries where relevant.
+5. **What the evidence says.** Visible negative findings, a disclosure containing the supported/reproduced summary, and links to the full ledger. The evidence review date remains separate from the date of an editorial refresh.
+6. **One practice, many forms**, **Join in**, **How I work** (its anchor is linked from `experiments/unreasonably-fast.md`), and the original closing quotation.
+
+## The full exhibition
+
+`docs/exhibition.md` retains the detailed tour that previously occupied the front page. Its six door illustrations, full exhibits, recorded failures, Pine Gap and CIRCLE animations, and art remain accessible. Local assets use `../assets/`; links to other documentation resolve from `docs/`. The tour links back to the profile at the top.
+
+The connection diagram and accompanying table live in the exhibition. The projects are separate systems organized around shared questions; never present them as one integrated architecture. Keep the exhibition's review date accurate and its captures identified as dated snapshots. The checker validates ledger markers throughout public Markdown, including the exhibition.
 
 ### An exhibit
 
@@ -134,12 +142,12 @@ Edit the content tables in `tools/draw_assets.py` (`CABINET`, `DOORS`, `CHAIN`),
 ## Updating evidence
 
 1. Update the entry in `ledger.json` with the source that justifies the state and a `last_reviewed` date. The top-level `reviewed` date equals the latest `last_reviewed`.
-2. Mirror changed states in `experiments/README.md` and on the front page's ladder lines. If an entry reaches or loses `SUPPORTED` or `REPRODUCED`, update the front page's **so far** lines; the check names any entry they leave out.
+2. Mirror changed states in `experiments/README.md`, `docs/exhibition.md`, and any front-page ladder lines. If an entry reaches or loses `SUPPORTED` or `REPRODUCED`, update the **so far** lines on both the profile and exhibition; the check names any entry they leave out.
 3. Never promote a state because of a deployment, a demo, or a passing build. Demote freely, and say why in the ledger.
 4. Add newly discarded approaches to the research map.
 
 ## Before publishing
 
 1. Run `python3 tools/check_profile.py`. Add `--external` to confirm that outside links answer; Bandcamp and Ko-fi refuse automated clients and are listed for a check by hand.
-2. Render the README in light and dark modes at desktop and phone widths: check the door grid, the two-column pairs, every image, heading order and anchor links.
+2. Render the README in light and dark modes at desktop and phone widths: check responsive banner selection, text wrapping, the navigation table, images, heading order, and anchors. When editing the exhibition, also inspect its door grid and two-column pairs.
 3. Run `git diff --check` and review the complete diff.
