@@ -7,6 +7,11 @@ name: Check profile
 on:
   push:
   pull_request:
+  # GITHUB_TOKEN commits from the Koi workflow do not trigger normal push CI.
+  # Validate the completed generated asset after the Koi job succeeds.
+  workflow_run:
+    workflows: ["Koi"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       external:
@@ -19,6 +24,7 @@ permissions:
 
 jobs:
   check:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
