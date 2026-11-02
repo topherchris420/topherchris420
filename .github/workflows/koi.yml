@@ -28,12 +28,29 @@ jobs:
       - name: Commit the koi if it changed
         shell: bash
         run: |
-          git add koi/koi.gif
-          if git diff --cached --quiet; then
-            echo "The koi is unchanged; nothing to commit."
-            exit 0
-          fi
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit --quiet --message "koi: draw the day's koi"
-          git push --quiet
+
+          # The README may change while git-koi is rendering. Always commit
+          # the generated GIF on top of the latest main, never a stale checkout.
+          # Keep the rendered file in the working tree across retries.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --mixed origin/main
+            git add koi/koi.gif
+            if git diff --cached --quiet; then
+              echo "The koi is already up to date; nothing to commit."
+              exit 0
+            fi
+
+            git commit -m "koi: draw the day's koi"
+            if git push origin HEAD:main; then
+              echo "Published the koi on attempt $attempt."
+              exit 0
+            fi
+            echo "main advanced while publishing; retrying ($attempt/3)."
+          done
+
+          echo "::error::Could not publish the koi after three attempts."
+          exit 1
