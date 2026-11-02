@@ -16,6 +16,14 @@ I'm also an educator, artist, musician, and writer. Sound, feedback, and experim
 
 **[Try a project](#start-here)** · **[Find your field](#choose-a-door)** · **[Inspect the evidence](#what-the-evidence-says)** · **[Collaborate](#join-in)**
 
+## A koi in the current
+
+<p align="center">
+  <img src="koi/koi.gif" width="256" alt="An animated Asagi pixel-art koi whose markings and movement reflect Christopher's public GitHub activity." />
+</p>
+
+<p align="center"><sub>My GitHub activity, translated into a little swimming life. Generated with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a> and refreshed daily when GitHub Actions runs.</sub></p>
+
 ## Start here
 
 Four ways to meet the lab. Each begins with something you can explore in your browser.
