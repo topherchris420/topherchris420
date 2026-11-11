@@ -49,7 +49,7 @@ In 2025 the DRR name was attached to wormholes and consciousness. In 2026 the DR
 
 | Repository | What it tried | What happened |
 | --- | --- | --- |
-| [resonance-flow-nexus](https://github.com/topherchris420/resonance-flow-nexus) | Project Sentinel: microphone spectrum, Web Bluetooth heart rate, and generated tones in guided sessions. | Rewritten in June 2026 to say it is a training and visualization prototype, not a medical or biometric tool, and archived. Unarchived and rebuilt on 1 October 2026 as [Sentinel](https://hello-goodbye-iota.vercel.app/), a sound and breathing studio that measures nothing about the body. The biosignal question returns, with review gates, in [CIRCLE](https://github.com/topherchris420/circle). |
+| `resonance-flow-nexus` (source no longer public as of 10 November 2026) | Project Sentinel: microphone spectrum, Web Bluetooth heart rate, and generated tones in guided sessions. | Rewritten in June 2026 to say it is a training and visualization prototype, not a medical or biometric tool, and archived. Unarchived and rebuilt on 1 October 2026 as [Sentinel](https://hello-goodbye-iota.vercel.app/), a sound and breathing studio that measures nothing about the body. The biosignal question returns, with review gates, in [CIRCLE](https://github.com/topherchris420/circle). |
 | tempo-weave-flow *(no longer public)* | Interval: reshaping the felt passage of time from biometric and environmental cues. | Archived. |
 | soul-resonance-studio *(no longer public)* | Aethel: voice, face, and ambient sound turned into audiovisual "soul prints". | Archived. |
 | coherence-journey-viz *(no longer public)* | A 3D "soul's resonance journey" with karma and coherence controls. | Archived. |

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Explore the projects, recorded evidence and open questions of Christopher Woodyard's Vers3Dynamics laboratory.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Research Observatory · Vers3Dynamics</title>
+<style>@@CSS@@</style>
+</head>
+<body>
+<a class="skip" href="#catalog">Skip to projects</a>
+<header class="masthead">
+  <a class="wordmark" href="https://github.com/topherchris420">VERS<span>3</span>DYNAMICS</a>
+  <span class="edition">RESEARCH OBSERVATORY / 01</span>
+  <button id="theme-toggle" type="button" hidden>Dark mode</button>
+</header>
+<main>
+  <section class="intro" aria-labelledby="title">
+    <div><p class="eyebrow">Christopher Woodyard · Independent research</p>
+    <h1 id="title">A laboratory,<br><em>open to question.</em></h1>
+    <p class="deck">Worlds, instruments, and experiments.<br>Follow an idea to its evidence. Find what would change our minds.</p></div>
+    <aside class="field-note"><span class="eyebrow">A note on the record</span>
+    <p>A working system is a beginning. The interesting part is finding out where it fails.</p>
+    <p class="small">Latest evidence review <strong>@@REVIEWED@@</strong>.<br>This was a partial review. Each project carries its own date.</p>
+    <a href="https://github.com/topherchris420/topherchris420/blob/main/experiments/README.md">Read the original ledger ↗</a></aside>
+  </section>
+  <section class="inventory" aria-label="Snapshot inventory">
+    <div><strong>@@PROJECTS@@</strong><span>cataloged projects</span></div>
+    <div><strong>@@RECORDS@@</strong><span>projects with evidence records</span></div>
+    <div><strong>@@NEGATIVE@@</strong><span>entries with a failed claim</span></div>
+    <div><strong>@@REPRODUCED@@</strong><span>independent reproductions in this ledger</span></div>
+  </section>
+  <p class="inventory-note">Counts describe this snapshot, not rankings. One project can have supported and failed claims under different conditions.</p>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Explore the collection">
+      <form id="filters" hidden>
+        <h2>Choose your question</h2>
+        <label for="search">Search the record</label>
+        <input id="search" type="search" placeholder="A project, method, or limitation…" autocomplete="off">
+        <label for="question">Research question</label>
+        <select id="question"><option value="">All questions</option>@@QUESTIONS@@<option value="unrecorded">No ledger entry</option></select>
+        <label for="state">Evidence state</label>
+        <select id="state"><option value="">All states</option>@@STATES@@<option value="unrecorded">No ledger entry</option></select>
+        <label for="theme">Field of interest</label>
+        <select id="theme"><option value="">All fields</option>@@THEMES@@</select>
+        <label class="check-label"><input id="archived" type="checkbox"> Include archives &amp; forks</label>
+        <button type="reset" class="secondary">Reset filters</button>
+        <div class="quick-filters" aria-label="Starting points">
+          <p class="eyebrow">Start with</p>
+          <button type="button" data-preset="failures">The failed claims ↗</button>
+          <button type="button" data-preset="worlds">The simulated worlds ↗</button>
+          <button type="button" data-preset="gaps">The unreviewed projects ↗</button>
+        </div>
+      </form>
+      <details class="legend"><summary>What the states mean</summary><dl>@@DEFINITIONS@@</dl></details>
+      <p class="small">Made to travel. This file works offline. Sources open on the web.</p>
+      <p class="small"><a href="https://github.com/topherchris420/topherchris420/blob/main/docs/research.md">Read the Markdown edition ↗</a></p>
+    </aside>
+    <section id="catalog" tabindex="-1" aria-labelledby="catalog-title">
+      <div class="catalog-header"><div><p class="eyebrow">The collection</p><h2 id="catalog-title">Follow the evidence.</h2></div><button id="export" class="secondary" type="button" hidden>Export results · JSON</button></div>
+      <p id="result-count" role="status" aria-live="polite">@@PROJECTS@@ projects. Open a record to inspect its evidence.</p>
+      <p class="small" id="filter-note" hidden>Search matches the complete record, including limitations and source paths. Question and state filters use ledger entries only.</p>
+      <noscript><p class="notice">All records are readable below. Enable JavaScript for search, comparison and export; no network access is used.</p></noscript>
+      <p id="empty" class="notice" hidden>No projects match these filters. Try a broader term or reset the filters.</p>
+      <div id="records">@@CARDS@@</div>
+    </section>
+  </div>
+  <section id="comparison" class="comparison" aria-labelledby="comparison-title" tabindex="-1" hidden>
+    <div class="catalog-header"><div><p class="eyebrow">At the same table</p><h2 id="comparison-title">Compare the questions.</h2></div><div class="actions"><button id="print" type="button">Print comparison</button><button id="clear-comparison" type="button" class="secondary">Clear comparison</button></div></div>
+    <p class="small">Compare scope and open work. These projects do not share a benchmark, so this is not a performance ranking. Selections persist when you filter the collection.</p>
+    <div id="comparison-content" class="comparison-grid"></div>
+  </section>
+  <div id="compare-tray" class="compare-tray" hidden><span id="selection-count" role="status"></span><a id="show-comparison" href="#comparison">View comparison ↓</a></div>
+  <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  <details class="provenance"><summary>Inspect this snapshot</summary>
+    <p>Generated from the project atlas and evidence ledger. SHA-256 digests identify the exact input bytes; they do not certify the scientific claims. Rebuild with <code>python3 tools/build_observatory.py</code> and verify with <code>--check</code>.</p>
+    <ul>@@HASHES@@</ul>
+    <p><a href="https://github.com/topherchris420/topherchris420/blob/main/docs/observatory-manifest.json">Build manifest ↗</a> · Exported JSON includes the definitions, complete selected records and input digests.</p>
+  </details>
+</main>
+<footer><p>Built by one researcher. Open for another pair of eyes.</p><a href="https://github.com/topherchris420/topherchris420">Christopher Woodyard / Vers3Dynamics ↗</a></footer>
+<script id="observatory-data" type="application/json">@@DATA@@</script>
+<script>@@JS@@</script>
+</body>
+</html>

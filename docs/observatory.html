@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Explore the projects, recorded evidence and open questions of Christopher Woodyard's Vers3Dynamics laboratory.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Research Observatory · Vers3Dynamics</title>
+<style>:root {
+  color-scheme:light;
+  --paper:#f5f4ec;
+  --panel:#fffef9;
+  --ink:#153b3c;
+  --muted:#526b67;
+  --accent:#0b5d63;
+  --rule:#c9d3c9;
+  --wash:#e7ece3;
+  --warm:#8a4b29;
+  --shadow:0 8px 30px #163a3912
+}
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme=light]) {
+    color-scheme:dark;
+    --paper:#102022;
+    --panel:#142a2c;
+    --ink:#e7efe6;
+    --muted:#b0c5ba;
+    --accent:#91d3c7;
+    --rule:#38524c;
+    --wash:#1d3434;
+    --warm:#f1b089;
+    --shadow:none
+  }
+}
+:root[data-theme=dark] {
+  color-scheme:dark;
+  --paper:#102022;
+  --panel:#142a2c;
+  --ink:#e7efe6;
+  --muted:#b0c5ba;
+  --accent:#91d3c7;
+  --rule:#38524c;
+  --wash:#1d3434;
+  --warm:#f1b089;
+  --shadow:none
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:1.5rem
+}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+button,input,select {
+  font:inherit;
+  color:inherit
+}
+a {
+  color:var(--accent);
+  text-underline-offset:.2em
+}
+a:hover {
+  text-decoration-thickness:2px
+}
+button {
+  cursor:pointer;
+  background:var(--accent);
+  color:var(--paper);
+  border:1px solid var(--accent);
+  border-radius:3px;
+  padding:.55rem .8rem;
+  font-size:.84rem;
+  font-weight:650
+}
+button:hover {
+  filter:brightness(.94)
+}
+button:disabled {
+  cursor:not-allowed;
+  opacity:.5
+}
+.secondary,#theme-toggle {
+  background:transparent;
+  color:var(--accent);
+  border-color:var(--rule)
+}
+:focus-visible {
+  outline:3px solid var(--warm);
+  outline-offset:4px
+}
+[hidden] {
+  display:none!important
+}
+.skip {
+  position:absolute;
+  left:1rem;
+  top:-5rem;
+  background:var(--panel);
+  padding:1rem;
+  z-index:5
+}
+.skip:focus {
+  top:1rem
+}
+.masthead,main,footer {
+  max-width:1280px;
+  margin:auto
+}
+.masthead {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  padding:1.5rem 3rem;
+  border-bottom:1px solid var(--rule)
+}
+.wordmark {
+  text-decoration:none;
+  letter-spacing:.13em;
+  font-size:.91rem;
+  font-weight:800;
+  white-space:nowrap
+}
+.wordmark span {
+  color:var(--warm)
+}
+.edition,.eyebrow {
+  font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted)
+}
+main {
+  padding:0 3rem
+}
+.intro {
+  display:grid;
+  grid-template-columns:1.8fr 1fr;
+  gap:4rem;
+  padding:4.2rem 0 3.3rem;
+  align-items:center
+}
+h1,h2,h3 {
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.035em
+}
+h1 {
+  font-size:clamp(3rem,5.4vw,4.8rem);
+  margin:.6rem 0 1.6rem
+}
+h1 em {
+  color:var(--accent);
+  font-weight:400
+}
+h2 {
+  font-size:2rem;
+  margin:.5rem 0
+}
+h3 {
+  font-size:1.8rem;
+  margin:0
+}
+h4 {
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin:1.5rem 0 .4rem;
+  color:var(--muted)
+}
+p {
+  margin:.7rem 0
+}
+.deck {
+  font-size:1.08rem;
+  color:var(--muted)
+}
+.field-note {
+  border-left:1px solid var(--rule);
+  padding:1rem 0 1rem 1.7rem
+}
+.field-note>p:first-of-type {
+  font-family:Georgia,serif;
+  font-size:1.45rem;
+  line-height:1.5
+}
+.field-note a {
+  font-size:.85rem
+}
+.small,.inventory-note {
+  font-size:.8rem;
+  line-height:1.65;
+  color:var(--muted)
+}
+.inventory {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-block:1px solid var(--rule);
+  padding:1.3rem 0
+}
+.inventory div {
+  padding:0 1.3rem;
+  border-left:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+  justify-content:center
+}
+.inventory div:first-child {
+  padding-left:0;
+  border:0
+}
+.inventory strong {
+  font:2rem/1.25 Georgia,serif
+}
+.inventory span {
+  font-size:.75rem;
+  color:var(--muted);
+  max-width:180px;
+  margin-top:.3rem
+}
+.inventory-note {
+  margin:1rem 0
+}
+.workspace {
+  display:grid;
+  grid-template-columns:240px minmax(0,1fr);
+  gap:3rem;
+  margin:3.5rem 0
+}
+.sidebar h2 {
+  font-size:1.4rem;
+  margin:0 0 1.3rem
+}
+.sidebar form {
+  position:relative
+}
+.sidebar label:not(.check-label) {
+  display:block;
+  margin:1rem 0 .3rem;
+  font-size:.77rem;
+  font-weight:650
+}
+.sidebar input[type=search],.sidebar select {
+  width:100%;
+  padding:.7rem .6rem;
+  border:1px solid var(--rule);
+  border-radius:3px;
+  background:var(--panel);
+  font-size:.82rem
+}
+.sidebar select {
+  padding-right:1.8rem
+}
+.check-label {
+  font-size:.8rem;
+  display:flex;
+  gap:.4rem;
+  align-items:center;
+  margin:1.1rem 0
+}
+input[type=checkbox] {
+  accent-color:var(--accent);
+  width:17px;
+  height:17px;
+  flex-shrink:0
+}
+.quick-filters {
+  border-top:1px solid var(--rule);
+  margin-top:1.5rem;
+  padding-top:.8rem
+}
+.quick-filters button {
+  border:0;
+  background:none;
+  color:var(--accent);
+  display:block;
+  padding:.5rem 0;
+  text-align:left
+}
+.legend {
+  margin:1.5rem 0;
+  border-block:1px solid var(--rule);
+  padding:1rem 0;
+  font-size:.8rem
+}
+.legend summary {
+  font-weight:650
+}
+.legend dt {
+  font:600 11px/1.5 ui-monospace,monospace;
+  margin-top:1rem
+}
+.legend dd {
+  margin:.4rem 0 0
+}
+.catalog-header {
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center
+}
+.catalog-header .eyebrow {
+  margin:0
+}
+.catalog-header button {
+  flex-shrink:0
+}
+#result-count {
+  font-size:.8rem;
+  color:var(--muted);
+  margin:1rem 0 .3rem
+}
+#filter-note {
+  margin-top:0;
+  margin-bottom:1.5rem
+}
+.record {
+  background:var(--panel);
+  padding:1.7rem 1.8rem;
+  margin-top:1rem;
+  border:1px solid var(--rule);
+  border-top:2px solid var(--accent);
+  border-radius:2px;
+  scroll-margin-top:2rem
+}
+.record:target {
+  outline:3px solid var(--warm);
+  outline-offset:4px
+}
+.record-meta {
+  font:10px/1.7 ui-monospace,monospace;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:.4rem;
+  margin-bottom:.8rem
+}
+.record-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem
+}
+.record h3 a {
+  color:var(--ink);
+  text-decoration:none
+}
+.record h3 a:hover {
+  text-decoration:underline
+}
+.compare-control {
+  display:flex;
+  align-items:center;
+  gap:.3rem;
+  font-size:.76rem;
+  white-space:nowrap;
+  cursor:pointer
+}
+.record>p {
+  font-size:.9rem
+}
+.record .invitation {
+  font-size:.83rem;
+  color:var(--muted)
+}
+.state-line {
+  font:11px/1.7 ui-monospace,monospace!important;
+  color:var(--accent);
+  letter-spacing:.035em;
+  padding:.6rem 0;
+  border-top:1px solid var(--rule)
+}
+.record details {
+  font-size:.84rem
+}
+.record summary {
+  cursor:pointer;
+  font-size:.79rem;
+  font-weight:650;
+  padding:.35rem 0
+}
+.record details[open] {
+  margin-bottom:1.3rem
+}
+.question {
+  font:italic 1.15rem/1.5 Georgia,serif;
+  color:var(--accent)
+}
+.scopes {
+  padding-left:1.1rem
+}
+.scopes li {
+  padding:.4rem 0
+}
+.scopes strong {
+  font:11px ui-monospace,monospace
+}
+.sources {
+  padding-left:1.1rem;
+  font-size:.75rem;
+  overflow-wrap:anywhere
+}
+.sources li {
+  margin:.45rem 0
+}
+.record-links {
+  font-size:.75rem;
+  line-height:2;
+  margin-top:1rem
+}
+.source-note {
+  font-size:.75rem!important;
+  color:var(--muted)
+}
+.notice {
+  padding:1.5rem;
+  border:1px solid var(--rule);
+  background:var(--wash)
+}
+.comparison {
+  border-top:2px solid var(--accent);
+  padding-top:2rem;
+  margin:3rem 0
+}
+.actions {
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap
+}
+.comparison-grid {
+  display:grid;
+  grid-template-columns:repeat(var(--columns,3),minmax(0,1fr));
+  gap:1rem;
+  margin:1.5rem 0
+}
+.comparison-grid article {
+  background:var(--panel);
+  padding:1.3rem;
+  border:1px solid var(--rule);
+  font-size:.85rem;
+  overflow-wrap:anywhere
+}
+.comparison-grid h3 {
+  font-size:1.55rem
+}
+.comparison-grid ul {
+  padding-left:1.1rem
+}
+.comparison-grid li {
+  margin:.5rem 0
+}
+.compare-tray {
+  position:sticky;
+  bottom:1rem;
+  background:var(--ink);
+  color:var(--paper);
+  border:1px solid var(--rule);
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  max-width:620px;
+  margin:1rem auto;
+  padding:.8rem 1rem;
+  box-shadow:var(--shadow);
+  border-radius:4px;
+  font-size:.85rem;
+  z-index:2
+}
+.compare-tray a {
+  color:var(--paper)
+}
+.provenance {
+  border-top:1px solid var(--rule);
+  padding:1.5rem 0;
+  font-size:.8rem;
+  color:var(--muted)
+}
+.provenance summary {
+  cursor:pointer
+}
+.provenance code {
+  display:block;
+  overflow-wrap:anywhere;
+  font-size:.7rem
+}
+.provenance p code {
+  display:inline
+}
+.provenance li {
+  padding:.4rem 0
+}
+footer {
+  padding:2rem 3rem 4rem;
+  border-top:1px solid var(--rule);
+  font-size:.8rem;
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between
+}
+footer p {
+  font-family:Georgia,serif;
+  font-size:1.2rem
+}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
+@media(max-width:900px) {
+  .masthead,main,footer {
+    padding-left:1.5rem;
+    padding-right:1.5rem
+  }
+  .intro {
+    gap:2rem
+  }
+  .workspace {
+    grid-template-columns:210px minmax(0,1fr);
+    gap:1.5rem
+  }
+  .record {
+    padding:1.3rem
+  }
+  .catalog-header {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .comparison-grid {
+    grid-template-columns:1fr
+  }
+  .comparison .catalog-header {
+    flex-direction:row
+  }
+  .record-heading {
+    align-items:flex-start
+  }
+  .edition {
+    display:none
+  }
+}
+@media(max-width:620px) {
+  .masthead {
+    padding-block:1rem
+  }
+  .wordmark {
+    font-size:.78rem
+  }
+  .intro {
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding:2.5rem 0 2rem
+  }
+  h1 {
+    font-size:3.1rem
+  }
+  .field-note {
+    padding-block:.3rem
+  }
+  .field-note>p:first-of-type {
+    font-size:1.2rem
+  }
+  .inventory {
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem
+  }
+  .inventory div:nth-child(3) {
+    border:0;
+    padding-left:0
+  }
+  .workspace {
+    grid-template-columns:1fr;
+    margin-top:2rem;
+    gap:2rem
+  }
+  .sidebar form {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0
+  }
+  .sidebar h2 {
+    margin-bottom:.4rem
+  }
+  .quick-filters {
+    display:flex;
+    gap:.8rem;
+    flex-wrap:wrap
+  }
+  .quick-filters p {
+    width:100%;
+    margin:0
+  }
+  .quick-filters button {
+    font-size:.77rem
+  }
+  .legend {
+    margin-bottom:.5rem
+  }
+  .sidebar>.small {
+    margin-block:.6rem
+  }
+  .record-heading {
+    flex-wrap:wrap
+  }
+  .record h3 {
+    font-size:1.7rem
+  }
+  .record-meta {
+    font-size:9px
+  }
+  .record {
+    padding:1.2rem
+  }
+  .comparison .catalog-header {
+    flex-direction:column
+  }
+  footer {
+    flex-direction:column;
+    align-items:flex-start;
+    padding-bottom:5rem
+  }
+  .compare-tray {
+    font-size:.75rem
+  }
+  .catalog-header {
+    flex-direction:row;
+    align-items:center
+  }
+  .catalog-header h2 {
+    font-size:1.6rem
+  }
+  .catalog-header button {
+    font-size:.7rem;
+    padding:.5rem
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+}
+@media print {
+  :root {
+    color-scheme:light;
+    --paper:white;
+    --panel:white;
+    --ink:#111;
+    --muted:#444;
+    --accent:#174d4d;
+    --rule:#bbb
+  }
+  .masthead,main,footer {
+    max-width:none;
+    padding:0
+  }
+  .masthead {
+    margin-bottom:1rem
+  }
+  .sidebar,button,.compare-control,.compare-tray,.skip,.provenance,#filter-note {
+    display:none!important
+  }
+  .intro {
+    padding:1rem 0;
+    gap:2rem
+  }
+  h1 {
+    font-size:2.5rem
+  }
+  .inventory {
+    padding:.7rem 0
+  }
+  .workspace {
+    display:block;
+    margin:1rem 0
+  }
+  .record,.comparison-grid article {
+    break-inside:avoid;
+    box-shadow:none
+  }
+  .comparison-grid {
+    grid-template-columns:1fr
+  }
+  .record-links {
+    font-size:.7rem
+  }
+  body[data-print=comparison] .intro,body[data-print=comparison] .inventory,body[data-print=comparison] .inventory-note,body[data-print=comparison] .workspace {
+    display:none
+  }
+  a {
+    color:#174d4d
+  }
+  footer {
+    padding:1rem 0
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#catalog">Skip to projects</a>
+<header class="masthead">
+  <a class="wordmark" href="https://github.com/topherchris420">VERS<span>3</span>DYNAMICS</a>
+  <span class="edition">RESEARCH OBSERVATORY / 01</span>
+  <button id="theme-toggle" type="button" hidden>Dark mode</button>
+</header>
+<main>
+  <section class="intro" aria-labelledby="title">
+    <div><p class="eyebrow">Christopher Woodyard · Independent research</p>
+    <h1 id="title">A laboratory,<br><em>open to question.</em></h1>
+    <p class="deck">Worlds, instruments, and experiments.<br>Follow an idea to its evidence. Find what would change our minds.</p></div>
+    <aside class="field-note"><span class="eyebrow">A note on the record</span>
+    <p>A working system is a beginning. The interesting part is finding out where it fails.</p>
+    <p class="small">Latest evidence review <strong>2026-11-10</strong>.<br>This was a partial review. Each project carries its own date.</p>
+    <a href="https://github.com/topherchris420/topherchris420/blob/main/experiments/README.md">Read the original ledger ↗</a></aside>
+  </section>
+  <section class="inventory" aria-label="Snapshot inventory">
+    <div><strong>38</strong><span>cataloged projects</span></div>
+    <div><strong>27</strong><span>projects with evidence records</span></div>
+    <div><strong>6</strong><span>entries with a failed claim</span></div>
+    <div><strong>0</strong><span>independent reproductions in this ledger</span></div>
+  </section>
+  <p class="inventory-note">Counts describe this snapshot, not rankings. One project can have supported and failed claims under different conditions.</p>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Explore the collection">
+      <form id="filters" hidden>
+        <h2>Choose your question</h2>
+        <label for="search">Search the record</label>
+        <input id="search" type="search" placeholder="A project, method, or limitation…" autocomplete="off">
+        <label for="question">Research question</label>
+        <select id="question"><option value="">All questions</option><option value="confidence">When should a machine&#x27;s confidence count?</option><option value="signals">How do signals move together?</option><option value="worlds">What happens when agents have to live somewhere?</option><option value="measurement">What would have to be measured?</option><option value="sound">What does it sound like?</option><option value="unrecorded">No ledger entry</option></select>
+        <label for="state">Evidence state</label>
+        <select id="state"><option value="">All states</option><option value="CONCEIVED">CONCEIVED</option><option value="BUILDING">BUILDING</option><option value="EXECUTABLE">EXECUTABLE</option><option value="OBSERVED">OBSERVED</option><option value="REPRODUCED">REPRODUCED</option><option value="SUPPORTED">SUPPORTED</option><option value="NOT SUPPORTED">NOT SUPPORTED</option><option value="unrecorded">No ledger entry</option></select>
+        <label for="theme">Field of interest</label>
+        <select id="theme"><option value="">All fields</option><option value="play-a-world">Play a world</option><option value="challenge-an-intelligent-system">Challenge an intelligent system</option><option value="hear-the-invisible">Hear the invisible</option><option value="explore-a-research-lab">Explore a research lab</option><option value="use-something-practical">Use something practical</option><option value="discover-the-unusual">Discover the unusual</option><option value="artist">The artist&#x27;s collection</option></select>
+        <label class="check-label"><input id="archived" type="checkbox"> Include archives &amp; forks</label>
+        <button type="reset" class="secondary">Reset filters</button>
+        <div class="quick-filters" aria-label="Starting points">
+          <p class="eyebrow">Start with</p>
+          <button type="button" data-preset="failures">The failed claims ↗</button>
+          <button type="button" data-preset="worlds">The simulated worlds ↗</button>
+          <button type="button" data-preset="gaps">The unreviewed projects ↗</button>
+        </div>
+      </form>
+      <details class="legend"><summary>What the states mean</summary><dl><dt>CONCEIVED</dt><dd>Stated precisely, with at least one prediction or success condition. Not yet running.</dd><dt>BUILDING</dt><dd>Code or hardware design exists. Not yet runnable end to end by someone else.</dd><dt>EXECUTABLE</dt><dd>Someone else can run it from the repository.</dd><dt>OBSERVED</dt><dd>It produced a recorded result under stated conditions. The scope (synthetic, simulated, physical) is always named.</dd><dt>REPRODUCED</dt><dd>The result was regenerated independently: another person, another dataset, or another instrument.</dd><dt>SUPPORTED</dt><dd>The claim survived a test stated in advance, against external or physical evidence.</dd><dt>NOT SUPPORTED</dt><dd>The claim failed a test stated in advance. It stays on the record.</dd></dl></details>
+      <p class="small">Made to travel. This file works offline. Sources open on the web.</p>
+      <p class="small"><a href="https://github.com/topherchris420/topherchris420/blob/main/docs/research.md">Read the Markdown edition ↗</a></p>
+    </aside>
+    <section id="catalog" tabindex="-1" aria-labelledby="catalog-title">
+      <div class="catalog-header"><div><p class="eyebrow">The collection</p><h2 id="catalog-title">Follow the evidence.</h2></div><button id="export" class="secondary" type="button" hidden>Export results · JSON</button></div>
+      <p id="result-count" role="status" aria-live="polite">38 projects. Open a record to inspect its evidence.</p>
+      <p class="small" id="filter-note" hidden>Search matches the complete record, including limitations and source paths. Question and state filters use ledger entries only.</p>
+      <noscript><p class="notice">All records are readable below. Enable JavaScript for search, comparison and export; no network access is used.</p></noscript>
+      <p id="empty" class="notice" hidden>No projects match these filters. Try a broader term or reset the filters.</p>
+      <div id="records"><article class="record" id="pine-gap" data-record="pine-gap">
+<div class="record-meta"><span>Playable world · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/satellite-vision-scape">Pine Gap: After Hours</a></h3><label class="compare-control" hidden><input type="checkbox" value="pine-gap" aria-label="Compare Pine Gap: After Hours"> Compare</label></div>
+<p>A browser 3D world built from public sources, where a person, a scripted policy and an AI agent attempt the same night-shift task under the same physics.</p><p class="invitation">Drive a coffee run at midnight, then watch the scripted baseline try it.</p>
+<p class="state-line">EXECUTABLE · OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What happens when agents have to live somewhere?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — browser world, shared human/agent input mechanics, trace and evaluation formats</li><li><strong>OBSERVED</strong> — recorded live Jev After Hours and Free Roam case studies plus paired scripted episodes; no repeated-trial live-model success rate</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>Repeated live-model runs compared against scripted baselines, with a success rate.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md">https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md</a></li><li><a href="https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json">https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json</a></li><li><a href="https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md">https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md</a></li><li><a href="https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md">https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/satellite-vision-scape">Project source</a> · <a href="https://geotwn.vercel.app/">Play</a> · <a class="permalink" href="#pine-gap">Permalink</a></div>
+
+</article>
+<article class="record" id="lop-nur" data-record="lop-nur">
+<div class="record-meta"><span>Research instrument · active</span><span>Evidence review · 2026-11-10</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/lop-nur-twin">Lop Nur Twin · ECHO &amp; R.A.I.N.</a></h3><label class="compare-control" hidden><input type="checkbox" value="lop-nur" aria-label="Compare Lop Nur Twin · ECHO &amp; R.A.I.N."> Compare</label></div>
+<p>A simulated world with a persistent digital fly, sealed histories and a separate laboratory that tests whether changes to research subjects improve behavior.</p><p class="invitation">Observe ECHO, inspect continuity records, and challenge the intelligence experiments.</p>
+<p class="state-line">EXECUTABLE · OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What happens when agents have to live somewhere?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — public-source reconstruction, labelled-fiction games, integrated R.A.I.N. research runtime and bounded civilization experiments; persistent ECHO runtime with sealed checkpoint continuation and a separate intelligence metrology bench</li><li><strong>OBSERVED</strong> — scripted Bethesda and rule-based civilization experiments with native replay; one live Gemma-designed oscillator run remained inconclusive after numerical guards failed; no physical or general scientific validation; recorded ECHO continuity interval checks and held-out simulated plasticity experiments with inconclusive benefit</li></ul><h4>Still open</h4><p>Reconstruction cannot confirm the real site. Simulator findings do not establish human behavior, historical outcomes, physical measurements or general scientific intelligence. The retained live Gemma oscillator experiment failed its analytic accuracy guards. The original ECHO and Eva are not controlled by the FlyWire/BANC research backends. Continuity checks cover a stated interval, not full lifetime proof or consciousness. Active embodied plasticity has no established performance advantage in the published held-out study.</p><h4>Next experiment</h4><p>A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines. For the persistent-fly work: an independently audited continuation and a new preregistered held-out comparison that can distinguish benefit, regression and inconclusive evidence without experimenting on either original.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md">https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md</a></li><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/rain-discovery-validation/README.md">https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/rain-discovery-validation/README.md</a></li><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md">https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md</a></li><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md">https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md</a></li><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/README.md">https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/README.md</a></li><li><a href="https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/docs/ECHO_INTELLIGENCE_METROLOGY.md">https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/docs/ECHO_INTELLIGENCE_METROLOGY.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/lop-nur-twin">Project source</a> · <a href="https://lop-nur-twin.vercel.app/live">Observe ECHO</a> · <a href="https://lop-nur-twin.vercel.app/">Twin</a> · <a href="https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RESEARCH_CLAIMS.md">Research claims</a> · <a class="permalink" href="#lop-nur">Permalink</a></div>
+
+</article>
+<article class="record" id="mannahatta" data-record="mannahatta">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/cognisync-terrain-weaver">Mannahatta</a></h3><label class="compare-control" hidden><input type="checkbox" value="mannahatta" aria-label="Compare Mannahatta"> Compare</label></div>
+<p>A map instrument that compares a place&#x27;s historical ecology, present land cover and drawn redesigns under one sealed, terrain-routed storm.</p><p class="invitation">Redraw a city block and send the same storm through it.</p>
+<p class="state-line">EXECUTABLE · OBSERVED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What happens when agents have to live somewhere?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — sealed-storm surface counterfactuals, fill-and-spill terrain routing and identity-checked browser/CLI replay; planning estimates</li><li><strong>OBSERVED</strong> — recorded synthetic checks, source/classification sensitivity and comparisons with public street-flooding reports; not measured intervention outcomes</li><li><strong>NOT SUPPORTED</strong> — preregistered holdout claim that routed accumulation ranks street-flooding reports better than simple low elevation</li></ul><h4>Still open</h4><p>Classification and fixed-coefficient hydrology remain limited. The holdout flood-report comparison did not beat the low-elevation baseline; replay and internally consistent counterfactuals do not validate a flood forecast.</p><h4>Next experiment</h4><p>A repaired model evaluated on a new frozen holdout, preserving the failed comparison and comparing against low elevation.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/README.md">https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/README.md</a></li><li><a href="https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/INDEX.md">https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/INDEX.md</a></li><li><a href="https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/routing/R5-311-association-holdout/REPORT.md">https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/routing/R5-311-association-holdout/REPORT.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/cognisync-terrain-weaver">Project source</a> · <a href="https://phaseroot.vercel.app/">Explore</a> · <a class="permalink" href="#mannahatta">Permalink</a></div>
+
+</article>
+<article class="record" id="orpheus" data-record="orpheus">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/orpheus-resonance-protocol">Orpheus</a></h3><label class="compare-control" hidden><input type="checkbox" value="orpheus" aria-label="Compare Orpheus"> Compare</label></div>
+<p>Interactive command-room fiction in the browser: commit decisions against generated events, then review their consequences in an after-action log.</p><p class="invitation">Make the calls, then audit every choice.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What happens when agents have to live somewhere?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — interface prototype; physiological values are generated, microphone energy is the only real input</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>No next experiment recorded.</p><h4>Source records</h4><ul class="sources"></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/orpheus-resonance-protocol">Project source</a> · <a href="https://parsonscorporation.vercel.app/">Play</a> · <a class="permalink" href="#orpheus">Permalink</a></div>
+
+</article>
+<article class="record" id="ghostwheel" data-record="ghostwheel">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/ghostwheel">GHOSTWHEEL</a></h3><label class="compare-control" hidden><input type="checkbox" value="ghostwheel" aria-label="Compare GHOSTWHEEL"> Compare</label></div>
+<p>A browser simulator where you drive fictional electric vehicles and watch a command gateway accept or refuse each steering request; no real vehicle can be connected.</p><p class="invitation">Drive a fictional EV, inject a synthetic fault and watch it refused.</p>
+<p class="state-line">EXECUTABLE · BUILDING</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — browser simulator of fictional EVs with nine synthetic fault scenarios, a seeded research suite and hash-chained replay, plus a Python service checked for parity with the browser; simulation only, no path to physical actuation</li><li><strong>BUILDING</strong> — Windows desktop edition, CARLA bridge and ROS 2 passive observers: code and mocked tests exist, none validated end to end</li></ul><h4>Still open</h4><p>No experiment results are committed. Measurements describe the model, not real-world vehicle safety; no vulnerability in any real vehicle, OVMS or CARLA is claimed.</p><h4>Next experiment</h4><p>Committed, replayable results from the seeded research suite, and the CARLA bridge validated in a live session.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/ghostwheel/blob/58312f824f23b32e94407cb83ab1cb86a6ac1ebc/README.md">https://github.com/topherchris420/ghostwheel/blob/58312f824f23b32e94407cb83ab1cb86a6ac1ebc/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/ghostwheel">Project source</a> · <a href="https://ghostwheel-one.vercel.app/">Open the simulator</a> · <a class="permalink" href="#ghostwheel">Permalink</a></div>
+
+</article>
+<article class="record" id="james" data-record="james">
+<div class="record-meta"><span>Desktop preview · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/james">James</a></h3><label class="compare-control" hidden><input type="checkbox" value="james" aria-label="Compare James"> Compare</label></div>
+<p>A Rust desktop companion that talks to a model on your own computer, sees the screen only when you ask, and needs your approval for every input.</p><p class="invitation">Chat with a local model that cannot act without you.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — Rust desktop preview and platform release packaging; loopback-only model-app connection and one-use Windows input contracts; recorded Linux-container real-model workflows and platform CI, not general end-user or physical-device validation</li></ul><h4>Still open</h4><p>Real-device Windows/macOS installation, a reviewed input reaching a real application, LM Studio, microphones, screen readers, first-time-user evaluation and code signing remain unverified. A model app can serve a cloud model despite James connecting only to loopback; the application reports and warns about that state.</p><h4>Next experiment</h4><p>Complete its published real-device acceptance scenarios and end-user release gates without removing prior failures.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/README.md">https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/README.md</a></li><li><a href="https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/END_USER_READINESS.md">https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/END_USER_READINESS.md</a></li><li><a href="https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/VALIDATION.md">https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/VALIDATION.md</a></li><li><a href="https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md">https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/james">Project source</a> · <a href="https://github.com/topherchris420/james/releases">Download the preview</a> · <a class="permalink" href="#james">Permalink</a></div>
+
+</article>
+<article class="record" id="pordenone" data-record="pordenone">
+<div class="record-meta"><span>Research instrument · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/resonate-ai-mesh">Pordenone · Resonate AI Mesh</a></h3><label class="compare-control" hidden><input type="checkbox" value="pordenone" aria-label="Compare Pordenone · Resonate AI Mesh"> Compare</label></div>
+<p>A deterministic Rust kernel in which simulated agents propose actions and checks decide, with every step recorded for exact replay and counterfactuals.</p><p class="invitation">Replay a decision where re-validation overruled an approval.</p>
+<p class="state-line">EXECUTABLE · OBSERVED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — deterministic hard check, optional model check, record and replay; telemetry is simulated</li><li><strong>OBSERVED</strong> — six seeded experiments in simulation, each with one pre-registered prediction, paired conditions and deterministic mock judges; not a language model or live inputs</li><li><strong>NOT SUPPORTED</strong> — pre-registered simulated claim that consulting judgment only for unstable agents keeps its protection (+2.55 degraded-evidence commits per run)</li></ul><h4>Still open</h4><p>Nothing in the repository moves physical hardware; human-state telemetry is labelled SIMULATED. The real language-model judge was recorded on one short run only, which is not a quality measurement.</p><h4>Next experiment</h4><p>A recorded session against live, non-simulated inputs.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md">https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md</a></li><li><a href="https://github.com/topherchris420/resonate-ai-mesh/blob/8afc9de712331efdb1aece51ff60c7ca0dbb4244/docs/experiments.md">https://github.com/topherchris420/resonate-ai-mesh/blob/8afc9de712331efdb1aece51ff60c7ca0dbb4244/docs/experiments.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/resonate-ai-mesh">Project source</a> · <a href="https://resonate-ai-bridge.vercel.app/">Open the cockpit</a> · <a class="permalink" href="#pordenone">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-dna-music-molecules" data-record="catalog-dna-music-molecules">
+<div class="record-meta"><span>Website · website</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://arpa-h.vercel.app/">DNA Music Molecules</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-dna-music-molecules" aria-label="Compare DNA Music Molecules"> Compare</label></div>
+<p>A browser instrument that reads a DNA sequence as a musical score through versioned lenses, so you can mutate a strand, compare two, and see the rule behind every note.</p><p class="invitation">Change one letter of a strand and hear the difference.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://arpa-h.vercel.app/">Project</a> · <a class="permalink" href="#catalog-dna-music-molecules">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-sentinel" data-record="catalog-sentinel">
+<div class="record-meta"><span>Website · website</span><span>Catalog review · 2026-11-10</span></div>
+<div class="record-heading"><h3><a href="https://hello-goodbye-iota.vercel.app/">Sentinel</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-sentinel" aria-label="Compare Sentinel"> Compare</label></div>
+<p>An account-free browser studio that plays adjustable stereo tones and noise beside a paced breathing guide, keeping session records on your own device.</p><p class="invitation">Shape a tone and breathe with a timed guide.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://hello-goodbye-iota.vercel.app/">Project</a> · <a class="permalink" href="#catalog-sentinel">Permalink</a></div>
+<p class="source-note">source no longer public; site checked 10 November 2026</p>
+</article>
+<article class="record" id="studio" data-record="studio">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/quantum-spin-sound">Vers3Dynamics Studio</a></h3><label class="compare-control" hidden><input type="checkbox" value="studio" aria-label="Compare Vers3Dynamics Studio"> Compare</label></div>
+<p>A browser instrument where scratching a virtual record bends a Web Audio synthesizer while waveform, spectrum and geometry react; its Strudel pattern editor does not yet drive the sound.</p><p class="invitation">Scratch a virtual record and watch the sound bend.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What does it sound like?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — browser synthesizer with a scratchable virtual record and audio-reactive visuals; its Strudel-style pattern editor does not yet drive the sound</li></ul><h4>Still open</h4><p>The project&#x27;s own falsification test, editing one note and hearing the pitch change, fails today: pattern text is not evaluated.</p><h4>Next experiment</h4><p>No next experiment recorded.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/quantum-spin-sound/blob/d019ddf43cf2d33eb36babaa21fa32ee09642322/README.md">https://github.com/topherchris420/quantum-spin-sound/blob/d019ddf43cf2d33eb36babaa21fa32ee09642322/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/quantum-spin-sound">Project source</a> · <a href="https://bell-labs.vercel.app/">Play</a> · <a class="permalink" href="#studio">Permalink</a></div>
+
+</article>
+<article class="record" id="drr" data-record="drr">
+<div class="record-meta"><span>Library · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/dynamic-resonance-rooting">Dynamic Resonance Rooting</a></h3><label class="compare-control" hidden><input type="checkbox" value="drr" aria-label="Compare Dynamic Resonance Rooting"> Compare</label></div>
+<p>A Python framework, with a browser lab, that finds rhythms, lead–lag links and structural change in multivariate signals and tests each against surrogate nulls.</p><p class="invitation">Plant a hidden rhythm in the live lab and see whether it is found.</p>
+<p class="state-line">OBSERVED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">How do signals move together?</p><ul class="scopes"><li><strong>OBSERVED</strong> — Monte Carlo calibration on simulated systems with known answers</li><li><strong>NOT SUPPORTED</strong> — preregistered structural-change comparison on the NOAA CPC quasi-biennial oscillation series</li></ul><h4>Still open</h4><p>Whether any external dataset supports the structural-change claim.</p><h4>Next experiment</h4><p>A preregistered external comparison that holds its false-alarm tolerance.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md">https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md</a></li><li><a href="https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md">https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md</a></li><li><a href="https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md">https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/dynamic-resonance-rooting">Project source</a> · <a href="https://dynamic-resonance-rooting.vercel.app/">Open the live lab</a> · <a class="permalink" href="#drr">Permalink</a></div>
+
+</article>
+<article class="record" id="triad" data-record="triad">
+<div class="record-meta"><span>Research instrument · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/triad">TRIAD</a></h3><label class="compare-control" hidden><input type="checkbox" value="triad" aria-label="Compare TRIAD"> Compare</label></div>
+<p>A Rust instrument that measures how often the answers a system chooses to give are wrong, and tests when it should refuse to answer at all.</p><p class="invitation">Score saved predictions, or read eight frozen studies and their failures.</p>
+<p class="state-line">EXECUTABLE · OBSERVED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — Rust instrument and command line; frozen artifacts replayed and claims rechecked in Linux and Windows CI</li><li><strong>OBSERVED</strong> — a simulated four-electrode capacitive sensor (synthetic pilot), frozen models on public datasets (OpenML Electricity, UCI Bike Sharing), and the Milestone 9 pre-registered simulation of refusal certification (not real data)</li><li><strong>NOT SUPPORTED</strong> — pre-registered Milestone 8: claim-relative evidence rules against blind comparators on 5,078 claims from five public datasets, with truth from held-out outcomes; frozen Milestone 3, 6 and 7 tests were also negative</li></ul><h4>Still open</h4><p>The blind comparators were written by an AI agent of the same model family from a brief alone; isolation was instruction-based and self-reported. There has been no human adjudication, unrelated-team replication or peer review. Milestone 7 repeated Milestone 6&#x27;s negative result on a second public dataset with the same authors and pipeline, which this profile does not count as independent reproduction.</p><h4>Next experiment</h4><p>Any repair to the evidence rules tested on a new frozen test its authors have not seen, ideally judged or rerun by an unrelated team.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/README.md">https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/README.md</a></li><li><a href="https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md">https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md</a></li><li><a href="https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone7-results.md">https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone7-results.md</a></li><li><a href="https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json">https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json</a></li><li><a href="https://github.com/topherchris420/triad/blob/917fc17338dffdc13f924c498c64aab493ad211a/results/certify-v1/report.md">https://github.com/topherchris420/triad/blob/917fc17338dffdc13f924c498c64aab493ad211a/results/certify-v1/report.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/triad">Project source</a> · <a href="https://github.com/topherchris420/triad#the-research-arc-machine-checked">Research arc</a> · <a class="permalink" href="#triad">Permalink</a></div>
+
+</article>
+<article class="record" id="qnp" data-record="qnp">
+<div class="record-meta"><span>Research instrument · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/quantum-noise-profiler">Quantum Noise Profiler</a></h3><label class="compare-control" hidden><input type="checkbox" value="qnp" aria-label="Compare Quantum Noise Profiler"> Compare</label></div>
+<p>A Python instrument that tracks qubit noise with separated provenance and sequential drift tests, and withholds estimates its data cannot support.</p><p class="invitation">Step through a real IBM qubit pilot, batch by batch.</p>
+<p class="state-line">EXECUTABLE · OBSERVED · SUPPORTED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — qubit-noise monitoring, provenance-separated series, model/forecast refusal, and declared session error budgets</li><li><strong>OBSERVED</strong> — preregistered v0.2/v0.3 simulations with frozen protocols and stored raw data; one preregistered two-hour assumption-check pilot on IBM ibm_fez (5 qubits, 14 jobs, 296,000 shots), not a detection test</li><li><strong>SUPPORTED</strong> — preregistered pilot check P.C2 on physical hardware: readout stayed stable within single sweep jobs on one IBM device over two hours (0 of 10 sweeps disagreed; at most 1 allowed); an assumption check, not detection performance</li><li><strong>NOT SUPPORTED</strong> — preregistered pilot check P.C1: readout-probe counts did not follow one constant binomial rate across 12 batches (6 of 10 series rejected; at most 1 allowed)</li></ul><h4>Still open</h4><p>Hardware warning accuracy is not established: the pilot covers one device for two hours, and whether its alerts were true or false is unknown. Guarantees depend on channel-specific null assumptions, and calibrated empirical configurations are distinct from anytime-valid thresholds. Conventional CUSUM matched v0.3 operational performance in simulation.</p><h4>Next experiment</h4><p>Independent replication and an authorized, separately scoped hardware validation of the monitoring assumptions.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/README.md">https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/README.md</a></li><li><a href="https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md">https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md</a></li><li><a href="https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md">https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md</a></li><li><a href="https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/results/V03_SUMMARY.md">https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/results/V03_SUMMARY.md</a></li><li><a href="https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/docs/report/HARDWARE_ADDENDUM.md">https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/docs/report/HARDWARE_ADDENDUM.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/quantum-noise-profiler">Project source</a> · <a class="permalink" href="#qnp">Permalink</a></div>
+
+</article>
+<article class="record" id="ions-x" data-record="ions-x">
+<div class="record-meta"><span>Simulated research · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/ions-x-deep-emergence-lab">IONS-X Deep Emergence Lab</a></h3><label class="compare-control" hidden><input type="checkbox" value="ions-x" aria-label="Compare IONS-X Deep Emergence Lab"> Compare</label></div>
+<p>A seeded simulation where sensing agents search a synthetic field for planted couplings, with every run paired against an identical run that has none.</p><p class="invitation">Watch forty agents hunt for a coupling, then check the control.</p>
+<p class="state-line">OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">How do signals move together?</p><ul class="scopes"><li><strong>OBSERVED</strong> — v0.5 paired coupled/uncoupled benchmark over 8 seeds in a synthetic driven field; results from the earlier generator were superseded after the project&#x27;s own audit found that field froze</li></ul><h4>Still open</h4><p>Outputs are associations in a synthetic model, not a validated null for empirical data. With 8 seeds the transient coupling does not clear the family-wise bar, and the detector fires on 8.8% of unrelated pairs against a nominal 2.35%.</p><h4>Next experiment</h4><p>The paired-control design applied to recorded data.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md">https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md</a></li><li><a href="https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/99401c3e1a6ceed3f63cc8e3e606f164e13ff245/README.md">https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/99401c3e1a6ceed3f63cc8e3e606f164e13ff245/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/ions-x-deep-emergence-lab">Project source</a> · <a class="permalink" href="#ions-x">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-rain-pipeline" data-record="catalog-rain-pipeline">
+<div class="record-meta"><span>Research instrument · active</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/rain-pipeline">rain-pipeline</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-rain-pipeline" aria-label="Compare rain-pipeline"> Compare</label></div>
+<p>A pipeline that commits an experiment&#x27;s pass and fail rules before held-out data is read, tests them on public heart-and-breathing recordings, and replays every verdict.</p><p class="invitation">Replay a preregistered experiment that failed.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/rain-pipeline">Project source</a> · <a class="permalink" href="#catalog-rain-pipeline">Permalink</a></div>
+
+</article>
+<article class="record" id="rain-atlas" data-record="rain-atlas">
+<div class="record-meta"><span>Research instrument · active</span><span>Evidence review · 2026-11-10</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/rain-atlas">R.A.I.N. ATLAS</a></h3><label class="compare-control" hidden><input type="checkbox" value="rain-atlas" aria-label="Compare R.A.I.N. ATLAS"> Compare</label></div>
+<p>A local research workbench with computational experiments, evidence records and BLACK GLASS static firmware inspection.</p><p class="invitation">Run a synthetic study, challenge its result and verify the evidence chain.</p>
+<p class="state-line">EXECUTABLE · OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">How do signals move together?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — local computational experiment runner, evidence ledger and offline observatory; BLACK GLASS static analysis on supported firmware inputs</li><li><strong>OBSERVED</strong> — recorded synthetic synchronization study over 30 conditions and synthetic firmware fixtures; not physical evidence or independent external replication</li></ul><h4>Still open</h4><p>The synchronization report concerns finite-window behavior of a two-oscillator model. Scripted research roles are not autonomous LLM researchers. Official DSM binary analysis has not been performed. A hash chain checks internal integrity, not scientific truth.</p><h4>Next experiment</h4><p>An independent reproduction with a separately implemented reference and recorded external measurements; a documented authorized firmware study beyond the synthetic fixture.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/README.md">https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/README.md</a></li><li><a href="https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md">https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md</a></li><li><a href="https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/src/rain_atlas/cli.py">https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/src/rain_atlas/cli.py</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/rain-atlas">Project source</a> · <a href="https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md">Recorded study</a> · <a class="permalink" href="#rain-atlas">Permalink</a></div>
+
+</article>
+<article class="record" id="project-ascent" data-record="project-ascent">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/project-ascent">Project Ascent</a></h3><label class="compare-control" hidden><input type="checkbox" value="project-ascent" aria-label="Compare Project Ascent"> Compare</label></div>
+<p>Free home-price studios for covered DC and Maryland homes that show every comparable sale and assumption, and publish the accuracy tests the models failed.</p><p class="invitation">Take apart the sales behind an estimate; not an appraisal.</p>
+<p class="state-line">EXECUTABLE · OBSERVED · SUPPORTED · NOT SUPPORTED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — account-free pricing studios for covered DC and Maryland homes, a fictional demo, homeowner scenarios and exports; not an appraisal or financial advice</li><li><strong>OBSERVED</strong> — five pre-registered, chronological holdout studies on recorded sales; internal and retrospective, not independently certified</li><li><strong>SUPPORTED</strong> — pre-registered acceptance (9 of 9 criteria) for the DC single-family and rowhouse model on 2,254 held-out recorded sales, thresholds fixed in code before scoring; three criteria passed narrowly, without statistical margin, and only the exact validated configuration is covered</li><li><strong>NOT SUPPORTED</strong> — pre-registered acceptance failed for DC condominiums (4 of 9 criteria), both Maryland models (4 and 8 of 9) and a King County backtest (5 of 9)</li></ul><h4>Still open</h4><p>Only the DC single-family and rowhouse model passed all 9 criteria (median error 9.98%, several narrowly), and only for its exact validated configuration. No study has outside attestation.</p><h4>Next experiment</h4><p>An outside attestation of one study, and repaired models tested on new frozen holdouts.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/README.md">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/README.md</a></li><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc.json">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc.json</a></li><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc-condos.json">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc-condos.json</a></li><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland.json">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland.json</a></li><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland-v2.json">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland-v2.json</a></li><li><a href="https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json">https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/project-ascent">Project source</a> · <a href="https://project-ascent-theta.vercel.app/">Try Ascent</a> · <a class="permalink" href="#project-ascent">Permalink</a></div>
+
+</article>
+<article class="record" id="luca" data-record="luca">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/Luca">Luca</a></h3><label class="compare-control" hidden><input type="checkbox" value="luca" aria-label="Compare Luca"> Compare</label></div>
+<p>A Wi-Fi access point that records one device&#x27;s traffic and checks it against indicators and heuristics; built on Kaspersky&#x27;s TinyCheck, with an added kernel observatory.</p><p class="invitation">Inspect a device you own without installing anything on it.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — Wi-Fi access-point appliance derived from Kaspersky&#x27;s TinyCheck, plus a kernel observatory with unit tests and CI virtual-machine smoke tests; a synthetic public demo</li></ul><h4>Still open</h4><p>The kernel observatory has not run on real access-point hardware, its preregistered experiments have no committed results, and the capture pipeline has no automated tests. A match is evidence to investigate, not proof of compromise.</p><h4>Next experiment</h4><p>The preregistered observatory experiments run and published, then repeated on access-point hardware.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/Luca/blob/07472038cc46677fdaf31d777161fcafa733fb5c/README.md">https://github.com/topherchris420/Luca/blob/07472038cc46677fdaf31d777161fcafa733fb5c/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/Luca">Project source</a> · <a href="https://luca-rho-five.vercel.app/">See the sample report</a> · <a class="permalink" href="#luca">Permalink</a></div>
+
+</article>
+<article class="record" id="jasmine" data-record="jasmine">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/Jasmine">Jasmine</a></h3><label class="compare-control" hidden><input type="checkbox" value="jasmine" aria-label="Compare Jasmine"> Compare</label></div>
+<p>A self-hosted studio that turns a plain-language request into an AI workflow you test on your own models and deploy as an API, widget or schedule.</p><p class="invitation">Describe an AI app and watch each step run on your own model.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — self-hosted workflow studio and runtime: a deterministic planner, test runs against models on the user&#x27;s machine, versioned deployments as APIs, widgets and schedules; 41 test files, no CI</li></ul><h4>Still open</h4><p>Feature equivalence with the workflow platform it is modelled on is not established. The hosted demo depends on a separately running runtime and was unavailable on 2026-10-21. The repository has no license file.</p><h4>Next experiment</h4><p>Continuous integration and a reproducible end-to-end run on a clean machine.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/Jasmine/blob/b66dcbdca5df8b61a1b04993910663ac24a92df3/README.md">https://github.com/topherchris420/Jasmine/blob/b66dcbdca5df8b61a1b04993910663ac24a92df3/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/Jasmine">Project source</a> · <a class="permalink" href="#jasmine">Permalink</a></div>
+
+</article>
+<article class="record" id="nocturne" data-record="nocturne">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/nocturne">Nocturne</a></h3><label class="compare-control" hidden><input type="checkbox" value="nocturne" aria-label="Compare Nocturne"> Compare</label></div>
+<p>A toolkit that works backward from a darker-sky target to the least-cost lighting changes, and turns owners&#x27; existing switches into tracked, reversible actions.</p><p class="invitation">Plan a darker sky without dimming the crosswalk.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — command line and local browser planner: least-cost lighting plans checked against a brute-force oracle, modeled skyglow and energy cases; controls no lights</li></ul><h4>Still open</h4><p>DC figures are model estimates and the restoration examples use invented data. In its own model streetlights are a minority of skyglow: removing about 60% of their after-midnight contribution moves the modeled sky by about 0.1 mag/arcsec2. No field pilot has run.</p><h4>Next experiment</h4><p>The written one-building field pilot, with calibrated target and control stations.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/README.md">https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/README.md</a></li><li><a href="https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/docs/EVIDENCE.md">https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/docs/EVIDENCE.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/nocturne">Project source</a> · <a class="permalink" href="#nocturne">Permalink</a></div>
+
+</article>
+<article class="record" id="anna" data-record="anna">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/anna">Anna · R.A.I.N. DataMatrix Engine</a></h3><label class="compare-control" hidden><input type="checkbox" value="anna" aria-label="Compare Anna · R.A.I.N. DataMatrix Engine"> Compare</label></div>
+<p>A self-hostable search engine for papers, standards, code and vendor documentation that fuses keyword and vector retrieval and cites the exact passage.</p><p class="invitation">Run your own research search and re-check every citation.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — self-hostable search with citation-first answers and explicit refusal when evidence is absent</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>A retrieval evaluation on a stated technical corpus.</p><h4>Source records</h4><ul class="sources"></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/anna">Project source</a> · <a class="permalink" href="#anna">Permalink</a></div>
+
+</article>
+<article class="record" id="eaiv" data-record="eaiv">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/embedded-ai-validation-platform">Embedded AI Validation Platform</a></h3><label class="compare-control" hidden><input type="checkbox" value="eaiv" aria-label="Compare Embedded AI Validation Platform"> Compare</label></div>
+<p>A command line and dashboard that run firmware, TinyML, sensor-fusion and fault-injection suites and gate releases; every committed result is simulated.</p><p class="invitation">Run a simulated release gate on an embedded AI build.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — simulated targets, replay datasets, deterministic fault injection</li></ul><h4>Still open</h4><p>Hardware power monitors (INA226, PPK2) are planned; the included monitor is simulated.</p><h4>Next experiment</h4><p>The same validation run against a physical board, with measured power.</p><h4>Source records</h4><ul class="sources"></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/embedded-ai-validation-platform">Project source</a> · <a class="permalink" href="#eaiv">Permalink</a></div>
+
+</article>
+<article class="record" id="circle" data-record="circle">
+<div class="record-meta"><span>Hardware design · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/circle">CIRCLE</a></h3><label class="compare-control" hidden><input type="checkbox" value="circle" aria-label="Compare CIRCLE"> Compare</label></div>
+<p>A closed-loop biosignal and haptic-feedback instrument designed in code and tested against a simulated physiology twin; nothing is fabricated or cleared for use on a person.</p><p class="invitation">Run the physiology twin and audit every controller decision.</p>
+<p class="state-line">OBSERVED · BUILDING</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">How do signals move together?</p><ul class="scopes"><li><strong>OBSERVED</strong> — seeded physiological twin, scored on held-out seeds</li><li><strong>BUILDING</strong> — hardware: not fabricated; not cleared for human connection</li></ul><h4>Still open</h4><p>Fabrication and human connection are blocked by unresolved review gates.</p><h4>Next experiment</h4><p>Review gates closed, a fabricated board, a bench measurement.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/circle/blob/main/docs/review-gates.md">https://github.com/topherchris420/circle/blob/main/docs/review-gates.md</a></li><li><a href="https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md">https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/circle">Project source</a> · <a class="permalink" href="#circle">Permalink</a></div>
+
+</article>
+<article class="record" id="project-33" data-record="project-33">
+<div class="record-meta"><span>Executable prototype · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/33">Project 33</a></h3><label class="compare-control" hidden><input type="checkbox" value="project-33" aria-label="Compare Project 33"> Compare</label></div>
+<p>A folding-fin rocket bench testbed whose evidence record ties each engineering claim to its artifacts, including the claims its own models contradict.</p><p class="invitation">Audit eight claims, three of them contradicted.</p>
+<p class="state-line">BUILDING</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>BUILDING</strong> — bench-validation prototype; firmware builds in CI; 8 claims tracked: 3 contradicted by their own models, 4 unresolved, 1 supported within stated limits; zero accepted physical measurements; no flight claimed</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>The first physical evidence artifact.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md">https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md</a></li><li><a href="https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md">https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md</a></li><li><a href="https://github.com/topherchris420/33/blob/2ad7213e5fea06d1f21a20c020ada15467199c8d/README.md">https://github.com/topherchris420/33/blob/2ad7213e5fea06d1f21a20c020ada15467199c8d/README.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/33">Project source</a> · <a href="https://topherchris420.github.io/33/">Project page</a> · <a class="permalink" href="#project-33">Permalink</a></div>
+
+</article>
+<article class="record" id="woodyard-workstation" data-record="woodyard-workstation">
+<div class="record-meta"><span>Website · website</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://waveform-teleportation.vercel.app/">Waveform</a></h3><label class="compare-control" hidden><input type="checkbox" value="woodyard-workstation" aria-label="Compare Waveform"> Compare</label></div>
+<p>Simulation workstations that evolve standard quantum mechanics and a proposed field model side by side and look for the experiment that would separate them.</p><p class="invitation">Change one parameter and watch two theories disagree.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — public browser workstation simulating a proposed scalar-field localization model beside standard quantum baselines; analytical models only, no measured data; source repository private since October 2026, so the code cannot be inspected</li></ul><h4>Still open</h4><p>The stated falsification condition (a phase-deviation bound from atom interferometry or optical clocks) has not been applied.</p><h4>Next experiment</h4><p>No next experiment recorded.</p><h4>Source records</h4><ul class="sources"></ul><p>The source repository (topherchris420/waveform-shift-quantum) became private in October 2026; the workstation still runs publicly at the linked site.</p></details>
+<div class="record-links"><a href="https://waveform-teleportation.vercel.app/">Project</a> · <a class="permalink" href="#woodyard-workstation">Permalink</a></div>
+
+</article>
+<article class="record" id="hello-os" data-record="hello-os">
+<div class="record-meta"><span>Simulated research · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/ideas">hello_os</a></h3><label class="compare-control" hidden><input type="checkbox" value="hello-os" aria-label="Compare hello_os"> Compare</label></div>
+<p>A small Python package that computes a toy gravitomagnetic rotor-array model, stress-limited design sweeps and synthetic detector traces.</p><p class="invitation">Sweep imaginary rotor designs against material limits.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — toy model with synthetic detector traces</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>No next experiment recorded.</p><h4>Source records</h4><ul class="sources"></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/ideas">Project source</a> · <a class="permalink" href="#hello-os">Permalink</a></div>
+
+</article>
+<article class="record" id="dlt" data-record="dlt">
+<div class="record-meta"><span>Paper · website</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://doi.org/10.5281/zenodo.18263032">Dynamic Location Theory</a></h3><label class="compare-control" hidden><input type="checkbox" value="dlt" aria-label="Compare Dynamic Location Theory"> Compare</label></div>
+<p>A preprint proposing that position is encoded through resonance with a background scalar field, with predictions for atomic clocks and matter-wave interferometry.</p><p class="invitation">Read the predictions that could reject it.</p>
+<p class="state-line">CONCEIVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What would have to be measured?</p><ul class="scopes"><li><strong>CONCEIVED</strong> — predictions stated for atomic-clock interferometry, matter-wave interferometry, gravitational-wave detection; untested</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>An interferometry measurement that could reject it.</p><h4>Source records</h4><ul class="sources"></ul><p>The paper repository (topherchris420/research) and its research site became private in October 2026. The simulation prototype it held, dlt_simulation.py, can no longer be run by anyone else, so the EXECUTABLE state recorded on 2026-09-27 was withdrawn on 2026-10-21. The preprint remains public.</p></details>
+<div class="record-links"><a href="https://doi.org/10.5281/zenodo.18263032">Project</a> · <a class="permalink" href="#dlt">Permalink</a></div>
+<p class="source-note">preprint</p>
+</article>
+<article class="record" id="vanta" data-record="vanta">
+<div class="record-meta"><span>Live web app · active</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/vanta">Vanta</a></h3><label class="compare-control" hidden><input type="checkbox" value="vanta" aria-label="Compare Vanta"> Compare</label></div>
+<p>Christopher&#x27;s portfolio: writing, instruments, worlds, paintings and music as five channels, with a source-linked research atlas.</p><p class="invitation">Tune five channels of one person&#x27;s work.</p>
+<p class="state-line">EXECUTABLE</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What does it sound like?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — portfolio and research atlas</li></ul><h4>Still open</h4><p>No separate limitation recorded; read each state’s scope.</p><h4>Next experiment</h4><p>No next experiment recorded.</p><h4>Source records</h4><ul class="sources"></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/vanta">Project source</a> · <a href="https://mitpress.vercel.app/">Visit</a> · <a class="permalink" href="#vanta">Permalink</a></div>
+
+</article>
+<article class="record" id="humantouch" data-record="humantouch">
+<div class="record-meta"><span>Live web app · website</span><span>Evidence review · 2026-10-04</span></div>
+<div class="record-heading"><h3><a href="https://huggingface.co/spaces/ciaochris/HumanTouch">HumanTouch</a></h3><label class="compare-control" hidden><input type="checkbox" value="humantouch" aria-label="Compare HumanTouch"> Compare</label></div>
+<p>A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable.</p><p class="invitation">Revise a paragraph and inspect what changed.</p>
+<p class="state-line">EXECUTABLE · OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">What does it sound like?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — Gradio writing studio and six stateless tools on Hugging Face Spaces; measurement runs without a model, editing needs the Space&#x27;s configured provider</li><li><strong>OBSERVED</strong> — offline evaluation of the measurement instruments on 13 synthetic fixtures with hand-written faithful and over-edited reference revisions; no model involved</li></ul><h4>Still open</h4><p>Whether the constraints and guard improve a live model&#x27;s edits. The live ablation&#x27;s numbers vary between runs, and the Space&#x27;s README says to read the latest results file rather than any quoted figure.</p><h4>Next experiment</h4><p>A live ablation across the five conditions, published with its model, date, and per-case results.</p><h4>Source records</h4><ul class="sources"><li><a href="https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md">https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md</a></li><li><a href="https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md">https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md</a></li><li><a href="https://huggingface.co/spaces/ciaochris/HumanTouch/tree/main/evals">https://huggingface.co/spaces/ciaochris/HumanTouch/tree/main/evals</a></li></ul></details>
+<div class="record-links"><a href="https://huggingface.co/spaces/ciaochris/HumanTouch">Project</a> · <a class="permalink" href="#humantouch">Permalink</a></div>
+<p class="source-note">source on Hugging Face</p>
+</article>
+<article class="record" id="catalog-indigo-people" data-record="catalog-indigo-people">
+<div class="record-meta"><span>Website · website</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://chriswoodyard.bandcamp.com/">Indigo People</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-indigo-people" aria-label="Compare Indigo People"> Compare</label></div>
+<p>Christopher&#x27;s recordings as Indigo People.</p><p class="invitation">Listen.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://chriswoodyard.bandcamp.com/">Project</a> · <a class="permalink" href="#catalog-indigo-people">Permalink</a></div>
+<p class="source-note">music</p>
+</article>
+<article class="record" id="rain-lab" data-record="rain-lab">
+<div class="record-meta"><span>Archived · archived</span><span>Evidence review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/james_library">james_library</a></h3><label class="compare-control" hidden><input type="checkbox" value="rain-lab" aria-label="Compare james_library"> Compare</label></div>
+<p>The original R.A.I.N. Lab runtime, whose dated experiments remain historical evidence; its Rust layer descends from ZeroClaw, and the lab now lives in Lop Nur Twin.</p><p class="invitation">Read the first quote-checking experiments, including the one that failed.</p>
+<p class="state-line">EXECUTABLE · OBSERVED</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p class="question">When should a machine&#x27;s confidence count?</p><ul class="scopes"><li><strong>EXECUTABLE</strong> — local research meeting, offline demo, bounded interfaces, experiment registry and reviewed simulation workflow</li><li><strong>OBSERVED</strong> — recorded seeded citation checks and CIRCLE simulated controls; same-seed reruns, not independent replication</li></ul><h4>Still open</h4><p>Real-model accuracy and speed behind the decision gate are unmeasured (stated in the README).</p><h4>Next experiment</h4><p>Measured accuracy of real models behind the gate.</p><h4>Source records</h4><ul class="sources"><li><a href="https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md">https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md</a></li><li><a href="https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md">https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md</a></li><li><a href="https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md">https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md</a></li><li><a href="https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md">https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md</a></li></ul></details>
+<div class="record-links"><a href="https://github.com/topherchris420/james_library">Project source</a> · <a class="permalink" href="#rain-lab">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-ai-metrology-submissions" data-record="catalog-ai-metrology-submissions">
+<div class="record-meta"><span>Fork · fork</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/ai-metrology-submissions">NIST metric proposal</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-ai-metrology-submissions" aria-label="Compare NIST metric proposal"> Compare</label></div>
+<p>One proposal on a branch: the established selective-risk-at-target-coverage metric, submitted through the NIST AI Metrology Center&#x27;s public community process; not merged as of 21 October 2026, and no endorsement is implied.</p><p class="invitation">Read the proposal.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/ai-metrology-submissions">Project source</a> · <a href="https://github.com/topherchris420/ai-metrology-submissions/blob/ff442fdfa56cc2fe4b18e087a5c5e9b6559a8e49/submissions/selective-risk-at-target-coverage.yml">Proposal</a> · <a class="permalink" href="#catalog-ai-metrology-submissions">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-darpa-math-ponderer" data-record="catalog-darpa-math-ponderer">
+<div class="record-meta"><span>Archived · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/darpa-math-ponderer">THINK</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-darpa-math-ponderer" aria-label="Compare THINK"> Compare</label></div>
+<p>A browser workspace that assembles templated conjectures in four areas of mathematics, each marked as needing proof; nothing in it is proved, searched or written by a model.</p><p class="invitation">Generate a conjecture with its assumptions.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/darpa-math-ponderer">Project source</a> · <a class="permalink" href="#catalog-darpa-math-ponderer">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-resona-lab-network" data-record="catalog-resona-lab-network">
+<div class="record-meta"><span>Archived · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/resona-lab-network">Resona</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-resona-lab-network" aria-label="Compare Resona"> Compare</label></div>
+<p>A social site where researchers post projects and others resonate with, fork and discuss them; no longer maintained.</p><p class="invitation">Read how a research network was imagined.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/resona-lab-network">Project source</a> · <a class="permalink" href="#catalog-resona-lab-network">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-washingtondc-news" data-record="catalog-washingtondc-news">
+<div class="record-meta"><span>Archived · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/washingtondc-news">DC news prototype</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-washingtondc-news" aria-label="Compare DC news prototype"> Compare</label></div>
+<p>A prototype local-news landing page with weather and puzzle-style easter eggs; never a news outlet, and its placeholder headlines are invented.</p><p class="invitation">Find the hidden documents.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/washingtondc-news">Project source</a> · <a class="permalink" href="#catalog-washingtondc-news">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-fartscroll" data-record="catalog-fartscroll">
+<div class="record-meta"><span>Archived · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/fartscroll">Signal Lab</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-fartscroll" aria-label="Compare Signal Lab"> Compare</label></div>
+<p>A one-page waveform console with sliders and an optional tone, kept in a repository that began as a fork of someone else&#x27;s browser prank.</p><p class="invitation">Tune a waveform.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/fartscroll">Project source</a> · <a href="https://woodyard.vercel.app/">Open</a> · <a class="permalink" href="#catalog-fartscroll">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-sergeant-carney" data-record="catalog-sergeant-carney">
+<div class="record-meta"><span>Archived · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/Sergeant_Carney">Sergeant Carney</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-sergeant-carney" aria-label="Compare Sergeant Carney"> Compare</label></div>
+<p>A chat experiment in which a language model role-plays Sgt. William Harvey Carney in nineteenth-century diction; his replies are model-generated and may be wrong.</p><p class="invitation">Read the role-play prompt.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/Sergeant_Carney">Project source</a> · <a class="permalink" href="#catalog-sergeant-carney">Permalink</a></div>
+
+</article>
+<article class="record" id="catalog-gitsocial-agent-skill" data-record="catalog-gitsocial-agent-skill">
+<div class="record-meta"><span>Fork · archived</span><span>Catalog review · 2026-10-21</span></div>
+<div class="record-heading"><h3><a href="https://github.com/topherchris420/gitsocial-agent-skill">GitSocial agent skill</a></h3><label class="compare-control" hidden><input type="checkbox" value="catalog-gitsocial-agent-skill" aria-label="Compare GitSocial agent skill"> Compare</label></div>
+<p>An unmodified reference copy of gitsocial-org&#x27;s skill that teaches coding agents the GitSocial command line; the work is theirs.</p><p class="invitation">Follow the link upstream.</p>
+<p class="state-line">NO LEDGER ENTRY</p>
+<details><summary>Evidence, limits &amp; next experiment</summary><p>This project has no evidence-ledger entry. Its catalog maturity is not an evidence verdict.</p></details>
+<div class="record-links"><a href="https://github.com/topherchris420/gitsocial-agent-skill">Project source</a> · <a class="permalink" href="#catalog-gitsocial-agent-skill">Permalink</a></div>
+
+</article></div>
+    </section>
+  </div>
+  <section id="comparison" class="comparison" aria-labelledby="comparison-title" tabindex="-1" hidden>
+    <div class="catalog-header"><div><p class="eyebrow">At the same table</p><h2 id="comparison-title">Compare the questions.</h2></div><div class="actions"><button id="print" type="button">Print comparison</button><button id="clear-comparison" type="button" class="secondary">Clear comparison</button></div></div>
+    <p class="small">Compare scope and open work. These projects do not share a benchmark, so this is not a performance ranking. Selections persist when you filter the collection.</p>
+    <div id="comparison-content" class="comparison-grid"></div>
+  </section>
+  <div id="compare-tray" class="compare-tray" hidden><span id="selection-count" role="status"></span><a id="show-comparison" href="#comparison">View comparison ↓</a></div>
+  <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  <details class="provenance"><summary>Inspect this snapshot</summary>
+    <p>Generated from the project atlas and evidence ledger. SHA-256 digests identify the exact input bytes; they do not certify the scientific claims. Rebuild with <code>python3 tools/build_observatory.py</code> and verify with <code>--check</code>.</p>
+    <ul><li><a href="https://github.com/topherchris420/topherchris420/blob/main/docs/atlas.json">docs/atlas.json</a><code>3160bf15639dc4394ccca07c91697a09bc4c1b38f564cc867a1c8d2846dabdd1</code></li><li><a href="https://github.com/topherchris420/topherchris420/blob/main/experiments/ledger.json">experiments/ledger.json</a><code>ba36883dbf0288aabf34461a3dab78a300d887a29c8b07bb4e02a0a1ae52ce8c</code></li><li><a href="https://github.com/topherchris420/topherchris420/blob/main/tools/build_observatory.py">tools/build_observatory.py</a><code>ac7f864e3ff9941bde91f7ce484012dd3e626339240b5c315ea65cd7fc890a59</code></li><li><a href="https://github.com/topherchris420/topherchris420/blob/main/tools/observatory.html">tools/observatory.html</a><code>310b593e4283d2cb979769bf2ea563df2af4f9074d74b3ed749f0ea6d47cb1aa</code></li><li><a href="https://github.com/topherchris420/topherchris420/blob/main/tools/observatory.css">tools/observatory.css</a><code>38542bd14e73215b3dff0d0d000bea6b0f27df752614dfa7d228934f301400e0</code></li><li><a href="https://github.com/topherchris420/topherchris420/blob/main/tools/observatory.js">tools/observatory.js</a><code>4ef2bceffe9850c9522513132e0e425fcd0b8366b056c0eb38230f9aa06a4897</code></li></ul>
+    <p><a href="https://github.com/topherchris420/topherchris420/blob/main/docs/observatory-manifest.json">Build manifest ↗</a> · Exported JSON includes the definitions, complete selected records and input digests.</p>
+  </details>
+</main>
+<footer><p>Built by one researcher. Open for another pair of eyes.</p><a href="https://github.com/topherchris420/topherchris420">Christopher Woodyard / Vers3Dynamics ↗</a></footer>
+<script id="observatory-data" type="application/json">{"schema":"vers3dynamics-observatory/v1","atlas_reviewed":"2026-10-21","ledger_reviewed":"2026-11-10","coverage_checked":"2026-11-10","note":"States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. On 10 November 2026 only Lop Nur Twin was refreshed and R.A.I.N. ATLAS added; other evidence records were not re-reviewed.","questions":{"confidence":"When should a machine's confidence count?","signals":"How do signals move together?","worlds":"What happens when agents have to live somewhere?","measurement":"What would have to be measured?","sound":"What does it sound like?"},"states":{"CONCEIVED":"Stated precisely, with at least one prediction or success condition. Not yet running.","BUILDING":"Code or hardware design exists. Not yet runnable end to end by someone else.","EXECUTABLE":"Someone else can run it from the repository.","OBSERVED":"It produced a recorded result under stated conditions. The scope (synthetic, simulated, physical) is always named.","REPRODUCED":"The result was regenerated independently: another person, another dataset, or another instrument.","SUPPORTED":"The claim survived a test stated in advance, against external or physical evidence.","NOT SUPPORTED":"The claim failed a test stated in advance. It stays on the record."},"themes":[{"id":"play-a-world","title":"Play a world","blurb":"Explore virtual cities, simulations and autonomous agents."},{"id":"challenge-an-intelligent-system","title":"Challenge an intelligent system","blurb":"Investigate decisions, authorization, uncertainty and security."},{"id":"hear-the-invisible","title":"Hear the invisible","blurb":"Discover sound, molecular representations, frequency and resonance."},{"id":"explore-a-research-lab","title":"Explore a research lab","blurb":"Inspect experiments, models, measurements and scientific results."},{"id":"use-something-practical","title":"Use something practical","blurb":"Approachable software for homeowners, creators, device owners and researchers."},{"id":"discover-the-unusual","title":"Discover the unusual","blurb":"Experimental inventions that resist easy categorization."},{"id":"artist","exhibition_anchor":"one-practice-many-forms","title":"The artist's collection","blurb":"Music, painting, writing and the portfolio that holds them."}],"records":[{"id":"pine-gap","name":"Pine Gap: After Hours","description":"A browser 3D world built from public sources, where a person, a scripted policy and an AI agent attempt the same night-shift task under the same physics.","do":"Drive a coffee run at midnight, then watch the scripted baseline try it","theme":"play-a-world","status":"active","maturity":"Playable world","links":[{"label":"Project source","url":"https://github.com/topherchris420/satellite-vision-scape"},{"label":"Play","url":"https://geotwn.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"pine-gap","name":"Pine Gap: After Hours","repo":"https://github.com/topherchris420/satellite-vision-scape","question":"What happens when agents have to live somewhere?","state":[{"state":"EXECUTABLE","scope":"browser world, shared human/agent input mechanics, trace and evaluation formats"},{"state":"OBSERVED","scope":"recorded live Jev After Hours and Free Roam case studies plus paired scripted episodes; no repeated-trial live-model success rate"}],"next":"Repeated live-model runs compared against scripted baselines, with a success rate.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-07-15"},"milestones":[{"day":0,"date":"2026-07-15","label":"3D site viewer published from an app-builder template"},{"day":72,"date":"2026-09-25","label":"playable third-person open world","sha":"3863c121a8281309fc8927a9f0cca2712130fcf8"},{"day":73,"date":"2026-09-26","label":"After Hours mission and agent runtime","sha":"f6d4a60237bdec8558b2b0a10f44c9c48348e074"},{"day":74,"date":"2026-09-27","label":"agent runtime test suites","sha":"3e7b4f06d31bb684411b3346dd314ca40e497fab"}]},"compressed":["3D world","physics","agent runtime and trace format","tests"],"not_compressed":["a success rate","knowing whether the agent is good at the task"],"evidence":["https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/AGENT_RUNTIME.md","https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json","https://github.com/topherchris420/satellite-vision-scape/blob/main/docs/EXPERIMENTS.md","https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/experiments/results/tuning-control-magnitude/report.md"],"last_reviewed":"2026-10-21","observations":[{"experiment":"jev-after-hours-live-2026-09-27","scope":"one recorded live Jev session in the After Hours simulation","model":"jev-1.13.0","task_completed":true,"elapsed_seconds":457.82,"human_interventions":0,"source":"https://github.com/topherchris420/satellite-vision-scape/blob/bff1f8095739d925a9e0bc13e3a6566cf2363d04/docs/traces/jev-after-hours-live-2026-09-27.json","limitation":"One completed session does not establish a success rate or a comparison with human performance. The source pin identifies the stored trace; its build field is 'development', not an executed-code commit."},{"experiment":"tuning-control-magnitude","scope":"scripted baseline, three control-size conditions, ten paired seeded runs each","graded":{"runs":10,"all_four_terminals_locked":10},"long":{"runs":10,"all_four_terminals_locked":0},"tap":{"runs":10,"all_four_terminals_locked":10},"limitation":"Tests the control-size effect in one simulation build; does not establish Jev's reliability or independent replication."}]}},{"id":"lop-nur","name":"Lop Nur Twin \u00b7 ECHO \u0026 R.A.I.N.","description":"A simulated world with a persistent digital fly, sealed histories and a separate laboratory that tests whether changes to research subjects improve behavior.","do":"Observe ECHO, inspect continuity records, and challenge the intelligence experiments","theme":"play-a-world","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/lop-nur-twin"},{"label":"Observe ECHO","url":"https://lop-nur-twin.vercel.app/live"},{"label":"Twin","url":"https://lop-nur-twin.vercel.app/"},{"label":"Research claims","url":"https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RESEARCH_CLAIMS.md"}],"source_note":"","catalog_reviewed":"2026-11-10","ledger":{"id":"lop-nur","name":"Lop Nur Twin","repo":"https://github.com/topherchris420/lop-nur-twin","question":"What happens when agents have to live somewhere?","state":[{"state":"EXECUTABLE","scope":"public-source reconstruction, labelled-fiction games, integrated R.A.I.N. research runtime and bounded civilization experiments; persistent ECHO runtime with sealed checkpoint continuation and a separate intelligence metrology bench"},{"state":"OBSERVED","scope":"scripted Bethesda and rule-based civilization experiments with native replay; one live Gemma-designed oscillator run remained inconclusive after numerical guards failed; no physical or general scientific validation; recorded ECHO continuity interval checks and held-out simulated plasticity experiments with inconclusive benefit"}],"open":"Reconstruction cannot confirm the real site. Simulator findings do not establish human behavior, historical outcomes, physical measurements or general scientific intelligence. The retained live Gemma oscillator experiment failed its analytic accuracy guards. The original ECHO and Eva are not controlled by the FlyWire/BANC research backends. Continuity checks cover a stated interval, not full lifetime proof or consciousness. Active embodied plasticity has no established performance advantage in the published held-out study.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-07-17","sha":"7cbff5a9adbe65d00286b40e52bea26904c18718"},"milestones":[{"day":0,"date":"2026-07-17","label":"3D airfield twin"},{"day":2,"date":"2026-07-19","label":"simulator grounded in reproducible public evidence","sha":"4a90c4813826f4db35f1ff4fb969124765e51f67"},{"day":19,"date":"2026-08-05","label":"shared evidence ledger, release manifest, accessible analysis view","sha":"c52bb8582e29c4c1abf80788cfa9ed7daf5c8ba9"}]},"last_reviewed":"2026-11-10","next":"A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines. For the persistent-fly work: an independently audited continuation and a new preregistered held-out comparison that can distinguish benefit, regression and inconclusive evidence without experimenting on either original.","evidence":["https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md","https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/rain-discovery-validation/README.md","https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md","https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md","https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/README.md","https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/docs/ECHO_INTELLIGENCE_METROLOGY.md"]}},{"id":"mannahatta","name":"Mannahatta","description":"A map instrument that compares a place's historical ecology, present land cover and drawn redesigns under one sealed, terrain-routed storm.","do":"Redraw a city block and send the same storm through it","theme":"play-a-world","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/cognisync-terrain-weaver"},{"label":"Explore","url":"https://phaseroot.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"mannahatta","name":"Mannahatta","repo":"https://github.com/topherchris420/cognisync-terrain-weaver","question":"What happens when agents have to live somewhere?","state":[{"state":"EXECUTABLE","scope":"sealed-storm surface counterfactuals, fill-and-spill terrain routing and identity-checked browser/CLI replay; planning estimates"},{"state":"OBSERVED","scope":"recorded synthetic checks, source/classification sensitivity and comparisons with public street-flooding reports; not measured intervention outcomes"},{"state":"NOT SUPPORTED","scope":"preregistered holdout claim that routed accumulation ranks street-flooding reports better than simple low elevation"}],"next":"A repaired model evaluated on a new frozen holdout, preserving the failed comparison and comparing against low elevation.","timeline":{"reconstructed":false,"caveat":"The current history begins on 2026-09-20 with an import of earlier work."},"last_reviewed":"2026-10-21","open":"Classification and fixed-coefficient hydrology remain limited. The holdout flood-report comparison did not beat the low-elevation baseline; replay and internally consistent counterfactuals do not validate a flood forecast.","evidence":["https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/README.md","https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/INDEX.md","https://github.com/topherchris420/cognisync-terrain-weaver/blob/d797b189f7e2d8df9fa75df26e77246e52da0210/experiments/routing/R5-311-association-holdout/REPORT.md"]}},{"id":"orpheus","name":"Orpheus","description":"Interactive command-room fiction in the browser: commit decisions against generated events, then review their consequences in an after-action log.","do":"Make the calls, then audit every choice","theme":"play-a-world","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/orpheus-resonance-protocol"},{"label":"Play","url":"https://parsonscorporation.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"orpheus","name":"Orpheus","repo":"https://github.com/topherchris420/orpheus-resonance-protocol","question":"What happens when agents have to live somewhere?","last_reviewed":"2026-10-21","state":[{"state":"EXECUTABLE","scope":"interface prototype; physiological values are generated, microphone energy is the only real input"}],"timeline":{"reconstructed":false}}},{"id":"ghostwheel","name":"GHOSTWHEEL","description":"A browser simulator where you drive fictional electric vehicles and watch a command gateway accept or refuse each steering request; no real vehicle can be connected.","do":"Drive a fictional EV, inject a synthetic fault and watch it refused","theme":"challenge-an-intelligent-system","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/ghostwheel"},{"label":"Open the simulator","url":"https://ghostwheel-one.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"ghostwheel","name":"GHOSTWHEEL","repo":"https://github.com/topherchris420/ghostwheel","question":"When should a machine's confidence count?","state":[{"state":"EXECUTABLE","scope":"browser simulator of fictional EVs with nine synthetic fault scenarios, a seeded research suite and hash-chained replay, plus a Python service checked for parity with the browser; simulation only, no path to physical actuation"},{"state":"BUILDING","scope":"Windows desktop edition, CARLA bridge and ROS 2 passive observers: code and mocked tests exist, none validated end to end"}],"open":"No experiment results are committed. Measurements describe the model, not real-world vehicle safety; no vulnerability in any real vehicle, OVMS or CARLA is claimed.","next":"Committed, replayable results from the seeded research suite, and the CARLA bridge validated in a live session.","timeline":{"reconstructed":false,"caveat":"Not reconstructed in this review."},"evidence":["https://github.com/topherchris420/ghostwheel/blob/58312f824f23b32e94407cb83ab1cb86a6ac1ebc/README.md"],"last_reviewed":"2026-10-21"}},{"id":"james","name":"James","description":"A Rust desktop companion that talks to a model on your own computer, sees the screen only when you ask, and needs your approval for every input.","do":"Chat with a local model that cannot act without you","theme":"challenge-an-intelligent-system","status":"active","maturity":"Desktop preview","links":[{"label":"Project source","url":"https://github.com/topherchris420/james"},{"label":"Download the preview","url":"https://github.com/topherchris420/james/releases"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"james","name":"James","repo":"https://github.com/topherchris420/james","question":"When should a machine's confidence count?","state":[{"state":"EXECUTABLE","scope":"Rust desktop preview and platform release packaging; loopback-only model-app connection and one-use Windows input contracts; recorded Linux-container real-model workflows and platform CI, not general end-user or physical-device validation"}],"open":"Real-device Windows/macOS installation, a reviewed input reaching a real application, LM Studio, microphones, screen readers, first-time-user evaluation and code signing remain unverified. A model app can serve a cloud model despite James connecting only to loopback; the application reports and warns about that state.","next":"Complete its published real-device acceptance scenarios and end-user release gates without removing prior failures.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-10-11","sha":"c18fb325615600bbd361c982d00748ab92b53ffc"},"milestones":[{"day":0,"date":"2026-10-11","label":"Rust authorization core: one-use approvals, policy checks, budgets, cancellation","sha":"c18fb325615600bbd361c982d00748ab92b53ffc"},{"day":0,"date":"2026-10-11","label":"native desktop app talking to a local model server","sha":"7cc7e322265ef79aef1a43565839c41b58b82bf0"},{"day":0,"date":"2026-10-11","label":"screen capture, voice, reviewed Windows input, read-only R.A.I.N. Lab context, Windows installer","sha":"b243e252a7dd8a889a791a16dd696de64eb02a3b"},{"day":0,"date":"2026-10-11","label":"delayed approvals expire before a resumed dispatch","sha":"a364945b284ff25f5d7e944b80268ba8afd37f6a"},{"day":1,"date":"2026-10-12","label":"james-loopback: every request confined to a loopback port","sha":"2fe074f6ecb6d250a701e1aeb10292cb68f59367"}],"caveat":"Not the archived james_library Python runtime. James is a separate Rust repository that reads R.A.I.N. Lab's status and results but cannot steer the Lab."},"compressed":["approval and supervision contracts","native desktop UI","loopback-only HTTP client","screen and voice helpers on three operating systems","Windows installer"],"not_compressed":["knowing whether real models give good answers and proposals","testing on a clean machine","knowing whether people can use it safely"],"evidence":["https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/README.md","https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/END_USER_READINESS.md","https://github.com/topherchris420/james/blob/112b5fa46ad9e88186b3dda22035f0c59faeecde/docs/VALIDATION.md","https://github.com/topherchris420/james/blob/31cdff1822b2026a916cb582d7be97afc7037d2f/docs/VALIDATION.md"],"last_reviewed":"2026-10-21"}},{"id":"pordenone","name":"Pordenone \u00b7 Resonate AI Mesh","description":"A deterministic Rust kernel in which simulated agents propose actions and checks decide, with every step recorded for exact replay and counterfactuals.","do":"Replay a decision where re-validation overruled an approval","theme":"challenge-an-intelligent-system","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/resonate-ai-mesh"},{"label":"Open the cockpit","url":"https://resonate-ai-bridge.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"pordenone","name":"Pordenone","repo":"https://github.com/topherchris420/resonate-ai-mesh","question":"When should a machine's confidence count?","state":[{"state":"EXECUTABLE","scope":"deterministic hard check, optional model check, record and replay; telemetry is simulated"},{"state":"OBSERVED","scope":"six seeded experiments in simulation, each with one pre-registered prediction, paired conditions and deterministic mock judges; not a language model or live inputs"},{"state":"NOT SUPPORTED","scope":"pre-registered simulated claim that consulting judgment only for unstable agents keeps its protection (+2.55 degraded-evidence commits per run)"}],"open":"Nothing in the repository moves physical hardware; human-state telemetry is labelled SIMULATED. The real language-model judge was recorded on one short run only, which is not a quality measurement.","next":"A recorded session against live, non-simulated inputs.","timeline":{"reconstructed":true,"first_commit":{"date":"2025-07-16"},"milestones":[{"day":0,"date":"2025-07-16","label":"started as a 'Resonant AI Router' browser prototype"},{"day":417,"date":"2026-09-06","label":"rebuilt as the Pordenone monorepo"},{"day":432,"date":"2026-09-21","label":"provider-neutral typed judgment added"}]},"evidence":["https://github.com/topherchris420/resonate-ai-mesh/blob/main/docs/replay.md","https://github.com/topherchris420/resonate-ai-mesh/blob/8afc9de712331efdb1aece51ff60c7ca0dbb4244/docs/experiments.md"],"last_reviewed":"2026-10-21"}},{"id":"catalog-dna-music-molecules","name":"DNA Music Molecules","description":"A browser instrument that reads a DNA sequence as a musical score through versioned lenses, so you can mutate a strand, compare two, and see the rule behind every note.","do":"Change one letter of a strand and hear the difference","theme":"hear-the-invisible","status":"website","maturity":"Website","links":[{"label":"Project","url":"https://arpa-h.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-sentinel","name":"Sentinel","description":"An account-free browser studio that plays adjustable stereo tones and noise beside a paced breathing guide, keeping session records on your own device.","do":"Shape a tone and breathe with a timed guide","theme":"hear-the-invisible","status":"website","maturity":"Website","links":[{"label":"Project","url":"https://hello-goodbye-iota.vercel.app/"}],"source_note":"source no longer public; site checked 10 November 2026","catalog_reviewed":"2026-11-10","ledger":null},{"id":"studio","name":"Vers3Dynamics Studio","description":"A browser instrument where scratching a virtual record bends a Web Audio synthesizer while waveform, spectrum and geometry react; its Strudel pattern editor does not yet drive the sound.","do":"Scratch a virtual record and watch the sound bend","theme":"hear-the-invisible","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/quantum-spin-sound"},{"label":"Play","url":"https://bell-labs.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"studio","name":"Vers3Dynamics Studio","repo":"https://github.com/topherchris420/quantum-spin-sound","question":"What does it sound like?","state":[{"state":"EXECUTABLE","scope":"browser synthesizer with a scratchable virtual record and audio-reactive visuals; its Strudel-style pattern editor does not yet drive the sound"}],"open":"The project's own falsification test, editing one note and hearing the pitch change, fails today: pattern text is not evaluated.","timeline":{"reconstructed":false},"evidence":["https://github.com/topherchris420/quantum-spin-sound/blob/d019ddf43cf2d33eb36babaa21fa32ee09642322/README.md"],"last_reviewed":"2026-10-21"}},{"id":"drr","name":"Dynamic Resonance Rooting","description":"A Python framework, with a browser lab, that finds rhythms, lead\u2013lag links and structural change in multivariate signals and tests each against surrogate nulls.","do":"Plant a hidden rhythm in the live lab and see whether it is found","theme":"hear-the-invisible","status":"active","maturity":"Library","links":[{"label":"Project source","url":"https://github.com/topherchris420/dynamic-resonance-rooting"},{"label":"Open the live lab","url":"https://dynamic-resonance-rooting.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"drr","name":"Dynamic Resonance Rooting","repo":"https://github.com/topherchris420/dynamic-resonance-rooting","question":"How do signals move together?","state":[{"state":"OBSERVED","scope":"Monte Carlo calibration on simulated systems with known answers"},{"state":"NOT SUPPORTED","scope":"preregistered structural-change comparison on the NOAA CPC quasi-biennial oscillation series"}],"open":"Whether any external dataset supports the structural-change claim.","next":"A preregistered external comparison that holds its false-alarm tolerance.","timeline":{"reconstructed":true,"first_commit":{"date":"2025-06-14"},"milestones":[{"day":0,"date":"2025-06-14","label":"447-line framework module and tutorial notebook committed","sha":"1dafd59a953df139faaf79948a2123fef3e6a2c7"},{"day":465,"date":"2026-09-22","label":"claim boundaries and the preregistered QBO comparison recorded: not_supported","sha":"bebd3512cadd0780d23b465cc1122d1fcf20be5c"},{"day":468,"date":"2026-09-25","label":"rooting surrogates calibrated; depth made unit- and grid-invariant"}]},"compressed":["operator implementation","browser port checked for parity to 1e-9","benchmarks and reproduction scripts"],"not_compressed":["choosing a fair external test","the external result itself"],"evidence":["https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md","https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md","https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"],"last_reviewed":"2026-10-21"}},{"id":"triad","name":"TRIAD","description":"A Rust instrument that measures how often the answers a system chooses to give are wrong, and tests when it should refuse to answer at all.","do":"Score saved predictions, or read eight frozen studies and their failures","theme":"explore-a-research-lab","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/triad"},{"label":"Research arc","url":"https://github.com/topherchris420/triad#the-research-arc-machine-checked"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"triad","name":"TRIAD","repo":"https://github.com/topherchris420/triad","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"Rust instrument and command line; frozen artifacts replayed and claims rechecked in Linux and Windows CI"},{"state":"OBSERVED","scope":"a simulated four-electrode capacitive sensor (synthetic pilot), frozen models on public datasets (OpenML Electricity, UCI Bike Sharing), and the Milestone 9 pre-registered simulation of refusal certification (not real data)"},{"state":"NOT SUPPORTED","scope":"pre-registered Milestone 8: claim-relative evidence rules against blind comparators on 5,078 claims from five public datasets, with truth from held-out outcomes; frozen Milestone 3, 6 and 7 tests were also negative"}],"open":"The blind comparators were written by an AI agent of the same model family from a brief alone; isolation was instruction-based and self-reported. There has been no human adjudication, unrelated-team replication or peer review. Milestone 7 repeated Milestone 6's negative result on a second public dataset with the same authors and pipeline, which this profile does not count as independent reproduction.","next":"Any repair to the evidence rules tested on a new frozen test its authors have not seen, ideally judged or rerun by an unrelated team.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-10-11","sha":"10e46ca7ccf083e77a39732c6b70bb61a18a8786"},"milestones":[{"day":0,"date":"2026-10-11","label":"reference audit, validated electrostatics and baseline localization for a simulated capacitive sensor","sha":"10e46ca7ccf083e77a39732c6b70bb61a18a8786"},{"day":0,"date":"2026-10-11","label":"Milestone 3 report published with negative findings","sha":"de428fe3f31863ac9875918ef5ff782f50913b4e"},{"day":0,"date":"2026-10-11","label":"Milestone 7 protocols, evidence method and claim suite frozen before fitting","sha":"bb1bd0fabde1010abcbf7433009d48218d3db1d0"},{"day":0,"date":"2026-10-11","label":"Milestone 8 protocol and comparator brief frozen before any model, case or comparator","sha":"9df849e805d7285eba0d9f047f9065ad11e7af29"},{"day":0,"date":"2026-10-11","label":"Milestone 8 run once and archived: not established","sha":"1d065ac3b7973a527ddbe2248fa302af6ce5ea01"},{"day":1,"date":"2026-10-12","label":"README findings bound to archived evidence by a checked claims ledger","sha":"79212616d762652b00bb3f5ec196a571de1938c6"}],"caveat":"The repository opens with a 12,844-line commit, so earlier work is not in Git."},"compressed":["electrostatic forward model","inverse estimation","experiment runners and archives","independent verifiers","a claims ledger checked in CI"],"not_compressed":["independent human review","replication by an unrelated team","a method that beats strong existing practice"],"evidence":["https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/README.md","https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone8-results.md","https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/metrology/milestone7-results.md","https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/docs/claims-ledger.json","https://github.com/topherchris420/triad/blob/917fc17338dffdc13f924c498c64aab493ad211a/results/certify-v1/report.md"],"last_reviewed":"2026-10-21","observations":[{"experiment":"milestone-2-optimizer-audit","scope":"1,080 test positions from a simulated capacitive sensor","result":"451 nonconvergence flags; only 10 of the 20 errors above 5 mm were flagged","source":"https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/evaluation.json","limitation":"Synthetic pilot; descriptive, not a calibrated abstention rule."},{"experiment":"milestone-7-bike-sharing","scope":"frozen ridge and gradient-boosting models on 2,806 eligible UCI Bike Sharing test hours","verdict":"evidence insufficient to establish a practical advantage","delta_cost_per_hour":{"ridge":0.0049,"gradient_boosting":0.0062},"source":"https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/bike-sharing-v7/report.json","limitation":"TRIAD minus standard monitoring at a matched budget; positive means TRIAD cost more. Hours and days are dependent, not independent trials."},{"experiment":"evidence-outcomes-v8","scope":"5,078 generated reliability claims on five public UCI datasets new to TRIAD; truth from held-out outcomes","verdict":"not established (pre-registered)","decision_cost":{"triad":0.159,"blind_statistical_reviewer":0.121,"blind_checklist":0.16,"never_endorse":0.125},"source":"https://github.com/topherchris420/triad/blob/7be64c8c93f2ef3238ac18b386aa5bb81c214bbb/results/evidence-outcomes-v8/score/report.json","limitation":"Comparators were written by an AI agent of the same model family; no human adjudication."}]}},{"id":"qnp","name":"Quantum Noise Profiler","description":"A Python instrument that tracks qubit noise with separated provenance and sequential drift tests, and withholds estimates its data cannot support.","do":"Step through a real IBM qubit pilot, batch by batch","theme":"explore-a-research-lab","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/quantum-noise-profiler"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"qnp","name":"Quantum Noise Profiler","repo":"https://github.com/topherchris420/quantum-noise-profiler","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"qubit-noise monitoring, provenance-separated series, model/forecast refusal, and declared session error budgets"},{"state":"OBSERVED","scope":"preregistered v0.2/v0.3 simulations with frozen protocols and stored raw data; one preregistered two-hour assumption-check pilot on IBM ibm_fez (5 qubits, 14 jobs, 296,000 shots), not a detection test"},{"state":"SUPPORTED","scope":"preregistered pilot check P.C2 on physical hardware: readout stayed stable within single sweep jobs on one IBM device over two hours (0 of 10 sweeps disagreed; at most 1 allowed); an assumption check, not detection performance"},{"state":"NOT SUPPORTED","scope":"preregistered pilot check P.C1: readout-probe counts did not follow one constant binomial rate across 12 batches (6 of 10 series rejected; at most 1 allowed)"}],"open":"Hardware warning accuracy is not established: the pilot covers one device for two hours, and whether its alerts were true or false is unknown. Guarantees depend on channel-specific null assumptions, and calibrated empirical configurations are distinct from anytime-valid thresholds. Conventional CUSUM matched v0.3 operational performance in simulation.","next":"Independent replication and an authorized, separately scoped hardware validation of the monitoring assumptions.","timeline":{"reconstructed":false,"caveat":"This review inspected the archived protocols and results; it did not reconstruct the project's development timeline."},"evidence":["https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/README.md","https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/results/V03_SUMMARY.md","https://github.com/topherchris420/quantum-noise-profiler/blob/d888fa421b1a843608838935976730a6aea093ad/docs/SEQUENTIAL_METHODS.md","https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/results/V03_SUMMARY.md","https://github.com/topherchris420/quantum-noise-profiler/blob/192a8a0362dc9738b5bbb4a8f145447c1221c96a/docs/report/HARDWARE_ADDENDUM.md"],"last_reviewed":"2026-10-21"}},{"id":"ions-x","name":"IONS-X Deep Emergence Lab","description":"A seeded simulation where sensing agents search a synthetic field for planted couplings, with every run paired against an identical run that has none.","do":"Watch forty agents hunt for a coupling, then check the control","theme":"explore-a-research-lab","status":"active","maturity":"Simulated research","links":[{"label":"Project source","url":"https://github.com/topherchris420/ions-x-deep-emergence-lab"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"ions-x","name":"IONS-X Deep Emergence Lab","repo":"https://github.com/topherchris420/ions-x-deep-emergence-lab","question":"How do signals move together?","state":[{"state":"OBSERVED","scope":"v0.5 paired coupled/uncoupled benchmark over 8 seeds in a synthetic driven field; results from the earlier generator were superseded after the project's own audit found that field froze"}],"open":"Outputs are associations in a synthetic model, not a validated null for empirical data. With 8 seeds the transient coupling does not clear the family-wise bar, and the detector fires on 8.8% of unrelated pairs against a nominal 2.35%.","next":"The paired-control design applied to recorded data.","timeline":{"reconstructed":true,"first_commit":{"date":"2025-12-17"},"milestones":[{"day":0,"date":"2025-12-17","label":"simulation committed","sha":"90676553c1030e3d4307e8a4051d92892d81cf7a"},{"day":281,"date":"2026-09-24","label":"reproducible experiment engine and paired coupling controls","sha":"9fddbba87100b41c9c4996cfe2fb96d1d05d0d85"}]},"compressed":["simulation","rendering","packaging"],"not_compressed":["deciding what the control should be"],"evidence":["https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/main/docs/experiment-design.md","https://github.com/topherchris420/ions-x-deep-emergence-lab/blob/99401c3e1a6ceed3f63cc8e3e606f164e13ff245/README.md"],"last_reviewed":"2026-10-21"}},{"id":"catalog-rain-pipeline","name":"rain-pipeline","description":"A pipeline that commits an experiment's pass and fail rules before held-out data is read, tests them on public heart-and-breathing recordings, and replays every verdict.","do":"Replay a preregistered experiment that failed","theme":"explore-a-research-lab","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/rain-pipeline"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"rain-atlas","name":"R.A.I.N. ATLAS","description":"A local research workbench with computational experiments, evidence records and BLACK GLASS static firmware inspection.","do":"Run a synthetic study, challenge its result and verify the evidence chain","theme":"explore-a-research-lab","status":"active","maturity":"Research instrument","links":[{"label":"Project source","url":"https://github.com/topherchris420/rain-atlas"},{"label":"Recorded study","url":"https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md"}],"source_note":"","catalog_reviewed":"2026-11-10","ledger":{"id":"rain-atlas","name":"R.A.I.N. ATLAS","repo":"https://github.com/topherchris420/rain-atlas","question":"How do signals move together?","state":[{"state":"EXECUTABLE","scope":"local computational experiment runner, evidence ledger and offline observatory; BLACK GLASS static analysis on supported firmware inputs"},{"state":"OBSERVED","scope":"recorded synthetic synchronization study over 30 conditions and synthetic firmware fixtures; not physical evidence or independent external replication"}],"open":"The synchronization report concerns finite-window behavior of a two-oscillator model. Scripted research roles are not autonomous LLM researchers. Official DSM binary analysis has not been performed. A hash chain checks internal integrity, not scientific truth.","next":"An independent reproduction with a separately implemented reference and recorded external measurements; a documented authorized firmware study beyond the synthetic fixture.","timeline":{"reconstructed":false,"caveat":"History not reconstructed in this review."},"last_reviewed":"2026-11-10","evidence":["https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/README.md","https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md","https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/src/rain_atlas/cli.py"]}},{"id":"project-ascent","name":"Project Ascent","description":"Free home-price studios for covered DC and Maryland homes that show every comparable sale and assumption, and publish the accuracy tests the models failed.","do":"Take apart the sales behind an estimate; not an appraisal","theme":"use-something-practical","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/project-ascent"},{"label":"Try Ascent","url":"https://project-ascent-theta.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"project-ascent","name":"Project Ascent","repo":"https://github.com/topherchris420/project-ascent","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"account-free pricing studios for covered DC and Maryland homes, a fictional demo, homeowner scenarios and exports; not an appraisal or financial advice"},{"state":"OBSERVED","scope":"five pre-registered, chronological holdout studies on recorded sales; internal and retrospective, not independently certified"},{"state":"SUPPORTED","scope":"pre-registered acceptance (9 of 9 criteria) for the DC single-family and rowhouse model on 2,254 held-out recorded sales, thresholds fixed in code before scoring; three criteria passed narrowly, without statistical margin, and only the exact validated configuration is covered"},{"state":"NOT SUPPORTED","scope":"pre-registered acceptance failed for DC condominiums (4 of 9 criteria), both Maryland models (4 and 8 of 9) and a King County backtest (5 of 9)"}],"open":"Only the DC single-family and rowhouse model passed all 9 criteria (median error 9.98%, several narrowly), and only for its exact validated configuration. No study has outside attestation.","next":"An outside attestation of one study, and repaired models tested on new frozen holdouts.","timeline":{"reconstructed":false,"caveat":"Not reconstructed in this review."},"evidence":["https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/README.md","https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc.json","https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc-condos.json","https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland.json","https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland-v2.json","https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json"],"last_reviewed":"2026-10-21"}},{"id":"luca","name":"Luca","description":"A Wi-Fi access point that records one device's traffic and checks it against indicators and heuristics; built on Kaspersky's TinyCheck, with an added kernel observatory.","do":"Inspect a device you own without installing anything on it","theme":"use-something-practical","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/Luca"},{"label":"See the sample report","url":"https://luca-rho-five.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"luca","name":"Luca","repo":"https://github.com/topherchris420/Luca","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"Wi-Fi access-point appliance derived from Kaspersky's TinyCheck, plus a kernel observatory with unit tests and CI virtual-machine smoke tests; a synthetic public demo"}],"open":"The kernel observatory has not run on real access-point hardware, its preregistered experiments have no committed results, and the capture pipeline has no automated tests. A match is evidence to investigate, not proof of compromise.","next":"The preregistered observatory experiments run and published, then repeated on access-point hardware.","timeline":{"reconstructed":false,"caveat":"Built on TinyCheck, whose history predates this project. Not reconstructed in this review."},"evidence":["https://github.com/topherchris420/Luca/blob/07472038cc46677fdaf31d777161fcafa733fb5c/README.md"],"last_reviewed":"2026-10-21"}},{"id":"jasmine","name":"Jasmine","description":"A self-hosted studio that turns a plain-language request into an AI workflow you test on your own models and deploy as an API, widget or schedule.","do":"Describe an AI app and watch each step run on your own model","theme":"use-something-practical","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/Jasmine"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"jasmine","name":"Jasmine","repo":"https://github.com/topherchris420/Jasmine","question":"When should a machine's confidence count?","state":[{"state":"EXECUTABLE","scope":"self-hosted workflow studio and runtime: a deterministic planner, test runs against models on the user's machine, versioned deployments as APIs, widgets and schedules; 41 test files, no CI"}],"open":"Feature equivalence with the workflow platform it is modelled on is not established. The hosted demo depends on a separately running runtime and was unavailable on 2026-10-21. The repository has no license file.","next":"Continuous integration and a reproducible end-to-end run on a clean machine.","timeline":{"reconstructed":false,"caveat":"Not reconstructed in this review."},"evidence":["https://github.com/topherchris420/Jasmine/blob/b66dcbdca5df8b61a1b04993910663ac24a92df3/README.md"],"last_reviewed":"2026-10-21"}},{"id":"nocturne","name":"Nocturne","description":"A toolkit that works backward from a darker-sky target to the least-cost lighting changes, and turns owners' existing switches into tracked, reversible actions.","do":"Plan a darker sky without dimming the crosswalk","theme":"use-something-practical","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/nocturne"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"nocturne","name":"Nocturne","repo":"https://github.com/topherchris420/nocturne","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"command line and local browser planner: least-cost lighting plans checked against a brute-force oracle, modeled skyglow and energy cases; controls no lights"}],"open":"DC figures are model estimates and the restoration examples use invented data. In its own model streetlights are a minority of skyglow: removing about 60% of their after-midnight contribution moves the modeled sky by about 0.1 mag/arcsec2. No field pilot has run.","next":"The written one-building field pilot, with calibrated target and control stations.","timeline":{"reconstructed":false,"caveat":"Not reconstructed in this review."},"evidence":["https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/README.md","https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/docs/EVIDENCE.md"],"last_reviewed":"2026-10-21"}},{"id":"anna","name":"Anna \u00b7 R.A.I.N. DataMatrix Engine","description":"A self-hostable search engine for papers, standards, code and vendor documentation that fuses keyword and vector retrieval and cites the exact passage.","do":"Run your own research search and re-check every citation","theme":"use-something-practical","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/anna"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"anna","name":"Anna","repo":"https://github.com/topherchris420/anna","question":"When should a machine's confidence count?","last_reviewed":"2026-10-21","state":[{"state":"EXECUTABLE","scope":"self-hostable search with citation-first answers and explicit refusal when evidence is absent"}],"next":"A retrieval evaluation on a stated technical corpus.","timeline":{"reconstructed":false,"caveat":"Built on the Anna's Archive codebase, whose history begins in 2022. Vers3Dynamics commits begin on 2026-02-14."}}},{"id":"eaiv","name":"Embedded AI Validation Platform","description":"A command line and dashboard that run firmware, TinyML, sensor-fusion and fault-injection suites and gate releases; every committed result is simulated.","do":"Run a simulated release gate on an embedded AI build","theme":"use-something-practical","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/embedded-ai-validation-platform"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"eaiv","name":"Embedded AI Validation Platform","repo":"https://github.com/topherchris420/embedded-ai-validation-platform","question":"When should a machine's confidence count?","last_reviewed":"2026-10-21","state":[{"state":"EXECUTABLE","scope":"simulated targets, replay datasets, deterministic fault injection"}],"open":"Hardware power monitors (INA226, PPK2) are planned; the included monitor is simulated.","next":"The same validation run against a physical board, with measured power.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-07-10","sha":"0d2b57b4c5a4f869bc770b940e38890d92b31f6b"},"milestones":[{"day":0,"date":"2026-07-10","label":"v0.3.0: fusion filters, hardware-in-the-loop simulator, firmware for four boards, CI","sha":"b45a541cd377d8e16b67adc430fb600100b59b1a"}],"caveat":"The repository opens with an upload, so earlier work is not in Git."},"compressed":["plugin architecture","sensor-fusion filters","fault injection","dashboard","tests"],"not_compressed":["measurement on physical hardware","power characterisation"]}},{"id":"circle","name":"CIRCLE","description":"A closed-loop biosignal and haptic-feedback instrument designed in code and tested against a simulated physiology twin; nothing is fabricated or cleared for use on a person.","do":"Run the physiology twin and audit every controller decision","theme":"discover-the-unusual","status":"active","maturity":"Hardware design","links":[{"label":"Project source","url":"https://github.com/topherchris420/circle"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"circle","name":"CIRCLE","repo":"https://github.com/topherchris420/circle","question":"How do signals move together?","state":[{"state":"OBSERVED","scope":"seeded physiological twin, scored on held-out seeds"},{"state":"BUILDING","scope":"hardware: not fabricated; not cleared for human connection"}],"open":"Fabrication and human connection are blocked by unresolved review gates.","next":"Review gates closed, a fabricated board, a bench measurement.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-08-14","sha":"5fb038724297f33b4ef5c863e0e377e7667b56f3"},"milestones":[{"day":0,"date":"2026-08-14","label":"safety basis, reproducible schematic execution, machine-checkable interlocks"},{"day":3,"date":"2026-08-17","label":"Rev B electronics engineering package","sha":"611723ddd09ed76b1ba9976cebc45c03e334bfce"},{"day":42,"date":"2026-09-25","label":"physiology twin, Rev B signal pipeline, auditable closed loop","sha":"74fa8e5af08211d751d5ce43d3151ca5ce2b9319"}]},"compressed":["schematics as code","safety contracts as tests","CI with KiCad","a physiological twin"],"not_compressed":["fabrication","electrical-safety and EMC review","any measurement on a person"],"evidence":["https://github.com/topherchris420/circle/blob/main/docs/review-gates.md","https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md"],"last_reviewed":"2026-10-21"}},{"id":"project-33","name":"Project 33","description":"A folding-fin rocket bench testbed whose evidence record ties each engineering claim to its artifacts, including the claims its own models contradict.","do":"Audit eight claims, three of them contradicted","theme":"discover-the-unusual","status":"active","maturity":"Executable prototype","links":[{"label":"Project source","url":"https://github.com/topherchris420/33"},{"label":"Project page","url":"https://topherchris420.github.io/33/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"project-33","name":"Project 33","repo":"https://github.com/topherchris420/33","question":"What would have to be measured?","state":[{"state":"BUILDING","scope":"bench-validation prototype; firmware builds in CI; 8 claims tracked: 3 contradicted by their own models, 4 unresolved, 1 supported within stated limits; zero accepted physical measurements; no flight claimed"}],"next":"The first physical evidence artifact.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-07-03"},"milestones":[{"day":0,"date":"2026-07-03","label":"raised into a verifiable engineering package; project page deployed","sha":"22d7f4c4fbabf2ed53714644388f8636db9ab67b"}],"caveat":"The repository opens with an upload, so earlier work is not in Git."},"compressed":["firmware hardening","dashboard","evidence tooling","documentation"],"not_compressed":["bench measurements","assembling the mechanism","any flight"],"evidence":["https://github.com/topherchris420/33/blob/main/docs/EVIDENCE_OBSERVATORY.md","https://github.com/topherchris420/33/blob/main/docs/PAPER_ALIGNMENT.md","https://github.com/topherchris420/33/blob/2ad7213e5fea06d1f21a20c020ada15467199c8d/README.md"],"last_reviewed":"2026-10-21"}},{"id":"woodyard-workstation","name":"Waveform","description":"Simulation workstations that evolve standard quantum mechanics and a proposed field model side by side and look for the experiment that would separate them.","do":"Change one parameter and watch two theories disagree","theme":"discover-the-unusual","status":"website","maturity":"Website","links":[{"label":"Project","url":"https://waveform-teleportation.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"woodyard-workstation","name":"Waveform (Woodyard model workstation)","repo":"https://waveform-teleportation.vercel.app/","question":"What would have to be measured?","state":[{"state":"EXECUTABLE","scope":"public browser workstation simulating a proposed scalar-field localization model beside standard quantum baselines; analytical models only, no measured data; source repository private since October 2026, so the code cannot be inspected"}],"visibility":"The source repository (topherchris420/waveform-shift-quantum) became private in October 2026; the workstation still runs publicly at the linked site.","last_reviewed":"2026-10-21","open":"The stated falsification condition (a phase-deviation bound from atom interferometry or optical clocks) has not been applied.","timeline":{"reconstructed":true,"first_commit":{"date":"2025-08-07"},"milestones":[{"day":366,"date":"2026-08-08","label":"Woodyard (2026) localization paper integrated with side-by-side simulations"},{"day":368,"date":"2026-08-10","label":"rebuilt as an experiment discovery and falsification engine"}]}}},{"id":"hello-os","name":"hello_os","description":"A small Python package that computes a toy gravitomagnetic rotor-array model, stress-limited design sweeps and synthetic detector traces.","do":"Sweep imaginary rotor designs against material limits","theme":"discover-the-unusual","status":"active","maturity":"Simulated research","links":[{"label":"Project source","url":"https://github.com/topherchris420/ideas"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"hello-os","name":"hello_os","repo":"https://github.com/topherchris420/ideas","question":"What would have to be measured?","last_reviewed":"2026-10-21","state":[{"state":"EXECUTABLE","scope":"toy model with synthetic detector traces"}],"timeline":{"reconstructed":false,"caveat":"Began as a Colab export, preserved under legacy/."}}},{"id":"dlt","name":"Dynamic Location Theory","description":"A preprint proposing that position is encoded through resonance with a background scalar field, with predictions for atomic clocks and matter-wave interferometry.","do":"Read the predictions that could reject it","theme":"discover-the-unusual","status":"website","maturity":"Paper","links":[{"label":"Project","url":"https://doi.org/10.5281/zenodo.18263032"}],"source_note":"preprint","catalog_reviewed":"2026-10-21","ledger":{"id":"dlt","name":"Dynamic Location Theory","repo":"https://doi.org/10.5281/zenodo.18263032","question":"What would have to be measured?","state":[{"state":"CONCEIVED","scope":"predictions stated for atomic-clock interferometry, matter-wave interferometry, gravitational-wave detection; untested"}],"visibility":"The paper repository (topherchris420/research) and its research site became private in October 2026. The simulation prototype it held, dlt_simulation.py, can no longer be run by anyone else, so the EXECUTABLE state recorded on 2026-09-27 was withdrawn on 2026-10-21. The preprint remains public.","last_reviewed":"2026-10-21","next":"An interferometry measurement that could reject it.","timeline":{"reconstructed":true,"milestones":[{"date":"2025-08-06","label":"precursor: 'Quantum Localization: Vibrational Variables as Location' (archived repository teleportation)"},{"date":"2026-01-16","label":"preprint published on Zenodo","doi":"10.5281/zenodo.18263032"},{"date":"2026-03-31","label":"research site and paper repository"}]}}},{"id":"vanta","name":"Vanta","description":"Christopher's portfolio: writing, instruments, worlds, paintings and music as five channels, with a source-linked research atlas.","do":"Tune five channels of one person's work","theme":"artist","status":"active","maturity":"Live web app","links":[{"label":"Project source","url":"https://github.com/topherchris420/vanta"},{"label":"Visit","url":"https://mitpress.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"vanta","name":"Vanta","repo":"https://github.com/topherchris420/vanta","question":"What does it sound like?","state":[{"state":"EXECUTABLE","scope":"portfolio and research atlas"}],"timeline":{"reconstructed":false},"last_reviewed":"2026-10-21"}},{"id":"humantouch","name":"HumanTouch","description":"A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable.","do":"Revise a paragraph and inspect what changed","theme":"artist","status":"website","maturity":"Live web app","links":[{"label":"Project","url":"https://huggingface.co/spaces/ciaochris/HumanTouch"}],"source_note":"source on Hugging Face","catalog_reviewed":"2026-10-21","ledger":{"id":"humantouch","name":"HumanTouch","repo":"https://huggingface.co/spaces/ciaochris/HumanTouch","question":"What does it sound like?","state":[{"state":"EXECUTABLE","scope":"Gradio writing studio and six stateless tools on Hugging Face Spaces; measurement runs without a model, editing needs the Space's configured provider"},{"state":"OBSERVED","scope":"offline evaluation of the measurement instruments on 13 synthetic fixtures with hand-written faithful and over-edited reference revisions; no model involved"}],"open":"Whether the constraints and guard improve a live model's edits. The live ablation's numbers vary between runs, and the Space's README says to read the latest results file rather than any quoted figure.","next":"A live ablation across the five conditions, published with its model, date, and per-case results.","timeline":{"reconstructed":false,"caveat":"Hosted on Hugging Face Spaces; its history was not read for this ledger."},"compressed":["the studio","deterministic measurement","change ledger and guard","offline evaluation harness"],"not_compressed":["knowing whether a live model's edits are better for the writer"],"evidence":["https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/README.md","https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md","https://huggingface.co/spaces/ciaochris/HumanTouch/tree/main/evals"],"last_reviewed":"2026-10-04","observations":[{"experiment":"offline-reference-revisions","scope":"13 synthetic fixtures with hand-written faithful and over-edited reference revisions, run through the measurement code; no model","recorded":"2026-10-03T17:52:28Z","unnecessary_change_rate":{"faithful":0.0,"smoothed":0.668,"n":9},"source":"https://huggingface.co/spaces/ciaochris/HumanTouch/blob/main/evals/results/offline.md","limitation":"Calibrates the instruments against hand-written references. It says nothing about a live model's edits; the Space's README quotes an earlier run of the same evaluation."}]}},{"id":"catalog-indigo-people","name":"Indigo People","description":"Christopher's recordings as Indigo People.","do":"Listen","theme":"artist","status":"website","maturity":"Website","links":[{"label":"Project","url":"https://chriswoodyard.bandcamp.com/"}],"source_note":"music","catalog_reviewed":"2026-10-21","ledger":null},{"id":"rain-lab","name":"james_library","description":"The original R.A.I.N. Lab runtime, whose dated experiments remain historical evidence; its Rust layer descends from ZeroClaw, and the lab now lives in Lop Nur Twin.","do":"Read the first quote-checking experiments, including the one that failed","theme":"explore-a-research-lab","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/james_library"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":{"id":"rain-lab","name":"R.A.I.N. Lab","repo":"https://github.com/topherchris420/james_library","question":"When should a machine's confidence count?","state":[{"state":"EXECUTABLE","scope":"local research meeting, offline demo, bounded interfaces, experiment registry and reviewed simulation workflow"},{"state":"OBSERVED","scope":"recorded seeded citation checks and CIRCLE simulated controls; same-seed reruns, not independent replication"}],"open":"Real-model accuracy and speed behind the decision gate are unmeasured (stated in the README).","next":"Measured accuracy of real models behind the gate.","timeline":{"reconstructed":true,"first_commit":{"date":"2026-02-12","sha":"16dd8f06317c5ed5f39bbaffec00da8602968956"},"milestones":[{"day":0,"date":"2026-02-12","label":"rain_lab.py meeting launcher and agent SOUL files committed"},{"day":222,"date":"2026-09-22","label":"promotion gate: independent bounded evidence required before a claim is promoted","sha":"0c24982bf6b93443676a2f9864dee6a2b83c947d"}],"caveat":"The Rust runtime descends from ZeroClaw; its imported history carries other contributors. Dates here refer to the R.A.I.N. Lab Python layer."},"compressed":["multi-agent orchestration","citation verification","documentation in six languages","decision replay tooling"],"not_compressed":["measuring whether real models make good decisions","calibration against outcomes"],"evidence":["https://github.com/topherchris420/james_library/blob/main/docs/bounded-decisions.md","https://github.com/topherchris420/james_library/blob/main/docs/typed-judgment.md","https://github.com/topherchris420/james_library/blob/9c8811e343d21b8c143055f9cf549abdefa862f1/RESULTS.md","https://github.com/topherchris420/james_library/blob/main/EXPERIMENTS.md"],"last_reviewed":"2026-10-21","observations":[{"experiment":"V3D-EXP-0001","verdict":"PASSED","scope":"exact-span citation checking on a local corpus with synthetic corruptions","limitation":"Does not test semantic support or scientific correctness."},{"experiment":"V3D-EXP-0002","verdict":"FAILED","scope":"genuine source quotes with typography normalized to ASCII","limitation":"The failure and same-seed rerun are retained."},{"experiment":"V3D-EXP-0003","verdict":"PASSED","scope":"seeded CIRCLE simulated controls","limitation":"No physical measurement or human outcome."}]}},{"id":"catalog-ai-metrology-submissions","name":"NIST metric proposal","description":"One proposal on a branch: the established selective-risk-at-target-coverage metric, submitted through the NIST AI Metrology Center's public community process; not merged as of 21 October 2026, and no endorsement is implied.","do":"Read the proposal","theme":"explore-a-research-lab","status":"fork","maturity":"Fork","links":[{"label":"Project source","url":"https://github.com/topherchris420/ai-metrology-submissions"},{"label":"Proposal","url":"https://github.com/topherchris420/ai-metrology-submissions/blob/ff442fdfa56cc2fe4b18e087a5c5e9b6559a8e49/submissions/selective-risk-at-target-coverage.yml"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-darpa-math-ponderer","name":"THINK","description":"A browser workspace that assembles templated conjectures in four areas of mathematics, each marked as needing proof; nothing in it is proved, searched or written by a model.","do":"Generate a conjecture with its assumptions","theme":"discover-the-unusual","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/darpa-math-ponderer"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-resona-lab-network","name":"Resona","description":"A social site where researchers post projects and others resonate with, fork and discuss them; no longer maintained.","do":"Read how a research network was imagined","theme":"discover-the-unusual","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/resona-lab-network"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-washingtondc-news","name":"DC news prototype","description":"A prototype local-news landing page with weather and puzzle-style easter eggs; never a news outlet, and its placeholder headlines are invented.","do":"Find the hidden documents","theme":"discover-the-unusual","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/washingtondc-news"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-fartscroll","name":"Signal Lab","description":"A one-page waveform console with sliders and an optional tone, kept in a repository that began as a fork of someone else's browser prank.","do":"Tune a waveform","theme":"hear-the-invisible","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/fartscroll"},{"label":"Open","url":"https://woodyard.vercel.app/"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-sergeant-carney","name":"Sergeant Carney","description":"A chat experiment in which a language model role-plays Sgt. William Harvey Carney in nineteenth-century diction; his replies are model-generated and may be wrong.","do":"Read the role-play prompt","theme":"discover-the-unusual","status":"archived","maturity":"Archived","links":[{"label":"Project source","url":"https://github.com/topherchris420/Sergeant_Carney"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null},{"id":"catalog-gitsocial-agent-skill","name":"GitSocial agent skill","description":"An unmodified reference copy of gitsocial-org's skill that teaches coding agents the GitSocial command line; the work is theirs.","do":"Follow the link upstream","theme":"use-something-practical","status":"archived","maturity":"Fork","links":[{"label":"Project source","url":"https://github.com/topherchris420/gitsocial-agent-skill"}],"source_note":"","catalog_reviewed":"2026-10-21","ledger":null}],"inputs":{"docs/atlas.json":"3160bf15639dc4394ccca07c91697a09bc4c1b38f564cc867a1c8d2846dabdd1","experiments/ledger.json":"ba36883dbf0288aabf34461a3dab78a300d887a29c8b07bb4e02a0a1ae52ce8c","tools/build_observatory.py":"ac7f864e3ff9941bde91f7ce484012dd3e626339240b5c315ea65cd7fc890a59","tools/observatory.html":"310b593e4283d2cb979769bf2ea563df2af4f9074d74b3ed749f0ea6d47cb1aa","tools/observatory.css":"38542bd14e73215b3dff0d0d000bea6b0f27df752614dfa7d228934f301400e0","tools/observatory.js":"4ef2bceffe9850c9522513132e0e425fcd0b8366b056c0eb38230f9aa06a4897"}}</script>
+<script>/* Progressive enhancement for a completely self-contained reading edition. */
+(() => {
+  "use strict";
+  const data = JSON.parse(document.getElementById("observatory-data").textContent);
+  const byId = new Map(data.records.map(record => [record.id, record]));
+  const nodes = new Map([...document.querySelectorAll("[data-record]")].map(node => [node.dataset.record, node]));
+  const get = id => document.getElementById(id);
+  const form = get("filters");
+  const fields = ["search", "question", "state", "theme"];
+  const selected = new Set();
+  const searchText = new Map(data.records.map(r => [r.id, JSON.stringify(r).toLocaleLowerCase()]));
+  let visible = [];
+  let printDetails = [];
+  let restoring = false;
+
+  function notify(text) { get("announcement").textContent = text; }
+  function state() {
+    return Object.fromEntries([...fields.map(id => [id, get(id).value]), ["archived", get("archived").checked]]);
+  }
+  function updateLocation() {
+    if (restoring) return;
+    const values = state();
+    const params = new URLSearchParams();
+    fields.forEach(id => { if (values[id]) params.set(id, values[id]); });
+    if (values.archived) params.set("archived", "1");
+    if (selected.size) params.set("compare", [...selected].join(","));
+    const hash = params.size ? "#view?" + params : "#catalog";
+    try { history.replaceState(null, "", hash); } catch { /* Some file: viewers disable history. */ }
+  }
+  function filter() {
+    const s = state();
+    const terms = s.search.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    visible = data.records.filter(r => {
+      const e = r.ledger;
+      return (s.archived || !["archived", "fork"].includes(r.status))
+        && (!s.theme || r.theme === s.theme)
+        && (!s.question || (s.question === "unrecorded" ? !e : e?.question === data.questions[s.question]))
+        && (!s.state || (s.state === "unrecorded" ? !e : e?.state.some(item => item.state === s.state)))
+        && terms.every(term => searchText.get(r.id).includes(term));
+    });
+    const ids = new Set(visible.map(r => r.id));
+    nodes.forEach((node, id) => { node.hidden = !ids.has(id); });
+    get("result-count").textContent = `${visible.length} of ${data.records.length} projects shown · ${visible.filter(r => r.ledger).length} with evidence records`;
+    get("empty").hidden = visible.length !== 0;
+    get("export").disabled = visible.length === 0;
+    updateLocation();
+  }
+  function text(tag, value, parent) {
+    const node = document.createElement(tag);
+    node.textContent = value;
+    parent.append(node);
+    return node;
+  }
+  function paragraph(title, value, parent) { text("h4", title, parent); text("p", value, parent); }
+  function compare() {
+    const container = get("comparison-content");
+    container.replaceChildren();
+    container.style.setProperty("--columns", String(selected.size || 1));
+    for (const id of selected) {
+      const r = byId.get(id);
+      const e = r.ledger;
+      const card = document.createElement("article");
+      text("h3", r.name, card);
+      paragraph("Question", e?.question || "No evidence-ledger question recorded.", card);
+      paragraph("Reviewed", e?.last_reviewed || (e ? data.ledger_reviewed : r.catalog_reviewed), card);
+      text("h4", "Evidence & scope", card);
+      if (e) {
+        const list = document.createElement("ul");
+        e.state.forEach(s => text("li", `${s.state} — ${s.scope}`, list));
+        card.append(list);
+      } else text("p", "No ledger entry. Catalog maturity is not an evidence verdict.", card);
+      paragraph("Still open", e?.open || "No separate limitation recorded; read each state’s scope.", card);
+      paragraph("Next experiment", e?.next || "No next experiment recorded.", card);
+      text("h4", "Source records", card);
+      const links = document.createElement("ul");
+      const sources = e?.evidence?.length ? e.evidence : [r.links[0].url];
+      sources.forEach((url, i) => {
+        const li = document.createElement("li");
+        const anchor = text("a", `Source ${i + 1} · ${new URL(url).pathname.split("/").pop() || "Project"}`, li);
+        anchor.href = url;
+        links.append(li);
+      });
+      card.append(links);
+      container.append(card);
+    }
+    document.querySelectorAll(".compare-control input").forEach(input => {
+      input.checked = selected.has(input.value);
+      input.disabled = selected.size >= 3 && !input.checked;
+    });
+    get("comparison").hidden = selected.size === 0;
+    get("compare-tray").hidden = selected.size === 0;
+    get("selection-count").textContent = `${selected.size} of 3 selected`;
+    updateLocation();
+  }
+  function restore() {
+    restoring = true;
+    form.reset();
+    selected.clear();
+    const hash = location.hash;
+    if (hash.startsWith("#view?")) {
+      const params = new URLSearchParams(hash.slice(6));
+      fields.forEach(id => { get(id).value = params.get(id) || ""; });
+      get("archived").checked = params.get("archived") === "1";
+      (params.get("compare") || "").split(",").filter(id => byId.has(id)).slice(0, 3).forEach(id => selected.add(id));
+    } else {
+      let id;
+      try { id = decodeURIComponent(hash.slice(1)); } catch { id = ""; }
+      if (byId.has(id)) {
+        get("archived").checked = ["archived", "fork"].includes(byId.get(id).status);
+        nodes.get(id).querySelector("details").open = true;
+      }
+    }
+    filter(); compare(); restoring = false;
+    if (!hash.startsWith("#view?")) {
+      let target;
+      try { target = get(decodeURIComponent(hash.slice(1))); } catch { target = null; }
+      target?.scrollIntoView();
+    }
+  }
+  form.hidden = false;
+  ["export", "filter-note", "theme-toggle"].forEach(id => { get(id).hidden = false; });
+  document.querySelectorAll(".compare-control").forEach(node => { node.hidden = false; });
+  form.addEventListener("submit", event => event.preventDefault());
+  form.addEventListener("input", filter);
+  form.addEventListener("reset", () => { if (!restoring) setTimeout(filter, 0); });
+  document.querySelectorAll("[data-preset]").forEach(button => button.addEventListener("click", () => {
+    form.reset();
+    const preset = button.dataset.preset;
+    if (preset === "failures") get("state").value = "NOT SUPPORTED";
+    if (preset === "worlds") get("question").value = "worlds";
+    if (preset === "gaps") get("state").value = "unrecorded";
+    filter();
+  }));
+  document.querySelectorAll(".compare-control input").forEach(input => input.addEventListener("change", () => {
+    if (input.checked && selected.size < 3) selected.add(input.value);
+    else selected.delete(input.value);
+    compare();
+    notify(`${selected.size} projects selected. Choose View comparison to read them together.`);
+  }));
+  get("clear-comparison").addEventListener("click", () => {
+    selected.clear(); compare(); get("catalog").focus(); notify("Comparison cleared.");
+  });
+  get("show-comparison").addEventListener("click", event => {
+    event.preventDefault(); get("comparison").scrollIntoView(); get("comparison").focus({preventScroll: true});
+  });
+  get("export").addEventListener("click", () => {
+    const payload = { ...data, records: visible, filters: state(), selected_ids: [...selected] };
+    const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2) + "\n"], {type: "application/json"}));
+    const anchor = document.createElement("a");
+    anchor.href = url; anchor.download = "vers3dynamics-research-records.json";
+    document.body.append(anchor); anchor.click(); anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    notify(`Exported ${visible.length} visible records with source hashes and evidence definitions.`);
+  });
+  get("print").addEventListener("click", () => { document.body.dataset.print = "comparison"; window.print(); });
+  window.addEventListener("beforeprint", () => {
+    printDetails = [...document.querySelectorAll(".record:not([hidden]) details")].map(node => [node, node.open]);
+    printDetails.forEach(([node]) => { node.open = true; });
+  });
+  window.addEventListener("afterprint", () => {
+    delete document.body.dataset.print;
+    printDetails.forEach(([node, open]) => { node.open = open; });
+  });
+  function dark() { return document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); }
+  function themeLabel() { get("theme-toggle").textContent = dark() ? "Light mode" : "Dark mode"; }
+  get("theme-toggle").addEventListener("click", () => {
+    document.documentElement.dataset.theme = dark() ? "light" : "dark"; themeLabel();
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", themeLabel);
+  window.addEventListener("hashchange", () => {
+    // Navigating to the comparison must not clear the very selection being viewed.
+    if (location.hash === "#comparison") return;
+    restore();
+  });
+  themeLabel(); restore();
+})();
+</script>
+</body>
+</html>

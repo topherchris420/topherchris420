@@ -157,6 +157,8 @@ def atlas_doc(data: dict) -> str:
         "| Label | Means |",
         "| --- | --- |",
     ]
+    if data.get("coverage_checked"):
+        out[10:10] = [f"Public repository coverage checked **{data['coverage_checked']}**. Descriptions retain the review date above unless an entry records a newer review; this is not a new review of every project.", ""]
     for label, meaning in data["maturity_labels"].items():
         out.append(f"| {label} | {meaning} |")
     out.append("")

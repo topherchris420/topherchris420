@@ -23,12 +23,22 @@ This repository is Christopher Woodyard's GitHub profile. The README is the entr
 
 `docs/superpowers/` is a superseded June 2026 plan kept as a record; nothing in it describes the current profile.
 
+## Research Observatory
+
+`tools/build_observatory.py` joins the atlas and ledger by canonical project URL. It generates `docs/observatory.html`, `docs/research.md` and `docs/observatory-manifest.json`. It never infers an evidence state from a maturity label. Unmatched ledger records are retained; duplicate identities and unsafe or non-public source URLs stop the build.
+
+The viewer is a self-contained offline file with no remote assets, tracking or network calls. Its complete records are rendered before JavaScript. Search, question/state/theme filters, archived-project inclusion, three-project comparisons, URL state, JSON exports, light/dark modes and printing enhance that reading edition. Every state retains its scope; states are not sorted into a leaderboard. A project can hold both supported and failed claims.
+
+Edit the HTML/CSS/JavaScript under `tools/`, then run `python3 tools/build_observatory.py`. The manifest hashes the exact input and output bytes. CI checks deterministic output and runs regression tests on Python 3.11 and 3.12. Downloaded snapshots do not update themselves; links still require a connection. GitHub displays HTML source, so readers must save the raw file and open it locally. No hosted deployment is assumed.
+
+The 10 November 2026 review added R.A.I.N. ATLAS, refreshed Lop Nur Twin's published scope, and corrected Sentinel's source visibility. Other evidence dates remain unchanged. `atlas.json.coverage_checked` dates the repository inventory; it does not claim a complete scientific review.
+
 ## The front page
 
 1. **Entrance.** Preserve the existing cabinet banner and Adinkra symbol. At viewport widths up to 600 px, `assets/hero-mobile-*.svg` uses larger lettering and four simplified drawers. Native text introduces Christopher, the lab, and its question even if images do not load.
-2. **Start here.** Four browser experiences, led by Pine Gap's driving GIF and original music, followed by GHOSTWHEEL, R.A.I.N., and Ascent. Each has a plain-language invitation, a primary action, source links, and its relevant scope. Keep the page focused; additional exhibits belong in the exhibition.
+2. **Start here.** Four browser experiences, led by Pine Gap's driving GIF and original music, followed by GHOSTWHEEL, ECHO, and Ascent. Each has a plain-language invitation, a primary action, source links, and its relevant scope. Keep the page focused; additional exhibits belong in the exhibition.
 3. **Choose a door.** A compact, generated table links to the six exhibition rooms and the artist's collection. Counts come from `docs/atlas.json`; the complete inventory remains in `docs/atlas.md`. `exhibition_anchor` overrides a theme id where the exhibition heading differs.
-4. **Build on the research.** Direct starting points for TRIAD, Quantum Noise Profiler, CIRCLE, and DRR, with installation and evidence boundaries where relevant.
+4. **Build on the research.** The Research Observatory connects the catalog and evidence ledger. Direct starting points for R.A.I.N. ATLAS, TRIAD, Quantum Noise Profiler, CIRCLE, and DRR, with installation and evidence boundaries where relevant.
 5. **What the evidence says.** Visible negative findings, a disclosure containing the supported/reproduced summary, and links to the full ledger. The evidence review date remains separate from the date of an editorial refresh.
 6. **One practice, many forms**, **Join in**, **How I work** (its anchor is linked from `experiments/unreasonably-fast.md`), and the original closing quotation.
 
@@ -147,6 +157,8 @@ Edit the content tables in `tools/draw_assets.py` (`CABINET`, `DOORS`, `CHAIN`),
 4. Add newly discarded approaches to the research map.
 
 ## Before publishing
+
+Run the full command sequence in [CONTRIBUTING.md](../CONTRIBUTING.md), including the Observatory generation and regression tests.
 
 1. Run `python3 tools/check_profile.py`. Add `--external` to confirm that outside links answer; Bandcamp and Ko-fi refuse automated clients and are listed for a check by hand.
 2. Render the README in light and dark modes at desktop and phone widths: check responsive banner selection, text wrapping, the navigation table, images, heading order, and anchors. When editing the exhibition, also inspect its door grid and two-column pairs.

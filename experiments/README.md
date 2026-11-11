@@ -32,6 +32,8 @@ Three rules keep the ladder honest:
 
 ## Where things stand
 
+**10 November 2026 partial review:** added R.A.I.N. ATLAS from its source and recorded synthetic study; refreshed Lop Nur Twin’s continuity and intelligence-metrology scope. Earlier records retain their individual review dates. [Browse the generated research index](../docs/research.md).
+
 **Current R.A.I.N. Lab:** [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin). The R.A.I.N. row below is intentionally linked to `james_library` because this ledger records historical experiments performed before the [October 6 runtime migration](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RAIN_MIGRATION.md). It does not identify the current development repository or certify the newer autonomous researcher.
 
 Initial snapshot: 27 September 2026. A partial review on 30 September refreshed R.A.I.N. and Pine Gap's recorded outcomes and rechecked the DRR, CIRCLE, Lop Nur, Mannahatta, and Vanta descriptions. A review on 4 October added HumanTouch from its public source files and put this table under the automated check. A review on 12 October added James and TRIAD. The 13 October portfolio review added Quantum Noise Profiler and refreshed the current R.A.I.N., Mannahatta, James, and Pine Gap records.
@@ -48,10 +50,11 @@ The **21 October review** read every public repository for the profile's redesig
 | [Anna](https://github.com/topherchris420/anna) | confidence | `EXECUTABLE` | a retrieval evaluation on a stated corpus |
 | [Embedded AI Validation](https://github.com/topherchris420/embedded-ai-validation-platform) | confidence | `EXECUTABLE` (simulated targets) | a run on a physical board, with measured power |
 | [Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting) | signals | `OBSERVED` (synthetic) · `NOT SUPPORTED` (preregistered external test) | an external comparison that holds its false-alarm tolerance |
+| [R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas) | signals | `EXECUTABLE` · `OBSERVED` (synthetic computational studies and firmware fixtures) | independent reproduction and an external measurement; an authorized firmware case beyond fixtures |
 | [CIRCLE](https://github.com/topherchris420/circle) | signals | `OBSERVED` (simulated twin) · hardware `BUILDING` | review gates closed, a fabricated board, a bench measurement |
 | [IONS-X](https://github.com/topherchris420/ions-x-deep-emergence-lab) | signals | `OBSERVED` (v0.5 synthetic benchmark; the earlier generator's results superseded by its own audit) | the paired-control design applied to recorded data |
 | [Pine Gap](https://github.com/topherchris420/satellite-vision-scape) | worlds | `EXECUTABLE` · `OBSERVED` (live Jev case studies and paired scripted episodes) | repeated live-model runs against scripted baselines, with a success rate |
-| [Lop Nur Twin / current R.A.I.N. Lab](https://github.com/topherchris420/lop-nur-twin) | worlds | `EXECUTABLE` · `OBSERVED` (scripted and live-model-designed simulator experiments; no physical validation) | a new frozen numerical investigation meeting its analytic guards; repeated model-designed studies against baselines |
+| [Lop Nur Twin / current R.A.I.N. Lab](https://github.com/topherchris420/lop-nur-twin) | worlds | `EXECUTABLE` · `OBSERVED` (simulator experiments, scoped checkpoint replay and inconclusive held-out plasticity comparisons; no physical validation) | a new frozen numerical investigation meeting its analytic guards; repeated model-designed studies against baselines |
 | [Mannahatta](https://github.com/topherchris420/cognisync-terrain-weaver) | worlds | `EXECUTABLE` · `OBSERVED` (model/public-data comparisons) · `NOT SUPPORTED` (holdout flood-report test) | a repaired model beating low elevation on a new frozen holdout |
 | [Orpheus](https://github.com/topherchris420/orpheus-resonance-protocol) | worlds | `EXECUTABLE` (interface prototype) | — |
 | [TRIAD](https://github.com/topherchris420/triad) | measurement | `EXECUTABLE` · `OBSERVED` (simulated sensor; frozen models on public datasets; Milestone 9 simulation) · `NOT SUPPORTED` (pre-registered test against blind comparators) | a repaired rule set that wins a new frozen test its authors have not seen, judged by an unrelated team |

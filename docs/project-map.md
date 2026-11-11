@@ -29,6 +29,8 @@ A model may search, argue, score, or propose. A host policy, deterministic check
 
 ## How do signals move together?
 
+- **[R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas)** — local computational studies, recorded challenges and an offline evidence viewer; BLACK GLASS inspects firmware statically. Reviewed 10 November 2026: committed results are synthetic, and integrity checks do not establish physical truth.
+
 Rhythm, lag, and coupling between changing signals. Controls and null models let a detector encounter something other than the pattern it was built to find.
 
 - **[Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting)** — recurring frequencies, lead–lag relationships, and structural-change diagnostics in multivariate time series. Synthetic calibration and a preregistered external result are reported separately. [External evidence](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/docs/external-evidence.md).
@@ -63,7 +65,7 @@ Ideas written precisely enough to fail, beside code that distinguishes analytica
 Music, photography, painting, poetry, and software are ways of paying closer attention and giving an experience a form.
 
 - **[Indigo People](https://chriswoodyard.bandcamp.com/)** — my recordings on Bandcamp.
-- **[Sentinel](https://github.com/topherchris420/resonance-flow-nexus)** — sound generation, breathing visuals, adjustable pacing and local session reflection. An account-free creative experience, not a biometric measurement or validated therapy.
+- **[Sentinel](https://hello-goodbye-iota.vercel.app/) (source no longer public)** — sound generation, breathing visuals, adjustable pacing and local session reflection. An account-free creative experience, not a biometric measurement or validated therapy.
 - **[Vers3Dynamics Studio](https://github.com/topherchris420/quantum-spin-sound)** — a browser synthesizer played by scratching a virtual record, with audio-reactive visuals. Its Strudel-style pattern editor is shown but not yet evaluated, so editing a note does not change the sound; the project says so itself. [Play](https://bell-labs.vercel.app/).
 - **[Vanta](https://github.com/topherchris420/vanta)** — writing, instruments, worlds, art, and music as five channels in one portfolio, with a source-linked research atlas. [Explore](https://mitpress.vercel.app/).
 - **[HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch)** — a writing studio where a model may change expression but not silently change meaning, certainty, or facts. The change ledger, the guard that withholds certainty and number changes, and the authorship map are HumanTouch's own code, applied after any model. An offline evaluation calibrates those instruments on synthetic fixtures; a live model's edits are not yet measured.

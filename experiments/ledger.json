@@ -1,7 +1,7 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-10-21",
-  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain the 2026-09-27 snapshot. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push.",
+  "reviewed": "2026-11-10",
+  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. On 10 November 2026 only Lop Nur Twin was refreshed and R.A.I.N. ATLAS added; other evidence records were not re-reviewed.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
     "signals": "How do signals move together?",
@@ -391,14 +391,14 @@
       "state": [
         {
           "state": "EXECUTABLE",
-          "scope": "public-source reconstruction, labelled-fiction games, integrated R.A.I.N. research runtime and bounded civilization experiments"
+          "scope": "public-source reconstruction, labelled-fiction games, integrated R.A.I.N. research runtime and bounded civilization experiments; persistent ECHO runtime with sealed checkpoint continuation and a separate intelligence metrology bench"
         },
         {
           "state": "OBSERVED",
-          "scope": "scripted Bethesda and rule-based civilization experiments with native replay; one live Gemma-designed oscillator run remained inconclusive after numerical guards failed; no physical or general scientific validation"
+          "scope": "scripted Bethesda and rule-based civilization experiments with native replay; one live Gemma-designed oscillator run remained inconclusive after numerical guards failed; no physical or general scientific validation; recorded ECHO continuity interval checks and held-out simulated plasticity experiments with inconclusive benefit"
         }
       ],
-      "open": "Reconstruction cannot confirm the real site. Simulator findings do not establish human behavior, historical outcomes, physical measurements or general scientific intelligence. The retained live Gemma oscillator experiment failed its analytic accuracy guards.",
+      "open": "Reconstruction cannot confirm the real site. Simulator findings do not establish human behavior, historical outcomes, physical measurements or general scientific intelligence. The retained live Gemma oscillator experiment failed its analytic accuracy guards. The original ECHO and Eva are not controlled by the FlyWire/BANC research backends. Continuity checks cover a stated interval, not full lifetime proof or consciousness. Active embodied plasticity has no established performance advantage in the published held-out study.",
       "timeline": {
         "reconstructed": true,
         "first_commit": {
@@ -425,13 +425,15 @@
           }
         ]
       },
-      "last_reviewed": "2026-10-21",
-      "next": "A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines.",
+      "last_reviewed": "2026-11-10",
+      "next": "A new preregistered numerical investigation meeting its independent accuracy guards, and repeated model-designed studies compared against stated baselines. For the persistent-fly work: an independently audited continuation and a new preregistered held-out comparison that can distinguish benefit, regression and inconclusive evidence without experimenting on either original.",
       "evidence": [
         "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/README.md",
         "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/rain-discovery-validation/README.md",
         "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/rea-research/evaluations/gemma-live/README.md",
-        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md"
+        "https://github.com/topherchris420/lop-nur-twin/blob/b8400fdf3f676d6ee9e090760921eff7c419df22/docs/benchmarks/noeterra-civilization/README.md",
+        "https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/README.md",
+        "https://github.com/topherchris420/lop-nur-twin/blob/92ee8a675f45d0fff0c8875a726370516c50010f/docs/ECHO_INTELLIGENCE_METROLOGY.md"
       ]
     },
     {
@@ -794,6 +796,34 @@
         "https://github.com/topherchris420/nocturne/blob/90a988788b9a6b8ef77d0ff04e51b189f0e9269c/docs/EVIDENCE.md"
       ],
       "last_reviewed": "2026-10-21"
+    },
+    {
+      "id": "rain-atlas",
+      "name": "R.A.I.N. ATLAS",
+      "repo": "https://github.com/topherchris420/rain-atlas",
+      "question": "How do signals move together?",
+      "state": [
+        {
+          "state": "EXECUTABLE",
+          "scope": "local computational experiment runner, evidence ledger and offline observatory; BLACK GLASS static analysis on supported firmware inputs"
+        },
+        {
+          "state": "OBSERVED",
+          "scope": "recorded synthetic synchronization study over 30 conditions and synthetic firmware fixtures; not physical evidence or independent external replication"
+        }
+      ],
+      "open": "The synchronization report concerns finite-window behavior of a two-oscillator model. Scripted research roles are not autonomous LLM researchers. Official DSM binary analysis has not been performed. A hash chain checks internal integrity, not scientific truth.",
+      "next": "An independent reproduction with a separately implemented reference and recorded external measurements; a documented authorized firmware study beyond the synthetic fixture.",
+      "timeline": {
+        "reconstructed": false,
+        "caveat": "History not reconstructed in this review."
+      },
+      "last_reviewed": "2026-11-10",
+      "evidence": [
+        "https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/README.md",
+        "https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md",
+        "https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/src/rain_atlas/cli.py"
+      ]
     }
   ]
 }

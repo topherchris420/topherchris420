@@ -18,9 +18,10 @@ concurrency: koi
 jobs:
   koi:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v7
-      - uses: yalongwastaken/git-koi@v1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: yalongwastaken/git-koi@7305e9b1fadee6f43d3b4fa543a25d4cde79856e # v1
         with:
           login: topherchris420
           body: asagi

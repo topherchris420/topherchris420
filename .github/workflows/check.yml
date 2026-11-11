@@ -26,13 +26,36 @@ jobs:
   check:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
+      - name: Test evidence joins, provenance and safe exports
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify reproducible observatory outputs
+        run: python3 tools/build_observatory.py --check
       - name: Compare the page with the ledger
         run: python3 tools/check_profile.py
       - name: Check external links
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.external }}
         run: python3 tools/check_profile.py --external
+
+  viewer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Check interactive behavior without network access
+        run: |
+          node --check tools/observatory.js
+          npm test

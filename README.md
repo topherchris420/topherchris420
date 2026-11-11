@@ -10,19 +10,11 @@
 
 # Experiments you can open. Evidence you can inspect.
 
-I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, an independent research lab near Washington, DC. I build simulated worlds, research instruments, and practical tools around one question: **what would make an intelligent system's decisions worth trusting?**
+I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, a one-person research lab near Washington, DC. I build simulated worlds, research instruments, and practical tools around one question: **what would make an intelligent system's decisions worth trusting?**
 
 I'm also an educator, artist, musician, and writer. Sound, feedback, and experimentation connect the work. The software gives those ideas something to answer to.
 
-**[Try a project](#start-here)** · **[Find your field](#choose-a-door)** · **[Inspect the evidence](#what-the-evidence-says)** · **[Collaborate](#join-in)**
-
-## A koi in the current
-
-<p align="center">
-  <img src="koi/koi.gif" width="256" alt="An animated Asagi pixel-art koi whose markings and movement reflect Christopher's public GitHub activity." />
-</p>
-
-<p align="center"><sub>My GitHub activity, translated into a little swimming life. Generated with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a> and refreshed daily when GitHub Actions runs.</sub></p>
+**[Try a project](#start-here)** · **[Find your field](#choose-a-door)** · **[Research Observatory](docs/research.md)** · **[Collaborate](#join-in)**
 
 ## Start here
 
@@ -48,11 +40,15 @@ Four ways to meet the lab. Each begins with something you can explore in your br
 
 **[Launch GHOSTWHEEL →](https://ghostwheel-one.vercel.app/)** · [Source](https://github.com/topherchris420/ghostwheel) · [Recorded scope](docs/exhibition.md#ghostwheel)
 
-### Enter a research lab inside a simulated city
+### Watch an individual keep its history
 
-**R.A.I.N. Lab / Lop Nur Twin** brings a walkable Bethesda, four AI research perspectives, and inspectable experiment records into one environment. Explore the twin and its evidence; live model research requires a configured local workbench.
+**ECHO / Lop Nur Twin** asks whether a simulated individual can continue through changes to its world and its own machinery, leaving a history another machine can check. Watch ECHO in Bethesda, then inspect its sealed checkpoints and the experiments conducted on separate research subjects.
 
-**[Explore the twin →](https://lop-nur-twin.vercel.app/)** · [Find Bethesda](https://github.com/topherchris420/lop-nur-twin#explore) · [Source](https://github.com/topherchris420/lop-nur-twin)
+<a href="https://lop-nur-twin.vercel.app/live"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/live-fly.jpg" width="100%" alt="ECHO in the clay model of Bethesda, with current behavior, energy reserve and recent decisions shown beside it."></a>
+
+<sub>Recorded software view, 10 November 2026. ECHO and Eva are separate simulated individuals. Replay checks establish continuity within audited intervals; they do not establish consciousness or biological equivalence.</sub>
+
+**[Observe ECHO →](https://lop-nur-twin.vercel.app/live)** · [Continuity & experiments](https://github.com/topherchris420/lop-nur-twin#03-a-machine-must-be-able-to-verify-the-history) · [Source](https://github.com/topherchris420/lop-nur-twin)
 
 ### Understand the evidence behind a home estimate
 
@@ -77,11 +73,20 @@ Follow your curiosity. The illustrated exhibition keeps the demonstrations, rese
 | **[Discover the unusual](docs/exhibition.md#discover-the-unusual)** | Experimental inventions that resist easy categorization. |
 | **[The artist's collection](docs/exhibition.md#one-practice-many-forms)** | Music, painting, writing and the portfolio that holds them. |
 
-[**Browse the complete atlas →**](docs/atlas.md) · 29 current projects · 8 archived experiments and forks
+[**Browse the complete atlas →**](docs/atlas.md) · 30 current projects · 8 archived experiments and forks
 <!-- atlas:end -->
+
+## Research Observatory
+
+**What would change our minds?** Follow the lab's questions into their recorded evidence, limits, and next experiments. The Observatory connects the project atlas to the evidence ledger, with a date on every reviewed record.
+
+**[Read the research index →](docs/research.md)** · **[Download the offline Observatory](https://raw.githubusercontent.com/topherchris420/topherchris420/main/docs/observatory.html)**
+
+Save the HTML file and open it in your browser. Search the collection, isolate failed claims, compare up to three projects, and export the records behind your view. It works offline; source links open on the web.
 
 ## Build on the research
 
+- **[R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas)** — Run a synthetic computational study, challenge its result, and verify its evidence chain. BLACK GLASS extends the workbench to static firmware inspection. [Start with the recorded experiment](https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md).
 - **[TRIAD](https://github.com/topherchris420/triad)** — Evaluate the error rate of accepted predictions and investigate when a system should abstain. Start with [saved predictions and labels](https://github.com/topherchris420/triad#start-with-the-evidence); no sensor simulation is required.
 - **[Quantum Noise Profiler](https://github.com/topherchris420/quantum-noise-profiler)** — Inspect recorded IBM qubit measurements in an [offline evidence explorer](https://github.com/topherchris420/quantum-noise-profiler#explore-the-real-hardware-data). Hardware warning accuracy remains unestablished.
 - **[CIRCLE](https://github.com/topherchris420/circle)** — Run a local workbench for simulated physiological sensing, adaptive feedback, and independent session audits. [Start with a guided scenario](https://github.com/topherchris420/circle#quick-start). Hardware remains a design awaiting physical validation.
@@ -105,7 +110,7 @@ Three useful places to challenge the work:
 
 **`REPRODUCED`, so far:** nothing in the ledger meets its independent-reproduction definition.
 
-*Reviewed 21 October 2026. This is the evidence ledger's review date; subsequent interface changes do not promote an evidence state.*
+*Reviewed 10 November 2026. Partial update: ATLAS and Lop Nur Twin. The two supported results above retain their 21 October review; every other entry keeps its own date. Interface changes do not promote an evidence state.*
 
 </details>
 
@@ -120,9 +125,17 @@ I record as **Indigo People**; that music plays on Pine Gap's radio. **Vanta** b
 
 **[Listen →](https://chriswoodyard.bandcamp.com/)** · **[See the art and writing →](https://mitpress.vercel.app/)** · **[Try HumanTouch →](https://huggingface.co/spaces/ciaochris/HumanTouch)**
 
+## A koi in the current
+
+<p align="center">
+  <img src="koi/koi.gif" width="256" alt="An animated Asagi pixel-art koi whose markings and movement reflect Christopher's public GitHub activity." />
+</p>
+
+<p align="center"><sub>My GitHub activity, translated into a little swimming life. Generated with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a> and refreshed daily when GitHub Actions runs.</sub></p>
+
 ## Join in
 
-Pick one project. Run an example, report where the experience breaks, reproduce a result, or bring a stronger comparison. Issues and pull requests belong in the relevant repository; you don't need to understand the entire lab to contribute.
+Pick one project and its [next experiment](docs/research.md). Run an example, report where the experience breaks, reproduce a result, or bring a stronger comparison. Issues and pull requests belong in the relevant repository; you don't need to understand the entire lab to contribute.
 
 For research, teaching, or creative collaboration, **[write to me](mailto:christopher@vers3dynamics.com)**. To help keep the work free to explore, [support the lab](https://ko-fi.com/vers3dynamics).
 
@@ -134,6 +147,6 @@ For research, teaching, or creative collaboration, **[write to me](mailto:christ
 
 ---
 
-**Vers3Dynamics** · Making intelligent systems more trustworthy, one verified decision at a time.
+**Vers3Dynamics** · Instruments for asking better questions.
 
 > I create because the alternative is unbearable: a day that occurs and is not noticed occurring.

@@ -225,7 +225,7 @@ Turn biological sequences into music, change the rules of interpretation, and in
 
 *Less noise. More resonance.* An account-free studio of stereo tones, noise and a paced breathing guide, with geometry that follows your settings. It measures nothing about your body and claims no therapeutic effect, and your session record stays on your device.
 
-<sub>[Source](https://github.com/topherchris420/resonance-flow-nexus)</sub>
+<sub>Source no longer public; the public studio remains available (checked 10 November 2026).</sub>
 
 </td>
 </tr>

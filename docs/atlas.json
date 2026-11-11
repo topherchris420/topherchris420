@@ -4,7 +4,7 @@
   "reviewed": "2026-10-21",
   "reviewed_label": "21 October 2026",
   "note": "Every public repository under topherchris420, plus public websites of projects whose source is private. Descriptions come from reading each repository's README and source at the commit current on the review date; they describe what is implemented, not what is planned. tools/build_atlas.py renders docs/atlas.md and the README's atlas block from this file, and --discover reports public repositories that are not listed here yet.",
-  "intro": "Every public project in one place, arranged by the six doors on the [front page](../README.md#choose-a-door). The [illustrated exhibition](exhibition.md) is curated; this atlas is meant to be complete. Each entry says what the project is, what you can do with it today, and how far along it is. Archived experiments and forks are at the end, kept for the record.",
+  "intro": "Every public project in one place, arranged by the seven paths on the [front page](../README.md#choose-a-door). The [illustrated exhibition](exhibition.md) is curated; this atlas is meant to be complete. Each entry says what the project is, what you can do with it today, and how far along it is. Archived experiments and forks are at the end, kept for the record.",
   "maturity_labels": {
     "Playable world": "A world or game you can open in a browser now.",
     "Live web app": "An interactive application you can use in a browser now, without installing anything.",
@@ -72,22 +72,27 @@
       "do": "Drive a coffee run at midnight, then watch the scripted baseline try it"
     },
     {
-      "name": "R.A.I.N. Lab · Lop Nur Twin",
+      "name": "Lop Nur Twin · ECHO & R.A.I.N.",
       "repo": "lop-nur-twin",
-      "url": "https://rainlabteam.vercel.app/",
-      "url_label": "Enter the lab",
+      "url": "https://lop-nur-twin.vercel.app/live",
+      "url_label": "Observe ECHO",
       "links": [
         {
-          "label": "Play Noeterra",
-          "url": "https://lop-nur-twin.vercel.app/noeterra"
+          "label": "Twin",
+          "url": "https://lop-nur-twin.vercel.app/"
+        },
+        {
+          "label": "Research claims",
+          "url": "https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RESEARCH_CLAIMS.md"
         }
       ],
       "theme": "play-a-world",
       "featured": true,
       "status": "active",
       "maturity": "Research instrument",
-      "description": "A research lab hidden inside a simulated city, where a local model may propose an experiment but host code decides what runs, replays it and records the verdict.",
-      "do": "Walk the public-source twin, find the lab and watch a scripted meeting"
+      "description": "A simulated world with a persistent digital fly, sealed histories and a separate laboratory that tests whether changes to research subjects improve behavior.",
+      "do": "Observe ECHO, inspect continuity records, and challenge the intelligence experiments",
+      "last_reviewed": "2026-11-10"
     },
     {
       "name": "Mannahatta",
@@ -160,14 +165,15 @@
     },
     {
       "name": "Sentinel",
-      "repo": "resonance-flow-nexus",
       "theme": "hear-the-invisible",
-      "status": "active",
-      "maturity": "Live web app",
+      "status": "website",
+      "maturity": "Website",
       "description": "An account-free browser studio that plays adjustable stereo tones and noise beside a paced breathing guide, keeping session records on your own device.",
       "do": "Shape a tone and breathe with a timed guide",
       "url": "https://hello-goodbye-iota.vercel.app/",
-      "url_label": "Open"
+      "url_label": "Open",
+      "source_note": "source no longer public; site checked 10 November 2026",
+      "last_reviewed": "2026-11-10"
     },
     {
       "name": "Vers3Dynamics Studio",
@@ -234,6 +240,22 @@
       "maturity": "Research instrument",
       "description": "A pipeline that commits an experiment's pass and fail rules before held-out data is read, tests them on public heart-and-breathing recordings, and replays every verdict.",
       "do": "Replay a preregistered experiment that failed"
+    },
+    {
+      "name": "R.A.I.N. ATLAS",
+      "repo": "rain-atlas",
+      "theme": "explore-a-research-lab",
+      "status": "active",
+      "maturity": "Research instrument",
+      "description": "A local research workbench with computational experiments, evidence records and BLACK GLASS static firmware inspection.",
+      "do": "Run a synthetic study, challenge its result and verify the evidence chain",
+      "last_reviewed": "2026-11-10",
+      "links": [
+        {
+          "label": "Recorded study",
+          "url": "https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md"
+        }
+      ]
     },
     {
       "name": "Project Ascent",
@@ -503,6 +525,8 @@
     "cropguard-nexus",
     "math-dreamweaver-ai",
     "stellar-resonance-engine",
-    "vitalsync-wellness"
-  ]
+    "vitalsync-wellness",
+    "resonance-flow-nexus"
+  ],
+  "coverage_checked": "2026-11-10"
 }

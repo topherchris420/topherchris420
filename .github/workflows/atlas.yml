@@ -7,6 +7,11 @@ name: Atlas coverage
 # move its entry in docs/atlas.json, and run tools/build_atlas.py.
 
 on:
+  push:
+    paths:
+      - docs/atlas.json
+      - tools/build_atlas.py
+      - .github/workflows/atlas.yml
   schedule:
     - cron: "41 13 * * 1"
   workflow_dispatch:
@@ -17,9 +22,10 @@ permissions:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
       - name: Compare the atlas with public repositories

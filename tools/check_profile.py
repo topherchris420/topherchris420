@@ -55,6 +55,7 @@ import argparse
 import concurrent.futures
 import datetime as dt
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -134,7 +135,11 @@ class Report:
 
 
 def markdown_files() -> list[Path]:
-    return sorted(p for p in ROOT.rglob("*.md") if ".git" not in p.parts)
+    files = []
+    for directory, subdirs, names in os.walk(ROOT):
+        subdirs[:] = [name for name in subdirs if name not in {".git", "node_modules", ".venv", "__pycache__"}]
+        files.extend(Path(directory) / name for name in names if name.endswith(".md"))
+    return sorted(files)
 
 
 def rel(path: Path) -> str:
@@ -469,7 +474,11 @@ def check_pins(report: Report) -> None:
     pinned = 0
     for md in markdown_files():
         for number, line in enumerate(lines_without_fences(md.read_text(encoding="utf-8")), 1):
-            for m in RAW_MEDIA.finditer(line):
+            # Only embedded media need frozen revisions. A link that downloads
+            # this repository's current HTML export is not an embedded image.
+            embedded = re.findall(r'!\[[^\]]*\]\(([^)\s]+)', line)
+            embedded += re.findall(r'\b(?:src|srcset)="([^"]+)"', line)
+            for m in RAW_MEDIA.finditer(" ".join(embedded)):
                 owner, repo, ref = m.groups()
                 if SHA.match(ref):
                     pinned += 1

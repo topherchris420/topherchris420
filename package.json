@@ -1,0 +1,11 @@
+{
+  "name": "vers3dynamics-profile-checks",
+  "private": true,
+  "type": "module",
+  "description": "Development-only DOM tests for the self-contained Research Observatory",
+  "engines": { "node": "^24.15.0 || >=26.0.0" },
+  "scripts": {
+    "test": "node --test tests/observatory.test.mjs"
+  },
+  "devDependencies": { "jsdom": "31.0.0" }
+}
