@@ -6,6 +6,10 @@
 
 ## Laboratory-wide mandate
 
+**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Its research question is organizational as well as technical: can one human direct a persistent, AI-native laboratory that designs meaningful experiments, confronts negative evidence, and produces knowledge that independent investigators can verify?
+
+The lab is an independent, open scientific effort rather than a venture-backed SaaS business. Research projects are evaluated for experimental value and public reproducibility, not their potential as sales funnels or valuation stories. This is a hypothesis about how research can be organized, not an established claim of superiority.
+
 **Build an AI-native scientific laboratory that reduces confidently wrong decisions and earns the right to make stronger claims through prospective experiments and independent verification.** Protect the difference between working software, measured results, supported conclusions, and externally reproduced discoveries.
 
 The three divisions are research responsibilities rather than GitHub organizations or separate companies. Each public project has one primary placement. Cross-division collaboration is expected.
