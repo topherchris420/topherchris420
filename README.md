@@ -10,13 +10,13 @@
 
 # Experiments you can open. Evidence you can inspect.
 
-I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, a one-person research lab near Washington, DC. I build simulated worlds, research instruments, and practical tools around one question: **what would make an intelligent system's decisions worth trusting?**
+I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, an independent, one-person research laboratory near Washington, DC. We investigate how AI systems can participate in scientific work, and what would make their conclusions worth trusting.
 
-**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Advances in AI raise a question: can one person direct a persistent research system that helps formulate hypotheses, design experiments, and challenge its own conclusions, while producing results that others can independently evaluate?
+**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Scientific progress depends not only on proposing ideas, but on choosing informative experiments, distinguishing competing explanations, and making results possible to verify. Increasingly capable AI systems may change how that work is organized. We want to know whether a single researcher, working with a persistent AI research system, can investigate meaningful problems without relaxing those standards.
 
-We are building R.A.I.N. Lab to investigate that question. AI agents contribute proposals, software, and analyses, but they do not decide what counts as a discovery. Claims must be tested against predefined criteria, credible baselines, uncertainty, and reproducible evidence. Negative results remain part of the record.
+R.A.I.N. Lab is the AI research system at the center of this experiment. Its agents can formulate hypotheses, propose experiments, write software, and examine results within defined boundaries. The system can propose an explanation; **it cannot establish that the explanation is correct merely by producing it**. We test its methods against simpler alternatives, set evaluation criteria before confirmatory experiments, account for uncertainty, and preserve negative results. Whether this approach improves scientific discovery is still an open question.
 
-**Vers3Dynamics is an independent research laboratory, not a venture-backed software business.** We build instruments and conduct experiments to expand what can be investigated. The organization itself is part of the experiment, and whether this approach improves science remains an open question.
+Our work is independent and open. **We are building a research laboratory, not a venture-backed software business.** Projects are instruments for investigation rather than products in a sales pipeline. We publish methods and evidence so that others can reproduce, challenge, or build on the work.
 
 I'm also an educator, artist, musician, and writer. Sound, feedback, and experimentation connect the work. The software gives those ideas something to answer to.
 

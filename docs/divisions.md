@@ -6,13 +6,13 @@
 
 ## Laboratory-wide mandate
 
-**Vers3Dynamics is an experiment in the future organization of scientific discovery.** The central question is whether a human-directed, AI-native laboratory can design more informative experiments and produce more reliable scientific judgments than simpler approaches.
+**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Our starting hypothesis is that a human-directed, persistent AI research system might make it possible to design and carry out useful investigations with fewer conventional institutional resources. This is a hypothesis about scientific practice, not an established result.
 
-The laboratory is also a subject of research. Its agents, methods, and organizational structure must be evaluated against credible alternatives. Working software is not, by itself, a scientific finding. A persuasive result must survive predefined tests, uncertainty analysis, and independent scrutiny.
+The critical test is not how many papers, programs, or experiments the system produces. It is whether its methods select more informative experiments, expose mistaken assumptions, and yield conclusions that withstand comparison with simpler methods and independent review. R.A.I.N. proposes and conducts bounded research; its own output is not sufficient evidence of its success.
 
-Vers3Dynamics is an independent research effort rather than a venture-backed product company. Its work is organized around research questions, open instruments, and inspectable evidence, including failed experiments and limitations. Scientific value, not commercial growth, is the criterion for continuing a research program.
+Vers3Dynamics is an independent, open research laboratory rather than a venture-backed software business. Projects exist to investigate questions and make their evidence available for scrutiny. They may be continued, consolidated, or retired according to what their results justify, including when the results are negative.
 
-**Our mandate:** reduce confidently wrong decisions through preregistered experiments, strong baselines, uncertainty accounting, and independent verification. Keep a clear boundary between functioning software, observed measurements, supported conclusions, and externally reproduced findings.
+**Our research standard:** preregister important tests, compare against credible baselines, account for uncertainty and cost, and distinguish working software from measured observations, supported findings, and independent replication. Scientific claims should become stronger only when the evidence does.
 
 The three divisions are research responsibilities rather than GitHub organizations or separate companies. Each public project has one primary placement. Cross-division collaboration is expected.
 
