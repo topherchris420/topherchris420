@@ -85,11 +85,13 @@ Creative instruments and public applications are included here as demonstrations
 - **Consent and original-state preservation**: Division III cannot present synthetic physiological testing as human validation; Division II cannot replace or reset Eva/ECHO in order to improve a demonstration.
 - **Private repositories**: not included in this public index. Website-only projects are linked to their public experiences without exposing private source.
 
-## Research council: decision rights (hypothetical)
+## Research governance and decision rights
 
-The seven-founder leadership scenario supplies **seven functional seats**, not real appointments or an Anthropic affiliation: scientific strategy; operations and governance; experimental methodology; interpretability; model and compute efficiency; reliability engineering; and public benefit.
+Vers3Dynamics uses a discipline-based research review framework spanning scientific strategy, experimental methodology, interpretability, model and compute efficiency, operational reliability, responsible deployment, and public benefit. These are **review responsibilities**, not claims that particular individuals hold positions in the laboratory.
 
-**Under the scenario, the council has final authority** to fund, consolidate, freeze, transfer between divisions, or sunset research lines, including favorites. It must document the evidence and safety implications of a decision. This page does not represent the real Anthropic founders as employees, advisers, collaborators, or endorsers of Vers3Dynamics.
+The laboratory's accountable decision-makers may fund, consolidate, freeze, transfer between divisions, or sunset research lines, including favored projects, only through documented reviews of evidence, dependencies, preservation, and safety. Any delegation of actual authority requires explicit appointments and access controls; until then, repository ownership and operational approval remain with the founder.
+
+Research direction is guided by the strength of the evidence, not by attachment to a project or the number of features delivered.
 
 ## Portfolio review rules
 
