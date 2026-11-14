@@ -12,9 +12,11 @@
 
 I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, a one-person research lab near Washington, DC. I build simulated worlds, research instruments, and practical tools around one question: **what would make an intelligent system's decisions worth trusting?**
 
-**Vers3Dynamics is an experiment in the future organization of scientific discovery.** The laboratory explores what one human can investigate with an AI-native research system that proposes hypotheses, designs experiments, challenges its own explanations, and keeps results open to inspection. The question is whether this arrangement can produce more trustworthy knowledge than simpler alternatives, not whether it can produce more output.
+**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Advances in AI raise a question: can one person direct a persistent research system that helps formulate hypotheses, design experiments, and challenge its own conclusions, while producing results that others can independently evaluate?
 
-This is **an independent, open research effort, not a venture-backed B2B SaaS startup**. Projects are instruments for asking and testing questions, not a product funnel. Results, including failed experiments, matter more than growth metrics. AI systems can propose and execute bounded research, but cannot certify their own discoveries.
+We are building R.A.I.N. Lab to investigate that question. AI agents contribute proposals, software, and analyses, but they do not decide what counts as a discovery. Claims must be tested against predefined criteria, credible baselines, uncertainty, and reproducible evidence. Negative results remain part of the record.
+
+**Vers3Dynamics is an independent research laboratory, not a venture-backed software business.** We build instruments and conduct experiments to expand what can be investigated. The organization itself is part of the experiment, and whether this approach improves science remains an open question.
 
 I'm also an educator, artist, musician, and writer. Sound, feedback, and experimentation connect the work. The software gives those ideas something to answer to.
 

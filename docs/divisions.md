@@ -6,11 +6,13 @@
 
 ## Laboratory-wide mandate
 
-**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Its research question is organizational as well as technical: can one human direct a persistent, AI-native laboratory that designs meaningful experiments, confronts negative evidence, and produces knowledge that independent investigators can verify?
+**Vers3Dynamics is an experiment in the future organization of scientific discovery.** The central question is whether a human-directed, AI-native laboratory can design more informative experiments and produce more reliable scientific judgments than simpler approaches.
 
-The lab is an independent, open scientific effort rather than a venture-backed SaaS business. Research projects are evaluated for experimental value and public reproducibility, not their potential as sales funnels or valuation stories. This is a hypothesis about how research can be organized, not an established claim of superiority.
+The laboratory is also a subject of research. Its agents, methods, and organizational structure must be evaluated against credible alternatives. Working software is not, by itself, a scientific finding. A persuasive result must survive predefined tests, uncertainty analysis, and independent scrutiny.
 
-**Build an AI-native scientific laboratory that reduces confidently wrong decisions and earns the right to make stronger claims through prospective experiments and independent verification.** Protect the difference between working software, measured results, supported conclusions, and externally reproduced discoveries.
+Vers3Dynamics is an independent research effort rather than a venture-backed product company. Its work is organized around research questions, open instruments, and inspectable evidence, including failed experiments and limitations. Scientific value, not commercial growth, is the criterion for continuing a research program.
+
+**Our mandate:** reduce confidently wrong decisions through preregistered experiments, strong baselines, uncertainty accounting, and independent verification. Keep a clear boundary between functioning software, observed measurements, supported conclusions, and externally reproduced findings.
 
 The three divisions are research responsibilities rather than GitHub organizations or separate companies. Each public project has one primary placement. Cross-division collaboration is expected.
 
