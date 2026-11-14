@@ -16,6 +16,18 @@ I'm also an educator, artist, musician, and writer. Sound, feedback, and experim
 
 **[Try a project](#start-here)** · **[Find your field](#choose-a-door)** · **[Research Observatory](docs/research.md)** · **[Collaborate](#join-in)**
 
+## Research divisions
+
+Vers3Dynamics is organized around **three research responsibilities**, with a common evidence standard and a preserved experimental archive.
+
+| Division | Research responsibility | Start with |
+| --- | --- | --- |
+| **[I · Autonomous Science](docs/divisions.md#division-i--autonomous-science)** | AI-designed experiments, measurable discovery, and independent verification | [RAIN ATLAS](https://github.com/topherchris420/rain-atlas) · [TRIAD](https://github.com/topherchris420/triad) |
+| **[II · Computational Life & Cognition](docs/divisions.md#division-ii--computational-life--cognition)** | Persistent organisms, interpretable learning, and reproducible agent worlds | [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin) |
+| **[III · Human-Centered Intelligence](docs/divisions.md#division-iii--human-centered-intelligence)** | Consent-aware sensing, safer decisions, and human agency | [CIRCLE](https://github.com/topherchris420/circle) |
+
+[**Explore the complete division map and portfolio decisions →**](docs/divisions.md) · [Evidence ledger](experiments/README.md) · [Project atlas](docs/atlas.md)
+
 ## Start here
 
 Four ways to meet the lab. Each begins with something you can explore in your browser.
