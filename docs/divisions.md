@@ -8,7 +8,7 @@
 
 **Vers3Dynamics is an experiment in the future organization of scientific discovery.** Our starting hypothesis is that a human-directed, persistent AI research system might make it possible to design and carry out useful investigations with fewer conventional institutional resources. This is a hypothesis about scientific practice, not an established result.
 
-The critical test is not how many papers, programs, or experiments the system produces. It is whether its methods select more informative experiments, expose mistaken assumptions, and yield conclusions that withstand comparison with simpler methods and independent review. R.A.I.N. proposes and conducts bounded research; its own output is not sufficient evidence of its success.
+The critical test is not how many papers, programs, or experiments the system produces. It is whether its methods select more informative experiments, expose mistaken assumptions, and yield conclusions that withstand comparison with simpler methods and independent review. R.A.I.N. Lab (Recursive Architecture for Intelligent Nexus) proposes and conducts bounded research; its own output is not sufficient evidence of its success.
 
 Vers3Dynamics is an independent, open research laboratory rather than a venture-backed software business. Projects exist to investigate questions and make their evidence available for scrutiny. They may be continued, consolidated, or retired according to what their results justify, including when the results are negative.
 
