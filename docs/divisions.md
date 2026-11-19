@@ -58,7 +58,7 @@ Eva and ECHO are production originals with separate persistent histories. The re
 | Project | Portfolio role | Present scope |
 | --- | --- | --- |
 | [Pine Gap: After Hours](https://github.com/topherchris420/satellite-vision-scape) | Research | A browser 3D world built from public sources, where a person, a scripted policy and an AI agent attempt the same night-shift task under the same physics. |
-| [Lop Nur Twin · ECHO & R.A.I.N.](https://github.com/topherchris420/lop-nur-twin) | Flagship | A simulated world with a persistent digital fly, sealed histories and a separate laboratory that tests whether changes to research subjects improve behavior. |
+| [Lop Nur Twin · Eva, ECHO & R.A.I.N.](https://github.com/topherchris420/lop-nur-twin) | Flagship | Two simulated flies keep separate histories in independently running worlds, with sealed checkpoints for ECHO and a separate lab for experiments on research subjects. |
 | [Orpheus](https://github.com/topherchris420/orpheus-resonance-protocol) | Exhibition | Interactive command-room fiction in the browser: commit decisions against generated events, then review their consequences in an after-action log. |
 
 ## Division III · Human-Centered Intelligence
@@ -78,8 +78,8 @@ Creative instruments and public applications are included here as demonstrations
 | [Project Ascent](https://github.com/topherchris420/project-ascent) | Research | Free home-price studios for covered DC and Maryland homes that show every comparable sale and assumption, and publish the accuracy tests the models failed. |
 | [Luca](https://github.com/topherchris420/Luca) | Enabler | A Wi-Fi access point that records one device's traffic and checks it against indicators and heuristics; built on Kaspersky's TinyCheck, with an added kernel observatory. |
 | [Nocturne](https://github.com/topherchris420/nocturne) | Research | A toolkit that works backward from a darker-sky target to the least-cost lighting changes, and turns owners' existing switches into tracked, reversible actions. |
-| [CIRCLE](https://github.com/topherchris420/circle) | Flagship | A closed-loop biosignal and haptic-feedback instrument designed in code and tested against a simulated physiology twin; nothing is fabricated or cleared for use on a person. |
-| [Vanta](https://github.com/topherchris420/vanta) | Exhibition | Christopher's portfolio: writing, instruments, worlds, paintings and music as five channels, with a source-linked research atlas. |
+| [CIRCLE](https://github.com/topherchris420/circle) | Flagship | A browser workbench turns simulated physiological rhythms into sound and visuals and records the decision behind each response. The proposed hardware remains a design. |
+| [Vanta](https://github.com/topherchris420/vanta) | Exhibition | Christopher’s portfolio brings writing, instruments, simulated worlds, paintings, and music together in a walkable studio and a research atlas. |
 | [HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch) (website-only) | Research | A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable. |
 | [Indigo People](https://chriswoodyard.bandcamp.com/) (website-only) | Exhibition | Christopher's recordings as Indigo People. |
 

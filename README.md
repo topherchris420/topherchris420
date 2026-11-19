@@ -4,118 +4,116 @@
 <source media="(max-width: 600px)" srcset="assets/hero-mobile-light.svg">
 <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
 <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-<img src="assets/hero-light.svg" width="100%" alt="Christopher Woodyard · Vers3Dynamics. I make strange things and test whether they work. A cabinet of experiments, with a drawer left open for the next. The Adinkra symbol Nea Onnim No Sua A, Ohu: one who does not know can know from learning.">
+<img src="assets/hero-light.svg" width="100%" alt="Christopher Woodyard, Vers3Dynamics. I make strange things and test whether they work. A cabinet of experiments with a drawer left open. The Adinkra symbol Nea Onnim No Sua A, Ohu means one who does not know can know from learning.">
 </picture></a>
 </p>
 
-# Experiments you can open. Evidence you can inspect.
-
-I'm **Christopher Woodyard**, founder of **[Vers3Dynamics](https://vers3dynamics.com/)**, an independent, one-person research laboratory near Washington, DC. We investigate how AI systems can participate in scientific work, and what would make their conclusions worth trusting.
-
-**Vers3Dynamics is an experiment in the future organization of scientific discovery.** Scientific progress depends not only on proposing ideas, but on choosing informative experiments, distinguishing competing explanations, and making results possible to verify. Increasingly capable AI systems may change how that work is organized. We want to know whether a single researcher, working with a persistent AI research system, can investigate meaningful problems without relaxing those standards.
-
-R.A.I.N. Lab (Recursive Architecture of Intelligent Nexus) is the AI research system at the center of this experiment. Its agents can formulate hypotheses, propose experiments, write software, and examine results within defined boundaries. The system can propose an explanation; **it cannot establish that the explanation is correct merely by producing it**. We test its methods against simpler alternatives, set evaluation criteria before confirmatory experiments, account for uncertainty, and preserve negative results. Whether this approach improves scientific discovery is still an open question.
-
-Our work is independent and open. **We are building a research laboratory, not a venture-backed software business.** Projects are instruments for investigation rather than products in a sales pipeline. We publish methods and evidence so that others can reproduce, challenge, or build on the work.
-
-I'm also an educator, artist, musician, and writer. Sound, feedback, and experimentation connect the work. The software gives those ideas something to answer to.
-
-**[Why I do it](#the-question-behind-the-lab)** · **[Try a project](#start-here)** · **[Find your field](#choose-a-door)** · **[Research Observatory](docs/research.md)** · **[Collaborate](#join-in)**
-
-## The question behind the lab
+# The question behind the lab
 
 **What can the physical universe teach us about the extraordinary fact that experience exists at all?**
 
-I've spent much of my life creating things. Music, paintings, poetry, and now systems that explore intelligence, biology, and the physical world.
+I don't know. I've come at that question through music, painting, and poetry for much of my life.
 
-Over time, I began to realize that these weren't entirely separate pursuits. In different ways, I was trying to understand the same thing.
+I'm Christopher Woodyard, an artist and educator in Washington, DC. I record as Indigo People and build instruments and simulated worlds at my one-person, open-source research lab, [Vers3Dynamics](https://vers3dynamics.com/).
 
-What is consciousness? How does it arise from physical systems? Or is it possible that consciousness is something more fundamental, something we don't yet have the language or instruments to fully understand?
-
-Sometimes I wonder whether the universe is experiencing itself through countless perspectives.
-
-Perhaps it is. Perhaps it isn't.
-
-**I don't know. And that's why I want to explore it.**
-
-Vers3Dynamics is my independent, open-source research lab for investigating questions like these. Through sound, biological signals, artificial intelligence, computational experiments, and art, I explore relationships between physical processes, information, intelligence, and conscious experience.
-
-### How I approach the work
-
-**Curiosity over certainty.** I don't believe every question needs to begin with an answer. I also don't believe my personal philosophy should determine what an experiment is allowed to discover.
-
-**Measurement without overinterpretation.** Some things can be measured. Others can be modeled, questioned, or expressed through art. I value all of these approaches, but they don't provide the same kinds of evidence.
-
-**Discovery over confirmation.** I'm not trying to prove that everything is consciousness. I'm trying to understand what makes experience possible in the first place. If the evidence leads somewhere completely different from what I imagined, I want to discover that too.
-
-### Where I look
-
-- **Sound and resonance:** How vibrations, rhythms, and auditory experiences relate to perception and physiological activity.
-- **Biological signals:** How the body's rhythms can be measured, interpreted, and translated into responsive experiences.
-- **AI and computational systems:** How information, adaptation, and complex behavior arise, and what they might teach us about intelligence without assuming they establish consciousness.
-- **Art, music, and poetry:** How creative work lets me explore dimensions of experience that measurements alone don't capture.
-
-I don't expect to find every answer. But understanding even a small part of what makes experience possible would be meaningful. Whatever I discover, I want the work to remain open, reproducible, and available for others to question, improve, or build upon.
-
-**This measurement is real. This transformation is ours. This interpretation is yours.**
-
-*Built by one researcher. Held in common. Free to explore.*
-
-## Research divisions
-
-Vers3Dynamics is organized around **three research responsibilities**, with a common evidence standard and a preserved experimental archive.
-
-| Division | Research responsibility | Start with |
-| --- | --- | --- |
-| **[I · Autonomous Science](docs/divisions.md#division-i--autonomous-science)** | AI-designed experiments, measurable discovery, and independent verification | [RAIN ATLAS](https://github.com/topherchris420/rain-atlas) · [TRIAD](https://github.com/topherchris420/triad) |
-| **[II · Computational Life & Cognition](docs/divisions.md#division-ii--computational-life--cognition)** | Persistent organisms, interpretable learning, and reproducible agent worlds | [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin) |
-| **[III · Human-Centered Intelligence](docs/divisions.md#division-iii--human-centered-intelligence)** | Consent-aware sensing, safer decisions, and human agency | [CIRCLE](https://github.com/topherchris420/circle) |
-
-[**Explore the complete division map and portfolio decisions →**](docs/divisions.md) · [Evidence ledger](experiments/README.md) · [Project atlas](docs/atlas.md)
+**[Walk into my studio](https://mitpress.vercel.app/studio)** · **[Observe ECHO](https://lop-nur-twin.vercel.app/live)** · **[Judge an experiment](#what-the-evidence-says)** · [Read the full founder's note](docs/the-question-behind-the-lab.md)
 
 ## Start here
 
-Four ways to meet the lab. Each begins with something you can explore in your browser.
+### From a painting to a car radio
 
-### Take a midnight drive with my music
+I painted the cover of *Green Machine* and recorded the album as **Indigo People**. Then I put the record on the radio in **Pine Gap: After Hours**. Choose **More ways to play → After Hours**, pick up a coffee at the canteen, and take it for a drive. On a keyboard, `R` turns the radio on.
 
-**Pine Gap: After Hours** is a fictional night shift in a world you can drive through. Deliver a coffee, explore the site, and tune in to my original music as **Indigo People** on the vehicle's radio.
+<p>
+<a href="https://chriswoodyard.bandcamp.com/album/green-machine"><img src="https://raw.githubusercontent.com/topherchris420/vanta/7c710012003edba67b9cf702d80c0a9d14d92b07/public/work/green-machine-cover.webp" width="35%" alt="My Green Machine cover painting, a leaf-like form in teal, red and acid green. Open the album."></a>
+<a href="https://geotwn.vercel.app/"><picture>
+<source media="(max-width: 600px), (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/topherchris420/vanta/7c710012003edba67b9cf702d80c0a9d14d92b07/public/work/pine-gap-agent-run.webp">
+<img src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" width="63%" alt="A four-wheel drive on the coffee run in Pine Gap. Open the playable world.">
+</picture></a>
+</p>
 
-<a href="https://geotwn.vercel.app/"><img src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" width="100%" alt="Pine Gap: After Hours: a four-wheel-drive vehicle travels across the simulated site at night to deliver a coffee. Click to enter the playable world and hear Christopher Woodyard's music on the radio."></a>
+<sub>The silent clip shows a scripted driver at 10× speed in a fictional world. Small screens and reduced-motion settings get a still. <a href="https://github.com/topherchris420/satellite-vision-scape/blob/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.mp4">Watch the recording (MP4)</a>.</sub>
 
-<sub>The scripted baseline, shown at 10× speed; no AI model ran in this recording. The GIF is silent; open the playable world for the radio. Public-source reconstruction, fictional gameplay.</sub>
+**[Hear 14 seconds of Green Machine (MP3)](https://mitpress.vercel.app/work/green-machine-excerpt.mp3)** · [Play the album](https://chriswoodyard.bandcamp.com/album/green-machine) · [Drive Pine Gap](https://geotwn.vercel.app/) · [Inspect the recorded runs](docs/exhibition.md#pine-gap-after-hours)
 
-**[Drive and hear the radio →](https://geotwn.vercel.app/)** · [Listen to Indigo People](https://chriswoodyard.bandcamp.com/) · [Source](https://github.com/topherchris420/satellite-vision-scape) · [Experiment and recorded runs](docs/exhibition.md#pine-gap-after-hours)
+### Two flies, two histories
 
-### Make a car refuse a command
+Close the browser and ECHO's world keeps going. Open it again and you can see what the simulated fly has been doing in Bethesda. Eva lives in a separate garden with her own clock and memories. Both pages let you watch without starting either fly over.
 
-**GHOSTWHEEL** is an interactive automotive cybersecurity lab. Drive a fictional electric vehicle, introduce a synthetic fault, and follow the gateway's decision into its event record.
+<p>
+<a href="https://lop-nur-twin.vercel.app/live"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/live-fly.jpg" width="49%" alt="ECHO in the simulated Bethesda streets, beside the log of its recent decisions. Open ECHO’s live page."></a>
+<a href="https://150-136-49-49.sslip.io/"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/garden.jpg" width="49%" alt="Eva resting on a windowsill in the clay garden. Visit Eva’s garden."></a>
+</p>
 
-<a href="https://ghostwheel-one.vercel.app/"><img src="assets/captures/ghostwheel-refusal.webp" width="100%" alt="GHOSTWHEEL's browser simulator rejecting a replayed steering command and recording the refusal."></a>
+<sub>ECHO in Bethesda and Eva in the garden, recorded on 10 November 2026. The checkpoints let another machine check continuity over a recorded interval.</sub>
 
-<sub>Actual browser capture, 21 October 2026. Fictional vehicle and synthetic commands; this browser experience is a simulation.</sub>
+**[Watch ECHO](https://lop-nur-twin.vercel.app/live)** · [Visit Eva's garden](https://150-136-49-49.sslip.io/) · [Inspect the continuity records](https://github.com/topherchris420/lop-nur-twin#03-a-machine-must-be-able-to-verify-the-history)
 
-**[Launch GHOSTWHEEL →](https://ghostwheel-one.vercel.app/)** · [Source](https://github.com/topherchris420/ghostwheel) · [Recorded scope](docs/exhibition.md#ghostwheel)
+### Hear a heartbeat become an instrument
 
-### Watch an individual keep its history
+In **CIRCLE**, play a recorded simulation, switch on the sound, and follow a change in the pulse trace through to the audio you hear. The workbench lets you inspect the decision behind each response. A separate study compares recordings from real phone cameras with an ECG reference.
 
-**ECHO / Lop Nur Twin** asks whether a simulated individual can continue through changes to its world and its own machinery, leaving a history another machine can check. Watch ECHO in Bethesda, then inspect its sealed checkpoints and the experiments conducted on separate research subjects.
+**[Play the CIRCLE workbench](https://topherchris420.github.io/circle/workbench.html)** · [Explore the phone-camera recordings](https://topherchris420.github.io/circle/first-light.html) · [Source](https://github.com/topherchris420/circle)
 
-<a href="https://lop-nur-twin.vercel.app/live"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/live-fly.jpg" width="100%" alt="ECHO in the clay model of Bethesda, with current behavior, energy reserve and recent decisions shown beside it."></a>
+## What the evidence says
 
-<sub>Recorded software view, 10 November 2026. ECHO and Eva are separate simulated individuals. Replay checks establish continuity within audited intervals; they do not establish consciousness or biological equivalence.</sub>
+### Would you pass this experiment?
 
-**[Observe ECHO →](https://lop-nur-twin.vercel.app/live)** · [Continuity & experiments](https://github.com/topherchris420/lop-nur-twin#03-a-machine-must-be-able-to-verify-the-history) · [Source](https://github.com/topherchris420/lop-nur-twin)
+In the first simulated **R.A.I.N. Lab × CIRCLE × TRIAD** study, the system could withhold a reading when the signal was poor. Across four conditions it accepted **297 readings**. Every one was within **3 beats per minute** of the simulated reference.
 
-### Understand the evidence behind a home estimate
+There was a second condition. The system had to report a reading in **at least one quarter** of the heavy-motion windows. It reported in **31 of 160**. Would you count that as a success?
 
-**Project Ascent** helps homeowners examine recorded sales, compare assumptions, and keep the reasoning behind a decision. Start with a fictional home, then explore the covered DC and Maryland markets. Estimates are bounded by their data and published accuracy studies; they are not appraisals.
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/motion-coverage-dark.svg">
+<img src="assets/motion-coverage-light.svg" width="100%" alt="Heavy motion in the original simulation. Each mark is one scheduled window. Of 160 windows, 31 yielded an accepted reading. The registered minimum was 40.">
+</picture>
 
-**[Try the example →](https://project-ascent-theta.vercel.app/demo)** · [Published accuracy](https://project-ascent-theta.vercel.app/accuracy) · [Source](https://github.com/topherchris420/project-ascent)
+<details>
+<summary><strong>Open the recorded verdict</strong></summary>
+
+**Inconclusive.** The monitor needed 40 readings under heavy motion. It fell nine short. Knowing the pulse when it spoke answered only half the question. The other half was how often it could give a reading at all.
+
+A follow-up tested different rules on two simulated pulse generators. Two rules cleared the later screen. The original verdict stays on the record.
+
+[Inspect the original counts and registration](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/history/prior-studies.json) · [Read the follow-up and its limits](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/replication/README.md)
+
+</details>
+
+<details>
+<summary>Which findings in the wider lab have external support?</summary>
+
+<!-- ledger:top-rung -->
+**`SUPPORTED`, so far:** Project Ascent's DC house model met its nine preregistered criteria on held-out sales. Quantum Noise Profiler detected no within-sweep drift on one IBM device over two hours.
+
+**`REPRODUCED`, so far:** nothing in the ledger meets its independent-reproduction definition.
+
+*Reviewed 10 November 2026. The partial review covered ATLAS and Lop Nur Twin. The two supported results retain their 21 October review.*
+
+[Read the evidence definitions and all recorded outcomes](experiments/README.md)
+
+</details>
+
+## How I work
+
+**R.A.I.N. Lab** is the AI research system I work with at Vers3Dynamics. I choose the questions and set the criteria a claim has to meet. R.A.I.N. can propose a test, write software, and examine what happened. I want to know whether one researcher working this way can choose better experiments. You can follow a proposal all the way to a result the lab had to reject. [Read the failed forecast](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/assumptions/README.md) · [See the build timelines](experiments/unreasonably-fast.md)
+
+### Research divisions
+
+| Division | A place to begin |
+| --- | --- |
+| [Autonomous Science](docs/divisions.md#division-i--autonomous-science) | Run a bounded investigation with [R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas#autonomous-research) or inspect how [TRIAD](https://github.com/topherchris420/triad) scores decisions to withhold a prediction. |
+| [Computational Life & Cognition](docs/divisions.md#division-ii--computational-life--cognition) | Follow a fly through a checkpoint in [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin). |
+| [Human-Centered Intelligence](docs/divisions.md#division-iii--human-centered-intelligence) | Trace a change in sound to the signal and consent decision that allowed it in [CIRCLE](https://github.com/topherchris420/circle). |
+
+### Research Observatory
+
+Follow a claim back to its source, find a failed comparison, or pick a next experiment. The downloadable Observatory opens in your browser and compares up to three projects offline.
+
+**[Read the research index](docs/research.md)** · [Download the offline Observatory](https://raw.githubusercontent.com/topherchris420/topherchris420/main/docs/observatory.html) · [Read the ledger](experiments/README.md)
 
 ## Choose a door
 
-Follow your curiosity. The illustrated exhibition keeps the demonstrations, research notes, and source links together; the atlas lists the wider collection.
+Two more things you can open in a browser are a fictional car that records why it refused a command and a DC home estimate you can trace back to individual sales. [Drive GHOSTWHEEL](https://ghostwheel-one.vercel.app/) · [Try a sample home in Ascent](https://project-ascent-theta.vercel.app/demo)
 
 <!-- atlas:begin -->
 <!-- Generated by tools/build_atlas.py from docs/atlas.json. -->
@@ -133,77 +131,17 @@ Follow your curiosity. The illustrated exhibition keeps the demonstrations, rese
 [**Browse the complete atlas →**](docs/atlas.md) · 30 current projects · 8 archived experiments and forks
 <!-- atlas:end -->
 
-## Research Observatory
-
-**What would change our minds?** Follow the lab's questions into their recorded evidence, limits, and next experiments. The Observatory connects the project atlas to the evidence ledger, with a date on every reviewed record.
-
-**[Read the research index →](docs/research.md)** · **[Download the offline Observatory](https://raw.githubusercontent.com/topherchris420/topherchris420/main/docs/observatory.html)**
-
-Save the HTML file and open it in your browser. Search the collection, isolate failed claims, compare up to three projects, and export the records behind your view. It works offline; source links open on the web.
-
-## Build on the research
-
-- **[R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas)** — Run a synthetic computational study, challenge its result, and verify its evidence chain. BLACK GLASS extends the workbench to static firmware inspection. [Start with the recorded experiment](https://github.com/topherchris420/rain-atlas/blob/8e8c42b1d2d9cb585029506163b0030c482c9dbf/docs/demonstration/report.md).
-- **[TRIAD](https://github.com/topherchris420/triad)** — Evaluate the error rate of accepted predictions and investigate when a system should abstain. Start with [saved predictions and labels](https://github.com/topherchris420/triad#start-with-the-evidence); no sensor simulation is required.
-- **[Quantum Noise Profiler](https://github.com/topherchris420/quantum-noise-profiler)** — Inspect recorded IBM qubit measurements in an [offline evidence explorer](https://github.com/topherchris420/quantum-noise-profiler#explore-the-real-hardware-data). Hardware warning accuracy remains unestablished.
-- **[CIRCLE](https://github.com/topherchris420/circle)** — Run a local workbench for simulated physiological sensing, adaptive feedback, and independent session audits. [Start with a guided scenario](https://github.com/topherchris420/circle#quick-start). Hardware remains a design awaiting physical validation.
-- **[Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting)** — Explore rhythms and lagged relationships in time series. [Plant a known signal first](https://github.com/topherchris420/dynamic-resonance-rooting#quick-start), then compare the result with the retained external-data failures.
-
-## What the evidence says
-
-The aim is to reduce confidently wrong decisions. **That is a research question, not a blanket result.** The [ledger](experiments/README.md) separates software that runs, observations that were recorded, independent reproduction, and claims that survived a stated external test.
-
-Three useful places to challenge the work:
-
-- **Mannahatta:** its routed-water model did not outperform low elevation at locating held-out flood reports. [Read the comparison](docs/exhibition.md#mannahatta).
-- **TRIAD:** added evidence rules have not established an advantage over strong existing practice. [Follow the research arc](https://github.com/topherchris420/triad#the-research-arc-machine-checked).
-- **R.A.I.N.:** a live-model experiment replayed correctly but failed its analytical accuracy checks. [Inspect the record](docs/exhibition.md#rain-lab-hidden-in-lop-nur-twin).
-
-<details>
-<summary><b>What has external support, and what has been independently reproduced?</b></summary>
-
-<!-- ledger:top-rung -->
-**`SUPPORTED`, so far:** two narrow results in the ledger. Project Ascent's DC house model met its nine preregistered criteria on held-out sales; Quantum Noise Profiler's within-sweep check detected no drift on one IBM device over two hours. Neither establishes general reliability.
-
-**`REPRODUCED`, so far:** nothing in the ledger meets its independent-reproduction definition.
-
-*Reviewed 10 November 2026. Partial update: ATLAS and Lop Nur Twin. The two supported results above retain their 21 October review; every other entry keeps its own date. Interface changes do not promote an evidence state.*
-
-</details>
-
-**[Read the evidence ledger →](experiments/README.md)** · [Machine-readable records](experiments/ledger.json) · [Research map](docs/project-map.md) · [Full exhibition](docs/exhibition.md)
-
-## One practice, many forms
-
-I record as **Indigo People**; that music plays on Pine Gap's radio. **Vanta** brings my paintings, writing, music, and research together. **HumanTouch** explores how AI-assisted editing can preserve a writer's meaning and voice while keeping proposed changes inspectable.
-
-<!-- ledger:humantouch -->
-<sub>HumanTouch evidence: `EXECUTABLE` · `OBSERVED` (offline instrument calibration on synthetic fixtures, not live-model evaluation).</sub>
-
-**[Listen →](https://chriswoodyard.bandcamp.com/)** · **[See the art and writing →](https://mitpress.vercel.app/)** · **[Try HumanTouch →](https://huggingface.co/spaces/ciaochris/HumanTouch)**
-
-## A koi in the current
-
-<p align="center">
-  <img src="koi/koi.gif" width="256" alt="An animated Asagi pixel-art koi whose markings and movement reflect Christopher's public GitHub activity." />
-</p>
-
-<p align="center"><sub>My GitHub activity, translated into a little swimming life. Generated with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a> and refreshed daily when GitHub Actions runs.</sub></p>
-
 ## Join in
 
-Pick one project and its [next experiment](docs/research.md). Run an example, report where the experience breaks, reproduce a result, or bring a stronger comparison. Issues and pull requests belong in the relevant repository; you don't need to understand the entire lab to contribute.
+Bring me a result you couldn't reproduce, a comparison I overlooked, or a question you would try in your own classroom or studio. For a reproduction, include the revision, inputs, and what you saw. [Contribution guide](CONTRIBUTING.md) · [Write to me](mailto:christopher@vers3dynamics.com) · [Support the lab](https://ko-fi.com/vers3dynamics)
 
-For research, teaching, or creative collaboration, **[write to me](mailto:christopher@vers3dynamics.com)**. To help keep the work free to explore, [support the lab](https://ko-fi.com/vers3dynamics).
+<details>
+<summary>See the koi drawn from my GitHub activity</summary>
 
-## How I work
+<p align="center"><img src="koi/koi.gif" width="256" alt="An animated Asagi pixel-art koi with markings derived from Christopher’s public GitHub activity."></p>
 
-**Maximum conceptual ambition; minimum credible experiment.** Build something, decide what would falsify it, keep what happened, and build again. AI helps me implement ideas; it cannot manufacture independent evidence. [The 72-hour question and the Git timelines →](experiments/unreasonably-fast.md)
+Its markings change when the daily workflow runs. [About git-koi](https://github.com/yalongwastaken/git-koi)
 
-**Resonance as Substrate. Intelligence as a Layer.**
-
----
-
-**Vers3Dynamics** · Instruments for asking better questions.
+</details>
 
 > I create because the alternative is unbearable: a day that occurs and is not noticed occurring.

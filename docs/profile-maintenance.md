@@ -6,7 +6,8 @@ This repository is Christopher Woodyard's GitHub profile. The README is the entr
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | Responsive entrance banner, short introduction, four browser experiences, generated navigation, research starting points, evidence, art, and collaboration |
+| Front door | `README.md` | The founder's question, album and playable world, persistent flies, CIRCLE, a recorded experiment, and routes to the wider collection |
+| Founder's note | `docs/the-question-behind-the-lab.md` | Christopher's full essay on experience, measurement, and creative practice |
 | Exhibition | `docs/exhibition.md` | The complete illustrated tour: six rooms, pinned captures and animations, methods, evidence labels, retained failures, and the connection diagram |
 | Atlas data | `docs/atlas.json` | Every public repository plus public sites of private projects: theme, one-sentence description, what a visitor can do, maturity, links. Source of truth for the atlas |
 | Atlas page | `docs/atlas.md` | Generated from `atlas.json` by `tools/build_atlas.py`, together with the README's atlas block |
@@ -36,11 +37,11 @@ The 10 November 2026 review added R.A.I.N. ATLAS, refreshed Lop Nur Twin's publi
 ## The front page
 
 1. **Entrance.** Preserve the existing cabinet banner and Adinkra symbol. At viewport widths up to 600 px, `assets/hero-mobile-*.svg` uses larger lettering and four simplified drawers. Native text introduces Christopher, the lab, and its question even if images do not load.
-2. **Start here.** Four browser experiences, led by Pine Gap's driving GIF and original music, followed by GHOSTWHEEL, ECHO, and Ascent. Each has a plain-language invitation, a primary action, source links, and its relevant scope. Keep the page focused; additional exhibits belong in the exhibition.
-3. **Choose a door.** A compact, generated table links to the six exhibition rooms and the artist's collection. Counts come from `docs/atlas.json`; the complete inventory remains in `docs/atlas.md`. `exhibition_anchor` overrides a theme id where the exhibition heading differs.
-4. **Build on the research.** The Research Observatory connects the catalog and evidence ledger. Direct starting points for R.A.I.N. ATLAS, TRIAD, Quantum Noise Profiler, CIRCLE, and DRR, with installation and evidence boundaries where relevant.
-5. **What the evidence says.** Visible negative findings, a disclosure containing the supported/reproduced summary, and links to the full ledger. The evidence review date remains separate from the date of an editorial refresh.
-6. **One practice, many forms**, **Join in**, **How I work** (its anchor is linked from `experiments/unreasonably-fast.md`), and the original closing quotation.
+2. **Start here.** The cover of *Green Machine* links to the record, and the driving GIF links to the world that plays it. The text also offers a 14-second MP3. Eva and ECHO each link to their own viewer. CIRCLE links directly to its simulated workbench and to the separate study of phone-camera recordings.
+3. **What the evidence says.** Readers can judge the original CIRCLE × TRIAD simulation before opening its recorded verdict. The dot figure uses the heavy-motion row in the [archived measurements](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/history/prior-studies.json). Its four groups show quarters of the 160 scheduled windows. Their positions carry no timing information. The wider ledger has its own review dates.
+4. **How I work.** The three divisions and the Research Observatory connect experiments to their records. The build timeline links back to this heading.
+5. **Choose a door.** The generated table opens the exhibition rooms and the artist's collection. Counts come from `docs/atlas.json`.
+6. **Join in.** Collaboration and reproduction links, the optional activity koi, and Christopher's closing line.
 
 ## The full exhibition
 
@@ -123,6 +124,8 @@ Pinned media from other repositories:
 | Jasmine | `docs/images/test-real-model.png`, a small local model answering from a PDF | `b66dcbdca5df8b61a1b04993910663ac24a92df3` |
 | CIRCLE | `diagrams/circle-3d-animation.gif` (concept render) and `diagrams/physiology-polygraph.png` (simulated physiology) | `774ddf8750dbe03fd207403d1b4bc428816f3967` |
 | Vanta | `public/work/impasto-head.webp`, Christopher's painting | `120c6c4d36356fc7a7b5ffa3fc8729d1ecc0b069` |
+| Vanta | `public/work/green-machine-cover.webp` and `public/work/pine-gap-agent-run.webp`, the album cover and still used on small screens and with reduced motion | `7c710012003edba67b9cf702d80c0a9d14d92b07` |
+| Lop Nur Twin | `docs/media/readme/gallery/live-fly.jpg` (ECHO) and `garden.jpg` (Eva), recorded 10 November 2026 | `92ee8a675f45d0fff0c8875a726370516c50010f` |
 
 Keep the Pine Gap driving GIF prominently on the main profile, with a link to the playable world's radio and Indigo People. This placement reflects the author's preference reiterated on 24 October 2026; the GIF itself is silent. Preserve the Pine Gap and CIRCLE animations: the author asked for their restoration on 13 October 2026. Keep their captions: the Pine Gap GIF is the scripted baseline, and the CIRCLE GIF is a concept render whose labels are not claims. The checker verifies that external media are pinned to a commit; it does not fetch them, so re-check pinned URLs when refreshing a capture.
 

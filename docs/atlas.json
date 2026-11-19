@@ -72,11 +72,15 @@
       "do": "Drive a coffee run at midnight, then watch the scripted baseline try it"
     },
     {
-      "name": "Lop Nur Twin · ECHO & R.A.I.N.",
+      "name": "Lop Nur Twin · Eva, ECHO & R.A.I.N.",
       "repo": "lop-nur-twin",
       "url": "https://lop-nur-twin.vercel.app/live",
       "url_label": "Observe ECHO",
       "links": [
+        {
+          "label": "Eva's garden",
+          "url": "https://150-136-49-49.sslip.io/"
+        },
         {
           "label": "Twin",
           "url": "https://lop-nur-twin.vercel.app/"
@@ -90,9 +94,9 @@
       "featured": true,
       "status": "active",
       "maturity": "Research instrument",
-      "description": "A simulated world with a persistent digital fly, sealed histories and a separate laboratory that tests whether changes to research subjects improve behavior.",
-      "do": "Observe ECHO, inspect continuity records, and challenge the intelligence experiments",
-      "last_reviewed": "2026-11-10"
+      "description": "Two simulated flies keep separate histories in independently running worlds, with sealed checkpoints for ECHO and a separate lab for experiments on research subjects.",
+      "do": "Watch ECHO in Bethesda, visit Eva’s garden, or inspect a checkpoint",
+      "last_reviewed": "2026-11-18"
     },
     {
       "name": "Mannahatta",
@@ -325,9 +329,18 @@
       "theme": "discover-the-unusual",
       "featured": true,
       "status": "active",
-      "maturity": "Hardware design",
-      "description": "A closed-loop biosignal and haptic-feedback instrument designed in code and tested against a simulated physiology twin; nothing is fabricated or cleared for use on a person.",
-      "do": "Run the physiology twin and audit every controller decision"
+      "maturity": "Research instrument",
+      "description": "A browser workbench turns simulated physiological rhythms into sound and visuals and records the decision behind each response.",
+      "do": "Replay a simulated session or compare public phone-camera recordings with their ECG references",
+      "url": "https://topherchris420.github.io/circle/workbench.html",
+      "url_label": "Play the workbench",
+      "last_reviewed": "2026-11-18",
+      "links": [
+        {
+          "label": "Phone-camera recordings",
+          "url": "https://topherchris420.github.io/circle/first-light.html"
+        }
+      ]
     },
     {
       "name": "Project 33",
@@ -380,8 +393,15 @@
       "theme": "artist",
       "status": "active",
       "maturity": "Live web app",
-      "description": "Christopher's portfolio: writing, instruments, worlds, paintings and music as five channels, with a source-linked research atlas.",
-      "do": "Tune five channels of one person's work"
+      "description": "Christopher’s portfolio brings writing, instruments, simulated worlds, paintings, and music together in a walkable studio and a research atlas.",
+      "do": "Walk into the studio or hear Green Machine as Indigo People recorded it",
+      "last_reviewed": "2026-11-18",
+      "links": [
+        {
+          "label": "Walk into the studio",
+          "url": "https://mitpress.vercel.app/studio"
+        }
+      ]
     },
     {
       "name": "HumanTouch",
@@ -528,5 +548,5 @@
     "vitalsync-wellness",
     "resonance-flow-nexus"
   ],
-  "coverage_checked": "2026-11-10"
+  "coverage_checked": "2026-11-18"
 }
