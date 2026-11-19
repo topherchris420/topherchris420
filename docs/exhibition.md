@@ -408,18 +408,18 @@ Evidence ladder: `EXECUTABLE` (TinyCheck-derived appliance and a kernel observat
 <a href="https://github.com/topherchris420/circle#quick-start"><img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/circle/774ddf8750dbe03fd207403d1b4bc428816f3967/diagrams/physiology-polygraph.png" width="40%" alt="CIRCLE's report view: physiological traces recovered by its signal pipeline, plotted against hidden synthetic reference signals."></a>
 </p>
 
-A closed-loop instrument, designed in code, that senses the body and answers with gentle haptic cues. Raw sensor codes become estimates, estimates inform bounded decisions, and an independent observation checks whether the intended cue actually happened. Timing, gaps, refusals and consent belong to one record, tested against a simulated physiology twin whose truth is known.
+Play a six-minute simulated session in the browser. The workbench turns rhythms into adaptive sound and visuals and records why it responded or withheld feedback. A separate study called First Light uses public phone-camera recordings and ECG references. The proposed haptic hardware remains a design.
 
 <sub>Left, a concept render of the planned Rev B hardware geometry, not footage of a device. Right, traces recovered from simulated physiology, not a human recording. Nothing has been fabricated, and the design is not cleared for fabrication or for connection to a person.</sub>
 
-`HARDWARE DESIGN · SIMULATED PHYSIOLOGY` · [**Run the physiology twin →**](https://github.com/topherchris420/circle#quick-start) · [Source](https://github.com/topherchris420/circle)
+**[Play the workbench](https://topherchris420.github.io/circle/workbench.html)** · [Explore First Light](https://topherchris420.github.io/circle/first-light.html) · [Run locally](https://github.com/topherchris420/circle#quick-start) · [Source](https://github.com/topherchris420/circle)
 
 <details>
 <summary><b>Under the hood:</b> a command is not an outcome</summary>
 
 - **What's distinctive.** Issuing a haptic command and observing a haptic onset are separate events, and every controller decision can be rebuilt from raw data.
 - **What failed.** The twin's benchmark passed 999 of 1,000 checks; one seed missed the skin-conductance sensitivity threshold, and that failure stays in the record.
-- **What isn't claimed.** No human recordings, no fabricated board, and no electrical-safety or clinical claim. The boards are unrouted and every review gate is open.
+- **Scope of the hardware record.** The October twin study used simulated physiology. First Light's phone-camera recordings come from a separate dataset. Physical validation of the proposed board remains open.
 
 <!-- ledger:circle -->
 Evidence ladder: `OBSERVED` (simulated physiology) · `BUILDING` (hardware design).

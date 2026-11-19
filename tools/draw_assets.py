@@ -3,8 +3,8 @@
 
     python3 tools/draw_assets.py
 
-Writes the entrance banner (hero), the six door cards, the chain diagram that
-connects the projects, and the section rule. Every drawing comes from one
+Writes the entrance banner (hero), the six door cards, the chain diagram,
+the heavy-motion coverage figure, and the section rule. Every drawing comes from one
 layout per asset, so the light and dark twins cannot drift. Text is drawn from
 tools/glyphs.json; pictograms are plain vector paths. Standard library only.
 
@@ -415,6 +415,42 @@ def chain(mode: str) -> str:
     return c.svg(background=p["bg"], border=p["rule"])
 
 
+# --- Original CIRCLE × TRIAD run ------------------------------------------------
+
+
+def motion_coverage(mode: str) -> str:
+    """Group the recorded counts by quarters. Positions do not encode time."""
+    p = PALETTES[mode]
+    # V3D-EXP-0001, execution/measurements.json, scenarios.motion_heavy.
+    # The archived measurements and registration are linked in the README.
+    reported, scheduled = 31, 160
+    required = scheduled // 4
+    c = Canvas(560, 133, "Heavy-motion coverage in the original simulation",
+               f"Each dot is one of {scheduled} scheduled windows, grouped in quarters. "
+               f"{reported} solid circles yielded a reading. The {required - reported} rings "
+               f"show the shortfall to the registered minimum of {required}.")
+    c.add(f'<circle cx="24" cy="26" r="5" fill="{p["accent"]}"/>')
+    c.text(f"{reported} reported", 37, 32, "sans-medium", 19, p["ink"])
+    c.add(f'<circle cx="212" cy="26" r="5" stroke="{p["warm"]}" stroke-width="2"/>')
+    c.text(f"{required - reported} more needed", 225, 32, "sans-medium", 19, p["warm"])
+    c.text(f"{scheduled} total", 539, 32, "sans", 18, p["muted"], anchor="end")
+
+    c.add('<g id="scheduled-windows">')
+    for i in range(scheduled):
+        quarter, slot = divmod(i, required)
+        row, column = divmod(slot, 8)
+        x, y = 27 + 136 * quarter + 14 * column, 55 + 14 * row
+        if i < reported:
+            mark = f'r="5" fill="{p["accent"]}"'
+        elif i < required:
+            mark = f'r="5" stroke="{p["warm"]}" stroke-width="2"'
+        else:
+            mark = f'r="2.5" fill="{p["muted"]}"'
+        c.add(f'<circle cx="{x}" cy="{y}" {mark}/>')
+    c.add('</g>')
+    return c.svg(background=p["bg"], border=p["rule"])
+
+
 # --- The section rule ------------------------------------------------------------
 
 
@@ -468,6 +504,7 @@ def main() -> None:
     for mode in PALETTES:
         builds = [("hero", lambda m: hero(m)), ("rule", lambda m: rule(m)), ("chain", lambda m: chain(m))]
         builds.append(("hero-mobile", hero_mobile))
+        builds.append(("motion-coverage", motion_coverage))
         builds += [(f"door-{d[0].split('-')[0]}", (lambda i: lambda m: door(m, i))(i)) for i, d in enumerate(DOORS)]
         for name, build in builds:
             path = OUT / f"{name}-{mode}.svg"
