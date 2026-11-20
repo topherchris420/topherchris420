@@ -6,7 +6,8 @@ This repository is Christopher Woodyard's GitHub profile. The README is the entr
 
 | Layer | File | Job |
 | --- | --- | --- |
-| Front door | `README.md` | The founder's question, album and playable world, persistent flies, CIRCLE, a recorded experiment, and routes to the wider collection |
+| Front door | `README.md` | A short first-person introduction, links into art, music and interactive research, the generated atlas, and the ledger's top-rung evidence summary |
+| Extended profile | `docs/profile-longform.md` | The previous illustrated front page, preserved with its original recordings, interactive exhibits, experiments and dated claims |
 | Founder's note | `docs/the-question-behind-the-lab.md` | Christopher's full essay on experience, measurement, and creative practice |
 | Exhibition | `docs/exhibition.md` | The complete illustrated tour: six rooms, pinned captures and animations, methods, evidence labels, retained failures, and the connection diagram |
 | Atlas data | `docs/atlas.json` | Every public repository plus public sites of private projects: theme, one-sentence description, what a visitor can do, maturity, links. Source of truth for the atlas |
@@ -36,12 +37,11 @@ The 10 November 2026 review added R.A.I.N. ATLAS, refreshed Lop Nur Twin's publi
 
 ## The front page
 
-1. **Entrance.** Preserve the existing cabinet banner and Adinkra symbol. At viewport widths up to 600 px, `assets/hero-mobile-*.svg` uses larger lettering and four simplified drawers. Native text introduces Christopher, the lab, and its question even if images do not load.
-2. **Start here.** The cover of *Green Machine* links to the record, and the driving GIF links to the world that plays it. The text also offers a 14-second MP3. Eva and ECHO each link to their own viewer. CIRCLE links directly to its simulated workbench and to the separate study of phone-camera recordings.
-3. **What the evidence says.** Readers can judge the original CIRCLE × TRIAD simulation before opening its recorded verdict. The dot figure uses the heavy-motion row in the [archived measurements](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/history/prior-studies.json). Its four groups show quarters of the 160 scheduled windows. Their positions carry no timing information. The wider ledger has its own review dates.
-4. **How I work.** The three divisions and the Research Observatory connect experiments to their records. The build timeline links back to this heading.
-5. **Choose a door.** The generated table opens the exhibition rooms and the artist's collection. Counts come from `docs/atlas.json`.
-6. **Join in.** Collaboration and reproduction links, the optional activity koi, and Christopher's closing line.
+1. **Introduce the person.** Lead with a few warm first-person paragraphs about Christopher's art, music, curiosity, and independent research. Keep the title accessible in plain text, not just an image.
+2. **Offer a handful of real experiences.** Link directly to Vanta, the studio, Indigo People, the simulated fly viewer, and the CIRCLE workbench. Keep the invitation informal and honest about what is simulated.
+3. **Preserve the research standards.** The generated project-atlas block and ledger top-rung summary remain on the front page in optional expandable sections because the automated checks depend on their current content.
+4. **Keep the richer edition available.** `docs/profile-longform.md` preserves the previous illustrated introduction, including the cabinet banner, pinned GIFs and screenshots, detailed evidence examples, and dated claims. The original recordings remain reachable without dominating a first visit.
+5. **Link into the wider collection.** Keep the complete atlas, illustrated exhibition, evidence ledger, collaboration address, and the artist's work one click away.
 
 ## The full exhibition
 
@@ -127,7 +127,7 @@ Pinned media from other repositories:
 | Vanta | `public/work/green-machine-cover.webp` and `public/work/pine-gap-agent-run.webp`, the album cover and still used on small screens and with reduced motion | `7c710012003edba67b9cf702d80c0a9d14d92b07` |
 | Lop Nur Twin | `docs/media/readme/gallery/live-fly.jpg` (ECHO) and `garden.jpg` (Eva), recorded 10 November 2026 | `92ee8a675f45d0fff0c8875a726370516c50010f` |
 
-Keep the Pine Gap driving GIF prominently on the main profile, with a link to the playable world's radio and Indigo People. This placement reflects the author's preference reiterated on 24 October 2026; the GIF itself is silent. Preserve the Pine Gap and CIRCLE animations: the author asked for their restoration on 13 October 2026. Keep their captions: the Pine Gap GIF is the scripted baseline, and the CIRCLE GIF is a concept render whose labels are not claims. The checker verifies that external media are pinned to a commit; it does not fetch them, so re-check pinned URLs when refreshing a capture.
+Keep the Pine Gap driving GIF prominently in the longer profile tour, with a link to the playable world's radio and Indigo People. The original illustrated placement is retained in `docs/profile-longform.md`; the GIF itself is silent. Preserve the Pine Gap and CIRCLE animations: the author asked for their restoration on 13 October 2026. Keep their captions: the Pine Gap GIF is the scripted baseline, and the CIRCLE GIF is a concept render whose labels are not claims. The checker verifies that external media are pinned to a commit; it does not fetch them, so re-check pinned URLs when refreshing a capture.
 
 ## Illustrations
 
@@ -150,7 +150,7 @@ Edit the content tables in `tools/draw_assets.py` (`CABINET`, `DOORS`, `CHAIN`),
 1. Read its README and source. Write one entry in `docs/atlas.json`: one sentence on what is implemented, a short *what you can do*, a maturity label from the atlas legend, and its live URL if one works.
 2. Run `python3 tools/build_atlas.py`, then `python3 tools/check_profile.py`.
 3. If it makes claims worth tracking, add a ledger entry, a row in `experiments/README.md`, and a line in `docs/project-map.md`.
-4. Feature it on the front page only by editorial decision, and then also add it to `CABINET` or `DOORS` if it changes what those show.
+4. Feature it in the short front-page introduction only by editorial decision; update `CABINET` or `DOORS` when the illustrated exhibition or long-form profile needs a matching change.
 
 ## Updating evidence
 
@@ -164,5 +164,5 @@ Edit the content tables in `tools/draw_assets.py` (`CABINET`, `DOORS`, `CHAIN`),
 Run the full command sequence in [CONTRIBUTING.md](../CONTRIBUTING.md), including the Observatory generation and regression tests.
 
 1. Run `python3 tools/check_profile.py`. Add `--external` to confirm that outside links answer; Bandcamp and Ko-fi refuse automated clients and are listed for a check by hand.
-2. Render the README in light and dark modes at desktop and phone widths: check responsive banner selection, text wrapping, the navigation table, images, heading order, and anchors. When editing the exhibition, also inspect its door grid and two-column pairs.
+2. Render the README in light and dark modes at desktop and phone widths: check introductory text, expandable atlas/evidence details, heading order, and links. Check the banner and responsive images in `docs/profile-longform.md`. When editing the exhibition, also inspect its door grid and two-column pairs.
 3. Run `git diff --check` and review the complete diff.
