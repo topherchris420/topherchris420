@@ -18,6 +18,8 @@ If something catches your imagination, say hello. You can [write to me](mailto:c
 
 ---
 
+## Choose a door
+
 <details>
 <summary><strong>Explore the wider collection of projects</strong></summary>
 
@@ -40,6 +42,10 @@ The [illustrated exhibition](docs/exhibition.md) is a guided tour. The [complete
 <!-- atlas:end -->
 
 </details>
+
+## How I work
+
+I choose the questions and what counts as evidence. My AI research system, R.A.I.N., helps propose and test ideas, but a working demonstration isn't the same as a scientific finding. The records include the experiments that didn't pass.
 
 <details>
 <summary><strong>What does the research evidence say?</strong></summary>
