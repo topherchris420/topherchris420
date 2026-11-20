@@ -22,10 +22,10 @@ I'm Christopher Woodyard, an artist and educator in Washington, DC. I record as 
 
 ### From a record to a car radio
 
-I recorded *Green Machine* as **Indigo People**. The album's cover was painted by another artist. Then I put the record on the radio in **Pine Gap: After Hours**. Choose **More ways to play → After Hours**, pick up a coffee at the canteen, and take it for a drive. On a keyboard, `R` turns the radio on.
+I recorded *Green Machine* as **Indigo People** and put the album on the radio in **Pine Gap: After Hours**. Choose **More ways to play → After Hours**, pick up a coffee at the canteen, and take it for a drive. On a keyboard, `R` turns the radio on.
 
 <p>
-<a href="https://chriswoodyard.bandcamp.com/album/green-machine"><img src="https://raw.githubusercontent.com/topherchris420/vanta/7c710012003edba67b9cf702d80c0a9d14d92b07/public/work/green-machine-cover.webp" width="35%" alt="Green Machine album cover artwork by another artist, a leaf-like form in teal, red and acid green. Open the album."></a>
+<a href="https://chriswoodyard.bandcamp.com/album/green-machine"><img src="https://raw.githubusercontent.com/topherchris420/vanta/7c710012003edba67b9cf702d80c0a9d14d92b07/public/work/green-machine-cover.webp" width="35%" alt="Green Machine album by Indigo People. Open the album."></a>
 <a href="https://geotwn.vercel.app/"><picture>
 <source media="(max-width: 600px), (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/topherchris420/vanta/7c710012003edba67b9cf702d80c0a9d14d92b07/public/work/pine-gap-agent-run.webp">
 <img src="https://raw.githubusercontent.com/topherchris420/satellite-vision-scape/3457607680492edf4e4c9117859429846695f10c/docs/media/agent-drive.gif" width="63%" alt="A four-wheel drive on the coffee run in Pine Gap. Open the playable world.">
