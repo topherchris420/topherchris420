@@ -93,6 +93,42 @@ A follow-up tested different rules on two simulated pulse generators. Two rules 
 
 </details>
 
+## Featured research
+
+Three places to begin if you want to **use a system, inspect the evidence, and see what remains unresolved**. A working demonstration is not the same as a supported scientific claim.
+
+### 01 / Computational life — [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin)
+
+**Question:** Can a simulated individual keep a verifiable history while its world, controller, and environment change?
+
+**Enter:** [Observe ECHO live](https://lop-nur-twin.vercel.app/live) · [Visit Eva's separate garden](https://150-136-49-49.sslip.io/) · [Explore the larger world](https://lop-nur-twin.vercel.app/)
+
+**Inspect:** [Continuity, experiments and negative findings](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RESEARCH_CLAIMS.md)
+
+**Not yet established:** Biological equivalence, consciousness, or consistent survival benefits from new learning mechanisms. The connectome experiments are separate from the original Eva and ECHO.
+
+### 02 / Scientific judgment — [R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas) + [TRIAD](https://github.com/topherchris420/triad)
+
+**Question:** Can a research system design useful tests, identify a mistaken assumption, and know when to withhold a conclusion?
+
+**Enter:** [Explore R.A.I.N.'s recorded investigations](https://lop-nur-twin.vercel.app/research-intelligence/) · [Inspect TRIAD's research arc](https://github.com/topherchris420/triad#the-research-arc-machine-checked)
+
+**Inspect:** [A failed forecast and unsuccessful revision](https://github.com/topherchris420/lop-nur-twin/blob/main/experiments/crosslab/assumptions/README.md) · [Research evidence ledger](experiments/README.md)
+
+**Not yet established:** That collaborating AI agents reliably outperform a strong single-agent or deterministic research baseline, or that synthetic evaluation results transfer to real-world scientific discovery.
+
+### 03 / Human-centered sensing — [CIRCLE](https://github.com/topherchris420/circle)
+
+**Question:** Can physiological signals become responsive sound and visuals without losing the measurement, timing, and consent decisions behind each change?
+
+**Enter:** [Try the resonance workbench](https://topherchris420.github.io/circle/workbench.html) · [Explore phone-camera recordings](https://topherchris420.github.io/circle/first-light.html)
+
+**Inspect:** [Source and reproducibility materials](https://github.com/topherchris420/circle) · [The inconclusive CIRCLE × TRIAD result](https://github.com/topherchris420/lop-nur-twin/blob/main/experiments/crosslab/replication/README.md)
+
+**Not yet established:** A validated clinical benefit or reliable end-to-end behavior across real physical devices and participants. Simulation results and recorded-device measurements are kept distinct.
+
+[**See all 30 current projects and their maturity labels**](docs/atlas.md) · [**Read the evidence ladder**](experiments/README.md)
+
 ## How I work
 
 **R.A.I.N. Lab** is the AI research system I work with at Vers3Dynamics. I choose the questions and set the criteria a claim has to meet. R.A.I.N. can propose a test, write software, and examine what happened. I want to know whether one researcher working this way can choose better experiments. You can follow a proposal all the way to a result the lab had to reject. [Read the failed forecast](https://github.com/topherchris420/lop-nur-twin/blob/de43db4f82d7dc677ad9897b394670c6eeda810d/experiments/crosslab/assumptions/README.md) · [See the build timelines](experiments/unreasonably-fast.md)
