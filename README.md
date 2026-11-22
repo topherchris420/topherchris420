@@ -1,10 +1,8 @@
-# Christopher Woodyard | Artist, Musician & Independent Researcher
+# Christopher Woodyard
 
-Hey, I'm Chris. 👋
+**Artist, musician, and independent researcher.**
 
-Welcome to my little corner of GitHub.
-
-Some days it's a sketchbook. Other days it's a recording studio, a simulated world, or an experiment that didn't go quite as planned.
+Some days my work starts in a sketchbook or recording studio. Other days it starts in a simulated world or with an experiment that didn't go as planned.
 
 I write poetry, paint, and make music as [Indigo People](https://chriswoodyard.bandcamp.com/). I'm also the founder of [Vers3Dynamics](https://vers3dynamics.com/), my independent, open-source research lab. I explore sound, intelligent systems, biological rhythms, and a question I keep returning to: **what can the physical world teach us about the fact that we experience anything at all?**
 
