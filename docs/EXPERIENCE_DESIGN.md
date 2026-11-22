@@ -33,7 +33,7 @@ Projects keep distinct identities:
 | Environment | Visitor role | Defining boundary |
 | --- | --- | --- |
 | [Vanta](https://github.com/topherchris420/vanta) | Play, listen, and investigate an expressive instrument and creative practice | Sound is opt-in; the work and its sources remain primary |
-| [DNA Music Molecules](https://github.com/topherchris420/dna-music-molecules) | Turn a sequence into an explicitly mapped musical score and inspect choices | DNA does not itself produce the notes |
+| [DNA Music Molecules](https://arpa-h.vercel.app/) | Turn a sequence into an explicitly mapped musical score and inspect choices | DNA does not itself produce the notes |
 | [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin) | Explore evidence, simulations, fictional games, and persistent modeled life | Historical evidence, fiction, and simulation remain distinguishable |
 | [CIRCLE](https://github.com/topherchris420/circle) | Examine human-state signal quality, consent, feedback decisions, and refusals | A simulation is not a therapeutic or measurement validation |
 | [James](https://github.com/topherchris420/james) | Use a desktop companion to investigate while controlling context and actions | The user retains authority; a model response is not proof |
