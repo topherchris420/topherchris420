@@ -14,6 +14,13 @@ If something catches your imagination, say hello. You can [write to me](mailto:c
 
 *Five notes. One chord.*
 
+<p align="center">
+  <a href="https://mitpress.vercel.app/"><img src="https://raw.githubusercontent.com/topherchris420/vanta/a31046f7f7d26bb5505cf18d5b3720862326f716/public/work/impasto-head.webp" width="34%" alt="Christopher Woodyard's original impasto portrait painting in bold blue, red, green and yellow strokes."></a>
+  <a href="https://mitpress.vercel.app/studio"><img src="https://raw.githubusercontent.com/topherchris420/vanta/a31046f7f7d26bb5505cf18d5b3720862326f716/docs/screenshots/studio/archive.jpg" width="62%" alt="Actual Vanta studio screenshot: a luminous circular resonance installation in a warm virtual room; this is a simulation, not physical hardware."></a>
+</p>
+
+<sub>A painting and a simulated instrument, two expressions of the same curiosity. [Explore the interactive studio](https://mitpress.vercel.app/studio). Images from Vanta, pinned to a specific source revision.</sub>
+
 ### An invitation to explore
 
 I want these projects to give people an extraordinary perspective on an ordinary universe. The experience begins with curiosity, becomes an experiment, and ends with a clearer pattern or a better question. **Explore → Influence → Discover → Explore Again.** Not every world is meant to be controlled; some are worth watching because they continue without us. [Read the Vers3Dynamics experience philosophy](docs/EXPERIENCE_DESIGN.md).
