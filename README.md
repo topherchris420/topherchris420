@@ -16,6 +16,10 @@ If something catches your imagination, say hello. You can [write to me](mailto:c
 
 *Five notes. One chord.*
 
+### An invitation to explore
+
+I want these projects to give people an extraordinary perspective on an ordinary universe. The experience begins with curiosity, becomes an experiment, and ends with a clearer pattern or a better question. **Explore → Influence → Discover → Explore Again.** Not every world is meant to be controlled; some are worth watching because they continue without us. [Read the Vers3Dynamics experience philosophy](docs/EXPERIENCE_DESIGN.md).
+
 ---
 
 ## Choose a door
