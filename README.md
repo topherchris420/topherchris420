@@ -25,6 +25,12 @@ If something catches your imagination, say hello. You can [write to me](mailto:c
 
 I want these projects to give people an extraordinary perspective on an ordinary universe. The experience begins with curiosity, becomes an experiment, and ends with a clearer pattern or a better question. **Explore → Influence → Discover → Explore Again.** Not every world is meant to be controlled; some are worth watching because they continue without us. [Read the Vers3Dynamics experience philosophy](docs/EXPERIENCE_DESIGN.md).
 
+<!--
+For the curious reader who opened the source:
+
+I've always found it strange that we spend our lives trying to understand the universe while rarely questioning the nature of the being attempting to understand it. We assume that we are conscious because we experience consciousness, that we are intelligent because we accumulate knowledge, and that we are free because we occasionally exercise preference. Yet how much of what we consider ourselves is simply the uninterrupted repetition of processes we neither initiated nor fully comprehend? Perhaps the most extraordinary thing about human existence is how ordinary it has become to all of us.
+-->
+
 ---
 
 ## Choose a door
