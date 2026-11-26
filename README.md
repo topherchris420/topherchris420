@@ -6,6 +6,13 @@ Some days my work starts in a sketchbook or recording studio. Other days it star
 
 I write poetry, paint, and make music as [Indigo People](https://chriswoodyard.bandcamp.com/). I'm also the founder of [Vers3Dynamics](https://vers3dynamics.com/), my independent, open-source research lab. I explore sound, intelligent systems, biological rhythms, and a question I keep returning to: **what can the physical world teach us about the fact that we experience anything at all?**
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/pine-gap-boogie/sleeve.webp">
+  <img src="assets/pine-gap-boogie/pine-gap-boogie.webp" width="880" alt="Pine Gap Boogie. My 3D character in glasses and sneakers steps to the beat, points each arm skyward, and spins on a vinyl record.">
+</picture>
+
+My Pine Gap character found the dance floor between missions. [Download the animated 3D model](https://raw.githubusercontent.com/topherchris420/topherchris420/main/assets/pine-gap-boogie/pine-gap-boogie.glb) · [Meet the original character](https://github.com/topherchris420/satellite-vision-scape/blob/49626bf71f56cf6db84c669e6a04accdb5a77865/gta-sa-99-9-percent-sure/docs/CHARACTER.md).
+
 I'm interested in art, science, education, the strange beauty of the natural world, and making things that invite people to wonder. I like an ambitious idea, but I care just as much about what the evidence actually says. Sometimes the most interesting result is the one that didn't work.
 
 If you feel like exploring, you can [visit my portfolio, Vanta](https://mitpress.vercel.app/), [walk around my interactive studio](https://mitpress.vercel.app/studio), [listen to my music](https://chriswoodyard.bandcamp.com/), [watch a simulated life unfold](https://lop-nur-twin.vercel.app/live), or [play with a sound-and-biosignal experiment](https://topherchris420.github.io/circle/workbench.html). There's no right order.
