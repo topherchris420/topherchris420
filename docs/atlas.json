@@ -406,13 +406,19 @@
     {
       "name": "HumanTouch",
       "url": "https://huggingface.co/spaces/ciaochris/HumanTouch",
-      "url_label": "Try it",
+      "url_label": "Standalone studio",
       "theme": "artist",
       "status": "website",
       "source_note": "source on Hugging Face",
       "maturity": "Live web app",
-      "description": "A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable.",
-      "do": "Revise a paragraph and inspect what changed"
+      "description": "A writing studio that helps you edit without losing your voice, with a record of each change you can undo.",
+      "do": "Revise a paragraph and inspect what changed",
+      "links": [
+        {
+          "label": "Open in ChatGPT",
+          "url": "https://chatgpt.com/plugins/plugin_asdk_app_6abeddf492188191a6d96c320e2c1315"
+        }
+      ]
     },
     {
       "name": "Indigo People",

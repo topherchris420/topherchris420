@@ -105,7 +105,7 @@ A label describes what exists, not whether a claim is true. The [evidence ledger
 | Project | What it is | What you can do | Maturity | Links |
 | --- | --- | --- | --- | --- |
 | **[Vanta](https://github.com/topherchris420/vanta)** | Christopher’s portfolio brings writing, instruments, simulated worlds, paintings, and music together in a walkable studio and a research atlas. | Walk into the studio or hear Green Machine as Indigo People recorded it | Live web app | [Visit ↗](https://mitpress.vercel.app/) · [Repository](https://github.com/topherchris420/vanta) · [Walk into the studio](https://mitpress.vercel.app/studio) |
-| **[HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch)** | A writing studio where a model may change expression but not silently change meaning, certainty or facts, and every proposed edit stays inspectable. *(source on Hugging Face)* | Revise a paragraph and inspect what changed | Live web app | [Try it ↗](https://huggingface.co/spaces/ciaochris/HumanTouch) |
+| **[HumanTouch](https://huggingface.co/spaces/ciaochris/HumanTouch)** | A writing studio that helps you edit without losing your voice, with a record of each change you can undo. *(source on Hugging Face)* | Revise a paragraph and inspect what changed | Live web app | [Standalone studio ↗](https://huggingface.co/spaces/ciaochris/HumanTouch) · [Open in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6abeddf492188191a6d96c320e2c1315) |
 | **[Indigo People](https://chriswoodyard.bandcamp.com/)** | Christopher's recordings as Indigo People. *(music)* | Listen | Website | [Listen ↗](https://chriswoodyard.bandcamp.com/) |
 
 ## The archive

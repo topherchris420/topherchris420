@@ -545,7 +545,7 @@ I record as **Indigo People**, and that music plays on Pine Gap's radio. My [Van
 <!-- ledger:humantouch -->
 <sub>Evidence: `EXECUTABLE` · `OBSERVED` (offline instrument calibration on synthetic fixtures, not live-model evaluation).</sub>
 
-[**Listen →**](https://chriswoodyard.bandcamp.com/) · [**See the art and writing →**](https://mitpress.vercel.app/) · [**Try HumanTouch →**](https://huggingface.co/spaces/ciaochris/HumanTouch)
+[**Listen →**](https://chriswoodyard.bandcamp.com/) · [**See the art and writing →**](https://mitpress.vercel.app/) · [**Try HumanTouch in ChatGPT →**](https://chatgpt.com/plugins/plugin_asdk_app_6abeddf492188191a6d96c320e2c1315) · [Open the standalone studio](https://huggingface.co/spaces/ciaochris/HumanTouch)
 
 <p align="center">
 <a href="https://mitpress.vercel.app/"><img loading="lazy" src="https://raw.githubusercontent.com/topherchris420/vanta/120c6c4d36356fc7a7b5ffa3fc8729d1ecc0b069/public/work/impasto-head.webp" width="42%" alt="An original impasto portrait painting by Christopher Woodyard, from his Vanta portfolio."></a>
