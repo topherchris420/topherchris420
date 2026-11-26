@@ -210,10 +210,10 @@ Turn biological sequences into music, change the rules of interpretation, and in
 
 <a href="https://dynamic-resonance-rooting.vercel.app/"><img loading="lazy" src="../assets/captures/drr-live-lab.webp" width="100%" alt="The DRR live lab: sliders for coupling, delay, rhythm and noise; streaming signals; and a result panel showing that DRR recovered the planted edge from dim 0 to dim 1 at lag 2 in every window, with no false alarms."></a>
 
-*When one signal seems to lead another, is that a real lag or memory in the noise?* Plant a rhythm and a delay, and watch DRR test every direction against surrogate nulls, live in your browser. Its own preregistered test on stratospheric wind data failed, and that result sits on its front page.
+*When one signal seems to lead another, is that a real lag or memory in the noise?* Plant a rhythm and a delay, and watch DRR test every direction against surrogate nulls, live in your browser. The [November manuscript](https://github.com/topherchris420/dynamic-resonance-rooting/blob/1b1ab6b7372d3457c5a2760789f60d2def3dc49d/paper/drr-v3/main.pdf) keeps the reconstruction and the three unsupported external tests on the same record.
 
 <!-- ledger:drr -->
-<sub>Evidence: `OBSERVED` (synthetic calibration) · `NOT SUPPORTED` (preregistered external structural-change test). [Source](https://github.com/topherchris420/dynamic-resonance-rooting)</sub>
+<sub>Evidence: `OBSERVED` (synthetic calibration and v3 reconstruction) · `NOT SUPPORTED` (three preregistered external tests). [Source](https://github.com/topherchris420/dynamic-resonance-rooting)</sub>
 
 </td>
 <td width="50%" valign="top">

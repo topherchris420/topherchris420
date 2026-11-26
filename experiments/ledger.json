@@ -1,7 +1,7 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-11-10",
-  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. On 10 November 2026 only Lop Nur Twin was refreshed and R.A.I.N. ATLAS added; other evidence records were not re-reviewed.",
+  "reviewed": "2026-11-26",
+  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. The 26 November 2026 review covers only DRR. The earlier 10 November review refreshed Lop Nur Twin and added R.A.I.N. ATLAS.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
     "signals": "How do signals move together?",
@@ -212,28 +212,31 @@
       "repo": "https://github.com/topherchris420/dynamic-resonance-rooting",
       "question": "How do signals move together?",
       "state": [
-        { "state": "OBSERVED", "scope": "Monte Carlo calibration on simulated systems with known answers" },
-        { "state": "NOT SUPPORTED", "scope": "preregistered structural-change comparison on the NOAA CPC quasi-biennial oscillation series" }
+        { "state": "OBSERVED", "scope": "Monte Carlo calibration on simulated systems and a preregistered v3 reconstruction that recovered all 12 registered findings" },
+        { "state": "NOT SUPPORTED", "scope": "three preregistered external claims: structural-change detection on NOAA QBO, daily cryptocurrency-return forecasting, and lead–lag breakdown detection" }
       ],
-      "open": "Whether any external dataset supports the structural-change claim.",
-      "next": "A preregistered external comparison that holds its false-alarm tolerance.",
+      "open": "Whether a new external structural-change comparison can meet its registered detection and false-alarm criteria. The v3 reconstruction does not provide independent replication under this ledger’s standard.",
+      "next": "A preregistered structural-change comparison on a new dataset, with held-out disruption windows and a fixed false-alarm tolerance.",
       "timeline": {
         "reconstructed": true,
         "first_commit": { "date": "2025-06-14" },
         "milestones": [
           { "day": 0, "date": "2025-06-14", "label": "447-line framework module and tutorial notebook committed", "sha": "1dafd59a953df139faaf79948a2123fef3e6a2c7" },
           { "day": 465, "date": "2026-09-22", "label": "claim boundaries and the preregistered QBO comparison recorded: not_supported", "sha": "bebd3512cadd0780d23b465cc1122d1fcf20be5c" },
-          { "day": 468, "date": "2026-09-25", "label": "rooting surrogates calibrated; depth made unit- and grid-invariant" }
+          { "day": 468, "date": "2026-09-25", "label": "rooting surrogates calibrated; depth made unit- and grid-invariant" },
+          { "day": 529, "date": "2026-11-25", "label": "November manuscript, registered v3 reconstruction and CI replay merged", "sha": "1b1ab6b7372d3457c5a2760789f60d2def3dc49d" }
         ]
       },
       "compressed": ["operator implementation", "browser port checked for parity to 1e-9", "benchmarks and reproduction scripts"],
       "not_compressed": ["choosing a fair external test", "the external result itself"],
       "evidence": [
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/1b1ab6b7372d3457c5a2760789f60d2def3dc49d/paper/drr-v3/main.pdf",
+        "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/results/expected/v3_reconstruction/README.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/862c4f75e6092e3314eb786adcb9fa2a7ee3e779/docs/external-evidence.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_VALIDATION_REPORT.md",
         "https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/DRR_BENCHMARKS.md"
       ],
-      "last_reviewed": "2026-10-21"
+      "last_reviewed": "2026-11-26"
     },
     {
       "id": "circle",
