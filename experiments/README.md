@@ -32,6 +32,8 @@ Three rules keep the ladder honest:
 
 ## Where things stand
 
+**26 November 2026 partial review:** refreshed only Dynamic Resonance Rooting. The [November manuscript](https://github.com/topherchris420/dynamic-resonance-rooting/blob/1b1ab6b7372d3457c5a2760789f60d2def3dc49d/paper/drr-v3/main.pdf) records a preregistered reconstruction and three unsupported external tests. [Replay the reconstruction](https://github.com/topherchris420/dynamic-resonance-rooting/blob/main/results/expected/v3_reconstruction/README.md).
+
 **10 November 2026 partial review:** added R.A.I.N. ATLAS from its source and recorded synthetic study; refreshed Lop Nur Twin’s continuity and intelligence-metrology scope. Earlier records retain their individual review dates. [Browse the generated research index](../docs/research.md).
 
 **Current R.A.I.N. Lab:** [Lop Nur Twin](https://github.com/topherchris420/lop-nur-twin). The R.A.I.N. row below is intentionally linked to `james_library` because this ledger records historical experiments performed before the [October 6 runtime migration](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RAIN_MIGRATION.md). It does not identify the current development repository or certify the newer autonomous researcher.
@@ -49,7 +51,7 @@ The **21 October review** read every public repository for the profile's redesig
 | [Jasmine](https://github.com/topherchris420/Jasmine) | confidence | `EXECUTABLE` (self-hosted studio and runtime; no CI) | continuous integration and a clean-machine end-to-end run |
 | [Anna](https://github.com/topherchris420/anna) | confidence | `EXECUTABLE` | a retrieval evaluation on a stated corpus |
 | [Embedded AI Validation](https://github.com/topherchris420/embedded-ai-validation-platform) | confidence | `EXECUTABLE` (simulated targets) | a run on a physical board, with measured power |
-| [Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting) | signals | `OBSERVED` (synthetic) · `NOT SUPPORTED` (preregistered external test) | an external comparison that holds its false-alarm tolerance |
+| [Dynamic Resonance Rooting](https://github.com/topherchris420/dynamic-resonance-rooting) | signals | `OBSERVED` (synthetic calibration and v3 reconstruction) · `NOT SUPPORTED` (three preregistered external tests) | a preregistered external structural-change comparison on new data |
 | [R.A.I.N. ATLAS](https://github.com/topherchris420/rain-atlas) | signals | `EXECUTABLE` · `OBSERVED` (synthetic computational studies and firmware fixtures) | independent reproduction and an external measurement; an authorized firmware case beyond fixtures |
 | [CIRCLE](https://github.com/topherchris420/circle) | signals | `OBSERVED` (simulated twin) · hardware `BUILDING` | review gates closed, a fabricated board, a bench measurement |
 | [IONS-X](https://github.com/topherchris420/ions-x-deep-emergence-lab) | signals | `OBSERVED` (v0.5 synthetic benchmark; the earlier generator's results superseded by its own audit) | the paired-control design applied to recorded data |

@@ -45,7 +45,7 @@ test("initial display hides archives, preserves review dates and shows real inve
   assert.equal(p.visible().length, currentCount);
   assert(p.get("result-count").textContent.startsWith(`${currentCount} of ${totalCount}`));
   assert.match(p.get("humantouch").textContent, /2026-10-04/);
-  assert.match(p.doc.querySelector(".field-note").textContent, /2026-11-10/);
+  assert(p.doc.querySelector(".field-note").textContent.includes(`Latest evidence review ${sourceLedger.reviewed}`));
   assert.equal(p.get("filters").hidden, false);
   p.close();
 });
