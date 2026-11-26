@@ -10,6 +10,8 @@ I'm interested in art, science, education, the strange beauty of the natural wor
 
 If you feel like exploring, you can [visit my portfolio, Vanta](https://mitpress.vercel.app/), [walk around my interactive studio](https://mitpress.vercel.app/studio), [listen to my music](https://chriswoodyard.bandcamp.com/), [watch a simulated life unfold](https://lop-nur-twin.vercel.app/live), or [play with a sound-and-biosignal experiment](https://topherchris420.github.io/circle/workbench.html). There's no right order.
 
+I built HumanTouch for anyone who’s asked AI to clean up a paragraph and got back something that no longer sounded like them. [Try it in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6abeddf492188191a6d96c320e2c1315) or [open the standalone studio](https://huggingface.co/spaces/ciaochris/HumanTouch).
+
 If something catches your imagination, say hello. You can [write to me](mailto:christopher@vers3dynamics.com) or explore the [open research and projects](docs/atlas.md).
 
 *Five notes. One chord.*
