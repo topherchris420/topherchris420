@@ -6,12 +6,14 @@ Some days my work starts in a sketchbook or recording studio. Other days it star
 
 I write poetry, paint, and make music as [Indigo People](https://chriswoodyard.bandcamp.com/). I'm also the founder of [Vers3Dynamics](https://vers3dynamics.com/), my independent, open-source research lab. I explore sound, intelligent systems, biological rhythms, and a question I keep returning to: **what can the physical world teach us about the fact that we experience anything at all?**
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/pine-gap-boogie/sleeve.webp">
-  <img src="assets/pine-gap-boogie/pine-gap-boogie.webp" width="880" alt="Pine Gap Boogie. My 3D character in glasses and sneakers steps to the beat, points each arm skyward, and spins on a vinyl record.">
-</picture>
+<a href="https://cdn.jsdelivr.net/gh/topherchris420/topherchris420@2eda23df3508bc8192a8dfc6e0d24ed67549db53/assets/pine-gap-boogie/side-b.mp4">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/pine-gap-boogie/sleeve.webp">
+    <img src="assets/pine-gap-boogie/pine-gap-boogie.webp" width="880" alt="Pine Gap Boogie. Five steps light five record grooves. On the fifth I plant my sneaker and scratch the label backward. Flip the sleeve for sound.">
+  </picture>
+</a>
 
-My Pine Gap character found the dance floor between missions. [Download the animated 3D model](https://raw.githubusercontent.com/topherchris420/topherchris420/main/assets/pine-gap-boogie/pine-gap-boogie.glb) · [Meet the original character](https://github.com/topherchris420/satellite-vision-scape/blob/49626bf71f56cf6db84c669e6a04accdb5a77865/gta-sa-99-9-percent-sure/docs/CHARACTER.md).
+[**Flip to Side B ♫**](https://cdn.jsdelivr.net/gh/topherchris420/topherchris420@2eda23df3508bc8192a8dfc6e0d24ed67549db53/assets/pine-gap-boogie/side-b.mp4) to hear one note from each track on my Indigo People album *Green Machine*. They land under my sneakers and ring out together on the scratch. [See the sample credits](assets/pine-gap-boogie/README.md) · [Download the animated 3D model](https://raw.githubusercontent.com/topherchris420/topherchris420/main/assets/pine-gap-boogie/pine-gap-boogie.glb).
 
 I'm interested in art, science, education, the strange beauty of the natural world, and making things that invite people to wonder. I like an ambitious idea, but I care just as much about what the evidence actually says. Sometimes the most interesting result is the one that didn't work.
 
