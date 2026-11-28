@@ -2,14 +2,14 @@
   "schema": "vers3dynamics-observatory-build/v1",
   "inputs": {
     "docs/atlas.json": "e709edd6d148aed8f7a1c6cc62c96a7d26101b027f18f8006cc15fc4557ec2ca",
-    "experiments/ledger.json": "9b39e95997dad3cce1a6b7dd703554451b3289dde739f137fbfee0e28f06fa06",
+    "experiments/ledger.json": "ac71663887332c8fc8d144326f243df21d8955b813c25cf5f12da08622c9cc5b",
     "tools/build_observatory.py": "ac7f864e3ff9941bde91f7ce484012dd3e626339240b5c315ea65cd7fc890a59",
     "tools/observatory.html": "310b593e4283d2cb979769bf2ea563df2af4f9074d74b3ed749f0ea6d47cb1aa",
     "tools/observatory.css": "38542bd14e73215b3dff0d0d000bea6b0f27df752614dfa7d228934f301400e0",
     "tools/observatory.js": "4ef2bceffe9850c9522513132e0e425fcd0b8366b056c0eb38230f9aa06a4897"
   },
   "outputs": {
-    "docs/observatory.html": "f212a02024f7b9fe07b778b9348531b28bb59c213a84b0ba6ef17b69041bd0ac",
-    "docs/research.md": "29f7f30dd4560aef3790c54790306e3dc976e6ef8e4202bbd7c0bf04d9a24273"
+    "docs/observatory.html": "7f2cea6099219337473e7fe4939d1ff0fe9832698e61a3c7dca54704827e8ed5",
+    "docs/research.md": "c7d0f47a9f44fdaf541be5aafdc21d3a4b9aa7ae638c08dc2815d01a5859d374"
   }
 }
