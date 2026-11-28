@@ -1,7 +1,7 @@
 {
   "schema": "vers3dynamics-ledger/v1",
-  "reviewed": "2026-11-26",
-  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. The 26 November 2026 review covers only DRR. The earlier 10 November review refreshed Lop Nur Twin and added R.A.I.N. ATLAS.",
+  "reviewed": "2026-11-28",
+  "note": "States are judgments made by reading each project's own README and evidence documents. Timelines come from Git author dates on each repository's default branch. A first commit is when work entered Git, not when an idea began. The latest review is partial: entries with last_reviewed were checked on that date; other entries retain their own dated snapshots. Project-local PASSED or SUPPORTED verdicts apply to their stated criteria and are not profile-ladder evidence of external or physical support. Same-seed reruns, and same-author repetitions on a new dataset, do not establish independent replication. tools/check_profile.py compares this file with every page that displays it on each push. The 28 November 2026 review covers only Project Ascent. The 26 November review refreshed DRR. The earlier 10 November review refreshed Lop Nur Twin and added R.A.I.N. ATLAS.",
   "questions": {
     "confidence": "When should a machine's confidence count?",
     "signals": "How do signals move together?",
@@ -752,12 +752,12 @@
       "question": "What would have to be measured?",
       "state": [
         { "state": "EXECUTABLE", "scope": "account-free pricing studios for covered DC and Maryland homes, a fictional demo, homeowner scenarios and exports; not an appraisal or financial advice" },
-        { "state": "OBSERVED", "scope": "five pre-registered, chronological holdout studies on recorded sales; internal and retrospective, not independently certified" },
+        { "state": "OBSERVED", "scope": "six pre-registered, chronological holdout studies on recorded sales; internal and retrospective, not independently certified" },
         { "state": "SUPPORTED", "scope": "pre-registered acceptance (9 of 9 criteria) for the DC single-family and rowhouse model on 2,254 held-out recorded sales, thresholds fixed in code before scoring; three criteria passed narrowly, without statistical margin, and only the exact validated configuration is covered" },
-        { "state": "NOT SUPPORTED", "scope": "pre-registered acceptance failed for DC condominiums (4 of 9 criteria), both Maryland models (4 and 8 of 9) and a King County backtest (5 of 9)" }
+        { "state": "NOT SUPPORTED", "scope": "pre-registered acceptance failed for DC condominiums (4 of 9 criteria), two earlier Maryland studies (4 and 8 of 9), a King County backtest (5 of 9), and a locally refitted four-county Maryland holdout (5 of 9 on 19,039 screened sales)" }
       ],
-      "open": "Only the DC single-family and rowhouse model passed all 9 criteria (median error 9.98%, several narrowly), and only for its exact validated configuration. No study has outside attestation.",
-      "next": "An outside attestation of one study, and repaired models tested on new frozen holdouts.",
+      "open": "Only the DC single-family and rowhouse model passed all 9 criteria (median error 9.98%, several narrowly), and only for its exact validated configuration. The registered four-county supplement found higher median absolute percentage error in withheld cases with an underlying estimate (16.76%) than in stated estimates (12.02%); limited estimates (13.10%) also had higher error than the strongest tier (8.98%, 3,964 of 19,039 screened sales). These subgroup comparisons did not reverse the model’s overall failure. No study has outside attestation.",
+      "next": "An outside replication using the published kit, and repaired models tested on new frozen holdouts.",
       "timeline": { "reconstructed": false, "caveat": "Not reconstructed in this review." },
       "evidence": [
         "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/README.md",
@@ -765,9 +765,12 @@
         "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-dc-condos.json",
         "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland.json",
         "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation-maryland-v2.json",
-        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json"
+        "https://github.com/topherchris420/project-ascent/blob/698e8fe8a345bf9a5522a0d8031a230775c14182/evidence/valuation-validation.json",
+        "https://github.com/topherchris420/project-ascent/blob/22aee33de6edcb245e01c47d6fb86bbd59f48e4d/evidence/valuation-validation-maryland-external.json",
+        "https://github.com/topherchris420/project-ascent/blob/22aee33de6edcb245e01c47d6fb86bbd59f48e4d/evidence/valuation-maryland-external-supplement.json",
+        "https://github.com/topherchris420/project-ascent/blob/22aee33de6edcb245e01c47d6fb86bbd59f48e4d/docs/independent-replication.md"
       ],
-      "last_reviewed": "2026-10-21"
+      "last_reviewed": "2026-11-28"
     },
     {
       "id": "luca",
