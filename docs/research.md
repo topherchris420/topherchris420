@@ -140,16 +140,17 @@ Latest evidence review: **2026-11-28**. This was a partial review; each entry re
 
 ### CIRCLE
 
-[Project](https://github.com/topherchris420/circle) · Reviewed 2026-10-21
+[Project](https://github.com/topherchris420/circle) · Reviewed 2026-11-28
 
 - **`OBSERVED`** — seeded physiological twin, scored on held-out seeds
-- **`BUILDING`** — hardware: not fabricated; not cleared for human connection
+- **`OBSERVED`** — First Light passed four preregistered pooled criteria on public smartphone PPG recordings: 56 sessions from eight held-out people; browser and Python replay agreed. Expert-good coverage was 490/1,440 (34.03%) pooled, 14.32% averaged across participants, and 5.76% at the median; two people contributed 478 of the 490 acted-on good windows.
+- **`BUILDING`** — Rev B hardware: not fabricated; not cleared for human connection
 
-**Still open:** Fabrication and human connection are blocked by unresolved review gates.
+**Still open:** First Light is a recorded-data result, not an independent replication or a new live-camera session. Rev B fabrication and human connection remain blocked by review gates.
 
-**Next experiment:** Review gates closed, a fabricated board, a bench measurement.
+**Next experiment:** First Light: independently reproduce the replay and test a live phone session. Rev B: close review gates before fabrication or bench measurement.
 
-**Source records:** [1](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md) · [2](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md)
+**Source records:** [1](https://github.com/topherchris420/circle/blob/cf6c4fff3cc6d9e60aebff8863048daeaf798a01/evidence/first-light/round-2/result.json) · [2](https://github.com/topherchris420/circle/blob/main/evidence/first-light/round-2/RESULT.md) · [3](https://github.com/topherchris420/circle/blob/main/docs/review-gates.md) · [4](https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md)
 
 ## What happens when agents have to live somewhere?
 
