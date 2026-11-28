@@ -245,10 +245,11 @@
       "question": "How do signals move together?",
       "state": [
         { "state": "OBSERVED", "scope": "seeded physiological twin, scored on held-out seeds" },
-        { "state": "BUILDING", "scope": "hardware: not fabricated; not cleared for human connection" }
+        { "state": "OBSERVED", "scope": "First Light passed four preregistered pooled criteria on public smartphone PPG recordings: 56 sessions from eight held-out people; browser and Python replay agreed. Expert-good coverage was 490/1,440 (34.03%) pooled, 14.32% averaged across participants, and 5.76% at the median; two people contributed 478 of the 490 acted-on good windows." },
+        { "state": "BUILDING", "scope": "Rev B hardware: not fabricated; not cleared for human connection" }
       ],
-      "open": "Fabrication and human connection are blocked by unresolved review gates.",
-      "next": "Review gates closed, a fabricated board, a bench measurement.",
+      "open": "First Light is a recorded-data result, not an independent replication or a new live-camera session. Rev B fabrication and human connection remain blocked by review gates.",
+      "next": "First Light: independently reproduce the replay and test a live phone session. Rev B: close review gates before fabrication or bench measurement.",
       "timeline": {
         "reconstructed": true,
         "first_commit": { "date": "2026-08-14", "sha": "5fb038724297f33b4ef5c863e0e377e7667b56f3" },
@@ -259,12 +260,14 @@
         ]
       },
       "compressed": ["schematics as code", "safety contracts as tests", "CI with KiCad", "a physiological twin"],
-      "not_compressed": ["fabrication", "electrical-safety and EMC review", "any measurement on a person"],
+      "not_compressed": ["fabrication", "electrical-safety and EMC review", "new live-camera validation and independent replication"],
       "evidence": [
+        "https://github.com/topherchris420/circle/blob/cf6c4fff3cc6d9e60aebff8863048daeaf798a01/evidence/first-light/round-2/result.json",
+        "https://github.com/topherchris420/circle/blob/main/evidence/first-light/round-2/RESULT.md",
         "https://github.com/topherchris420/circle/blob/main/docs/review-gates.md",
         "https://github.com/topherchris420/circle/blob/main/docs/physiology-pipeline.md"
       ],
-      "last_reviewed": "2026-10-21"
+      "last_reviewed": "2026-11-28"
     },
     {
       "id": "ions-x",
