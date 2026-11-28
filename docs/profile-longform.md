@@ -48,12 +48,12 @@ Close the browser and ECHO's world keeps going. Open it again and you can see wh
 
 <p>
 <a href="https://lop-nur-twin.vercel.app/live"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/live-fly.jpg" width="49%" alt="ECHO in the simulated Bethesda streets, beside the log of its recent decisions. Open ECHO’s live page."></a>
-<a href="https://150-136-49-49.sslip.io/"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/garden.jpg" width="49%" alt="Eva resting on a windowsill in the clay garden. Visit Eva’s garden."></a>
+<a href="https://bethesda-garden-viewer.ciao-chris.chatgpt.site/"><img src="https://raw.githubusercontent.com/topherchris420/lop-nur-twin/92ee8a675f45d0fff0c8875a726370516c50010f/docs/media/readme/gallery/garden.jpg" width="49%" alt="Eva resting on a windowsill in the clay garden. Visit Eva’s garden."></a>
 </p>
 
 <sub>ECHO in Bethesda and Eva in the garden, recorded on 10 November 2026. The checkpoints let another machine check continuity over a recorded interval.</sub>
 
-**[Watch ECHO](https://lop-nur-twin.vercel.app/live)** · [Visit Eva's garden](https://150-136-49-49.sslip.io/) · [Inspect the continuity records](https://github.com/topherchris420/lop-nur-twin#03-a-machine-must-be-able-to-verify-the-history)
+**[Watch ECHO](https://lop-nur-twin.vercel.app/live)** · [Visit Eva's garden](https://bethesda-garden-viewer.ciao-chris.chatgpt.site/) · [Inspect the continuity records](https://github.com/topherchris420/lop-nur-twin#03-a-machine-must-be-able-to-verify-the-history)
 
 ### Hear a heartbeat become an instrument
 
@@ -107,7 +107,7 @@ Three places to begin if you want to **use a system, inspect the evidence, and s
 
 **Question:** Can a simulated individual keep a verifiable history while its world, controller, and environment change?
 
-**Enter:** [Observe ECHO live](https://lop-nur-twin.vercel.app/live) · [Visit Eva's separate garden](https://150-136-49-49.sslip.io/) · [Explore the larger world](https://lop-nur-twin.vercel.app/)
+**Enter:** [Observe ECHO live](https://lop-nur-twin.vercel.app/live) · [Visit Eva's separate garden](https://bethesda-garden-viewer.ciao-chris.chatgpt.site/) · [Explore the larger world](https://lop-nur-twin.vercel.app/)
 
 **Inspect:** [Continuity, experiments and negative findings](https://github.com/topherchris420/lop-nur-twin/blob/main/docs/RESEARCH_CLAIMS.md)
 
